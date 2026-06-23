@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+---
+
+# DCU Setup
+
+The **DCU Setup** menu provides access to the main configuration, diagnostic, and maintenance functions for the DCU. Technicians and authorized users can use this menu to review system status, configure device settings, run hardware diagnostics, and perform maintenance tasks before field deployment.
+
+To open the DCU Setup menu, proceed as follows:
+
+1. From the **Main Menu**, select **DCU Setup**.
+
+The **DCU Setup** submenu appears and provides access to the following options:
+
+{/* --- Import the three pieces needed for auto-numbered figures --- */}
+
+{/* FigureProvider: the wrapper that sets up the shared counter for this page */}
+{/* FigureRef: renders a clickable "Figure N" link in your text */}
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+
+{/* Figure: the component that renders the image + auto-numbered caption */}
+import Figure from "@site/src/components/Figure";
+
+{/* Everything that uses Figure or FigureRef must be inside FigureProvider */}
+{/* The counter resets to 1 at the top of this wrapper */}
+<FigureProvider>
+
+    {/* Renders the image with an auto-assigned number and caption */}
+    {/* id: unique name used to link to this figure from FigureRef */}
+    {/* src: path relative to the /static folder */}
+    {/* caption: text shown below the image after "Figure N:" */}
+    {/* width: controls image size — remove this line to use the 100% default */}
+    <Figure 
+        src="/img/4-DCUSetup/DCUSetupSubmenu.png" 
+        id="DCU Setup Submenu" 
+        caption="DCU Setup Submenu" 
+        width="100%"
+    />
+
+    {/* FigureRef looks up the number assigned to that id and renders "Figure 1" */}
+    {/* Clicking it scrolls the page up to the image */}
+    {/* The options in <FigureRef id="DCU Setup Submenu" /> are described below. *}
+
+{/* Close FigureProvider — figures outside this will not be numbered */}
+</FigureProvider>
