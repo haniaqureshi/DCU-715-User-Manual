@@ -1,55 +1,97 @@
 ---
 sidebar_position: 2
+toc_min_heading_level: 2
+toc_max_heading_level: 4
 ---
 
 # Battery Test
 
-Use the **Battery Test** function to verify battery health and review battery performance values, such as voltage, capacity, and test duration. 
-
-To open the Battery Test function, proceed as follows:
-1. From the **Main Menu**, select **DCU Setup**.
-2. From the **DCU Setup** submenu, select **Maintenance**.
-3. Select **Battery Test**.
-
-The **Battery Test** modal appears.
-
-{/* --- Image Block --- */}
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
 <FigureProvider>
+    Use the **Battery Test** function to verify battery health and review battery performance values, such as voltage, capacity, and test duration. 
+
+    To open the Battery Test function, proceed as follows:
+    1. From the **Main Menu**, select **DCU Setup**.
+    2. From the **DCU Setup** submenu, select **Maintenance**.
+    3. Select **Battery Test**.
+
+    The **Battery Test** modal appears.
+
     <Figure 
         src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/BatteryTestModal.png" 
-        id="Battery Test modal" 
+        id="BatteryTestModal" 
         caption="Battery Test modal" 
         width="100%"
     />
+
+    ## Battery Test modal
+
+    The following table describes the fields and controls available in the Battery Test modal as seen in <FigureRef id="BatteryTestModal"/>.
+
+    | Field/Button          | Description                                                                                         | 
+    | :-------------------- | :-------------------------------------------------------------------------------------------------- | 
+    | Battery Serial Number | Specifies the battery serial number. Enter at least five digits. <br /><br /><b>Example: </b> 12345 | 
+    | Minutes               | Displays the elapsed test time in minutes. <br /><br /><b>Example: </b> 15                          | 
+    | Battery Voltage       | Displays the current battery voltage in volts (V). <br /><br /><b>Example: </b> 12.45 V             | 
+    | Battery Capacity      | Displays the current battery capacity as a percentage (%). <br /><br /><b>Example: </b> 85%         | 
+    | Start                 | Starts the battery test cycle.                                                                      | 
+    | Stop                  | Stops the battery test cycle.                                                                       | 
+    | Cancel                | Closes the Battery Test modal without running or continuing the test.                               |
+
+    ### Enter the Battery Serial Number
+    To enter the battery serial number, proceed as follows:
+
+    1. In the **Battery Test** modal, select the **Battery Serial Number** field. The **Battery Serial Number** modal appears.
+        <Figure 
+            src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/BatterySerialNumberModal.png" 
+            id="BatterySerialNumberModal" 
+            caption="Battery Serial Number modal" 
+            width="100%"
+        />
+    2. Use the numeric keypad to enter the battery serial number.
+
+    #### Battery Serial Number modal
+    The following table describes the fields and controls available in the Battery Serial Number modal as seen in <FigureRef id="BatterySerialNumberModal"/>.
+
+    | Field/Button          | Description                                                                                                   | 
+    | :-------------------- | :------------------------------------------------------------------------------------------------------------ | 
+    | Battery Serial Number | Displays the battery serial number entered by the user. <br /><br /> <b>Example:</b> 12345                    | 
+    | Numeric Keypad        | Enters numeric digits from 0 through 9.                                                                       | 
+    | Backspace             | Removes the last entered digit from the battery serial number field.                                          |  
+    | Clear All             | Removes all digits from the battery serial number field.                                                      |  
+    | Cancel                | Closes the Battery Serial Number modal without saving changes to the battery serial number field.             |
+    | Ok                    | Closes the Battery Serial Number modal and saves the entered battery serial number to the Battery Test modal. |   
+
+    ## Run the battery test
+
+    To run the battery test, proceed as follows:
+
+    1. Enter a valid value in the **Battery Serial Number** field.
+    2. Select **Start**. The DCU starts the battery test cycle.
+    4. Review the following values during the test:
+       - Minutes
+       - Battery Voltage
+       - Battery Capacity
+    5. Select **Stop** to end the battery test.
+    
+    The DCU creates a battery test report and displays a message in the system message bar.
+
+    ### Battery test report
+    When the user selects **Stop** in the Battery Test modal, the DCU creates a battery test report file and the system alert bar displays the report location as shown in <FigureRef id="BatteryTestReportCreatedMessage"/>.
+    The file is saved in the `\CVASYS\ITR100\` folder as `Batterytest.txt`
+
+    <Figure 
+        src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/BatteryTestReportCreatedMessage.png" 
+        id="BatteryTestReportCreatedMessage" 
+        caption="Battery test report created message" 
+        width="100%"
+    />
+
+    :::info
+
+    Please note that other ITR programs may also save data to this folder. 
+
+    :::
 </FigureProvider>
-
-## Battery Test modal
-
-The following table describes the fields and controls available in the Battery Test modal.
-
-| Field/Button          | Description                                                                                   | 
-| :-------------------- | :-------------------------------------------------------------------------------------------- | 
-| Battery Serial Number | Specifies the battery serial number. Enter at least five digits. <br /><br /> Example: <b>12345</b> | 
-| Minutes               | Displays the elapsed test time in minutes. <br /><br /> Example: <b>15</b>                          | 
-| Battery Voltage       | Displays the current battery voltage in volts (V). <br /><br /> Example: <b>12.45 V</b>             | 
-| Battery Capacity      | Displays the current battery capacity as a percentage (%). <br /><br /> Example: <b>85%</b>             | 
-| Start                 | Starts the battery test cycle.                                                                | 
-| Stop                  | Stops the battery test cycle.                                                                 | 
-| Cancel                | Closes the Battery Test modal without running or continuing the test.                         |
-
-### Enter the Battery Serial Number
-
-### Battery Serial Number modal
-
-## Run the battery test
-
-### Battery test report
-
-:::note
-
-Other ITR programs may also save data to this folder. 
-
-:::

@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'DCU 715 User Manual',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -82,10 +82,16 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
+      themeConfig: {
+        tableOfContents: {
+          minHeadingLevel: 2,
+          maxHeadingLevel: 5,
+        },
+      },
       navbar: {
-        title: 'My Site',
+        title: 'DCU 715 User Manual',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'DCU 715 User Manual Logo',
           src: 'img/logo.svg',
         },
         items: [
