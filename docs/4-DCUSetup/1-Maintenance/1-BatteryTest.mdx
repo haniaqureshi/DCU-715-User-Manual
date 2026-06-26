@@ -80,7 +80,7 @@ import Figure from "@site/src/components/Figure";
 
     ### Battery test report
     When the user selects **Stop** in the Battery Test modal, the DCU creates a battery test report file and the system alert bar displays the report location as shown in <FigureRef id="BatteryTestReportCreatedMessage"/>.
-    The file is saved in the `\CVASYS\ITR100\` folder as `Batterytest.txt`
+    The file is saved to `C:\CVASYS\ITR100\` on the DCU as `Batterytest.txt`.
 
     <Figure 
         src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/BatteryTestReportCreatedMessage.png" 
@@ -94,4 +94,27 @@ import Figure from "@site/src/components/Figure";
     Please note that other ITR programs may also save data to this folder. 
 
     :::
+
+    The first line of the report identifies the battery test record and the DCU used for the test as shown below.
+
+    <Figure 
+        src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/BatteryTestReportFile.png" 
+        id="BatteryTestReportFile" 
+        caption="Battery test report file" 
+        width="100%"
+    />
+
+    The following table describes the fields in the report as seen in <FigureRef id="BatteryTestReportFile"/>.
+
+    | Field/Button          | Description                                                                                                     | 
+    | :-------------------- | :---------------------------------------------------------------------------------------------------------------| 
+    | Battery serial number | Identifies the battery tested during the battery test. <br /><br /><b>Example:</b> 55444                        |
+    | Device ID             | Identifies the DCU device ID. This value is available in Show System Settings.<br /><br /><b>Example:</b> 834   | 
+    | DCU number            | Identifies the DCU number. This value is available in Show System Settings.<br /><br /><b>Example:</b> 07150002 |
+    | Technician name       | Identifies the technician assigned to the DCU. This value is available in Show System Settings.<br /><br /><b>Example:</b> Indiana Jones | 
+
+
+
+
+
 </FigureProvider>

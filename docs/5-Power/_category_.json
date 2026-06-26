@@ -1,0 +1,8 @@
+{
+  "label": "Power",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "Power/index"
+  }
+}
