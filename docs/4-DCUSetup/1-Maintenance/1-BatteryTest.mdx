@@ -2,6 +2,7 @@
 sidebar_position: 1
 toc_min_heading_level: 2
 toc_max_heading_level: 4
+sidebar_label: '4.1.1 - Battery Test'
 ---
 
 # Battery Test
@@ -30,15 +31,15 @@ import Figure from "@site/src/components/Figure";
 
     The following table describes the fields and controls available in the Battery Test modal as seen in <FigureRef id="BatteryTestModal"/>.
 
-    | Field/Button          | Description                                                                                         | 
-    | :-------------------- | :-------------------------------------------------------------------------------------------------- | 
-    | Battery Serial Number | Specifies the battery serial number. Enter at least five digits. <br /><br /><b>Example: </b> 12345 | 
-    | Minutes               | Displays the elapsed test time in minutes. <br /><br /><b>Example: </b> 15                          | 
-    | Battery Voltage       | Displays the current battery voltage in volts (V). <br /><br /><b>Example: </b> 12.45 V             | 
-    | Battery Capacity      | Displays the current battery capacity as a percentage (%). <br /><br /><b>Example: </b> 85%         | 
-    | Start                 | Starts the battery test cycle.                                                                      | 
-    | Stop                  | Stops the battery test cycle.                                                                       | 
-    | Cancel                | Closes the Battery Test modal without running or continuing the test.                               |
+    | Field/Button          | Description                                                                                     | 
+    | :-------------------- | :---------------------------------------------------------------------------------------------- | 
+    | Battery Serial Number | Specifies the battery serial number. Enter at least five digits. <br /><br />**Example:** 12345 | 
+    | Minutes               | Displays the elapsed test time in minutes. <br /><br />**Example:** 15                          | 
+    | Battery Voltage       | Displays the current battery voltage in volts (V). <br /><br />**Example:** 12.45 V             | 
+    | Battery Capacity      | Displays the current battery capacity as a percentage (%). <br /><br />**Example:** 85%         | 
+    | Start                 | Starts the battery test cycle.                                                                  | 
+    | Stop                  | Stops the battery test cycle.                                                                   | 
+    | Cancel                | Closes the Battery Test modal without running or continuing the test.                           |
 
     ### Enter the Battery Serial Number
     To enter the battery serial number, proceed as follows:
@@ -57,7 +58,7 @@ import Figure from "@site/src/components/Figure";
 
     | Field/Button          | Description                                                                                                   | 
     | :-------------------- | :------------------------------------------------------------------------------------------------------------ | 
-    | Battery Serial Number | Displays the battery serial number entered by the user. <br /><br /> <b>Example:</b> 12345                    | 
+    | Battery Serial Number | Displays the battery serial number entered by the user. <br /><br /> **Example:** 12345                       | 
     | Numeric Keypad        | Enters numeric digits from 0 through 9.                                                                       | 
     | Backspace             | Removes the last entered digit from the battery serial number field.                                          |  
     | Clear All             | Removes all digits from the battery serial number field.                                                      |  
@@ -108,9 +109,16 @@ import Figure from "@site/src/components/Figure";
 
     | Field/Button          | Description                                                                                                                              | 
     | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------- | 
-    | Battery serial number | Identifies the battery tested during the battery test. <br /><br /><b>Example:</b> 55444                                                 |
-    | Device ID             | Identifies the DCU device ID. This value is available in Show System Settings.<br /><br /><b>Example:</b> 834                            | 
-    | DCU number            | Identifies the DCU number. This value is available in Show System Settings.<br /><br /><b>Example:</b> 07150002                          |
-    | Technician name       | Identifies the technician assigned to the DCU. This value is available in Show System Settings.<br /><br /><b>Example:</b> Indiana Jones | 
+    | Battery serial number | Identifies the battery tested during the battery test. <br /><br />**Example:** 55444                                                 |
+    | Device ID             | Identifies the DCU device ID. This value is available in [Show System Settings](../3-Settings/8-ShowSystemSettings.mdx).<br /><br />**Example:** 834                            | 
+    | DCU number            | Identifies the DCU number. This value is available in [Show System Settings](../3-Settings/8-ShowSystemSettings.mdx).<br /><br />**Example:** 07150002                          |
+    | Technician name       | Identifies the technician assigned to the DCU. This value is available in [Show System Settings](../3-Settings/8-ShowSystemSettings.mdx).<br /><br />**Example:** Indiana Jones | 
+
+    The remaining lines contain the battery readings captured during the test. The DCU records one reading every 1 minute.
+
+    ```jsx title="C:\CVASYS\ITR100\Batterytest.txt"
+        0 5/14/2026 5:11:43 AM 100.00% 18.443
+        1 5/14/2026 5:11:43 AM 100.00% 18.418
+    ```
 
 </FigureProvider>
