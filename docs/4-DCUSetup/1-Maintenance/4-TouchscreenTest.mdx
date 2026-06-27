@@ -6,3 +6,85 @@ sidebar_label: '4.1.4 - Touchscreen Test'
 ---
 
 # Touchscreen Test
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+
+<FigureProvider>
+    Use the **Touchscreen Test** function to verify that the touchscreen detects finger input across the display area. This test helps identify unresponsive areas, inaccurate touch response, or possible touchscreen dead zones.
+
+    To open the Touchscreen Test function, proceed as follows:
+
+    1. From the **Main Menu**, select **DCU Setup**.
+    2. From the **DCU Setup** submenu, select **Maintenance**.
+    3. Select **Touchscreen Test**.
+
+    The **Test Touch Screen** modal appears.
+
+    <Figure 
+        src="/img/4-DCUSetup/1-Maintenance/4-TouchscreenTest/TouchscreenTestScreenModal.png" 
+        id="TouchscreenTestScreenModal" 
+        caption="Touchscreen Test Screen modal"
+        width="100%"
+    /> 
+
+    ## Touchscreen Test screen
+    The following table describes the information and controls available on the Touchscreen Test screen.
+
+    | Screen element     | Description                                                          | 
+    | :----------------- | :------------------------------------------------------------------- | 
+    | Double tap to exit | Exits the touchscreen test when the user double-taps the box.        |
+    | Close              | Closes the Touchscreen Test screen and returns to the previous menu. | 
+
+    ## Test the touchscreen
+    To test the touchscreen, proceed as follows:
+
+    1. Open the **Touchscreen Test** function. The **Test Touch Screen** modal appears.
+    2. Touch, tap, or swipe different areas of the touchscreen with your finger. Test the center, corners, and edges of the display to confirm that the screen responds accurately. As you swipe, the screen displays a drawn touch path.
+    3. Double-tap the **Double tap to exit** box. If the touchscreen responds correctly, the confirmation dialog box appears.
+        <Figure 
+            src="/img/4-DCUSetup/1-Maintenance/4-TouchscreenTest/TouchscreenWorkingConfirmationDialogBox.png" 
+            id="TouchscreenWorkingConfirmationDialogBox" 
+            caption="Touchscreen working confirmation dialog box"
+            width="100%"
+        /> 
+    4. Select **Close** to acknowledge the confirmation message and return to the Maintenance submenu.
+
+    ## Exit without completing the test
+    If the user exits the test screen without testing the touchscreen, the DCU displays a warning message.
+
+    <Figure 
+        src="/img/4-DCUSetup/1-Maintenance/4-TouchscreenTest/TouchscreenTestWarningDialogBox.png" 
+        id="TouchscreenTestWarningDialogBox" 
+        caption="Touchscreen test warning dialog box"
+        width="100%"
+    /> 
+
+    To exit without completing the test, proceed as follows:
+
+    1. Select **Close** on the **Test Touch Screen** modal before testing the touchscreen.
+    2. The warning dialog box appears.
+    3. Select **Close** to acknowledge the warning and return to the Maintenance submenu.
+
+    ## Exit without completing the test
+    If the user exits the test screen without testing the touchscreen, the DCU displays a warning message.
+
+    <Figure 
+        src="/img/4-DCUSetup/1-Maintenance/4-TouchscreenTest/TouchscreenTestWarningDialogBox.png" 
+        id="TouchscreenTestWarningDialogBox" 
+        caption="Touchscreen test warning dialog box"
+        width="100%"
+    /> 
+
+    To exit without completing the test, proceed as follows:
+
+    1. Select **Close** on the **Test Touch Screen** modal before testing the touchscreen.
+    2. The warning dialog box appears.
+    3. Select **Close** to acknowledge the warning and return to the Maintenance submenu.
+
+    ## Quick Reference Guide
+
+    | Message                                       | When it appears                                                                              | Action                                                                         | 
+    | :-------------------------------------------- | :------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+    | The touch screen is working properly          | Appears after the user tests the touchscreen and double-taps the **Double tap to exit** box. | Select **Close** to return to the Maintenance submenu.                         |
+    | The touch screen has not been tested properly | The touch screen has not been tested properly                                                | Select **Close**, reopen **Touchscreen Test**, and test the touchscreen again. |
+    
+</FigureProvider>
