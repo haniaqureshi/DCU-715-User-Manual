@@ -7,6 +7,7 @@ sidebar_label: '4.1.5 - Software Upgrade'
 
 # Software Upgrade
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
 
 <FigureProvider>
     Use the **Software Upgrade** function to update the DCU software when a new approved version is available.
@@ -32,9 +33,7 @@ import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 
     | Field/Button       | Description                                                                               | 
     | :----------------- | :-------------------------------------------------------------------------------------------- | 
-    | USB drive          | Selects a USB drive as the source for the software upgrade package. After the 
-                           user selects this option, the DCU waits for a USB flash drive to be inserted 
-                           into the USB port.                                                                            |
+    | USB drive          | Selects a USB drive as the source for the software upgrade package. After the user selects this option, the DCU waits for a USB flash drive to be inserted into the USB port.|
     | ITR.com            | Selects ITR.com as the source for the software upgrade package. When this option 
                            is selected, the DCU automatically checks for the available version when the 
                            Software Upgrade screen opens.                                                                |
@@ -110,18 +109,15 @@ import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
     No further action is required.
     To review recent system messages, proceed as follows:
     1. Double-tap the **system message bar**. The **System Alerts** modal appears.
-
-     <Figure 
-        src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/SystemAlertsModal.png" 
-        id="SystemAlertsModal" 
-        caption="System Alerts modal"
-        width="100%"
-    /> 
-
+        <Figure 
+            src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/SystemAlertsModal.png" 
+            id="SystemAlertsModal" 
+            caption="System Alerts modal"
+            width="100%"
+        /> 
     2. Review the system messages.
     3. Select **Clear** to clear the displayed messages, or select **Close** to return to the Software Upgrade screen.
 
     To return to the **Main Menu**, select the **Exit** button in the **Software Upgrade screen**. Alternatively, 
     select the **Menu** button in the header.
-
 </FigureProvider>

@@ -1,8 +1,9 @@
 import React, { useContext, useRef } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import ThemedImage from "@theme/ThemedImage";
 import { FigureContext } from "./FigureContext";
 
-export default function Figure({ src, id, caption, width = "100%" }) {
+export default function Figure({ src, srcDark, id, caption, width = "100%" }) {
   const { store } = useContext(FigureContext);
   const numRef = useRef(null);
 
@@ -12,8 +13,6 @@ export default function Figure({ src, id, caption, width = "100%" }) {
     );
   }
 
-  // Register this figure into the map on every render during pass 1
-  // numRef ensures the number is locked in and never changes after pass 1
   if (numRef.current === null) {
     store.current.counter += 1;
     numRef.current = store.current.counter;
@@ -22,20 +21,28 @@ export default function Figure({ src, id, caption, width = "100%" }) {
 
   const num = numRef.current;
   const resolvedSrc = useBaseUrl(src);
+  const resolvedSrcDark = useBaseUrl(srcDark || src);
 
   return (
     <>
       <div id={id} style={{ scrollMarginTop: "80px" }} />
       <figure style={{ textAlign: "center", margin: "1.5rem 0" }}>
-        <img
-          src={resolvedSrc}
+
+        {/* If srcDark is provided, use ThemedImage to swap automatically */}
+        {/* If no srcDark provided, falls back to the same image for both modes */}
+        <ThemedImage
           alt={caption}
+          sources={{
+            light: resolvedSrc,
+            dark: resolvedSrcDark,
+          }}
           style={{ maxWidth: width, display: "block" }}
         />
-        <figcaption style={{ marginTop: "0.5rem", color: "#1C1E21" }}>
-          <strong style={{ color: "#00559e" }}>Figure {num}: </strong>
-          {caption}
-        </figcaption>
+
+      <figcaption style={{ marginTop: "0.5rem", color: "var(--ifm-font-color-base)" }}>
+        <span style={{ color: "#00559e", fontWeight: "bold" }}>Figure {num}: </span>
+        {caption}
+      </figcaption>
       </figure>
     </>
   );
