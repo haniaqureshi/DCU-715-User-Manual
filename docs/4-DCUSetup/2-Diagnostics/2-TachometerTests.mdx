@@ -6,3 +6,92 @@ sidebar_label: '4.2.2 - Tachometer Tests'
 ---
 
 # Tachometer Tests
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+<FigureProvider>
+
+    Use the **Tachometer Tests** function to verify that the tachometer sensor is correctly connected and 
+    transmitting a valid speed signal to the DCU. The function displays the measured rotational speed
+    and provides diagnostic information that helps identify sensor or connection issues before performing
+    measurements that require speed or phase reference data.
+
+    To open the Tachometer Tests function, proceed as follows:
+
+    1. From the **Main Menu**, select **DCU Setup**.
+    2. From the **DCU Setup** submenu, select **Diagnostics**.
+    3. Select **Tachometer Tests**.
+
+    The **Tachometer Test** modal appears.
+
+    <Figure 
+        src="/img/4-DCUSetup/2-Diagnostics/2-TachometerTests/TachometerTestModal.png" 
+        id="TachometerTestModal" 
+        caption="Tachometer Test Modal"
+        width="100%"
+    /> 
+
+    ## Tachometer Test Modal
+    The following table describes the fields and controls available in the Tachometer Test modal Figure<FigureRef id="TachometerTestModal"/>
+
+    | Field/Button      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    | :---------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
+    | Test Result       | **<u>No Signal</u>** <br />Indicates that no tachometer signal is currently being detected by the DCU <br /><br />**Example:** No signal: Hertz                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                           
+    | Test Details      | **<u>Tests</u>**<br />Displays the total number of tachometer measurements performed during the current test session<br /><br />**Example:**25 <br /><br /> **<u>Failed Tests</u>** <br /> Displays the number of tachometer measurements that failed during the current test session.<br /><br />**Example:** 0 <br /><br /> **<u>Status</u>** <br />Displays the current tachometer interface status code <br /><br />**Example:** 1024 |
+    | Unit              | **<u>Hertz</u>**<br />Displays tachometer measurements in Hertz (cycles per second)<br /><br />**<u>CPM</u>**<br />Displays tachometer measurements in cycles per minute.                                                                                                                                                                                                                                                                 |                                                                                                                                                                   
+    | Cancel            | Closes the Tachometer Test modal and returns to the Diagnostics submenu.                                                                                                                                                                                                                                                                                                                                                                  |                                                                                                                                                               
+
+    :::Info
+
+    The DCU continuously updates the tachometer reading while a valid signal is present. 
+    The displayed value may fluctuate slightly as the measured speed changes.
+
+    :::
+
+    ## Select the Measurement Unit
+
+    The Tachometer Test function supports two measurement units:
+
+    1. **Hertz (Hz)** – Displays the measured frequency in cycles per second.
+    2. **CPM (Cycles Per Minute)** – Displays the measured frequency in cycles per minute.
+
+    To select a measurement unit, proceed as follows:
+
+    1. Open the **Tachometer Test** modal.
+    2. Select either the **Hertz** radio button or the **CPM (Cycles Per Minute)** radio button.
+
+    The DCU immediately updates the displayed measurement using the selected unit.
+
+    :::Note:
+
+    Changing the measurement unit does not affect the sensor reading. 
+    It only changes how the measured value is displayed
+
+    :::
+
+    ## Verify Tachometer Operation
+
+    To verify tachometer operation, proceed as follows:
+
+    1. Connect the tachometer sensor to the appropriate DCU input.
+    2. Open the **Tachometer Test** modal.
+    3. Select the preferred measurement unit.
+    4. Allow the DCU approximately 1 to 2 seconds to stabilize the measurement.
+    5. Review the value displayed in the **Test Result** area. 
+    6. Review the following diagnostic values:
+        1. **Tests**
+        2. **Failed Tests**
+        3. **Status**
+
+    A valid tachometer signal indicates that the sensor and connection are functioning correctly.
+
+    :::Warning
+
+    If the **Test Result** area displays **No signal**, the DCU is not detecting a valid tachometer signal. 
+    See Error: No signal under **5.6 DCU Setup Troubleshooting**.
+
+    :::
+
+    To close the Tachometer Test modal and return to the **Diagnostics** submenu, select the **Cancel** button.
+
+</FigureProvider>

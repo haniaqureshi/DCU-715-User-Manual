@@ -22,8 +22,15 @@ import Figure from "@site/src/components/Figure";
 
     The **Accelerometer Tests** screen appears.
 
+    :::Note
 
-     <Figure 
+    When the **Accelerometer Tests** screen opens, the DCU automatically starts a measurement using the 
+    most recently saved test configuration. The graph begins displaying data immediately, and the 
+    [Task status bar displays](../../intro.mdx#task-status-bar) **Measurement** to indicate that a measurement is currently in progress.
+
+    :::
+
+    <Figure 
         src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreen.png" 
         id="AccelerometerTestsScreen" 
         caption="Accelerometer Tests Screen"
@@ -31,13 +38,120 @@ import Figure from "@site/src/components/Figure";
     /> 
 
     ## Accelerometer Tests Screen
-    The following table describes the fields and controls available in the Accelerometer Tests screen.
 
+    The following table describes the fields and controls available in the Accelerometer Tests screen in <FigureRef id="AccelerometerTestsScreen"/>.
 
+    | Field/Button      | Description                                                                                                                                                                      | 
+    | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
+    | Options           | **<u>Plot Type</u>** <br />Displays the currently selected plot type. Available options include:<br />**Real Time** <br />**RMS Trend**                                          |
+    |                   | **<u>Source</u>** <br />Displays the currently selected measurement source. Available options include:<br />**Accel** <br />**Bias**                                             |
+    |                   | **<u>Cable Test</u>** <br />Shows whether cable test mode is turned on or off. <br /><br />**Example:** off                                                                      |
+    |                   | **<u>Bias X</u>** <br />Displays the bias voltage measured on the X-axis. <br /><br />**Example:** 1.989 V                                                                       |
+    |                   | **<u>Bias Y</u>** <br />Displays the bias voltage measured on the Y-axis. <br /><br />**Example:** 1.994 V                                                                       |
+    |                   | **<u>Bias Z</u>** <br />Displays the bias voltage measured on the Z-axis. <br /><br />**Example:** 1.992 V                                                                       |
+    |                   | **<u>Meas. nr</u>** <br />Displays the current measurement number. <br /><br />**Example:** 49                                                                                   |
+    | Graph Area        | Displays measurement data for the selected channels.                                                                                                                             |
+    | Task status bar   | Displays the status of the currently running task. <br /><br />**Example:** Measurement <br /><br />**Note:** See [Task status bar](../../intro.mdx#task-status-bar)for details. |
+    | Options Button    | Opens the Accelerometer Tests Options screen                                                                                                                                     |
+    | Stop Button       | Stops the current measurement.                                                                                                                                                   |
+    | Reset Button      | Clears the displayed measurement data and restarts the graph display.                                                                                                            |
+    | Up Arrow Button   | Scrolls upward through the graph display when applicable.                                                                                                                        | 
+    | Down Arrow Button | Scrolls downward through the graph display when applicable.                                                                                                                      |
 
+    ## Configure Accelerometer Tests settings
 
+    To configure Accelerometer Tests options, proceed as follows:
 
+        1. In the **Accelerometer Tests** screen, select the **Options** button.
 
+    The **Accelerometer Tests Options** screen appears.
 
+    <Figure 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsOptionsScreen.png" 
+        id="AccelerometerTestsOptionsScreen" 
+        caption="Accelerometer Tests Options Screen"
+        width="100%"
+    />
+
+    ### Accelerometer Tests Options Screen
+    The following table describes the available configuration options in figure <FigureRef id="AccelerometerTestsOptionsScreen"/>.
+
+    | Option     | Description                                                                                                                                                                                                                                                                                                         |
+    | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Plot Type  | **<u>RMS Trend</u>** <br />Displays measurement data as RMS trend values over time. See Figure 5.3.x. <FigureRef id="AccelerometerTestsOptionsScreen"/><br /><br /> **<u>Real Time</u>** <br />Displays live accelerometer signals in real time. See Figure 5.3.x <FigureRef id="AccelerometerTestsOptionsScreen"/> |
+    | Source     | **<u>Accel</u>** <br />Displays accelerometer measurement data. <br /><br /> **<u>Bias</u>** <br />Displays sensor bias voltage values. <br /><br />**Note:** If the **Source** options are disabled, uncheck the **Cable Test** check box                                                                          |
+    | Cable Test | Enables or disables cable integrity testing. <br /><br /> **Note:** Selecting the **Cable Test** check box disables the **Source** options.                                                                                                                                                                         |
+    | Channel    | **<u>X</u>** <br />Enables or disables the X-axis channel. <br /><br /> **<u>Y</u>** <br />Enables or disables the Y-axis channel. <br /><br /> **<u>Z</u>** <br />Enables or disables the Z-axis channel.                                                                                                          |
+    | Cancel     | Closes the Options screen without saving changes.                                                                                                                                                                                                                                                                   |
+    | Save       | Saves the selected settings and returns to the Accelerometer Tests screen.                                                                                                                                                                                                                                          |  
+
+    #### Example:Channel selection
+    The DCU allows individual accelerometer channels to be enabled or disabled during testing.
+
+    For example, when only the **X** channel is enabled, the screen displays a single graph.
+
+    <Figure 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenWithX-axisChannelEnabled.png" 
+        id="AccelerometerTestsScreenWithX-axisChannelEnabled" 
+        caption="Accelerometer Tests Screen with X-axis Channel Enabled"
+        width="100%"
+    />
+
+    :::Note
+
+    Enable only the channels required for the test. This can simplify graph analysis and help isolate 
+    issues on a specific accelerometer axis.
+
+    :::
+
+    #### Example:Plot type selection
+    The DCU supports two plot display modes **Real Time** and **RMS Trend**.
+
+    The following example shows the RMS Trend display.
+
+    <Figure 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenUsingRMSTrendPlotType.png" 
+        id="AccelerometerTestsScreenUsingRMSTrendPlotType" 
+        caption="Accelerometer Tests Screen using RMS Trend Plot Type"
+        width="100%"
+    />
+
+    ## Run an Accelerometer Test
+    To run an accelerometer test, proceed as follows:
+
+    1. Connect the accelerometer sensor and cable to the DCU.
+    2. Open the **Accelerometer Tests** screen. The DCU automatically starts a measurement using the previously saved configuration.
+    3. If necessary, select the **Options** button and configure the following settings:
+        1. Plot Type
+        2. Source
+        3. Cable Test
+        4. Channel
+    4. Select the Save button. The DCU applies the new settings and continues displaying measurement data.
+    5. Review the following values during the test:
+        1. Plot Type
+        2. Source
+        3. Cable Test
+        4. Bias X, Bias Y, and Bias Z
+        5. Meas. nr
+        6. Graph data
+    
+    :::Warning:
+
+    Do not disconnect the accelerometer cable during a measurement unless you are intentionally checking 
+    cable connectivity. Disconnecting the cable may interrupt the signal shown on the graph.
+
+    :::
+
+    6. Select the **Stop** button to stop the measurement. The **Measurement** indicator is removed from the **Task Status Bar**.
+    7. Select the **Reset** button to clear the displayed graph data and begin a new measurement session.
+
+    :::Warning:
+
+    The **Reset** button clears the currently displayed graph data. Record any required observations before 
+    selecting **Reset.**
+
+    :::
+
+    To return to the Main Menu, select the **Menu** button in the header.
 
 </FigureProvider>
