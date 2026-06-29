@@ -29,3 +29,24 @@
   table-layout: fixed; /* Ensures columns share the max width evenly */
 }
 
+/* Footer Styling */
+.footer {
+  --ifm-footer-background-color: rgba(0, 86, 160, 0.08);
+}
+
+[data-theme='dark'] .footer {
+  --ifm-footer-background-color: #242526;
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: #99c9e9;
+  --ifm-footer-title-color: #ffffff;
+}
+
+/* Figure Styling */
+.figure-label {
+  font-weight: bold;
+  color: #00559e;
+}
+
+[data-theme='dark'] .figure-label {
+  color: #4d9fd6;
+}

@@ -97,43 +97,59 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Routes',
+                to: '/Routes/',
+              },
+              {
+                label: 'Measurements',
+                to: '/Measurements/',
+              },
+              {
+                label: 'Special Tests',
+                to: '/SpecialTests/',
+              },
+              {
+                label: 'DCU Setup',
+                to: '/DCUSetup/',
+              },
+              {
+                label: 'Power',
+                to: '/Power/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Resources',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Introduction',
+                to: '/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Appendix A: Glossary',
+                to: '/Appendix/glossary',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Appendix B: Troubleshooting',
+                to: '/Appendix/troubleshooting',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Social',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'LinkedIn',
+                to: 'https://www.linkedin.com/company/industrial-technology-research',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Website',
+                href: 'https://www.itr.com/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ITR - Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

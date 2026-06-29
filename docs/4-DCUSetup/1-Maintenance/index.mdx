@@ -1,4 +1,6 @@
 # Maintenance
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
 
 The **Maintenance** submenu provides tools that help technicians verify DCU operation before deployment. Use this submenu to run system health checks, test hardware components, and confirm that the device is ready for field use.
 
@@ -9,15 +11,12 @@ To open the Maintenance submenu, proceed as follows:
 
 The **Maintenance** submenu appears.
 
-{/* --- Image Block --- */}
-import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
-import Figure from "@site/src/components/Figure";
-
 <FigureProvider>
-    <Figure 
-        src="/img/4-DCUSetup/1-Maintenance/DCUSetupMaintenanceSubmenu.png" 
-        id="DCU Setup MaintenanceSubmenu" 
-        caption="DCU Setup Maintenance Submenu" 
+    <Figure
+        id="DCUSetupMaintenanceSubmenu"
+        src="/img/4-DCUSetup/1-Maintenance/DCUSetupMaintenanceSubmenu-Light.png"
+        srcDark="/img/4-DCUSetup/1-Maintenance/DCUSetupMaintenanceSubmenu-Dark.png"
+        caption="DCU Setup Maintenance Submenu"
         width="100%"
     />
 </FigureProvider>

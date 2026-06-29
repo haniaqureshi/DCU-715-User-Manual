@@ -39,10 +39,10 @@ export default function Figure({ src, srcDark, id, caption, width = "100%" }) {
           style={{ maxWidth: width, display: "block" }}
         />
 
-      <figcaption style={{ marginTop: "0.5rem", color: "var(--ifm-font-color-base)" }}>
-        <span style={{ color: "#00559e", fontWeight: "bold" }}>Figure {num}: </span>
-        {caption}
-      </figcaption>
+        <figcaption style={{ marginTop: "0.5rem", color: "var(--ifm-font-color-base)" }}>
+          <span className="figure-label">Figure {num}: </span>
+          {caption}
+        </figcaption>
       </figure>
     </>
   );
