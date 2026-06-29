@@ -10,8 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DCU 715 User Manual',
-  // tagline: 'Dinosaurs are cool',
+  title: 'DCU 715',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -77,9 +76,9 @@ const config = {
         },
       },
       navbar: {
-        title: 'DCU 715 User Manual',
+        title: 'DCU 715',
         logo: {
-          alt: 'DCU 715 User Manual Logo',
+          alt: 'DCU 715',
           src: 'img/logo.png',
         },
         items: [
@@ -149,7 +148,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} ITR - Built with Docusaurus.`,
+        copyright: `Copyright © 2016 - ${new Date().getFullYear()} ITR - Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
