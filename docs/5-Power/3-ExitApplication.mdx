@@ -6,3 +6,26 @@ sidebar_label: '5.3 - Exit Application'
 ---
 
 # Exit Application
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+<FigureProvider>
+
+    The **Exit Application** option closes the diagnostic software and terminates the current session. Unlike Power Off, 
+    this option does not shut down the DCU hardware, the device remains powered on after the application closes.
+
+    :::warning
+
+    Exiting the application terminates the active session. Ensure all data has been saved or synchronized before 
+    selecting this option, as unsaved progress will be lost.
+
+    :::
+
+    To exit the application, follow the steps below:
+
+    1. On the main menu, select **Power**, then select **Exit Application**.
+    2. The application interface closes immediately and the software process is terminated.
+    3. Verify that the system has returned to the desktop or login screen, confirming the application has exited successfully.
+
+</FigureProvider>
