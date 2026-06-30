@@ -10,8 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'DCU 715 User Manual',
-  // tagline: 'Dinosaurs are cool',
+  title: 'DCU 715',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -77,9 +76,9 @@ const config = {
         },
       },
       navbar: {
-        title: 'DCU 715 User Manual',
+        title: 'DCU 715',
         logo: {
-          alt: 'DCU 715 User Manual Logo',
+          alt: 'DCU 715',
           src: 'img/logo.png',
         },
         items: [
@@ -97,43 +96,59 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Routes',
+                to: '/Routes/',
+              },
+              {
+                label: 'Measurements',
+                to: '/Measurements/',
+              },
+              {
+                label: 'Special Tests',
+                to: '/SpecialTests/',
+              },
+              {
+                label: 'DCU Setup',
+                to: '/DCUSetup/',
+              },
+              {
+                label: 'Power',
+                to: '/Power/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Resources',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Introduction',
+                to: '/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Appendix A: Glossary',
+                to: '/Appendix/glossary',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Appendix B: Troubleshooting',
+                to: '/Appendix/troubleshooting',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Social',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'LinkedIn',
+                to: 'https://www.linkedin.com/company/industrial-technology-research',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Website',
+                href: 'https://www.itr.com/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © 2016 - ${new Date().getFullYear()} ITR - Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

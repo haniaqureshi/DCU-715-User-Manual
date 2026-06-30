@@ -29,3 +29,63 @@
   table-layout: fixed; /* Ensures columns share the max width evenly */
 }
 
+/* Figure Styling */
+.figure-label {
+  font-weight: bold;
+  color: #00559e;
+}
+
+[data-theme='dark'] .figure-label {
+  color: #4d9fd6;
+}
+
+/* Footer Styling */
+.footer {
+  --ifm-footer-background-color: #0056a0;
+  --ifm-footer-color: rgba(255, 255, 255, 0.85);
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.85);
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-title-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tighten up the column titles */
+.footer__title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-footer-title-color);
+}
+
+/* Subtle divider above copyright */
+.footer__bottom {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+}
+
+[data-theme='dark'] .footer {
+  --ifm-footer-background-color: #1a1b1e;
+  --ifm-footer-color: rgba(255, 255, 255, 0.8);
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.8);
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-title-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme='dark'] .footer {
+  --ifm-footer-background-color: #2a2b2e;  /* lighter than page bg */
+  --ifm-footer-color: rgba(255, 255, 255, 0.8);
+  --ifm-footer-link-color: rgba(255, 255, 255, 0.8);
+  --ifm-footer-link-hover-color: #ffffff;
+  --ifm-footer-title-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme='dark'] .footer__bottom {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Separator line at the very top of the footer */
+[data-theme='dark'] .footer.footer--dark {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
