@@ -31,32 +31,33 @@ import Figure from "@site/src/components/Figure";
     :::
 
     <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreen.png" 
-        id="AccelerometerTestsScreen" 
+        id="AccelerometerTests-Screen" 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/Accelerometer-Tests-Screen-Dark.png"
         caption="Accelerometer Tests Screen"
         width="70%"
     /> 
 
     ## Accelerometer Tests Screen
 
-    The following table describes the fields and controls available in the Accelerometer Tests screen in <FigureRef id="AccelerometerTestsScreen"/>.
+    The following table describes the fields and controls available in the Accelerometer Tests screen in <FigureRef id="AccelerometerTests-Screen"/>.
 
-    | Field/Button      | Description                                                                                                                                                                      | 
-    | :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
-    | Options           | **<u>Plot Type</u>** <br />Displays the currently selected plot type. Available options include:<br />**Real Time** <br />**RMS Trend**                                          |
-    |                   | **<u>Source</u>** <br />Displays the currently selected measurement source. Available options include:<br />**Accel** <br />**Bias**                                             |
-    |                   | **<u>Cable Test</u>** <br />Shows whether cable test mode is turned on or off. <br /><br />**Example:** off                                                                      |
-    |                   | **<u>Bias X</u>** <br />Displays the bias voltage measured on the X-axis. <br /><br />**Example:** 1.989 V                                                                       |
-    |                   | **<u>Bias Y</u>** <br />Displays the bias voltage measured on the Y-axis. <br /><br />**Example:** 1.994 V                                                                       |
-    |                   | **<u>Bias Z</u>** <br />Displays the bias voltage measured on the Z-axis. <br /><br />**Example:** 1.992 V                                                                       |
-    |                   | **<u>Meas. nr</u>** <br />Displays the current measurement number. <br /><br />**Example:** 49                                                                                   |
-    | Graph Area        | Displays measurement data for the selected channels.                                                                                                                             |
+    | Field/Button      | Description                                                                                                                                                                       | 
+    | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
+    | Options           | **<u>Plot Type</u>** <br />Displays the currently selected plot type. Available options include:<br />**Real Time** <br />**RMS Trend**                                           |
+    |                   | **<u>Source</u>** <br />Displays the currently selected measurement source. Available options include:<br />**Accel** <br />**Bias**                                              |
+    |                   | **<u>Cable Test</u>** <br />Shows whether cable test mode is turned on or off. <br /><br />**Example:** off                                                                       |
+    |                   | **<u>Bias X</u>** <br />Displays the bias voltage measured on the X-axis. <br /><br />**Example:** 1.989 V                                                                        |
+    |                   | **<u>Bias Y</u>** <br />Displays the bias voltage measured on the Y-axis. <br /><br />**Example:** 1.994 V                                                                        |
+    |                   | **<u>Bias Z</u>** <br />Displays the bias voltage measured on the Z-axis. <br /><br />**Example:** 1.992 V                                                                        |
+    |                   | **<u>Meas. nr</u>** <br />Displays the current measurement number. <br /><br />**Example:** 49                                                                                    |
+    | Graph Area        | Displays measurement data for the selected channels.                                                                                                                              |
     | Task status bar   | Displays the status of the currently running task. <br /><br />**Example:** Measurement <br /><br />**Note:** See [Task status bar](../../intro.mdx#task-status-bar) for details. |
-    | Options Button    | Opens the Accelerometer Tests Options screen                                                                                                                                     |
-    | Stop Button       | Stops the current measurement.                                                                                                                                                   |
-    | Reset Button      | Clears the displayed measurement data and restarts the graph display.                                                                                                            |
-    | Up Arrow Button   | Scrolls upward through the graph display when applicable.                                                                                                                        | 
-    | Down Arrow Button | Scrolls downward through the graph display when applicable.                                                                                                                      |
+    | Options Button    | Opens the Accelerometer Tests Options screen                                                                                                                                      |
+    | Stop Button       | Stops the current measurement.                                                                                                                                                    |
+    | Reset Button      | Clears the displayed measurement data and restarts the graph display.                                                                                                             |
+    | Up Arrow Button   | Scrolls upward through the graph display when applicable.                                                                                                                         | 
+    | Down Arrow Button | Scrolls downward through the graph display when applicable.                                                                                                                       |
 
     ## Configure Accelerometer Tests settings
 
@@ -67,32 +68,34 @@ import Figure from "@site/src/components/Figure";
     The **Accelerometer Tests Options** screen appears.
 
     <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsOptionsScreen.png" 
-        id="AccelerometerTestsOptionsScreen" 
+        id="AccelerometerTests-Options-Screen"
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Options-Screen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Options-Screen-Dark.png"
         caption="Accelerometer Tests Options Screen"
         width="70%"
     />
 
     ### Accelerometer Tests Options Screen
-    The following table describes the available configuration options in <FigureRef id="AccelerometerTestsOptionsScreen"/>.
+    The following table describes the available configuration options in <FigureRef id="AccelerometerTests-Options-Screen"/>.
 
-    | Option     | Description                                                                                                                                                                                                                                                                                                         |
-    | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Plot Type  | **<u>RMS Trend</u>** <br />Displays measurement data as RMS trend values over time. <br /><br /> **<u>Real Time</u>** <br />Displays live accelerometer signals in real time. |
-    | Source     | **<u>Accel</u>** <br />Displays accelerometer measurement data. <br /><br /> **<u>Bias</u>** <br />Displays sensor bias voltage values. <br /><br />**Note:** If the **Source** options are disabled, uncheck the **Cable Test** check box                                                                          |
-    | Cable Test | Enables or disables cable integrity testing. <br /><br /> **Note:** Selecting the **Cable Test** check box disables the **Source** options.                                                                                                                                                                         |
-    | Channel    | **<u>X</u>** <br />Enables or disables the X-axis channel. <br /><br /> **<u>Y</u>** <br />Enables or disables the Y-axis channel. <br /><br /> **<u>Z</u>** <br />Enables or disables the Z-axis channel.                                                                                                          |
-    | Cancel     | Closes the Options screen without saving changes.                                                                                                                                                                                                                                                                   |
-    | Save       | Saves the selected settings and returns to the Accelerometer Tests screen.                                                                                                                                                                                                                                          |  
+    | Option     | Description                                                                                                                                                                                                                                 |
+    | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Plot Type  | **<u>RMS Trend</u>** <br />Displays measurement data as RMS trend values over time. <br /><br /> **<u>Real Time</u>** <br />Displays live accelerometer signals in real time.                                                               |
+    | Source     | **<u>Accel</u>** <br />Displays accelerometer measurement data. <br /><br /> **<u>Bias</u>** <br />Displays sensor bias voltage values. <br /><br />**Note:** If the **Source** options are disabled, uncheck the **Cable Test** check box  |
+    | Cable Test | Enables or disables cable integrity testing. <br /><br /> **Note:** Selecting the **Cable Test** check box disables the **Source** options.                                                                                                 |
+    | Channel    | **<u>X</u>** <br />Enables or disables the X-axis channel. <br /><br /> **<u>Y</u>** <br />Enables or disables the Y-axis channel. <br /><br /> **<u>Z</u>** <br />Enables or disables the Z-axis channel.                                  |
+    | Cancel     | Closes the Options screen without saving changes.                                                                                                                                                                                           |
+    | Save       | Saves the selected settings and returns to the Accelerometer Tests screen.                                                                                                                                                                  |  
 
     #### Example: Channel selection
     The DCU allows individual accelerometer channels to be enabled or disabled during testing.
 
     For example, when only the **X** channel is enabled, the screen displays a single graph.
 
-    <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenWithX-axisChannelEnabled.png" 
-        id="AccelerometerTestsScreenWithX-axisChannelEnabled" 
+    <Figure
+        id="AccelerometerTests-Screen-WithX-axisChannel-Enabled" 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-WithX-axisChannel-Enabled-Light.png" 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-WithX-axisChannel-Enabled-Dark.png"
         caption="Accelerometer Tests Screen with X-axis Channel Enabled"
         width="70%"
     />
@@ -110,8 +113,9 @@ import Figure from "@site/src/components/Figure";
     The following example shows the RMS Trend display.
 
     <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenUsingRMSTrendPlotType.png" 
-        id="AccelerometerTestsScreenUsingRMSTrendPlotType" 
+        id="AccelerometerTests-Screen-Using-RMSTrendPlotType" 
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-Using-RMSTrendPlotType-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-Using-RMSTrendPlotType-Dark.png"
         caption="Accelerometer Tests Screen using RMS Trend Plot Type"
         width="70%"
     />

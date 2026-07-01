@@ -23,15 +23,16 @@ import Figure from "@site/src/components/Figure";
 
     The **Start Voltage Tests** screen appears.
 
-    <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/StartVoltageTestsScreen.png" 
-        id="StartVoltageTestsScreen" 
+    <Figure
+        id="Start-Voltage-Tests-Screen"  
+        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Start-Voltage-Tests-Screen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Start-Voltage-Tests-Screen-Dark.png"
         caption="Start Voltage Tests Screen"
         width="70%"
     /> 
 
     ## Start Voltage Tests Screen
-    The following table describes the fields and controls available in the Start Voltage Tests screen. <FigureRef id="StartVoltageTestsScreen"/>
+    The following table describes the fields and controls available in the Start Voltage Tests screen. <FigureRef id="Start-Voltage-Tests-Screen"/>
 
     | Field/Button               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
     | :------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -63,8 +64,9 @@ import Figure from "@site/src/components/Figure";
     5. Select **Pause** to stop updating the displayed values and review the current readings.
 
     <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/VoltageTestsInProgress.png" 
-        id="VoltageTestsInProgress" 
+        id="Voltage-TestsIn-Progress" 
+        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Voltage-TestsIn-Progress-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Voltage-TestsIn-Progress-Dark.png"
         caption="Voltage Tests in Progress"
         width="70%"
     />
@@ -112,14 +114,24 @@ import Figure from "@site/src/components/Figure";
     :::
 
     <Figure 
-        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/LimitTestsScreen.png" 
-        id="LimitTestsScreen" 
+        id="Limit-Tests-Screen"
+        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Limit-Tests-Screen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Limit-Tests-Screen-Dark.png" 
         caption="Limit Tests Screen"
         width="70%"
     />
 
-    The following table describes the fields and controls available in the Limit Tests screen. <FigureRef id="LimitTestsScreen"/>
+    The following table describes the fields and controls available in the Limit Tests screen. <FigureRef id="Limit-Tests-Screen"/>
 
-    | Field/Button               | Description                             |
-    | :------------------------- | :-------------------------------------- |
+    | Field/Button       | Description                                                                                                                                                                               |
+    | :----------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | Internal Voltages  | Displays voltage readings and associated limit violation counts. <br /><br />**Example:** Battery = 18.445, Count = 2                                                                     |
+    | Signal Channels    | Displays channel voltages and associated limit violation counts. <br /><br />**Example:** Channel X = 0.895, Count = 0                                                                    |
+    | Auxiliary Channels | Displays auxiliary channel voltages and associated limit violation counts. <br /><br />**Example:** Aux1 = 2.701, Count = 0                                                               |
+    | Test Status Panel  | **<u>Total Count</u>** <br /><br />**Example:** 2 <br /><br />**<u>Saturated</u>** <br />Indicates whether a channel has exceeded a saturation threshold. <br /><br />**Example:** Falsex |
+    | Start Limit Tests  | Starts automatic limit testing.                                                                                                                                                           |
+    | Pause              | Stop the running limit test.                                                                                                                                                              |
+
+    To return to the Main Menu, select the **Menu** button in the header.
+
 </FigureProvider>
