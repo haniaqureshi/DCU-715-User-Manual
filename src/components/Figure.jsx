@@ -36,7 +36,7 @@ export default function Figure({ src, srcDark, id, caption, width = "100%" }) {
             light: resolvedSrc,
             dark: resolvedSrcDark,
           }}
-          style={{ maxWidth: width, display: "block" }}
+          style={{ maxWidth: width, display: "block", margin: "0 auto" }}
         />
 
         <figcaption style={{ marginTop: "0.5rem", color: "var(--ifm-font-color-base)" }}>

@@ -36,13 +36,21 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh-Hans'],
-    localeConfigs: {
-      'zh-Hans': {
-        label: '中文',
-      },
-    },
+    locales: ['en'],
   },
+
+  plugins: [
+    [
+      'docusaurus-plugin-image-zoom',
+      {
+        selector: '.markdown img', 
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -61,6 +69,20 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['en'],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: '/',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -68,6 +90,13 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
+      },
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          margin: 24,
+          scrollOffset: 0,
+        },
       },
       themeConfig: {
         tableOfContents: {
