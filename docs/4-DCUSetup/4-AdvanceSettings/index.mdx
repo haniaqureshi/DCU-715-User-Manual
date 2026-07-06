@@ -1,1 +1,68 @@
 # Advance Settings
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+## Access Advanced Settings using Password
+
+The **Advanced Settings** submenu provides access to advanced device configuration options on the DCU. This submenu is password protected. 
+A valid **7-digit** password is required to access the Advanced Settings submenu. 
+
+To open the **Advanced Settings** submenu, proceed as follows:
+
+1. From the Main Menu, select **DCU Setup**.
+2. From the DCU Setup submenu, select **Advanced Settings**. The Enter Password modal will appear as shown in <FigureRef id="Enter-Password-Modal" />
+
+<FigureProvider>
+    <Figure 
+        id="Enter-Password-Modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/                    -Light.png"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/                -Dark.png" 
+        caption="Enter Password Modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Use the numeric keypad to enter the 7-digit password.
+
+:::info
+
+The password must be exactly 7 digits. The **Ok** button remains disabled until exactly 7 digits are entered. If fewer 
+than 7 digits are entered, the DCU does not accept the entry.
+
+:::
+
+4. Select **Ok**.
+    a. If the password is correct, the Advanced Settings submenu appears.
+    b. If the password is incorrect, a warning dialog appears as shown in .
+    c. Select **Close** to dismiss the dialog and re-enter the correct password.
+
+
+:::warning
+
+If an incorrect password is entered, the following message appears: **Wrong password**.
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Wrong-Password-Dialog" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/                    -Light.png"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/                -Dark.png" 
+        caption="Wrong password dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+d. When you enter the valid password the **Advanced Settings** submenu will appear as shown in Figure-5.5.2.
+e. To close the Enter Password modal without proceeding, select **Cancel**. 
+
+<FigureProvider>
+    <Figure 
+        id="Advanced-Settings-Submenu" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/                    -Light.png"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/                -Dark.png" 
+        caption="Advanced Settings submenu" 
+        width="70%"
+    />
+</FigureProvider>

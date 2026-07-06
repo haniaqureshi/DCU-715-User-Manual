@@ -6,3 +6,38 @@ sidebar_label: '4.4.3 - DCU Type'
 ---
 
 # DCU Type
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **DCU Type function** to define the hardware model of the DCU. Selecting the correct DCU type ensures that the software applies the appropriate processing parameters and calibration constants for the specific device.
+To open the DCU Type screen, proceed as follows:
+
+1. From the Advanced Settings submenu, select **DCU Type**. 
+2. The DCU Type screen appears, displaying the list of supported DCU types. 
+
+<FigureProvider>
+    <Figure 
+        id="DCU-Type-Screen" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/3-DCUType/                    -Light.png"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/3-DUCType/                -Dark.png" 
+        caption="DCU Type screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## DCU Type screen
+The following fields and controls available on the DCU Type screen are shown in <FigureRef id="DCU-Type-Screen" /> 
+
+| Options             | Description                                                                                                                                                             |                                                                                                                                          
+| :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Supported DCU types | Displays the list of supported DCU hardware models. Select the radio button corresponding to the installed hardware model. Available options include: DCU 714, DCU 715. |
+| Exit                | Saves the selected DCU type and returns to the Advanced Settings submenu.                                                                                               | 
+
+## Select the DCU type
+
+To select the DCU type, proceed as follows:
+1. From the Advanced Settings submenu, select **DCU Type**. The DCU Type screen appears.
+2. Locate the hardware model label on the physical DCU device.
+3. Select the radio button corresponding to the installed hardware model. Example: DCU 715
+4. Select **Exit**. The DCU saves the selected type and returns to the Advanced Settings submenu.
