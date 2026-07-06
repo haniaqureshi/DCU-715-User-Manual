@@ -6,3 +6,77 @@ sidebar_label: '4.3.10 - Wi-Fi Setup'
 ---
 
 # Wi-Fi Setup
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **WiFi Setup function** to configure and manage the wireless network connection on the DCU. Technicians can 
+turn Wi-Fi on or off, scan for available networks, and connect to a wireless network by entering the network name 
+and password. To open the WiFi Setup screen, proceed as follows:
+
+1. From the Settings submenu, select **WiFi Setup**.
+    <ul><li>If the WiFi adapter is available, the WiFi Setup screen appears.<br /></li>
+    <li>If the WiFi adapter is disabled, an error message appears as shown in <FigureRef id="" /></li></ul>
+
+<FigureProvider>
+    <Figure 
+        id="WiFi-Adapter-Disabled-(Error-message)" 
+        src="/img/4-DCUSetup/3-Settings/10-WifiSetup/                    -Light.png"
+        srcDark="/img/4-DCUSetup/3-Settings/10-WifiSetup/                -Dark.png" 
+        caption="WiFi adapter disabled (Error message)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+If the WiFi adapter is disabled, the following message appears: **WiFi adapter is disabled**. Select **Close** to 
+acknowledge the message and return to the Settings submenu.
+
+:::
+
+## WiFi Setup screen
+The following table describes the fields and controls available on the WiFi Setup screen as shown in <FigureRef id="WiFi-Adapter-Disabled-(Error-message)" />
+
+| Fields/Buttons | Description                                                                                           |                                                                                                                                          
+| :------------- | :---------------------------------------------------------------------------------------------------- |
+| Name           | Displays the name of the selected wireless network.                                                   |
+| Status         | Displays the current connection status of the wireless network.                                       |
+| Password       | Displays the password field for the selected wireless network. Enter the network password to connect. |
+| Name (list)    | Displays the name of each detected wireless network.                                                  | 
+| Connected      | Displays whether the DCU is currently connected to the network.                                       |
+| Signal         | Displays the signal strength of the detected network.                                                 |
+| Is Secure      | Displays whether the detected network is secured with a password.                                     |
+| Turn On Wi-Fi  | Enables the WiFi adapter and scans for available wireless networks.                                   |
+| Turn Off Wi-Fi | Disables the WiFi adapter and disconnects from the current network                                    |
+| Rescan         | Scans for available wireless networks and refreshes the network list.                                 |
+| Abandon        | Disconnects from the currently connected wireless network.                                            |
+| Cancel         | Closes the WiFi Setup screen and returns to the Settings submenu.                                     |
+
+## Connect to a WIFI network
+To connect to a wifi network, proceed as follows:
+
+1. From the Settings submenu, select WiFi Setup. The WiFi Setup screen appears as shown in <FigureRef id="" />.
+
+<FigureProvider>
+    <Figure 
+        id="WiFi-Setup-Screen" 
+        src="/img/4-DCUSetup/3-Settings/10-WifiSetup/                    -Light.png"
+        srcDark="/img/4-DCUSetup/3-Settings/10-WifiSetup/                -Dark.png" 
+        caption="WiFi Setup screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+2. Select **Turn On Wi-Fi**. The DCU enables the WiFi adapter and scans for available wireless networks. The detected networks appear in the network list.
+3. Select the desired network from the list. The network name appears in the **Name** field.
+4. Select the **Password** field and enter the network password using the on-screen keyboard.
+5. Select **Turn On Wi-Fi** to connect. The DCU connects to the selected wireless network. The **Status** field updates to reflect the active connection.
+6. To scan for networks again, select **Rescan**.
+7. To disconnect from the current network, select **Abandon**.
+8. To close the WiFi Setup screen without making changes, select **Cancel**.
+
+
+
+
+

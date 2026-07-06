@@ -6,3 +6,116 @@ sidebar_label: '4.3.9 - CMAS Server'
 ---
 
 # CMAS Server
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **CMAS Server function** to manage CMAS system connections on the DCU. Technicians can add, edit, select, and 
+delete CMAS server entries from this screen. To open the Select CMAS system screen, proceed as follows:
+
+From the Settings submenu, select **CMAS Server**. The Select CMAS system screen appears.
+
+<FigureProvider>
+    <Figure 
+        id="Select-CMAS-System-Screen" 
+        src="/img/4-DCUSetup/3-Settings/9-CMASServer/                    -Light.png"
+        srcDark="/img/4-DCUSetup/3-Settings/9-CMASServer/                -Dark.png" 
+        caption="Select CMAS system screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Select CMAS system screen 
+The following fields and controls available on the Select CMAS system screen are shown in <FigureRef id="" />. 
+
+| Fields/Buttons                | Description                                            |                                                                                                                                          
+| :-------------- | :--------------------------------------------------------------------|
+| CMAS | Displays the name of the CMAS server entry. <br />**Example:** abc |
+| Alias | Displays the alias assigned to the CMAS server entry. <br />**Example:** abc |
+| Selected | Displays a checkbox indicating whether the CMAS entry is currently selected. | 
+| Save | Saves the CMAS server entry. This button becomes available only after a valid CMAS name and alias are entered. |
+| Select | Selects the highlighted CMAS server entry as the active connection. |
+| New | Clears the CMAS and Alias fields and allows the technician to enter a new CMAS server entry. This button becomes unavailable after a CMAS name and alias are entered and before the entry is saved |
+| Edit | Opens the selected CMAS server entry for editing. |
+| ∧ (Up) | Scrolls up through the CMAS server list |
+| ∨ (Down) | Scrolls down through the CMAS server list. |
+| Delete | Deletes the selected CMAS server entry. A confirmation dialog appears before the entry is deleted. |
+| Cancel | Closes the Select CMAS system screen and returns to the Settings submenu. |
+
+## Add a new CMAS server entry
+To add a new CMAS server entry, proceed as follows:
+1. On the Select CMAS system screen, select **New**. The CMAS and Alias fields are cleared and the on-screen keyboard 
+appears as shown in <FigureRef id="Enter-CMAS-(on-screen keyboard)" />.
+
+<FigureProvider>
+    <Figure 
+        id="Enter-CMAS-(on-screen keyboard)" 
+        src="/img/4-DCUSetup/3-Settings/9-CMASServer/                    -Light.png"
+        srcDark="/img/4-DCUSetup/3-Settings/9-CMASServer/                -Dark.png" 
+        caption="Enter CMAS (on-screen keyboard)" 
+        width="70%"
+    />
+</FigureProvider>
+
+2. Select the **CMAS** field and use the on-screen keyboard to enter the CMAS server name.
+3. Select the **Alias** field and use the on-screen keyboard to enter the alias for the CMAS server.
+4. Select **Save.** The DCU saves the new CMAS server entry. The entry appears in the CMAS server list below the input fields.
+
+:::note
+
+The **Save** button becomes available only after both the CMAS name and alias fields contain a valid entry. The **New** button becomes 
+unavailable while a CMAS name and alias are entered and not yet saved.
+
+:::
+
+## Select a CMAS server entry
+To select a CMAS server entry as the active connection, proceed as follows:
+
+1. On the Select CMAS system screen, select the desired CMAS entry from the list. The selected entry is highlighted.
+2. Select Select. An Error message dialog appears as shown in <FigureRef id="" />.
+
+<FigureProvider>
+    <Figure 
+        id="CMAS-OPC-disabled-(Error-message-dialogbox)" 
+        src="/img/4-DCUSetup/3-Settings/9-CMASServer/                    -Light.png"
+        srcDark="/img/4-DCUSetup/3-Settings/9-CMASServer/                -Dark.png" 
+        caption="CMAS OPC disabled (Error message dialogbox)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+If CMAS OPC is disabled, the following message appears: **CMAS OPC is disabled. Enable this option in "Advanced 
+settings"** 
+
+:::
+
+3. Select **Close** to acknowledge the warning and return to the Select CMAS system screen. 
+
+## Delete a CMAS server entry
+To delete a CMAS server entry, proceed as follows:
+
+1. On the Select CMAS system screen, select the desired CMAS entry from the list. The selected entry is 
+highlighted and the checkbox in the **Selected** column is marked.
+2. Select **Delete.** A confirmation dialog appears as shown in <FigureRef id="Delete-CMAS-Server-(confirmation dialog)" />
+
+<FigureProvider>
+    <Figure 
+        id="Delete-CMAS-Server-(confirmation dialog)" 
+        src="/img/4-DCUSetup/3-Settings/9-CMASServer/                    -Light.png"
+        srcDark="/img/4-DCUSetup/3-Settings/9-CMASServer/                -Dark.png" 
+        caption="Delete CMAS server (confirmation dialog)" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Review the confirmation message: **Delete CMAS server: [server name]**.
+4. Select **Yes** to confirm the deletion. The DCU removes the selected CMAS server entry from the list.
+
+
+
+
+
+
+
