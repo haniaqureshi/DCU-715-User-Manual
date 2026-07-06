@@ -5,4 +5,57 @@ toc_max_heading_level: 4
 sidebar_label: '4.2.5 - Screenshots'
 ---
 
-# Screen shots
+# Screenshots
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+    Use the **Screenshots option**  to view, send, or delete screenshots that are stored on the DCU. 
+    If no screenshots are available, the screen displays a message indicating that no screenshots are stored on the device.
+
+    To open the Display Screenshots screen, proceed as follows:
+
+    1. From the Main Menu, select **Diagnostics**.
+    2. From the Diagnostics submenu, select **Screenshots**.
+
+    The Display Screenshots screen appears as show in the <FigureRef id="Display Screenshots screen" />.
+
+    <FigureProvider>
+        <Figure 
+            id="Display Screenshots screen" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/.png" 
+            caption="Display Screenshots screen" 
+            width="70%"
+        />
+    </FigureProvider>
+
+    ## View and manage screenshots
+
+    To view and manage screenshots, proceed as follows:
+        1. Open the Display Screenshots screen.
+
+            a. If no screenshots are available, the screen displays **No screenshots available.**<br />
+            b. Select **Cancel** to return to the Diagnostics submenu.<br />
+            c. If screenshots are available, proceed with the steps below.
+
+                i.   Review the screenshot counter at the top of the screen to confirm the total number of available screenshots.<br />
+                ii.  Use the **up** and **down** arrow buttons to scroll through the available screenshots.<br />
+                iii. To send a screenshot, select the desired screenshot and select **Send**. The DCU sends the selected screenshot.<br />
+                iv.  To delete a screenshot, select the desired screenshot and select **Delete**. The DCU removes the selected screenshot from the device.
+
+    ## Display Screenshots screen
+
+    The following fields and controls available on the Display Screenshots screen.
+
+    | Options                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                
+    | :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Options                        | **<u>Pre-Selected Ranges</u>**<br />Displays the currently selected frequency range. Example: 50,000 CPM (4 Code)<br /><br />**<u>Dynamic Filter (all in hertz)</u>** <br />Displays the dynamic filter parameters.<br />-**Filter**<br />Displays the selected filter type.<br />**Example:** LP <br />-**Sample Rate**<br />Displays the sample rate value in hertz.<br />**Example:** 12,800<br /> -**fsamp (fmax x 2.56)**<br />Displays the calculated sampling frequency.<br />**Example:** 2133.333<br />-**Fmax**<br />Displays the maximum frequency value.<br />**Example:** 833.333 <br /> -**Taps**<br />Displays the number of filter taps.<br />**Example:** 1,500  |                                  
+    | Chart area                     | Displays a live frequency chart showing amplitude (g's) versus frequency (Hertz). The chart updates after running a range test or filter test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+    | Run Range Test                 | Runs the range test and displays the result on the frequency chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+    | Run Filter Test                | Runs the filter test and displays the result on the frequency chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | ∧ (Up)                         | Scrolls up in the chart view.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | ∨ (Down)                       | Scrolls down in the chart view.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | Option                         | Open the Options screen to configure filter parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+
+    Select **Cancel** to return to the Diagnostics submenu.

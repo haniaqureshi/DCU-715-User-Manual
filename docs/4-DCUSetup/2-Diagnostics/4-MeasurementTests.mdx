@@ -6,3 +6,270 @@ sidebar_label: '4.2.4 - Measurement Tests'
 ---
 
 # Measurement Tests
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+    Use the Measurement Tests function to collect real-time vibration data from connected sensors. 
+    This screen displays current measurement options, output values, and live chart data. 
+    Technicians can configure measurement settings, select a sensor, store collected data to a route, 
+    and monitor sensor channel status during the measurement process.
+
+    To open the Measurement Tests screen, proceed as follows:
+
+    1. From the **Main Menu**, select **Measurement Tests**.
+    2. The Measurement Tests screen appears as shown in the <FigureRef id="Measurement-Tests-Screen" /> below.
+
+    
+    <FigureProvider>
+        <Figure 
+            id="Measurement-Tests-Screen" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Measurement-Tests-Screen-Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Measurement-Tests-Screen-Dark.png" 
+            caption="Measurement Tests screen" 
+            width="70%"
+        />
+    </FigureProvider>
+
+    ## Measurement Tests screen
+
+    The following fields, sections, and controls available on the Measurement Tests screen.
+
+    | Field/Button    | Description                                                                                                                                                  
+    | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |   
+    | Options         | **<u>Sensor</u>** <br />Displays the sensor type currently selected for measurement. <br />**Example:** 10 mv/g triax <hr />**<u>Frequency</u>** <br />Displays the measurement frequency in cycles per minute (CPM). <br />**Example:** 0 CPM <hr />**<u>Calibrate</u>** <br />Displays whether calibration is enabled or disabled.<br />**Example:** Off <hr />**<u>Mode</u>** <br />Displays the selected measurement mode.<br />**Example:** Waterfall <hr />**<u>1 Shot</u>** <br />Displays whether single-shot mode is enabled.<br /> **Example:** No <hr /> **<u>Resolution</u>** <br />Displays the resolution value for the measurement.<br />**Example:** 200**<hr /> **<u>HiPass</u>** <br />Displays whether the HiPass filter is active.<br />**Example:**  On <hr /> **<u>Time (s)</u>** <br />Displays the measurement time in seconds.<br />**Example:** 0.00 <hr /> **<u>Trigger Value</u>** <br />Displays the configured trigger value, if set.<hr /> **<u>Samples</u>** <br />Displays the number of samples collected.<br />**Example:** 0 <hr /> **<u>Integrate</u>** <br />Displays whether integration is enabled.<br />**Example:** No <hr /> **<u>Couple</u>** <br />Displays the coupling type selected.<br />**Example:** AC Couple <hr /> **<u>Measure</u>** <br />Displays the active measurement axis.<br />**Example:** X <hr /> **<u>Use Anti-Alias</u>** <br />Displays whether the anti-alias filter is enabled or disabled.<br />**Example:** Disabled |
+    | Output          | **<u>DC Off</u>** <br />Displays the DC offset value for each axis.<br />**Example:** X: 0.0000 Y: 0.0000 Z: 0.0000 <hr />**<u>RMS</u>** <br />Displays the root mean square value for each axis.<br />**Example:** X: 0.0000 Y: 0.0000 Z: 0.0000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+    | Waterfall       | **<u>Plots</u>** <br />Displays the number of waterfall plots configured.<br />**Example:** 1 <hr /> **<u>Interval</u>** <br />Displays the waterfall interval value.<br />**Example:** 1.000 <hr />**<u>Waterfall</u>** <br />Displays the current waterfall count.<br />**Example:** 0 
+    | Start Measuring | Start MeasuringStarts the measurement data collection cycle 
+    | Break           | Pauses the active measurement session. |
+    | Store Data      | Opens the Select Route modal to save collected measurement data to a route. |
+    | Sensor          | Opens the Sensor Selection modal to configure the sensor type and sensitivity. 
+    | Options         | Opens the Options configuration screen to set measurement parameters.
+    | More            | Expands the button panel to display additional controls. 
+    | Less            | Collapses the expanded button panel and returns to the standard button layout. 
+    | Task status bar | Displays the current task status at the bottom of the screen. Examples: Waiting, Ready, Measurement, Store Data.
+
+    ## Start Measuring 
+
+    Use the Start Measuring function to begin real-time data collection from the connected sensor. 
+    When measurement starts, the DCU collects output values and displays a live chart.  
+
+    ## Run a measurement
+
+    To start a measurement, proceed as follows:
+
+    1. On the Measurement Tests screen, select **Start Measuring**. The task status bar displays **Waiting**.
+    2. Wait for the DCU to initialize the measurement session. The task status bar updates to **Ready**, and the chart area displays a live data graph.
+    3. Monitor the following values in the **Output** section during the measurement:
+        - DC Off (X, Y, Z)
+        - RMS (X, Y, Z)
+    4. Review the live chart to observe amplitude data in real time.
+    5. Select **Break** to pause the measurement session, or select **Store Data** to save the collected data.
+
+    
+    
+    
+    <FigureProvider>
+        <Figure 
+            id="Start-Measurement" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/" 
+            caption="Measurement Tests screen (Start Measurement)" 
+            width="70%"
+        />
+    </FigureProvider>
+
+    :::Info
+
+        When Waterfall mode is active, the chart area displays a three-dimensional waterfall graph.
+        The Waterfall section shows the current plot count, interval, and waterfall reading. 
+
+    :::
+
+
+    ## Store Data
+
+    Use the Store Data function to save collected measurement data to a selected route. 
+    When the technician selects Store Data, the Select Route modal appears and displays the available routes stored on the DCU.
+
+    To store measurement data, proceed as follows:
+
+    1. On the Measurement Tests screen, select Store Data. The Select Route screen will appear as shown in the <FigureRef id="Select-Route-List-Screen" />.
+
+    <FigureProvider>
+        <Figure 
+            id="Select-Route-List-Screen" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Select-Route-List-Screen-Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Select-Route-List-Screen-Dark.png" 
+            caption="Select Route list Screen" 
+            width="70%"
+        />
+    </FigureProvider>
+
+    2. Select the desired route from the list. The selected route is highlighted.
+    3. Select **Select**. The DCU saves the measurement data to the selected route and returns to the Measurement Tests screen and displays **Store Data** in the task status bar.  
+
+    ## Sensor
+
+    Use the **Sensor function** to configure the sensor type and sensitivity before starting a measurement session.
+    To open the Sensor Selection modal, proceed as follows:
+    
+    1. On the Measurement Tests screen, select **Sensor**. The Sensor Selection pop-up will appear as shown in <FigureRef id="Sensor-Selection-Screen" />. 
+
+    <FigureProvider>
+        <Figure 
+            id="Sensor-Selection-Screen" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Sensor-Selection-Screen-Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Sensor-Selection-Screen-Dark.png" 
+            caption="Sensor Selection Screen" 
+            width="70%"
+        />
+    </FigureProvider>
+
+    ## Sensor Selection modal
+
+    The following fields and controls available in the Sensor Selection modal.
+    
+    | Field/Button           | Description                                                                                                                          |                                                                                                                                          
+    | :--------------        | :------------------------------------------------------------------------------------------------------------------------------------|
+    | Sensor                 | Selects the sensor type from the available options using the dropdown. <br />**Example:** Triaxial Accelerometer                     |
+    | Sensitivity            | Selects the sensor sensitivity from the available options using the dropdown.<br />**Example:** 10 mv/g                              |
+    | Checks Cable Integrity | Enables a cable integrity check when the sensor is confirmed. When selected, the DCU checks the cable connection before proceeding.  |
+    | Cancel                 | Closes the Sensor Selection modal without saving changes and returns to the Measurement Tests screen.                                |
+    | Ok                     | Saves the sensor configuration and returns to the Measurement Tests screen.                                                          |
+
+    ## Configure the sensor
+
+    1. To configure the sensor, proceed as follows:
+    2. Select the desired sensor type from the **Sensor** dropdown.
+    3. Select the desired sensitivity value from the **Sensitivity** dropdown.
+    4. To enable a cable integrity check, select the **Checks Cable Integrity** checkbox.
+    5. Select **Ok**. The DCU saves the sensor configuration and returns to the Measurement Tests screen. 
+    The updated sensor details appear in the **Options** section of the Measurement Tests screen.
+    6. To close the Sensor Selection modal without saving changes, select **Cancel**.
+
+
+    ## Options
+
+    Use the Options function to configure measurement parameters before starting a measurement session. 
+    The Options screen allows the technician to set the frequency, resolution, averages, 
+    measurement mode, coupling type, and additional signal processing options.
+
+    To open the Options screen, proceed as follows:
+
+    1. On the Measurement Tests screen, select Options. The Options screen appears.
+
+    <FigureProvider>
+        <Figure 
+            id="Configure Options (Triaxial Accelerometer)" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests-Dark.png" 
+            caption="Configure Options (Triaxial Accelerometer)" 
+            width="70%"
+        />
+    </FigureProvider> 
+
+    ## Option Screen 
+
+    The following fields and controls available on the Options screen.
+
+    | Options                | Description                                                                                                                                                                                                                                                            |                                                                                                                                          
+    | :--------------        | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Frequency              | Sets the measurement frequency in cycles per minute (CPM). Select from the dropdown.<br />**Example:** 5,000 CPM                                                                                                                                                       |
+    | Resolution             | Sets the frequency resolution for the measurement. Select from the dropdown.<br />**Example:** 200                                                                                                                                                                     |
+    | Averages               | Sets the number of averages for the measurement. Select from the dropdown.<br />**Example:** 1                                                                                                                                                                         |
+    | Demod                  | Sets the demodulation frequency in CPM. Select from the dropdown.<br />**Example:** 5,000 CPM                                                                                                                                                                          |
+    | Mode                   | Selects the measurement mode. Available options include:<br /> -Spectrum <br /> -Time <br /> -Demod <br /> -URE <br /> -Phase <br /> -Waterfall                                                                                                                        |
+    | Show Channel           | Selects the measurement axis to display. Available options include:<br /> -X <br /> -Y <br /> -Z                                                                                                                                                                       |
+    | 1 Shot                 | Enables or disables single-shot measurement mode. When selected, the DCU captures one measurement and stops.                                                                                                                                                           |
+    | Trigger                | Sets the trigger value for the measurement.<br />**Example:** 0                                                                                                                                                                                                        |                                                            
+    | Max. chart             | Enables or disables the maximum chart display option.                                                                                                                                                                                                                  |
+    | Cable Check            | Enables the cable integrity check before measurement.                                                                                                                                                                                                                  | 
+    | Integrate              | Enables signal integration.                                                                                                                                                                                                                                            |
+    | Calibrate              | Enables calibration mode. When selected, Cable Check becomes unavailable.                                                                                                                                                                                              |   
+    | HiPass                 | Enables the high-pass filter.                                                                                                                                                                                                                                          |  
+    | AC Couple              | Selects AC coupling for the signal input.                                                                                                                                                                                                                              |     
+    | DC Couple              | Selects DC coupling for the signal input.                                                                                                                                                                                                                              |  
+    | Use Anti-Alias Filters | Enables the anti-alias filter for the measurement.                                                                                                                                                                                                                     |
+    | Waterfall              | Displays the Waterfall section. This section appears when Waterfall mode is selected. <br /><br />**<u>Plots</u>**<br />Sets the number of waterfall plots. <br />**Example:** 1 <br /><br />**<u>Interval</u>**<br />Sets the waterfall interval.<br />**Example:** 1 |
+    | Cancel                 | Closes the Options screen without saving changes and returns to the Measurement Tests screen.                                                                                                                                                                          |
+    | Save                   | Saves the configured options and initiates the Sensor Channel Status check.                                                                                                                                                                                            |
+
+
+    ## Configure measurement options
+
+    To configure the measurement options, proceed as follows:
+
+    1. On the Option screen you can:<br />
+        a.  Select the desired Frequency from the dropdown.<br />
+        b.  Select the desired Resolution from the dropdown.<br />
+        c.  Select the desired Averages from the dropdown.<br />
+        d.  Select the desired Mode from the available options:<br />
+            i.   Spectrum<br />
+            ii.  Time<br />
+            iii. Demod<br />
+            iv.  URE<br />
+            v.   Phase<br />
+            vi.  Waterfall
+
+        e.  Select the **Show Channel** axis (X, Y, or Z) to specify which axis to measure.<br />
+        f.  Enable or disable the following options as required by selecting the corresponding checkbox or radio button:<br />
+            i.    Cable check<br />
+            ii.   Integrate<br />
+            iii.  Calibrate<br />
+            iv.   Hipass<br />
+            v.    Ac/Dc Couple<br />
+            vi.   Use Anti-Alias Filter<br />
+            vii.  1 Shot<br />
+            viii. Max.Chart
+
+    :::Note
+        - When **Calibrate** is selected, the **Cable Check** option becomes disabled.
+        - When **Waterfall** mode is selected, the Waterfall section appears at the bottom of the screen. 
+        Configure the **Plots** and **Interval** fields as required.
+    :::
+
+    2. Select **Save**. The DCU saves the configured options and returns to the Measurement Tests screen.
+    3. On the Measurement Tests screen, select **Start Measuring**. The Sensor Channel Status modal appears and displays the progress of the sensor check for channels X, Y, and Z.
+
+    <FigureProvider>
+        <Figure 
+            id="Sensor Channel Status pop-up" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests-Dark.png" 
+            caption="Sensor Channel Status pop-up" 
+            width="70%"
+        />
+    </FigureProvider> 
+
+    4. Wait for the sensor channel status check to complete. After the check is complete, the Sensor Channel Status modal closes and the task status bar displays **Ready**. 
+    The chart area displays live measurement data according to the selected configuration.
+
+    ## More OptionsSelect More 
+
+    On the Measurement Tests screen to expand the button panel and access additional controls.
+
+    <FigureProvider>
+        <Figure 
+            id="Sensor Channel Status pop-up" 
+            src="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests/Light.png"
+            srcDark="/img/4-DCUSetup/2-Diagnostics/4-MeasurementTests-Dark.png" 
+            caption="Measurement Tests screen (More options)" 
+            width="70%"
+        />
+    </FigureProvider> 
+
+    The following additional controls are available after selecting More.
+
+    | Options                | Description                                                          |                                                                                                                                          
+    | :--------------        | :--------------------------------------------------------------------|
+    | Demod. Options         | Opens the demodulation options configuration screen.                 |
+    | Reset                  | Resets the current measurement session and clears the output values. | 
+    | Expand chart (icon)    | Expands the chart area to a larger view for easier data review.      | 
+    | ∧ (Up)                 | Scrolls up in the measurement data or chart view.                    |
+    | ∨ (Down)               | Scrolls down in the measurement data or chart view.                  |
+
+    To return to the Main Menu, select the **Menu** button in the header.
+
+
+
