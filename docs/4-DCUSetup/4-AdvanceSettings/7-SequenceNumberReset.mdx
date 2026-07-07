@@ -6,3 +6,49 @@ sidebar_label: '4.4.7 - Sequence Number Reset'
 ---
 
 # Sequence Number Reset
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **Sequence Number Reset function** to manually reset the internal counter that tracks the transmission of 
+data packets to the CMAS server. This function is used when troubleshooting data synchronization issues. To open 
+the Sequence Number Reset confirmation dialog, proceed as follows: 
+
+1. From the Advanced Settings submenu, select **Sequence Number Reset**s. 
+2. A confirmation dialog appears as shown in <FigureRef id="Sequence-Number-Reset-Confirmation-Dialog" />
+
+<FigureProvider>
+    <Figure 
+        id="Sequence-Number-Reset-Confirmation-Dialog" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/7-SequenceNumberReset/                    -Light.png"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/7-SequenceNumberReset/                -Dark.png" 
+        caption="Sequence Number Reset confirmation dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Sequence Number Reset confirmation dialog
+The following controls are available in the Sequence Number Reset confirmation dialog. 
+
+| Control              | Description                                                                   |                                                                                                                                          
+| :------------------- | :---------------------------------------------------------------------------- |
+| Confirmation message | Displays the message: **Are you sure you want to reset the sequence Number?** |
+| Yes                  | Confirms the reset and returns to the Advanced Settings submenu.              |
+| No                   | Cancels the reset and returns to the Advanced Settings submenu.               |  
+
+## Reset the sequence number
+To reset the sequence number, proceed as follows:
+
+1. From the Advanced Settings submenu, select **Sequence Number Reset**. A confirmation dialog appears.
+2. Review the confirmation message: **Are you sure you want to reset the sequence Number?**
+
+:::warning
+
+Are you sure you want to reset the sequence Number?
+
+:::
+
+3. Select **Yes** to confirm the reset. The DCU resets the sequence number and returns to the Advanced Settings submenu.
+4. To cancel the reset without making changes, select **No**.The DCU returns to the Advanced Settings submenu in both cases.
+
+

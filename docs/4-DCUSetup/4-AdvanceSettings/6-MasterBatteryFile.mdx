@@ -6,3 +6,61 @@ sidebar_label: '4.4.6 - Master Battery File'
 ---
 
 # Master Battery File
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **Master Battery File function** to generate a Master Battery Curve for the DCU. This process maps the discharge characteristics of the internal battery, which the DCU uses to provide accurate battery percentage readings during operation.
+To open the Generate Master Battery Curve modal, proceed as follows:
+
+1. From the Advanced Settings submenu, select **Master Battery File**. 
+2. The Generate Master Battery Curve modal appears as shown in <FigureRef id="Generate-Master-Battery-Curve-Modal" />.
+
+<FigureProvider>
+    <Figure 
+        id="Generate-Master-Battery-Curve-Modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/6-MasterBatteryFile/                    -Light.png"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/6-MasterBatteryFile/                -Dark.png" 
+        caption="Generate Master Battery Curve modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Generate Master Battery Curve modal 
+The following fields and controls available in the Generate Master Battery Curve modal are shown in <FigureRef id="Generate-Master-Battery-Curve-Modal" />.
+
+| Field/Button    | Description                                                                                            |                                                                                                                                          
+| :-------------- | :----------------------------------------------------------------------------------------------------- |
+| Battery Voltage | Displays the DFPID value entered by the user. A minimum of 2 digits is required. <br />**Example:** 16 |
+| Start           | Starts the Master Battery Curve generation process.                                                    |
+| Stop            | Stops the Master Battery Curve generation process and saves the collected data.                        |
+| Cancel          | Closes the Generate Master Battery Curve modal and returns to the Advanced Settings submenu.           | 
+
+:::info
+
+When the process is complete, the DCU creates a battery curve file. The system message bar at the bottom of the
+screen displays the file location. Example: File 'C:\CVASYS\ITR100\Master Battery Curve.txt' has been created. 
+
+:::
+
+## Generate the Master Battery Curve
+To generate the Master Battery Curve, proceed as follows:
+
+1. From the Advanced Settings submenu, select **Master Battery File**. The Generate Master Battery Curve modal appears.
+2. Ensure the DCU is fully charged and disconnected from any external power source before starting the process.
+3. Select **Start**. The DCU begins the Master Battery Curve generation process. The **Battery Voltage** field displays the current voltage reading in real time.
+4. Allow the process to run until sufficient data has been collected.
+5. Select **Stop**. The DCU stops the generation process and saves the battery curve data. The system message bar displays the file location of the generated Master Battery Curve file.
+6. To close the Generate Master Battery Curve modal without completing the process, select **Cancel**.
+
+:::note
+
+
+When the generation process starts, the **Cancel** button becomes disabled. The **Cancel** button becomes enabled again 
+only after **Stop** is selected to end the generation process.
+
+:::
+
+
+
+
