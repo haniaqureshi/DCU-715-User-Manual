@@ -1,1 +1,17 @@
 # Routes
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+In this module, we will explain how the Routes module is used to manage measurement routes 
+within the DCU device. It allows users to create, update, select, and delete routes for vibration
+data collection and machine condition monitoring. Before accessing and working with routes, the system
+performs internal checks (such as voltage and system validation) to ensure the device is operating correctly. 
+All route-related data is managed through a backend server and stored in a central database (SQL Server), 
+which is connected to the ITR system. This ensures that routes created, updated, or deleted on the server are 
+properly synchronized with the DCU device. Routes are designed to organize measurement activities for industrial
+equipment, and they can also be configured based on different client locations or operational areas. To explore the
+routes module see <FigureRef id="DCU Routes Sub Menu" />
+
+
+
