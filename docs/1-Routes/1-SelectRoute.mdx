@@ -1,0 +1,650 @@
+---
+sidebar_position: 1
+toc_min_heading_level: 2
+toc_max_heading_level: 4
+sidebar_label: '1.1 - Select Route'
+---
+
+# Select Routes
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+The **Select Route** option allows the user to choose a measurement route for data collection.
+Once you select this option the system will display all routes that are currently available on the device. These 
+routes are typically downloaded by technicians from the DCU and stored locally after synchronization with the server.
+
+**Key-Points:**
+
+<ul><li>The route list is fetched from the database (SQL Server).</li>
+<li>Only downloaded and available routes are displayed.</li>
+<li>Routes are used to perform measurements on industrial equipment through the ITR system.</li></ul>
+
+**Procedure For Access the Select Route Module:**
+
+1. From the **Routes** menu, click **Select Route**.
+2. The list of available routes will appear.
+3. Select the required route.
+4. Click on **Select** to load the route.
+
+<FigureProvider>
+    <Figure 
+        id="DCU-Routes-Sub-Menu" 
+        src="/img/1-Routes/1-SelectRoute/Select-Routes-Measurement-Route-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Select-Routes-Measurement-Route-Screen-Dark.png"
+        caption="Select Routes (Measurement Route List)" 
+        width="70%"
+    />
+</FigureProvider>
+
+After loading the route, the **Measurement List** screen will appear, as shown in <FigureRef id="" />.
+
+**Procedure**
+
+1. Navigate to **Measurements > Select Route**.
+2. Select a route from the list.
+3. Click the **Select** button from the right-side operational menu.
+4. If the selected route contains configuration data older than two weeks (14 days), an warning alert dialog box 
+    appears. See <FigureRef id="Warning-Dialog-Box" />.
+
+<FigureProvider>
+    <Figure 
+        id="Warning-Dialog-Box" 
+        src="/img/1-Routes/1-SelectRoute/Warning-Dialogbox-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Warning-Dialogbox-Dark.png"
+        caption="Warning Dialog Box" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning 
+
+    Routes older than two weeks may not contain the latest equipment changes, updated limits, or measurement point
+    updates. Therefore, their use is not recommended.
+
+:::
+
+**When "Yes" is Selected** <br />
+**Press 'YES':** To acknowledge the stale data warning. The system remains on the current screen, allowing you to 
+either update the route with the latest data or continue with the measurement process using the existing route. 
+
+## Measure Data 
+If you want to measure the data, you can click on the **Measure Data** option from the right-side menu of the **Select 
+Route** screen. 
+
+**Procedure:**	
+
+1. Select any route from the list and click on the **Measure Data** option.
+2. The **Transmit Measurements** screen will open, displaying the available routes as shown in Figure-2.2.3.
+3. Choose the desired routes by checking the box in the **Selected** column and click the **Transmit** option.
+4. After clicking this option, the route data will be transmitted, and the system will redirect you to the main screen.
+
+<FigureProvider>
+    <Figure 
+        id="Measurement-Data-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Measurement-Data-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Measurement-Data-Screen-Dark.png"
+        caption="Measurement Data Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## More Option (Displayed When "Measure Data" is Selected)
+When you click on **"Measure Data"** from the main menu, the system navigates to the **"Transmit Measurements"** screen. From this screen, you can configure your connection source and data transfer settings before transmitting.
+
+**Procedure to Change Connection Settings:**
+1. Click on **Measure Data** to open the **Transmit Measurements** screen.
+2. On the right-side vertical panel, click the **More** button (indicated by the arrow navigation at the bottom) to display additional menu options.
+3. Click on the **Options** button from the expanded right-side menu as shown in the <FigureRef id="Measure-Data-More-Screen" />
+
+<FigureProvider>
+    <Figure 
+        id="Measure-Data-More-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Measure-Data-More-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Measure-Data-More-Screen-Dark.png"
+        caption="Measurement Data (More screen)" 
+        width="70%"
+    />
+</FigureProvider>
+
+4. The Options configuration window will open, as shown in Figure-2.2.5. Set your required preferences:
+<ul><li>**Connection Selection:** Select your preferred data path by clicking the corresponding radio button (USB Drive, USB Drive - Data from backup, or ITR.com).</li>
+<li>**Transmission Filters:** Check or uncheck the rule boxes on the right (e.g., Data not previously transmitted, Measurements Only, High speed transmission) based on your requirements.</li></ul>
+5. After applying all modifications click the **Save** button at the bottom right to apply your settings.
+
+<FigureProvider>
+    <Figure 
+        id="Measure-Data-Connection-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Measure-Data-Connection-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Measure-Data-Connection-Screen-Dark.png"
+        caption="Measurement Data (Connection screen)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::note
+
+After clicking **Save**, you will be redirected back to the main transmission screen. Your active selection will now 
+be displayed in the top status bar (e.g., "Connection: USB Drive - from backup etc.
+
+:::
+
+**When "No" is Selected** <br />
+**Press 'NO':** To disregard the alert, dismiss the dialog box, and proceed to the active measurement routes screen  to collect or review data under the existing configuration.
+
+## Executing Route Measurements 
+When you click No on the alert box, the system takes you to the measurement list where you can start collecting data. 
+
+**Procedure**
+1. Redirect to the Routes screen that displayed a list of machines and their Measurement Points as shown in <FigureRef id="Measurement-Points-Screen" />
+
+<FigureProvider>
+    <Figure 
+        id="Measurement-Points-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Measurement-Points-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Measurement-Points-Screen-Dark.png"
+        caption="Measurement Points Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+2. After selecting the measurement point, click the Measurement button from the right-side operational menu.
+3. The measurement starts, and a yellow bar labeled "Measurement" appears at the bottom of the screen to indicate
+that the test is in progress, as shown in <FigureRef id="Measurement-In-process" />
+
+<FigureProvider>
+    <Figure 
+        id="Measurement-In-process" 
+        src="/img/1-Routes/1-SelectRoute/Routes-Measurement-Inprogress-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Routes-Measurement-Inprogress-Dark.png"
+        caption="Measurement In process" 
+        width="70%"
+    />
+</FigureProvider>
+
+4. Once the measurement is complete, the RCM Results screen opens and displays the test results. The RMS Increase
+screen shows the vibration levels for the X, Y, and Z axes, as shown in <FigureRef id="RCM-Results" />
+
+<FigureProvider>
+    <Figure 
+        id="RCM-Results" 
+        src="/img/1-Routes/1-SelectRoute/RCM-Results-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/RCM-Results-Dark.png"
+        caption="RCM Results" 
+        width="70%"
+    />
+</FigureProvider>
+
+5. If you need to stop the measurement early, just click the Stop request button on the screen as shown in the 
+<FigureRef id="Stop-Measurement-In-process-Screen" />.
+
+<FigureProvider>
+    <Figure 
+        id="Stop-Measurement-In-process-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Stop-Measurement-In-process-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Stop-Measurement-In-process-Screen-Dark.png"
+        caption="Measurement In process Screen (Stop Measurement Request)" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Area/Machine View
+Click on the **Area/Machine** option from the **right-side menu**.
+
+**Procedure:**
+1. Click on the **Area/Machines** option from the right-side menu.
+2. The **Area in Route** screen will appear as shown in <FigureRef id="List-of-Area" />. 
+3. This screen lists will display all the available areas that are included in your active route file.
+4. Highlight your desired area click on **Select** option.
+
+<FigureProvider>
+    <Figure 
+        id="List-of-Area" 
+        src="/img/1-Routes/1-SelectRoute/List-of-Area-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/List-of-Area-Dark.png"
+        caption="List of Area" 
+        width="70%"
+    />
+</FigureProvider>
+
+5. Once an area is chosen, the  list of machines related to that selected area will display as shown in <FigureRef id="List-of-Machine-in-Area" />
+
+<FigureProvider>
+    <Figure 
+        id="List-of-Machine-in-Area" 
+        src="/img/1-Routes/1-SelectRoute/List-of-Machine-in-Area-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/List-of-Machine-in-Area-Dark.png"
+        caption=" List of Machine in Area" 
+        width="70%"
+    />
+</FigureProvider>
+
+6. Choose the required machine from the list and click on select option. 
+7. The system will open the Measurement Screen for the selected machine as shown in <FigureRef id="Measurement-Screen-(for-measure-machine-in-area)" />
+8. From this screen, you can manage and perform measurements on the machine. This screen displays:
+<ul><li>**Machine Details:** The top section shows the machine ID, name, status configuration (ICP, Settling, Cable Check), and severity details.</li>
+<li>**Measurement Points List:** A list of all specific test locations on the machine along with their previous measurement dates.</li>
+<li>**Control Panel:** Use the right-side menu buttons **(Measure, NEXT, PREV)** to control data collection or navigate between points.</li>
+<li>Tap the **Areas / Machines** button if you need to go back and select a different equipment group.</li></ul>
+
+<FigureProvider>
+    <Figure 
+        id="Measurement-Screen-(for-measure-machine-in-area)" 
+        src="/img/1-Routes/1-SelectRoute/Measurement-Screen-(for-measure-machine-in-area)-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Measurement-Screen-(for-measure-machine-in-area)-Dark.png"
+        caption="Measurement Screen for (Machine in Area)" 
+        width="70%"
+    />
+</FigureProvider>
+
+## More (Displayed When "Area/Machine" is Selected) 
+The More Screen provides additional functions and settings that can be used during route measurements. To access
+this screen, tap the More  button from the measurement screen. The More Screen is shown in <FigureRef id="More-Screen" />
+
+The following options are available:
+<ul><li>**Plot** – Displays the measurement data in graphical form for analysis.</li> 
+<li>**Add Point** – Adds a new measurement point to the route.</li>
+<li>**Enter ID Number** – Allows the user to enter an identification number for the selected measurement point.</li>
+<li>**Display Parameters** – Displays the measurement parameters configured for the selected point.</li>
+<li>**Trouble Codes** – Opens the list of available trouble codes for the selected measurement point.</li>
+<li>**Adjust Backlight** – Adjusts the screen brightness level.</li>
+<li>**Not Measured Codes** – Allows the user to select a reason code when a measurement cannot be taken.</li>
+<li>**Enter Speed** – Allows the user to enter the machine operating speed.</li>
+<li>**Enter Temp** – Allows the user to enter the temperature value for the selected point.</li>
+<li>**Clean Screen** – Clears the screen display for improved visibility.</li>
+<li>**Turn Off Screen** – Turns off the display to conserve battery power.</li></ul>
+
+<FigureProvider>
+    <Figure 
+        id="More-Screen" 
+        src="/img/1-Routes/1-SelectRoute/More-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/More-Screen-Dark.png"
+        caption="More Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Plot
+The Plot screen displays measurement data in graphical form. Users can view and analyze the recorded measurement
+values and trends for the selected measurement point. 
+
+Procedure:
+
+1. Access Plot > More screen.
+2. The Graphics (Plot) screen will appear as shown in <FigureRef id="Plot-Screen" />.
+3. This screen displays the graphical view of the selected measurement point and channel.
+4. The measurement point number, channel, mode, and **X, Y, Z** values are displayed at the top of the screen.
+5. If no measurement data is available for the selected account or measurement number, an error message will be displayed stating **"No measurement data available"**.
+6. Click **Close** to dismiss the warning message and return to the Graphics screen.
+7. Use the **Reset button** to reset the graph display if required.
+
+<FigureProvider>
+    <Figure 
+        id="Plot-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Plot-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Plot-Screen-Dark.png"
+        caption="Plot Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Options
+The **Options** screen displays measurement configuration and visibility settings. Users can filter the visible machines in a route and enable specific pre-test hardware checks for data collection. 
+
+**Procedure:**
+1. Access **Select Route > More > Options** screen.
+2. The Options screen will appear as shown in <FigureRef id="Option-Screen" />.
+3. This screen displays filtering preferences under the **Machines visible** section and hardware diagnostic options on the right.
+4. Select from the radio buttons to filter visible machines by **All, Interval < 999 days, Scheduled**, or **Not Measured**.
+5. Check the **Cable Check** box to enable automated sensor cable integrity verification before data collection.
+6. Check the **Sensor Settling** box to introduce a mandatory stabilization delay for the sensor prior to recording data.
+7. Click **Save** to apply the selected filters and configuration changes to the active route session.
+8. Click **Cancel** to discard any changes and return to the previous measurement screen.
+
+<FigureProvider>
+    <Figure 
+        id="Option-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Option-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Option-Screen-Dark.png"
+        caption="Option Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Add Point
+The **Add New Point** module allows users to dynamically create and configure custom measurement configurations for a 
+machine. Users can define measurement types (Spectrum, Time Domain, or Waterfall), select sensor specifications,
+assign required Identification IDs, and save the configurations to the active profile.
+
+**Procedure:**
+1. Access **Select Route > More >  Add point** option.
+2. The Add new point screen will appear as shown in <FigureRef id="Add-Point-(Spectrum-Screen)" />. By default, this screen initializes on the
+**Spectrum** measurement type configuration view.
+
+<FigureProvider>
+    <Figure 
+        id="Add-Point-(Spectrum-Screen)" 
+        src="/img/1-Routes/1-SelectRoute/Add-Point-(Spectrum-Screen)-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Add-Point-(Spectrum-Screen)-Dark.png"
+        caption="Add Point (Spectrum Screen)" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. If required, select the **Time Domain** radio button to display and configure parameters specific to time wave
+profiles, as shown in <FigureRef id="Add-Point-Time-Domain-Screen" />.
+
+<FigureProvider>
+    <Figure 
+        id="Add-Point-Time-Domain-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Add-Point-(Time-Domain-Screen)-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Add-Point-(Time-Domain-Screen)-Dark.png"
+        caption="Add Point Time Domain Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+4. Select the **Waterfall** radio button to configure a waterfall measurement. If a multi-axis sensor is active, 
+a warning message will be displayed stating "Single axis sensor must be selected. Channel 'Z' must be selected." 
+as shown in <FigureRef id="Add-Waterfall-Measurement-Error-Message-Screen" />.
+5. Click **Close** to dismiss the warning message. The **Waterfall Specific** configuration layout will appear.
+
+:::warning
+
+A single axis sensor must be selected. Channel Z must be selected.
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Add-Waterfall-Measurement-Error-Message-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Add-point-Waterfall-Measurement-Screen-error-message-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Add-point-Waterfall-Measurement-Screen-error-message-Dark.png"
+        caption="Add Point (Waterfall Measurement Error Message Screen)" 
+        width="70%"
+    />
+</FigureProvider>
+
+#### Configure Measurement Point ID
+1. After applying all modifications click **Save** on the right control panel.<br />
+a. If no ID has been assigned, a warning message will be displayed stating "The Meas Point ID cannot be empty. 
+Enter 6 digits Measure Point ID". See <FigureRef id="Add-Warning-Message" />
+
+:::warning
+
+The Meas Point ID cannot be empty. Enter 6 digits Measure Point ID.
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Add-Warning-Message" 
+        src="/img/1-Routes/1-SelectRoute/Add-Warning-Message-for-Configuration-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Add-Warning-Message-for-Configuration-Dark.png"
+        caption="Add Point (Warning Screen)" 
+        width="70%"
+    />
+</FigureProvider>
+
+b. Click **Close** to dismiss the warning message. The numerical pin-pad dialog overlay will automatically open on the screen for ID digit entry.<br />
+c. Enter a valid 6-digit number string. A green **"Valid value"** confirmation message will appear, and the **Ok** action 
+button will become active as shown in the <FigureRef id="Add-Numeric-Pin-Pad" />
+
+<FigureProvider>
+    <Figure 
+        id="Add-Numeric-Pin-Pad" 
+        src="/img/1-Routes/1-SelectRoute/Add-Numeric-Pin-Pad-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Add-Numeric-Pin-Pad-Dark.png"
+        caption="Add Point (Numeric Pin-Pad)" 
+        width="70%"
+    />
+</FigureProvider>
+
+d. Once the ID is verified click **Ok** to apply the ID entry. A final tracking message box will display stating
+"Frequency changed based on ID number" as shown in <FigureRef id="Frequency-Change-Warning-Dialogbox" />.
+
+:::warning
+
+Frequency changed based on ID number.
+
+:::
+
+e. Click **Close** to dismiss the message and return to the main configuration screen.
+
+<FigureProvider>
+    <Figure 
+        id="Frequency-Change-Warning-Dialogbox" 
+        src="/img/1-Routes/1-SelectRoute/Frequency-Change-Warning-Dialogbox-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Frequency-Change-Warning-Dialogbox-Dark.png"
+        caption="Add Point (Frequency Change Warning Dialogbox)" 
+        width="70%"
+    />
+</FigureProvider>
+
+2. Once all configurations are completed, click **Save** on the right control panel. 
+3. A **confirmation** dialog box will appear stating "The measurement point has been defined" as shown in <FigureRef id="Confirmation-Dialog-box-for-Update-points" />.
+4. Click **Close** to dismiss the message window and return to the main route profile interface.
+
+:::tip[Confirmation:]
+
+The measurement point has been defined
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Confirmation-Dialog-box-for-Update-points" 
+        src="/img/1-Routes/1-SelectRoute/Confirmation-Dialog-box-for-Update-points-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Confirmation-Dialog-box-for-Update-points-Dark.png"
+        caption="Add Point (Confirmation Dialog Box for Update Points)" 
+        width="70%"
+    />
+</FigureProvider>
+
+#### Modify Sensor
+If you want to Modify the Sensor
+1. Click on the **Sensor** button on the right-hand panel to configure hardware profiles. The **Sensor Type** dialog
+box will appear as shown in <FigureRef id="Sensor-Type-Screen" />
+2. Modify the **Sensor** type and **Sensitivity** dropdown options to comply with single-axis specifications, then
+click **Ok** to return to the configuration screen.
+
+<FigureProvider>
+    <Figure 
+        id="Sensor-Type-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Sensor-Type-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Sensor-Type-Screen-Dark.png"
+        caption="Add Point (Sensor Type)" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Enter ID Number 
+The **Enter ID Number** feature allows operators to instantly access a specific monitoring location by entering its
+unique 6-digit identifier. This provides a direct shortcut to load the target measurement point for data collection
+without navigating complex machine lists. 
+
+1. Access **Measure Data > More > Add ID.**
+2. The **Enter 6-digit ID** pin-pad screen will appear as shown in <FigureRef id="Enter-ID" />
+
+<FigureProvider>
+    <Figure 
+        id="Enter-ID" 
+        src="/img/1-Routes/1-SelectRoute/Enter-ID-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Enter-ID-Dark.png"
+        caption="Enter ID (Pin-Pad)" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. This screen displays a secure system numeric keypad mapping digits 0-9 alongside input modification tools.
+4. Use the keypad interface to input the unique numeric values into the primary entry text field.
+5. Once you enter the ID the **OK** confirmation button will dynamically enable only after exactly 6 digits have been inputted.
+6. If the ID is correct, the system automatically opens the target measurement point screen otherwise a warning pop-up
+will appear as shown in <FigureRef id="Enter-ID-Warning-Message" />.
+
+:::warning
+
+Point ID Could Not Find in Measurement.
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Enter-ID-Warning-Message" 
+        src="/img/1-Routes/1-SelectRoute/Enter-ID-Warning-Message-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Enter-ID-Warning-Message-Dark.png"
+        caption="Enter ID (Error/Warning Dialog)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::info
+
+The Add ID window can also be accessed alternatively through the **Add Point** workflow. 
+
+:::
+
+### Display Parameters
+The **Display Parameters** feature allows operators to review the specific configuration settings, hardware setups,
+and sensor details assigned to a selected measurement point. It is used to quickly verify test limits, sensor
+channels, and machine location details before or after collecting vibration data.
+
+**Procedure:**
+1. Access **Measure Data > More > Display Parameters**.
+2. The **Display Parameters** window will open as shown in <FigureRef id="Display-Measurement-Screen" />.
+3. Review the **Measure Point** block to verify details such as the location ID, plant name, drive type, and specific test component.
+4. Check the **Parameters** block to read sensor configurations, including the sensor type (Triaxial Accelerometer), frequency limits (250 000 CPM), and measurement type (Spectrum).
+5. Verify additional diagnostic details like **Demodulation** frequencies and averaging configurations at the bottom of the pane.
+6. Use the **Up** and **Down** arrow buttons on the right menu panel to scroll through the data fields if more parameters are available.
+7. Click the **Cancel** button at the bottom right to close the window and return to the main measurement route list.
+
+
+<FigureProvider>
+    <Figure 
+        id="Display-Measurement-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Display-Measurement-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Display-Measurement-Screen-Dark.png"
+        caption="Display Measurement" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Trouble Codes
+The **Trouble Code** feature allows operators to assign standard diagnostic condition codes or custom notes to a 
+specific measurement point. This is used to flag field issues, machine orientation states, or specific vibration
+observations during data collection.
+
+**Procedure:**
+1. Access **Measure Data > More > Trouble Code** screen.
+2. The Trouble Code configuration window will open, displaying the **active Measure Point** information (such as the 
+point Id and Name) at the top of the screen.
+
+**Option A: Select From List**
+<ul><li>By default the **Select from list** radio button will be displayed with predefined system codes as shown in <FigureRef id="Trouble-Codes-Screen" />.</li>
+<li>Use the **Up** and **Down** arrow buttons on the right side to scroll through the available numeric entries (e.g., 27: 1-Orientation, 1507: 100 Hz vibration).</li>
+<li>Tap on the required code from the list to highlight it.</li>
+<li>Click the **Save** button to link the selected trouble code to the active measurement point.</li></ul>
+
+<FigureProvider>
+    <Figure 
+        id="Trouble-Codes-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Trouble-Codes-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Trouble-Codes-Screen-Dark.png"
+        caption="Trouble Codes (Select lists) Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+**Option B: Add a Custom Memo**
+
+1. Select the User Memo radio button to switch the display mode as shown in <FigureRef id="Trouble-Codes-Memo-Screen" />.
+2. Tap inside the empty Memo text box and use the keyboard to type custom comments or observation notes regarding the measurement point.
+
+<FigureProvider>
+    <Figure 
+        id="Trouble-Codes-Memo-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Trouble-Codes-Memo-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Trouble-Codes-Memo-Screen-Dark.png"
+        caption="Display Measurement" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. After applying the desired modifications and clicking **Save**, the window will close and the system will return
+to the **Measurement Route**.
+4. Click **Cancel** to discard your selections and return to the primary measurement screen without saving.
+
+### Enter Temp
+The **Enter Temperature** feature allows operators to manually record the current process or machinery temperature for
+the selected measurement point. This parameter is tracked alongside vibration signatures to help diagnose thermal
+expansion or overheating issues.
+
+**Procedure:**<br />
+<ul><li>Access **Measure Data > More > Enter Temp.**</li>
+<li>The temperature entry window will open with a dynamic numeric keypad as shown in <FigureRef id="Enter-Temp-Screen" />.</li>
+<li>Use the keypad interface (digits 0-9 and the decimal point button) to enter the observed temperature value.</li>
+<li>The system will instantly validate your input and display a green **"Valid value"** confirmation status if the entry falls within acceptable limits.</li>
+<li>If needed, use the unit conversion button (e.g., **-> °C**) to toggle or convert the measurement unit context.</li>
+<li>Click the **Backspace icon** or **Clear All** button to modify or reset your numeric entry.</li>
+<li>Click **Ok** to save the recorded temperature value. The pop-up window will close automatically, and you will return directly to the main measurement route list screen.</li>
+<li>Click **Cancel** to dismiss the window and return to the main layout without saving the temperature parameter.</li></ul>
+
+<FigureProvider>
+    <Figure 
+        id="Enter-Temp-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Enter-Temp-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Enter-Temp-Screen-Dark.png"
+        caption=" Enter Temp" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Adjust Backlight 
+The **Adjust Backlight Settings**s feature allows operators to adjust the hardware screen brightness and toggle the
+system visual theme. This is used to optimize screen visibility and conserve battery life when working in different
+plant lighting environments, such as low-light areas or bright outdoor conditions.
+
+**Procedure:**
+
+1. Access Measure Data > More > Adjust Backlight.
+2. The Display settings window will open as shown in <FigureRef id="" />
+3. To adjust screen brightness:
+<ul><li>Tap and drag the vertical **Backlight slider** up or down to manually change the brightness levels.</li>
+<li>Alternatively, click the **Plus (+)** button to increase screen brightness or the **Minus (-)** button to decrease it.</li></ul>
+
+**To change the interface appearance:**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
