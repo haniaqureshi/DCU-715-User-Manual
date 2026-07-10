@@ -77,6 +77,52 @@ and transfer measurement data during routine condition monitoring and diagnostic
 accessories supplied with the DCU.
 
 <FigureProvider>
+    The **Series 715 Digital Collection Unit** (hereafter referred to as the DCU) is a portable vibration data collection device designed for predictive maintenance and condition monitoring applications. It acquires vibration and process data from industrial equipment, stores the collected measurements, and transfers them to the ITR Graphics™ software platform for analysis and reporting.
+
+    The DCU supports simultaneous multi-channel data acquisition, allowing vibration, auxiliary sensor, and tachometer signals to be collected while maintaining phase relationships between channels. 
+
+    Measurements can be displayed in multiple formats, including spectrum, time waveform, phase, and waterfall views, enabling technicians to verify signal quality before saving data.
+
+    This module introduces the DCU, its operating concept, and the overall workflow used to collect vibration measurements. It also provides an overview of the DCU hardware, user interface, and system capabilities to help technicians become familiar with the device before performing measurements or diagnostics.
+
+    ## System Configuration
+    The Series 715 DCU is designed to operate with the ITR Graphics™ vibration analysis platform.
+
+    Before field work begins, predefined measurement routes are transferred from ITR Graphics™ to the DCU. These routes guide technicians through each inspection by defining the equipment to measure, the order in which measurements are collected, and the acquisition parameters required for each point.
+
+    A measurement route can include:
+
+    - Measurement locations
+    - Machine information
+    - Measurement sequence
+    - Sensor configuration
+    - Data acquisition parameters
+    - Historical measurement information
+    - Scheduled inspection information
+
+    After measurements have been collected, the recorded data is transferred back to ITR Graphics™ for processing, trending, analysis, and report generation.
+
+    ## How the DCU Works
+    The DCU records machine vibration using an accelerometer mounted at predefined measurement locations.
+
+    During data collection, the operator places the sensor on the machine according to the measurement route loaded into the DCU. The device acquires vibration data, processes the measurement in real time, and stores the results as a measurement event.
+
+    Once field data collection is complete, the stored measurements are uploaded to ITR Graphics™, where vibration analysts review the results to evaluate machine condition, identify developing faults, and prepare maintenance recommendations.
+
+    The overall workflow consists of four stages:
+
+    - Measurement routes are created in ITR Graphics™.
+    - Routes are transferred to the DCU.
+    - Measurements are collected in the field using the DCU.
+    - Measurement data is uploaded back to ITR Graphics™ for analysis and reporting.
+
+    ## Hardware Overview
+    The DCU is designed for portable field use in industrial environments. The device combines vibration data acquisition, onboard processing, and a touchscreen interface in a rugged enclosure that enables technicians to perform measurements without requiring a separate computer.
+
+    The DCU supports multiple sensor connections, auxiliary inputs, and communication interfaces that allow technicians to collect, store, and transfer measurement data during routine condition monitoring and diagnostic activities.
+
+    <FigureRef id="DCU-715-Front-View"/> through <FigureRef id="Sensor-Connection-Cable"/> identify the primary hardware components and accessories supplied with the DCU.
+
     <Figure 
         id="DCU-715-Front-View" 
         src="/img/0-Intro/DCU-715-Front-View.png" 
@@ -146,11 +192,10 @@ accessories supplied with the DCU.
         caption="Sensor Connection Cable" 
         width="25%"
     />
-</FigureProvider>
 
-### Hardware Components
+    ### Hardware Components
 
-The following table describes the primary hardware components of the Series 715 DCU as seen in <FigureRef id="DCU-715-Front-View"/> and <FigureRef id="DCU-715-Back-View"/>.
+    The following table describes the primary hardware components of the Series 715 DCU as seen in <FigureRef id="DCU-715-Front-View"/> and <FigureRef id="DCU-715-Back-View"/>.
 
     | #   | Components            | Description                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                          
     | :-  | :-------------------  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -172,27 +217,25 @@ The following table describes the primary hardware components of the Series 715 
 ## Application Interface 
 The DCU application provides a consistent touchscreen interface across all modules, including Routes, Measurements, Special Tests, and DCU Setup. Most screens share the same layout, allowing technicians to navigate the application and monitor device status regardless of the function being performed.
 
-The application interface consists of four primary areas:
-- Header Bar
-- Task Status Bar
-- Main Workspace
-- System Alerts Bar
+    The application interface consists of four primary areas:
+    - Header Bar
+    - Task Status Bar
+    - Main Workspace
+    - System Alerts Bar
 
-Understanding the purpose of each area will help you navigate the application and quickly identify important system information during operation.
+    Understanding the purpose of each area will help you navigate the application and quickly identify important system information during operation.
 
-### Application Screen Layout
-The DCU application uses a consistent screen layout throughout the software. Each screen is divided into four functional areas that display navigation information, task status, application content, and system notifications.
+    ### Application Screen Layout
+    The DCU application uses a consistent screen layout throughout the software. Each screen is divided into four functional areas that display navigation information, task status, application content, and system notifications.
 
-<FigureProvider>
     <Figure 
         id="DCU-Application-Screen-Layout" 
         src="/img/0-Intro/DCUApplicationScreenLayout.png" 
         caption="DCU Application Screen Layout" 
         width="70%"
     />
-</FigureProvider>
-
-The following table describes each area of the application screen as seen in <FigureRef id="DCU-Application-Screen-Layout"/>.
+ 
+    The following table describes each area of the application screen as seen in <FigureRef id="DCU-Application-Screen-Layout"/>.
 
     | Area | Name             | Description                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                     
     | :-   | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -203,6 +246,8 @@ The following table describes each area of the application screen as seen in <Fi
     
     :::note
 
+    ### System Alert Bar
+</FigureProvider>
         The layout remains consistent throughout the DCU application. Although the content displayed in the **Main Workspace** changes depending on the selected function, the **Header Bar**, **Task Status Bar**, 
         and **System Alerts Bar** remain available on most screens.
 
