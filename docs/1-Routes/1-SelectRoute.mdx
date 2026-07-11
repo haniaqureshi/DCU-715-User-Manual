@@ -605,13 +605,172 @@ plant lighting environments, such as low-light areas or bright outdoor condition
 
 **Procedure:**
 
-1. Access Measure Data > More > Adjust Backlight.
-2. The Display settings window will open as shown in <FigureRef id="" />
-3. To adjust screen brightness:
+1. Access **Measure Data > More > Adjust Backlight**.
+2. The **Display settings** window will open as shown in <FigureRef id="Adjust-Blacklight" />
+3. **To adjust screen brightness:**
 <ul><li>Tap and drag the vertical **Backlight slider** up or down to manually change the brightness levels.</li>
 <li>Alternatively, click the **Plus (+)** button to increase screen brightness or the **Minus (-)** button to decrease it.</li></ul>
 
-**To change the interface appearance:**
+**To change the interface appearance:**<br />
+<ul><li>Select the **Light Theme** radio button for a standard bright user interface background.</li>
+<li>Select the **Dark Theme** radio button to switch the application to a high-contrast dark layout suited for low-light environments.</li></ul>
+
+5. Click **Ok** to save your preferences and apply the changes immediately. The window will close automatically, returning you to the primary screen.
+6. Click **Cancel** to exit without saving any modifications to the display configuration.
+
+<FigureProvider>
+    <Figure 
+        id="Adjust-Blacklight" 
+        src="/img/1-Routes/1-SelectRoute/Adjust-Blacklight-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Adjust-Blacklight-Dark.png"
+        caption="Adjust Blacklight" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Not Measured Codes
+The **Not Measured Codes** feature allows operators to assign a reason code to a measurement point when a reading 
+cannot be taken. This ensures that skipping a point is logged with a specific operational justification (such as 
+machinery being offline or undergoing maintenance) rather than leaving the route incomplete without documentation.
+
+**Procedure:**
+1. Access **Measure Data > More > Not Measured Codes**.
+2. The **Select Code** window will open, showing the active **Measure Point** details (Code and Name) at the top of the interface as shown in <FigureRef id="Not-Measured-Code-Screen" />.
+3. Use the **Up** and **Down** arrow buttons on the right side to scroll through the list of standardized exceptions (e.g., 10000 Not Running, 10001 Being rebuilt, 10004 Safety issue).
+
+<FigureProvider>
+    <Figure 
+        id="Not-Measured-Code-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Not-Measured-Code-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Not-Measured-Code-Screen-Dark.png"
+        caption="Not Measured Code (Select Code) Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+4. Tap on the applicable reason code from the list to highlight it.
+5. Click the **Save** button at the bottom right corner to submit the selected code.
+6. A green confirmation pop-up window will open with a checkmark icon displaying the message **"Store completed"** as shown in <FigureRef id="Not-Measured-Confirmation-Popup" />.
+7. Click the **Close** button on the confirmation pop-up to return to the active asset tracking view.
+8. Click **Cancel** on the primary selection window to close the interface without saving any reason codes.
+
+<FigureProvider>
+    <Figure 
+        id="Not-Measured-Confirmation-Popup" 
+        src="/img/1-Routes/1-SelectRoute/Not-Measured-Confirmation-Popup-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Not-Measured-Confirmation-Popup-Dark.png"
+        caption="Not Measured Confirmation Pop-up" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Enter Speed
+The Speed and Load feature allows operators to manually enter or update the operational running speed and load 
+parameters for specific plant equipment. This data provides necessary context for calculating variable frequency
+thresholds and diagnosing issues under varying operational states.
+
+**Procedure:**
+1. Access **Measure Data > More > Enter Speed**.
+2. The **Speed and Load** window will open as shown in <FigureRef id="Enter-Speed-and-Load-Screen" />.
+3. Click the Area dropdown arrow to select the target plant location from the list (e.g., MILL DRIVES).
+4. Click the **Machine** dropdown arrow to select the specific asset under configuration.
+5. Review the automatically assigned **Measurement ID Number** text box.
+6. Tap inside the **Enter Speed** and **Enter Load** data fields to input the current numeric operating values using the keypad interface.
+7. Click the **Ok** button to save the configuration adjustments.
+
+
+<FigureProvider>
+    <Figure 
+        id="Enter-Speed-and-Load-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Enter-Speed-and-Load-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Enter-Speed-and-Load-Screen-Dark.png"
+        caption="Enter Speed & Load Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+8. A green confirmation pop-up window will appear displaying the update status message (e.g., **"12 measurements have been updated"**) as shown in <FigureRef id="Enter-Speed-Confirmation-Pop-up" />. 
+9. Click the **Close** button on the confirmation pop-up window to return to the active layout view.
+10. Click **Cancel** on the main window to discard your input parameters and exit the setup screen.
+
+
+<FigureProvider>
+    <Figure 
+        id="Enter-Speed-Confirmation-Pop-up" 
+        src="/img/1-Routes/1-SelectRoute/Enter-Speed-Confirmation-Pop-up-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Enter-Speed-Confirmation-Pop-up-Dark.png"
+        caption="Enter Speed (Confirmation Popup)" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Clean Screen
+The **Clean Screen** feature is used to temporarily lock the user interface layout so the physical touchscreen hardware
+can be wiped or cleaned without accidentally triggering any buttons, changing parameters, or interrupting active 
+routes.
+
+**Procedure:**
+1. Access **Measure Data > More > Clean Screen**.
+2. The system will display a green progress loading bar in the center of the display grid as shown in <FigureRef id="Clean-Screen" />.
+3. During this time, the touchscreen interface remains inactive, allowing you to clean the hardware display surface.
+4. Once the progress loading bar fills completely, the system automatically unlocks the interface.
+5. The loader window closes on its own, and you are automatically returned back to the active measurement route screen to resume your data collection.
+
+
+<FigureProvider>
+    <Figure 
+        id="Clean-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Clean-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Clean-Screen-Dark.png"
+        caption="Enter Speed (Confirmation Popup)" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Turn Off Screen
+The **Turn Off** Screen feature allows operators to temporarily put the display into a power-saving mode without
+shutting down the entire system or losing data within the active measurement route. This is used to save battery
+life during breaks or while moving between distant machine test locations.
+
+**Procedure:**
+1. Access **Measure Data > More > Turn Off Screen**.
+2. The screen will instantly dim, and a single **Turn On** button will appear at the bottom right corner of the interface as shown in <FigureRef id="Turn-Off-Screen" />.
+3. Shortly after, the rest of the display surface will turn black to conserve the unit's battery power.
+4. The device remains fully operational in the background, keeping your current data selection intact.
+5. To reactivate the device display, tap the highlighted **Turn On** button on the bottom right of the panel.
+6. The interface screen color will restore instantly, returning you directly to your active measurement layout.
+
+<FigureProvider>
+    <Figure 
+        id="Turn-Off-Screen" 
+        src="/img/1-Routes/1-SelectRoute/Turn-Off-Screen-Light.png"
+        srcDark="/img/1-Routes/1-SelectRoute/Turn-Off-Screen-Dark.png"
+        caption="Turn Off Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+### Navigation Buttons
+| Navigation Button | Functionality                                                        |                                                                                                                                          
+| :---------------- | :--------------------------------------------------------------------|
+| Select | Opens the selected **Area, Machine, Measurement List, or Summary Report.** |
+| Measure | Starts the measurement process |
+| Measure Again | Repeat the measurement for the selected point. |
+| Preview | Displays the previous screen or previous item. |
+| Next | Moves to the next screen or next item. |
+| Area | Returns to the Area screen. |
+| Up/Down Arrows | Scroll the list for better selection. |
+| Turn Off Screen | Turn off the display screen to save power. | 
+| Cancel | Cancels the current operation and returns to the previous screen. |
+| More | Explore the more options |
+
+Use these buttons that are available on the right side of the screen for navigation: 
+
+:::note
+Explore the right-side navigation menu, which changes based on actions performed on the screen.
+:::
+
+
 
 
 

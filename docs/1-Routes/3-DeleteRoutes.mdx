@@ -1,0 +1,73 @@
+---
+sidebar_position: 1
+toc_min_heading_level: 2
+toc_max_heading_level: 4
+sidebar_label: '1.3 - Delete Routes'
+---
+
+# Delete Routes
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+The **Delete Routes** option allows the user to remove unwanted or unused routes from the device to keep 
+the route list organized.
+
+**Key Points:**
+- Deleted routes are permanently removed from the device.
+- After deletion, they will no longer appear in the route list.
+
+**Procedure:**
+1. From the Routes menu, click **Delete Routes**.
+2. The system will display the list of available routes as shown in <FigureRef id="Configuration-Connection-Route-Update-Screen" />
+
+<FigureProvider>
+    <Figure 
+        id="Route-List-for-Delete-Route" 
+        src="/img/1-Routes/3-DeleteRoutes/Route-List-for-Delete-Route-Light.png"
+        srcDark="/img/1-Routes/3-DeleteRoutes/Route-List-for-Delete-Route-Dark.png"
+        caption="Route List for Delete Route" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select the route(s) that you want to delete by checking the boxes or using **Select All**.
+4. If no route is selected, a warning dialog reading **"Select Routes to delete"** will appear as shown in <FigureRef id="Error-Message-Dialog-Box" />
+
+:::warning
+
+Select Route to Delete
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Error-Message-Dialog-Box" 
+        src="/img/1-Routes/3-DeleteRoutes/Error-Message-Dialog Box-Light.png"
+        srcDark="/img/1-Routes/3-DeleteRoutes/Error-Message-Dialog Box-Dark.png"
+        caption="Error Message Dialog Box" 
+        width="70%"
+    />
+</FigureProvider>
+
+5. After selecting the required routes, click the **Delete Routes** option on the right panel.
+6. A confirmation dialog asking **"Do you want to delete selected routes?"** will appear as shown in <FigureRef id="Error-Message-Dialog Box" /><br />
+    a. Press **Yes** to proceed.<br />
+    b. Press **No** to close the warning dialog box and return to the list screen without deleting any data.
+7. If you pressed **Yes** the selected routes have been deleted successfully.
+
+:::tip[confirmation:]
+
+Do you want to Delete the Selected Route?
+
+:::
+
+<FigureProvider>
+    <Figure 
+        id="Confirmation-Dialog-Box" 
+        src="/img/1-Routes/3-DeleteRoutes/Confirmation-Dialog-Box-Light.png"
+        srcDark="/img/1-Routes/3-DeleteRoutes/Confirmation-Dialog-Box-Dark.png"
+        caption="Confirmation Dialog Box" 
+        width="70%"
+    />
+</FigureProvider>

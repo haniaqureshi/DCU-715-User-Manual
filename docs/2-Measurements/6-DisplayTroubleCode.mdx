@@ -1,0 +1,62 @@
+---
+sidebar_position: 1
+toc_min_heading_level: 2
+toc_max_heading_level: 4
+sidebar_label: '2.6 - Display Trouble Code'
+---
+
+# Display Trouble Code
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+The **Display Trouble Code** option allows the user to view the trouble codes generated during the measurement process.
+These codes help identify machine faults or abnormal conditions detected during data collection.
+
+**Procedure:**
+
+1. Select Measurements from the dashboard.
+2. Click on **Display Trouble Code**.
+3. The **Select Route screen** will appear showing the list of available routes as shown in <FigureRef id="" />
+4. Select the required route.
+5. Click **Select**.
+
+<FigureProvider>
+    <Figure 
+        id="Select-Route-Warning-Dialogbox" 
+        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
+        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
+        caption="Trouble Code Route Selection" 
+        width="70%"
+    />
+</FigureProvider>
+
+After selecting the route, the **Trouble Code** screen will appear, as shown in <FigureRef id="" />. This screen displays the
+trouble code details related to the selected route or machine.
+
+<FigureProvider>
+    <Figure 
+        id="Select-Route-Warning-Dialogbox" 
+        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
+        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
+        caption="Trouble Code Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Screen Description (Display Trouble Code)
+
+| Navigation Button | Functionality                                                              |                                                                                                                                          
+| :---------------- | :------------------------------------------------------------------------- |
+| ID                |  Displays the trouble code identification number.                          | 
+| Type              | Shows the type or category of the detected issue.                          | 
+| Date              | Displays the date when the trouble code was recorded.                      | 
+| Tech Name         | Shows the technician name associated with the measurement.                 |
+| Memo              | Allows viewing or entering additional remarks related to the trouble code. |
+| Delete            | Removes the selected trouble code entry.                                   |
+
+:::info
+
+If no trouble cod R.es are available for the selected route, the system may display an empty screen.
+
+:::

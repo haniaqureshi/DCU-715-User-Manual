@@ -1,0 +1,87 @@
+---
+sidebar_position: 1
+toc_min_heading_level: 2
+toc_max_heading_level: 4
+sidebar_label: '2.3 - Not Measured Machines Report'
+---
+
+# Not-Measured Machines Report
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+The **Not-Measured Machines Report** option allows the user to view the list of machines or measurement points for which data has not been recorded. This helps ensure that all required measurements are completed for the selected route.
+
+**Procedure:**
+1. Select  **Measurements** option from dashboard menu.
+2. Click **Not-Measured Machines Report** from the measurement menu.
+3. The **Select Route** screen will appear showing the list of available routes. (See <FigureRef id="" />)
+4. Select the required route from the list.
+5. Tap **Select**.
+
+
+<FigureProvider>
+    <Figure
+        id=""
+        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
+        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
+        caption="Not Measured Machine Route List"
+        width="70%"
+    />
+</FigureProvider>
+
+After selecting the route, the system will display the list of machines or measurement points where measurements are missing, as shown in <FigureRef id="" />. 
+Each entry in the list shows the machine/drive name, measurement status or reason, and date information.
+
+**Procedure:**
+
+6. Select any machine or measurement points
+7. Click on Save copy to usb option
+8. Copies the report data to a connected **USB device**.
+
+<FigureProvider>
+    <Figure
+        id=""
+        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
+        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
+        caption="Missing Machine Measurement"
+        width="70%"
+    />
+</FigureProvider>
+
+## Export Not-Measured Report to USB
+**Procedure:**
+1. On the Not-Measured Machines Report screen, tap **Copy in USB** to export the report.
+2. If the USB device is **not connected**, a dialog box will appear prompting the user to connect the USB device first, as shown in <FigureRef id="" />.
+3. After connecting the USB device, tap **Copy in USB** again to transfer the data.
+
+Once the USB device is properly connected, the system will copy the report data to the USB device.
+
+
+<FigureProvider>
+    <Figure
+        id=""
+        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
+        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
+        caption="Notification Dialog Box"
+        width="70%"
+    />
+</FigureProvider>
+
+:::note
+
+Ensure that the USB device is properly inserted before starting the data export process.
+
+:::
+
+## Screen Description (Not Measured Machine Reports):
+<ul><li>**Route List:** Displays all available routes stored in the device.</li>
+<li>**Not-Measured List**: Shows machines or points where measurement data has not been recorded.</li>
+<li>**Measurement Status**: Indicates which machines are pending for measurement.</li></ul>
+
+:::note
+
+If all machines have recorded measurements, the system may display an empty list or a message indicating that no 
+pending measurements are available.
+
+:::

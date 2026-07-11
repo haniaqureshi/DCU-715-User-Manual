@@ -2,15 +2,65 @@
 sidebar_position: 1
 toc_min_heading_level: 2
 toc_max_heading_level: 4
-sidebar_label: '2.1 - Measurements'
+sidebar_label: '2.1 - Transmit Measurements'
 ---
 
-# Measurements
+# Transmit Measurements
 
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
+The **Transmit Measurements** option allows the user to send the recorded measurement data from the device to the server or computer for storage and further analysis.
 
+**Procedure:**
+1. Select Measurements from the Dashboard.
+2. After opening the measurement menu click on **Transmit Measurements**.
+3. The **Transmit Measurements** screen will appear showing the list of available routes.
+4. Select the required route from the list, or tap Select All to select all routes.
+5. Select to confirm the selection.
+6. Click Transmit to start sending the measurement data.
 
+After tapping Transmit, the system will begin transferring the data to the configured connection as shown in <FigureRef id="" />.
+
+## Screen Description (Transmit Measurement)
+
+| Navigation Button               | Functionality                                                   |
+|-------------------------------- |---------------------------------------------------------------- |
+| Connection 	    	          | Shows the configured connection source (e.g., ITR.com).         |
+| Data not previously transmitted | Indicates whether there is new data available for transmission. |
+| Route List 		              | Displays route ID, route name, and number of measurements.      |
+| Select All                      | Selects all available routes.                                   |
+| Select                          | Confirms the selected route.                                    |
+| Transmit                        | Starts the data transmission process.                           |
+
+:::note
+
+Ensure that the device is properly connected before starting the transmission process.
+
+:::
+
+<FigureProvider>
+    <Figure
+        id=""
+        src="/img/3-Measurements/1-TransmitMeasurements/          -Light.png"
+        srcDark="/img/3-Measurements/1-TransmitMeasurements/		-Dark.png"
+        caption="Transmit Measurements"
+        width="70%"
+    />
+</FigureProvider>
+
+If no route is selected for transmission and the user taps the **Transmit** option, a dialog box will appear
+indicating that no route is selected as shown in <FigureRef id="" />. The user must select at least one route to 
+proceed with transmission.
+
+<FigureProvider>
+    <Figure
+        id=""
+        src="/img/3-Measurements/1-TransmitMeasurements/          -Light.png"
+        srcDark="/img/3-Measurements/1-TransmitMeasurements/		-Dark.png"
+        caption="Notification Dialog Box"
+        width="70%"
+    />
+</FigureProvider>
 
 
