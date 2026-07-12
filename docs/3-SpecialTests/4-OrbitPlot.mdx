@@ -6,3 +6,259 @@ sidebar_label: '3.4 - Orbit Plot'
 ---
 
 # Orbit Plot
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the Orbit Plot function to visualize the path of a shaft's centerline as it rotates within a bearing. 
+This test combines vibration data from two orthogonal sensors to help identify unbalance, misalignment, or 
+shaft rubs.
+
+To open the Orbit Plot screen, proceed as follows:
+
+1. From the **Special Tests** submenu, select **Orbit Plot.** 
+2. The Select Route screen appears as shown in <FigureRef id="Orbit-Plot-Select-Route-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Orbit-Plot-Select-Route-Screen" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Orbit-Plot-Select-Route-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Orbit-Plot-Select-Route-Screen-Dark.png" 
+        caption="Orbit Plot Select Route Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Select Route Screen
+
+:::note
+
+The Select Route screen and its available fields and controls are the same as described in [Section 4.2 (Bump Test).](../3-SpecialTests/1-BumpTest.mdx)
+Please review that section for a detailed description. 
+
+:::
+
+## Select a route
+
+To select a route, proceed as follows:
+
+1. On the Select Route screen, select the desired route from the list. The selected route is highlighted.
+2. Select **Select**.
+    a. If the selected route is more than 2 weeks old, a warning dialog appears as shown in <FigureRef id="Route-Warning-Dialog" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Route-Warning-Dialog" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Route-Warning-Dialog-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Route-Warning-Dialog-Dark.png" 
+        caption="Route Warning Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+If the route is more than 2 weeks old, the following message appears: Route is more than 2 weeks old. 
+Please download a new route before proceeding! Press **'YES'** to exit and download a new **ROUTE** or **'NO'** to proceed with the **old ROUTE**.
+
+:::
+
+3. Select Yes to exit and download a new route. The Update Routes screen appears.
+4. Select No to proceed with the existing route. The Orbit Plot Measurement screen appears.
+
+## Update Routes screen (In case of Yes)
+
+If **Yes** is selected on the warning dialog, the Update Routes screen appears. <FigureRef id="Update-Routes-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Update-Routes-Screen" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Update-Routes-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Update-Routes-Screen-Dark.png" 
+        caption="Update Routes Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Update Route Screen
+
+:::note
+
+The **Update Route** screen is identical to the one described in [Section 4.2 (Bump test)](../3-SpecialTests/1-BumpTest.mdx). 
+Refer to **Section 4.2 or 4.3** for detailed screen description and available controls. 
+
+:::
+
+If the route list is unavailable or the connection is not stable, select **More** to configure the connection settings.
+
+## Configure the Connection
+
+To configure the connection, proceed as follows:
+
+1. On the Update Routes screen, select **More**. 
+2. The Connection Options screen appears as shown in <FigureRef id="Connection-Options-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Connection-Options-Screen" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Connection-Options-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Connection-Options-Screen-Dark.png" 
+        caption="Connection Options Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select the desired connection type:
+4. USB Drive
+<ul><li>ITR.com</li>
+<li>ITR.com High Speed</li>
+<li>ITR.com via CMAS</li>
+<li>CMAS</li></ul>
+5. Select **Save**. The DCU saves the connection setting and returns to the Update Routes screen.
+6. To close without saving, select **Cancel**.
+
+## Orbit Plot Measurement screen (In case of No)
+
+After selecting a route and selecting **No** on the warning dialog, the **Orbit Plot Measurement** screen appears as shown in <FigureRef id="Orbit-Plot-Measurement-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Orbit-Plot-Measurement-Screen" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Orbit-Plot-Measurement-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Orbit-Plot-Measurement-Screen-Dark.png" 
+        caption="Orbit-Plot-Measurement-Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Orbit Plot Measurement Modal
+
+The following fields and controls available on the **Orbit Plot Measurement** screen.
+
+| Field/Button   | Description                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                     
+| :------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Options        | Displays the current measurement configuration.                                                                                     |
+| Rotation       | Displays the shaft rotation direction.<br /> **Example:** Clockwise                                                                 |
+| Horizontal     | Displays the angular position configured for the horizontal sensor.<br /> **Example:** 45                                           |
+| Vertical       | Displays the angular position configured for the vertical sensor. <br /> **Example:** 315                                           |
+| Tachometer     | Displays the tachometer input status.                                                                                               |
+| Type           | Displays the signal type being processed.<br /> **Example:** AC                                                                     |
+| Nr of orbits   | Displays the number of shaft revolutions configured for the plot.<br /> **Example:** 4                                              |
+| Id             | Displays the measurement identification number.<br /> **Example:** 900001                                                           |
+| RMS(H)         | Displays the Root Mean Square vibration level for the horizontal axis.                                                              |
+| RMS(V)         | Displays the Root Mean Square vibration level for the vertical axis.                                                                |
+| Measure        | Starts the live data acquisition. When active, all other controls on the right panel are disabled until the measurement is stopped. |
+| Break          | Stop the active measurement session.                                                                                                |
+| Sensor         | Opens the Sensor Selection modal to configure the sensor type and sensitivity. Becomes available after the measurement is stopped.  |
+| Test Tachomet. | Opens the Tachometer Test modal to verify the speed sensor signal. Becomes available after the measurement is stopped.              |
+| Options        | Opens the Options screen to configure orbit plot parameters. Becomes available after the measurement is stopped.                    |
+
+:::info
+
+When **Measure** is selected, all other buttons on the right panel are disabled. The remaining controls become available again only after **Break** is selected to stop the measurement.
+
+:::
+
+## Run an Orbit Plot measurement
+
+To run an Orbit Plot measurement, proceed as follows:
+
+1. On the Orbit Plot Measurement screen, select Measure. 
+2. The DCU begins capturing vibration data from the horizontal and vertical sensors. 
+3. The task status bar displays Waiting for tach. 
+4. All other controls on the right panel are disabled during the active measurement.
+5. Allow the DCU to capture the shaft orbit data.
+6. Select Break to stop the measurement. The remaining controls become available.
+7. Review the following values on the measurement screen:
+<ul><li>RMS(H)</li>
+<li>RMS(V)</li>
+<li>Nr of orbits</li></ul>
+
+## Additional Configuration Controls 
+
+## Sensor
+
+Use the **Sensor function** to configure the sensor type, sensitivity, and auxiliary parameters for the Orbit Plot measurement.
+
+To configure the sensor, proceed as follows:
+
+1. On the Orbit Plot Measurement screen, select **Sensor**. 
+2. The Sensor Selection modal appears as shown in <FigureRef id="Sensor-Selection-Modal" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Sensor-Selection-Modal" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Sensor-Selection-Modal-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Sensor-Selection-Modal-Dark.png" 
+        caption="Sensor-Selection-Modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Sensor Selection modal
+
+The following fields and controls available in the Sensor Selection modal.
+
+
+| Field/Button           | Description                                                                      |                                                                                                                                                                                                                                                                                                                                                                                                            
+| :--------------------- | :------------------------------------------------------------------------------- |
+| Sensor                 | Selects the sensor type from the dropdown. <br />**Example:** Aux Input          |
+| Sensitivity            | Selects the sensor sensitivity from the dropdown. <br />**Example:** 200 mv/mil  |
+| Aux Parameters         | Displays the auxiliary input configuration options.                              |
+| AUX1-ICP               | Enables ICP power for the AUX1 input channel.                                    |
+| AUX2-ICP               | Enables ICP power for the AUX2 input channel.                                    |
+| DC Couple              | Enables DC coupling for the auxiliary input.                                     |
+| Gain                   | Selects the signal gain level. Available options: 10X, 6x, 3X, 1X.               |
+| Checks Cable Integrity | Enables a cable integrity check when the sensor is confirmed.                    |
+| Ok                     | Saves the sensor configuration and returns to the Orbit Plot Measurement screen. |
+| Cancel                 | Closes the Sensor Selection modal without saving changes.                        |
+
+## Test Tachometer
+
+Use the **Test Tachometer function** to verify the speed sensor signal before or after running the Orbit Plot measurement.
+
+To run the Tachometer Test, proceed as follows:
+
+1. On the Orbit Plot Measurement screen, select **Test Tachometer**. 
+2. The Tachometer Test modal appears the same as shown in <FigureRef id="Tachometer-Test-Modal" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Tachometer-Test-Modal" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Tachometer-Test-Modal-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Tachometer-Test-Modal-Dark.png" 
+        caption="Tachometer Test Modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select the desired unit and select **Cancel** to close the modal.
+
+## Options
+
+Use the **Options function** to configure the orbit plot parameters before or after running a measurement.
+
+To open the Options screen, proceed as follows:
+1. On the Orbit Plot Measurement screen, select **Options**. 
+2. The Options screen appears as shown in <FigureRef id="Orbit-Plot-Options-Screen" />
+
+<FigureProvider>
+    <Figure 
+        id="Orbit-Plot-Options-Screen" 
+        src="/img/3-SpecialTests\4-OrbitPlot/Orbit-Plot-Options-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\4-OrbitPlot/Orbit-Plot-Options-Screen-Dark.png" 
+        caption="Orbit Plot Options Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+| Field/Button     | Description                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                            
+| :--------------- | :-------------------------------------------------------------------------------------------------- |
+| Horizontal Probe | Sets the angular position for the horizontal probe. Select from the dropdown.<br /> **Example:** 45 |
+| Vertical Probe   | Sets the angular position for the vertical probe. Select from the dropdown.<br /> **Example:** 315  |
+| Rotation         | Selects the shaft rotation direction. Available options: Clockwise, Counterclockwise.               |
+| Type             | Selects the signal coupling type. Available options: AC, DC.                                        |
+| Number of Orbits | Sets the number of shaft revolutions to display in the orbit plot. .<br /> **Example:** 4           |
+| Max. chart       | Enables or disables the maximum chart display option.                                               |
+| Save             | Saves the configured options and returns to the Orbit Plot Measurement screen.                      |
+| Cancel           | Closes the Options screen without saving changes.                                                   |

@@ -6,3 +6,363 @@ sidebar_label: '3.2 - Coast Down Test'
 ---
 
 # Coast Down Test
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **Coast Down Test function** to analyze how a machine's vibration levels change as it decelerates from 
+operating speed to a complete stop. This test helps identify resonance zones and critical speeds that the 
+machine passes through during shutdown.
+
+To open the Coast Down Test screen, proceed as follows:
+
+1. From the **Special Tests** submenu, select **Coast Down Test**.
+2. The Select Route screen appears as shown in <FigureRef id="Coast-Down-Test-Select-Route-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Bump-Test-Select-Route-Screen" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Select-Route-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Select-Route-Screen-Dark.png" 
+        caption="Coast Down Test Select Route Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Select Route screen
+
+The following fields and controls available on the Select Route screen.
+
+| Field/Column | Description                                                                                      |                                                                                                                                          
+| :----------- | :----------------------------------------------------------------------------------------------- |
+| Meas         | Displays the total number of measurements available in the selected route.<br /> **Example:** 12 |
+| Trans Date   | Displays the last transmission date for the selected route.                                      |
+| Trans        | Displays the number of transmissions completed. <br />**Example**: 0                             | 
+| RDate        | Displays the route date.<br /> **Example**: 4/16/2026                                            | 
+| Job          | Displays the job number.<br /> **Example**: 123456                                               |
+| Company Name | Displays the company name associated with the route.<br /> **Example**: TEST #2                  |
+| Meas         | Displays the number of measurements in the route.<br /> **Example**: 12                          |
+| ∧ (Up)       | Scrolls up through the route list.                                                               |
+| ∨ (Down)     | Scrolls down through the route list.                                                             |
+| Select       | Confirms the selected route and proceeds to the Bump Test Measurement screen.                    |
+
+## Select Route
+
+To select a route, proceed as follows:
+
+1. On the Select Route screen, select the desired route from the list. The selected route is highlighted.
+2. Select Select.<br />
+    a. If the selected route is more than 2 weeks old, a warning dialog appears the same as shown in <FigureRef id="Route-Age-Warning-Dialog" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Route-Age-Warning-Dialog" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Route-Age-Warning-Dialog-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Route-Age-Warning-Dialog-Dark.png" 
+        caption="Route Age Warning Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+If the route is more than 2 weeks old, the following message appears: 
+**Route is more than 2 weeks old**. Please download a new route before proceeding! 
+Press **'YES' to exit** and download a new **ROUTE or 'NO' to** proceed with the old **ROUTE**.
+
+:::
+
+3. Select **Yes** to exit and download a new route. The Update Routes screen appears.
+4. Select **No** to proceed with the existing route. The Coast Down Test Measurement screen appears.
+
+## Update Routes screen (in case of yes)
+
+If **Yes** is selected on the warning dialog, the Update Routes screen appears. This screen allows the 
+technician to download a new route from the selected connection source.
+
+<FigureProvider>
+    <Figure 
+        id="Update-Routes-Screen" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Update-Routes-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Update-Routes-Screen-Dark.png" 
+        caption="Update Routes Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Update Route Screen
+
+The following fields and controls available on the Update Routes screen.  
+
+| Field/Column    | Description                                                                       |                                                                                                                                          
+| :-------------- | :-------------------------------------------------------------------------------- |
+| Connection      | Displays the currently selected connection type. <br /> **Example:** USB Drive    |
+| High speed down | Displays whether high speed download is enabled.. <br /> **Example:** No          |
+| Selected        | Displays a checkbox indicating whether the route is selected for download.        |
+| ID              | Displays the route ID.                                                            |
+| Name            | Displays the route name.                                                          |
+| Load Route List | Loads the available routes from the selected connection source.                   |
+| Select All      | Selects all available routes for download.                                        |
+| Select          | Confirms the selected routes for download.                                        |
+| More            | Opens the connection Options screen to configure the connection type.             |
+| Task status bar | Displays the current task status. <br /> **Example**: Error – USB Stick not found.|
+
+## Configure the connection
+
+If the route list is unavailable or the connection is not stable, select **More** to configure the connection settings.
+
+To configure the connection, proceed as follows:
+
+1. On the Update Routes screen, select More. The Options screen appears, displaying the available connection types as shown in <FigureRef id="Connection-Options-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Connection-Options-Screen" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Connection-Options-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Connection-Options-Screen-Dark.png" 
+        caption="Connection-Options-Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+2. Select the desired connection type from the available options:
+<ul><li>USB Drive</li>
+<li>ITR.com</li>
+<li>ITR.com High Speed</li>
+<li>ITR.com via CMAS</li>
+<li>CMAS</li></ul>
+
+3. Select **Save**. The DCU saves the connection setting and returns to the Update Routes screen.
+4. To close the Options screen without saving changes, select **Cancel**.
+
+## Coast Down Test Measurement screen (In case of No)
+
+After selecting a route and selecting No on the warning dialog, the Coast Down Test Measurement screen appears.
+
+<FigureProvider>
+    <Figure 
+        id="Coast-Down-Test-Measurement-Screen" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Measurement-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Measurement-Screen-Dark.png" 
+        caption="Coast Down Test Measurement Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Coast Down Test Measurement screen
+
+The following fields and controls available on the Coast Down Test Measurement screen.
+
+| Field/Column    | Description                                                                       |                                                                                                                                          
+| :-------------- | :-------------------------------------------------------------------------------- |
+| Options         | Displays the current measurement configuration.                                   |
+| Frequency       | Displays the configured frequency range.<br /> **Example**: 100,000 CPM           |
+| Resolution      | Displays the configured resolution value.<br /> **Example**: 800                  |
+| Mode            | Displays the number of averages configured.<br /> **Example**: 4                  |
+| Order           | Displays the tracked vibration order.<br /> **Example**: 1                        |
+| Sensor          | Displays the connected sensor type.<br /> **Example**: 100mv/g triax              |
+| Display         | Displays the current test type.<br /> **Example**: Coastdown                      |    
+| Channel         | Displays the active measurement axis.<br /> **Example**: X                        |
+| Scale           | Displays the scale type.<br /> **Example**: Linear                                |
+| Time            | Displays the elapsed measurement time in seconds.<br /> **Example**: 0.72         |
+| Max Change      | Displays the RPM increment used for data snapshots.<br /> **Example**: 100 RPM    |
+| Id              | Displays the measurement identification number.<br /> **Example**:500001          |
+| Display Options | Displays the current display configuration.                                       |
+| Waterfall       | Displays whether waterfall mode is enabled.<br /> **Example**: False              |
+| Touch           | Displays whether touch mode is enabled. <br /> **Example**: False                 |
+| Magnitude       | Displays whether magnitude display is enabled.<br /> **Example**: True            |
+| Unwrap Phase    | Displays whether the unwrap phase is enabled. <br /> **Example**:  False          | 
+| Show Phase      | Displays whether phase display is enabled.<br /> **Example**:  True               |  
+| Start Measuring | Starts the Coast Down Test data acquisition process.                              |
+| Stop            | Stops the active measurement session.                                             |
+| Store Data      | Saves the captured measurement data to the selected route.                        |
+| ∧ (Up)          | Scrolls up in the measurement data or chart view.                                 |
+| ∨ (Down)        | Scrolls down in the measurement data or chart view.                               |
+| More            | Expands the button panel to display additional controls                           |
+
+
+## Run a Coast Down Test
+
+To run a **Coast Down Test**, proceed as follows:
+
+1. On the Coast Down Test Measurement screen, select **Start Measuring**. 
+2. The DCU begins capturing vibration data. The task status bar displays **Measurement**.
+3. Allow the machine to decelerate from operating speed to a complete stop. 
+4. The DCU captures vibration data across the decreasing RPM range and displays the results on the chart as shown in <FigureRef id="Coast-Down-Test-Measurement-Chart" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Coast-Down-Test-Measurement-Chart" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Measurement-Chart-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Measurement-Chart-Dark.png" 
+        caption="Coast Down Test Measurement Chart" 
+        width="70%"
+    />
+</FigureProvider>
+
+5. Select **Stop** to end the measurement.
+6. Select **Store Data** to save the captured measurement data to the selected route.
+
+## Additional Configuration Controls 
+
+## More Options (in case of No)
+
+Select **More** on the Coast Down Test Measurement screen to access additional settings.
+
+<FigureProvider>
+    <Figure 
+        id="Coast-Down-Test-Measurement-Screen-More-Options-Expanded" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Measurement-Screen-More-Options-Expanded-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Measurement-Screen-More-Options-Expanded-Dark.png" 
+        caption="Coast Down Test Measurement Screen More Options Expanded" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Test Tachometer
+
+Use the **Test Tachometer function** to verify the speed sensor signal before running the Coast Down Test.
+
+To run the Tachometer Test, proceed as follows:
+
+1. On the Coast Down Test Measurement screen, select **More**, then select **Test Tachometer**. 
+2. The Tachometer Test modal appears as shown in <FigureRef id="Tachometer-Test-Modal" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Tachometer-Test-Modal" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Tachometer-Test-Modal-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Tachometer-Test-Modal-Dark.png" 
+        caption="Tachometer Test Modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select the desired Unit for the tachometer reading:
+    a. **Hertz**
+    b. **CPM (Cycles Per Minute)**
+4. Select **Cancel** to close the Tachometer Test modal and return to the Coast Down Test Measurement screen.
+
+## Test Tachometer Screen
+
+The following fields and controls available on the Test Tachometer screen.
+
+| Field        | Description                                                                                       |                                                                                                                                          
+| :----------- | :------------------------------------------------------------------------------------------------ |
+| Test Result  | Displays the current tachometer signal status.<br />**Example:** Waiting: Hertz                   |   
+| Tests        | Displays the total number of tests run. <br />**Example:** 0                                      |
+| Failed Tests | Displays the number of failed tests. <br />**Example:** 0                                         |
+| Status       | Displays the current test status.                                                                 |
+| Unit         | DSelects the unit for the tachometer reading. Available options: Hertz, CPM (Cycles Per Minute).  |
+| Cancel       | Closes the Tachometer Test modal and returns to the Coast Down Test Measurement screen.           |
+
+## Sensor
+
+Use the **Sensor function** to configure the sensor type and sensitivity for the Coast Down Test.
+
+To configure the sensor, proceed as follows:
+1. On the Coast Down Test Measurement screen, select **More**, then select **Sensor**. 
+2. The Sensor Selection modal appears as shown in <FigureRef id="Sensor-Selection-Modal" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Sensor-Selection-Modal" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Sensor-Selection-Modal-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Sensor-Selection-Modal-Dark.png" 
+        caption="Sensor Selection Modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select the desired sensor type from the **Sensor** dropdown. Example: Triaxial Accelerometer
+4. Select the desired sensitivity value from the **Sensitivity** dropdown. Example: 100 mv/g
+5. To enable a cable integrity check, select the **Checks Cable Integrity** checkbox.
+6. Select **Ok**. The DCU saves the sensor configuration and returns to the Coast Down Test Measurement screen.
+7. To close the Sensor Selection modal without saving changes, select **Cancel**.
+
+## Setup
+
+Use the **Setup function** to configure the core acquisition parameters for the Coast Down Test.
+
+To configure the setup, proceed as follows:
+1. On the Coast Down Test Measurement screen, select **More**, then select **Setup**.
+2. The Setup modal appears as shown in <FigureRef id="Setup-Modal" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Setup-Modal" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Setup-Modal-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Setup-Modal-Dark.png" 
+        caption="Setup-Modal" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Setup Modal
+
+The following fields and controls available in the Setup modal.
+
+
+| Field/Button        | Description                                                                                       |                                                                                                                                          
+| :------------------ | :------------------------------------------------------------------------------------------------ |
+| Frequency           | Sets the frequency range for analysis. Select from the dropdown. Example: 100,000 CPM             |
+| Resolution          | Sets the number of spectral lines for analysis. Select from the dropdown.<br /> Example: 800      | 
+| Amount of change    | Sets the RPM interval for data snapshots. Select from the dropdown.<br />Example: 100 RPM         | 
+| Order #1            | Sets the first vibration order to track.<br /> Example: 1                                         |
+| Order #2            | Sets the second vibration order to track.<br /> Example: 2                                        |
+| Order #3            | Sets the third vibration order to track.<br /> Example: 5                                         |
+| Temporary Storage   | Selects the temporary storage location. Available options: Memory, Disk.                          |
+| Temporary Storage   | Enables saving of temporary data for later use.                                                   |
+| Ok                  | Saves the configured setup parameters and closes the modal.                                       |
+| Cancel              | Closes the Setup modal without saving changes.                                                    |
+
+3. Configure the required parameters.
+4. Select **Ok**. The DCU saves the setup parameters and returns to the Coast Down Test Measurement screen.
+5. To close the Setup modal without saving changes, select **Cancel**.
+
+## Options (in case of No)
+
+Use the Options function to configure the display and calculation settings for the Coast Down Test.
+
+To configure the options, proceed as follows:
+
+1. On the Coast Down Test Measurement screen, select **More**, then select **Options**. 
+2. The Options screen appears as shown in <FigureRef id="Coast-Down-Test-Options-Screen" /> 
+
+<FigureProvider>
+    <Figure 
+        id="Coast-Down-Test-Options-Screen" 
+        src="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Options-Screen-Light.png"
+        srcDark="/img/3-SpecialTests\2-CoastDownTest/Coast-Down-Test-Options-Screen-Dark.png" 
+        caption="Coast-Down-Test-Options-Screen" 
+        width="70%"
+    />
+</FigureProvider>
+
+## Option Modal
+
+The following fields and controls available in the option modal.
+
+| Field/Button | Description                                                                        |                                                                                                                                                                                                                           
+| :----------- | :--------------------------------------------------------------------------------- |
+| Display      | Selects the display mode. Available options: Coastdown, RampUp.                    |
+| Scale        | Selects the scale type. Available options: Log, Linear.                            |
+| Mode         | Selects the measurement mode. Available options: Velocity, Acceleration.           |
+| Show         | Selects the active measurement axis. Available options: X, Y, Z.                   |
+| Waterfall    | Enables or disables waterfall display.                                             |
+| Magnitude    | Enables or disables magnitude display.                                             |
+| Show Phase   | Enables or disables phase display.                                                 |
+| Touch        | Enables or disables touch mode                                                     |
+| Unwrap Phase | Enables or disables unwrap phase.                                                  |
+| Max. chart   | Enables or disables the maximum chart display.                                     |
+| Reset        | Resets all options to their default values.                                        |
+| Save         | Saves the configured options and returns to the Coast Down Test Measurement screen |
+| Cancel       | Closes the Options screen without saving changes.                                  |
+
+3. Configure the required options.
+4. Select **Save**. The DCU saves the configured options and returns to the Coast Down Test Measurement screen.
+5. To reset all options to default values, select **Reset**.
+6. To close the Options screen without saving changes, select **Cancel.**
+
+
+
