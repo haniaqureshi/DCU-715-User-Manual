@@ -6,3 +6,263 @@ sidebar_label: '3.5 - Time Synchronous Averaging'
 ---
 
 # Time Synchronous Averaging
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **Time Synchronous Averaging** (TSA) function to extract periodic waveforms from noisy vibration data by synchronizing data acquisition with the shaft's rotation via a tachometer signal. This technique is useful for isolating gear mesh frequencies and other rotation-synchronous events from background noise.
+To open the Time Synchronous Averaging screen, proceed as follows:
+1. From the **Special Tests** submenu, select **Time Synchronous Averaging**.
+2. The Select Route screen appears as shown in <FigureRef id="Time-Synchronous-Averaging-Select-Route-Screen" />.
+
+<FigureProvider>
+    <Figure
+        id="Time-Synchronous-Averaging-Select-Route-Screen"
+        src="/img/4-SpecialTests/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-Select-Route-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTests/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-Select-Route-Screen-Dark.jpg"
+        caption="Time Synchronous Averaging Select Route screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Select Route Screen
+:::note
+
+The **Select Route** screen and its available fields and controls are the same as described in [Section 3.1 (Bump Test)](../3-SpecialTests/1-BumpTest.mdx). Please review that section for a detailed description. 
+
+:::
+
+### Select a route
+To select a route, proceed as follows:
+1. On the Select Route screen, select the desired route from the list. The selected route is highlighted.
+2. Select **Select**.<br />
+	a. If the selected route is more than 2 weeks old, a warning dialog appears as shown in <FigureRef id="Select-Route-Warning-Dialog" />
+
+<FigureProvider>
+    <Figure
+        id="Select-Route-Warning-Dialog"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Select-Route-Warning-Dialog-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Select-Route-Warning-Dialog-Dark.jpg"
+        caption="Select Route warning dialog"
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+If the route is more than 2 weeks old, the following message appears: Route is more than 2 weeks old. Please 
+download a new route before proceeding! Press **'YES'** to exit and download a new **ROUTE** or **'NO'** to proceed 
+with the old **ROUTE**.
+
+:::
+
+3. Select **Yes** to exit and download a new route. The Update Routes screen appears.
+4. Select **No** to proceed with the existing route. The Time Synchronous Averaging Measurement screen appears.
+
+### Update Routes screen
+If **Yes** is selected on the warning dialog, the Update Routes screen appears as shown in <FigureRef id="Select-Route-Warning-Dialog" />.
+
+<FigureProvider>
+    <Figure
+        id="Select-Route-Warning-Dialog"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Select-Route-Warning-Dialog-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Select-Route-Warning-Dialog-Dark.jpg"
+        caption="Update Routes screen"
+        width="70%"
+    />
+</FigureProvider>
+
+
+### Update Route Screen
+:::note
+
+The **Update Route** screen is identical to the one described in [Section 3.1 (Bump Test)](../3-SpecialTests/1-BumpTest.mdx). 
+See [Section 3.1 or 3.2](../3-SpecialTests/1-BumpTest.mdx/../2-CoastDownTest.mdx) for detailed screen description and available controls. 
+
+:::
+
+If the route list is unavailable or the connection is not stable, select **More** to configure the connection settings.
+
+
+### Configure the Connection
+To configure the connection, proceed as follows:
+
+1. On the Update Routes screen, select **More**. The Connection Options screen appears as shown in the <FigureRef id="Connection-Options-Screen" />.
+
+<FigureProvider>
+    <Figure
+        id="Connection-Options-Screen"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Connection-Options-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Connection-Options-Screen-Dark.jpg"
+        caption="Connection Options screen"
+        width="70%"
+    />
+</FigureProvider>
+
+2. Select the desired connection type:
+<ul><li>USB Drive</li>
+<li>ITR.com</li>
+<li>ITR.com High Speed</li>
+<li>ITR.com via CMAS</li>
+<li>CMAS</li></ul>
+3. Select **Save**. The DCU saves the connection setting and returns to the Update Routes screen.
+4. To close without saving, select **Cancel**.
+
+### Time Synchronous Averaging Measurement screen
+After selecting a route and selecting **No** on the warning dialog, the Time Synchronous Averaging Measurement 
+screen appears as shown in <FigureRef id="Time-Synchronous-Averaging-Measurement-Screen" />.
+
+<FigureProvider>
+    <Figure
+        id="Time-Synchronous-Averaging-Measurement-Screen"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-Measurement-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-Measurement-Screen-Dark.jpg"
+        caption="Time Synchronous Averaging Measurement screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Measurement screen fields
+The following  fields and controls available on the Time Synchronous Averaging Measurement screen are shown 
+in <FigureRef id="Time-Synchronous-Averaging-Measurement-Screen" />
+
+| Field/Button    | Description                                        				       	                     |
+|---------------- |--------------------------------------------------------------------------------------------- |
+| Options         | Displays the current measurement configuration. 						                     |
+| Frequency 	  | Displays the frequency range configured for analysis.<br />**Example:** 50,000 CPM           |
+| Resolution 	  | Displays the number of spectral lines configured for the measurement. <br />**Example:** 800 | 
+| Mode 		      | Displays the measurement unit type. <br />**Example:** Velocity 				             | 
+| Sensor 	      | Displays the connected sensor type and sensitivity. <br />**Example:** 100 mv/g triax        |
+| Display         | Displays the current graph view setting. <br />**Example:** Spectrum                         |
+| Channel 	      | Displays the active measurement axis being shown. <br />**Example:** X                       | 
+| Averages 	      | Displays the number of revolutions/blocks configured for averaging. <br />**Example:** 8     |
+| Scale 	      | Displays the vertical axis scaling. <br />**Example:** Lo                                    |
+| Id 		      | Displays the measurement identification number. <br />**Example:** 400001                    |
+| Start Measuring | Starts the live data acquisition, synchronized with the tachometer pulses.                   |
+| Store Data 	  | Saves the captured measurement data.                                                         |
+| Reset 	      | Clears the current measurement and restores default values.                                  |
+| More            | Expands the right panel to display Test Tachomet., Sensor, and Options controls.             |
+
+
+### Run a Time Synchronous Averaging measurement
+To run a Time Synchronous Averaging measurement, proceed as follows:
+
+1. On the Time Synchronous Averaging Measurement screen, select **Start Measuring**.
+2. The DCU begins capturing the vibration signal synchronized with the tachometer pulses.
+3. Allow the DCU to complete the configured number of averages.
+4. Select **Store Data** to save the captured data.
+5. Select **Reset** to clear the current measurement, if needed.
+
+## Additional Configuration Controls 
+
+### More
+
+Use the **More** button to access the Test Tachomet., Sensor, and Options controls for the Time Synchronous Averaging measurement.
+To access these controls, proceed as follows:
+1. On the Time Synchronous Averaging Measurement screen, select **More**. 
+2. The left panel expands to display **Test Tachometer., Sensor,** and **Options**.
+3. Select **Less** to collapse the panel and return to the standard Measurement screen view.
+
+<FigureProvider>
+    <Figure
+        id="Time-Synchronous-Averaging-More-Screen"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-More-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-More-Screen-Dark.jpg"
+        caption="Time Synchronous Averaging More screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Test Tachometer
+Use the Test Tachometer function to verify that the tachometer is receiving a clean, steady signal before or after running the Time Synchronous Averaging measurement.
+To run the Tachometer Test, proceed as follows:
+
+1. On the Time Synchronous Averaging More screen, select **Test Tachometer**. 
+2. The Tachometer Test modal appears as shown in <FigureRef id="Tachometer-Test-Modal" />.
+3. Select the desired unit and select Cancel to close the modal. 
+
+<FigureProvider>
+    <Figure
+        id="Tachometer-Test-Modal"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Tachometer-Test-Modal-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Tachometer-Test-Modal-Dark.jpg"
+        caption="Tachometer Test modal"
+        width="70%"
+    />
+</FigureProvider>
+
+### Tachometer Test modal fields 
+The following fields and controls available in the Tachometer Test  modal are shown in <FigureRef id="Tachometer-Test-Modal" />
+
+| Field/Button | Description                                         	       	                       |
+|------------- |-------------------------------------------------------------------------------------- |
+| Test Result  | Displays the live tachometer reading status. **Example:** Waiting: Hertz              |
+| Test Details | Displays the number of tests run, failed tests, and current status.                   |
+| Unit         | Selects the display unit for the tachometer signal: Hertz or CPM (Cycles Per Minute). | 
+| Cancel       | Closes the Tachometer Test modal. 						                               |
+
+
+### Sensor
+
+Use the **Sensor function** to configure the sensor type, sensitivity, and cable check for the Time Synchronous Averaging measurement.
+To configure the sensor, proceed as follows:
+
+1. On the Time Synchronous Averaging More screen, select **Sensor**. 
+2. The Sensor Selection modal appears as shown in <FigureRef id="Sensor-Selection-Modal" />.
+
+<FigureProvider>
+    <Figure
+        id="Sensor-Selection-Modal"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Sensor-Selection-Modal-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Sensor-Selection-Modal-Dark.jpg"
+        caption="Sensor Selection modal"
+        width="70%"
+    />
+</FigureProvider>
+
+### Sensor Selection modal fields
+
+The following fields and controls available in the Sensor Selection modal are shown in <FigureRef id="Sensor-Selection-Modal" />.
+
+| Field/Button 		     | Description                                         	       	                        |
+|----------------------- |------------------------------------------------------------------------------------- |
+| Sensor       		     | Selects the sensor type from the dropdown. <br />**Example:** Triaxial Accelerometer |
+| Sensitivity 		     | Selects the sensor sensitivity from the dropdown. <br />**Example:** 100 mv/g        |
+| Checks Cable Integrity | Enables a cable integrity check when the sensor is confirmed.                        |
+| Ok 			         | Saves the sensor configuration and returns to the Measurement screen.                |
+| Cancel 	             | Closes the Sensor Selection modal without saving changes.                            |
+
+### Options
+Use the **Options function** to configure the Time Synchronous Averaging parameters before or after running a measurement.
+To open the Options screen, proceed as follows:
+
+1. On the Time Synchronous Averaging More screen, select **Options**.
+2. The Options screen will appear as shown in <FigureRef id="Time-Synchronous-Averaging-Options-Screen" />.
+
+<FigureProvider>
+    <Figure
+        id="Time-Synchronous-Averaging-Options-Screen"
+        src="/img/4-SpecialTest/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-Options-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/5-TimeSynchronousAveraging/Time-Synchronous-Averaging-Options-Screen-Dark.jpg"
+        caption="Time Synchronous Averaging Options screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Options screen fields
+The following fields and controls available on the Options screen are shown in <FigureRef id="Time-Synchronous-Averaging-Options-Screen" />.
+
+| Field/Button | Description                                         	       	                                        |
+|------------- |------------------------------------------------------------------------------------------------------- |
+| Display      | Toggles the visual output between Spectrum (frequency domain) or Time (time domain).                   |
+| Scale        | Selects the vertical axis scaling. Available options: Log, Linea                                       |
+| Mode         | Selects the measurement unit. Available options: Velocity, Acceleration.                               | 
+| Frequency    | Sets the frequency range for analysis. Select from the dropdown. <br />**Example:** 50,000 CPM         |
+| Resolution   | Sets the number of spectral lines for the measurement. Select from the dropdown. <br />**Example:** 80 |
+| Show Channel | For triaxial sensors, selects which axis to display. Available options: X, Y, Z.                       |
+| Averages     | Sets the number of revolutions/blocks to average. <br />Example: 8                                     |
+| Max. chart   | Enables or disables the maximum chart display option.                                                  | 
+| Save         | Saves the configured options and returns to the Measurement screen.                                    | 
+| Cancel       | Closes the Options screen without saving changes.                                                      |
+
+

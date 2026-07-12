@@ -6,3 +6,172 @@ sidebar_label: '3.9 - Balancing Program'
 ---
 
 # Balancing Program
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **Balancing Program** to correct rotor unbalance by calculating the correction weight and angle needed on one or two correction planes. The program supports Single Plane, Single Plane One Shot, and 2 Plane Balance workflows depending on the rotor configuration.
+To open the Balancing Program, proceed as follows:
+
+1. From the Dashboard, select **Balancing Program.**
+2. The Select Route screen appears as shown in <FigureRef id="Balancing-Program-Select-Route-Screen" />
+
+<FigureProvider>
+    <Figure
+        id="Balancing-Program-Select-Route-Screen"
+        src="/img/4-SpecialTest/9-Balancing Program/Balancing-Program-Select-Route-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-Balancing Program/Balancing-Program-Select-Route-Screen-Dark.png"
+        caption="Balancing Program Select Route screen "
+        width="70%"
+    />
+</FigureProvider>
+
+### Select Route Screen
+
+:::note
+
+The Select Route screen and its available fields and controls are the same as described in [Section 3.1](1-BumpTest.mdx). 
+Please review that section for a detailed description. 
+
+:::
+
+### Select a route
+To select a route, proceed as follows:
+
+1. On the Select Route screen, select the desired route from the list. The selected route is highlighted.
+2. Select **Select** the system redirect you to the Select Machine screen.
+
+:::info 
+If the selected route is more than 2 weeks old, a warning dialog appears. Select **Yes** to download a new route or **No** to proceed with the existing route. The warning and Update Routes flow is the same as described in above sections. 
+:::
+
+### Select Machine screen
+After selecting a route, the Select Machine screen appears. This screen displays the profile of the currently 
+selected machine and provides access to the balancing workflows.
+
+<FigureProvider>
+    <Figure
+        id="Select-Machine-Screen"
+        src="/img/4-SpecialTest/9-Balancing Program/Select-Machine-Screen-Light.png"
+        srcDark="/img/4-SpecialTest/9-Balancing Program/Select-Machine-Screen-Dark.png"
+        caption="Select Machine screen "
+        width="70%"
+    />
+</FigureProvider>
+
+### Select Machine screen fields
+The following e fields and controls available on the Select Machine screen as shown in the <FigureRef id="Select-Machine-Screen" />
+
+| Fields/Buttons                      | Description             	                                                                                             |
+|------------------------------------ |------------------------------------------------------------------------------------------------------------------------- |
+| Description of the selected machine | Displays the profile details of the selected machine. 						                                             |
+| Machine                             | Displays the machine name. 										 	                                                     |
+| Rotor Weight                        | Displays the rotor weight configured for the machine 		 						                                     |
+| Rotor Radius                        | Displays the rotor radius configured for the machine. 								                                     |
+| Approx Speed                        | Displays the approximate operating speed of the rotor. 								                                     | 
+| Number of Blades                    | Displays the number of blades configured for the machine. 					      	                                     |
+| Blade # at Tape                     | Displays the reference blade number aligned with the reflective tape. 						                             |
+| Direction                           | Displays the shaft rotation direction. 						                 	                                         |
+| Unit System                         | Displays the configured unit system. 										                                             |
+| Weight Unit                         | Displays the configured weight unit. 										                                             |
+| Tach Angle                          | Displays the configured tachometer reference angle. 						          	                                 |
+| More                                | Displays the list of saved machine profiles and expands the panel to show Add Machine, Edit Machine, and Delete Machine. | 
+| Single Plane                        | Starts a single-plane balancing measurement. 									                                         |
+| Single Plane One Shot               | Starts a single-plane balancing measurement using existing configuration coefficients, without running trial weight step |
+| 2 Plane Balance                     | Starts a two-plane balancing measurement. 									     |
+
+## Right Side Navigation Menu
+### Single Plane 
+Use **Single Plane balancing** for narrow or cantilevered rotors, where correction on a single plane is sufficient and cross-effect balancing between two planes is not required.
+To run a Single Plane balancing measurement, proceed as follows:
+
+1. On the Select Machine screen, select the required machine profile from the list.
+2. Select **Single Plane**. The Single Plane measurement screen appears as shown in <FigureRef id="Single-Plane" />.
+
+<FigureProvider>
+    <Figure
+        id="Single-Plane"
+        src="/img/4-SpecialTest/9-Balancing Program/Single-Plane-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-Balancing Program/Single-Plane-Dark.jpg"
+        caption="Single Plane "
+        width="70%"
+    />
+</FigureProvider>
+
+:::info
+
+If no machine profile is selected when **Single Plane** is selected, a warning dialog appears: **Create a description of a new machine for which a balancing process will be conducted.** Select **Close** to dismiss the dialog, then add or select a machine profile before proceeding. 
+
+:::
+
+### Single Plane One Shot
+Use **Single Plane One Shot** to compute a rapid correction using existing configuration coefficients, bypassing the trial weight run required in a standard 
+Single Plane balance. To run a Single Plane One Shot balancing measurement, proceed as follows:
+
+1. On the Select Machine screen, select the required machine profile from the list.
+2. Select **Single Plane One Shot**. The Single Plane One Shot measurement screen appears as shown in <FigureRef id="Single-Plane-One-Shot" />.
+
+<FigureProvider>
+    <Figure
+        id="Single-Plane-One-Shot"
+        src="/img/4-SpecialTest/9-Balancing Program/Single-Plane-One-Shot-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-Balancing Program/Single-Plane-One-Shot-Dark.jpg"
+        caption="Single Plane One Shot"
+        width="70%"
+    />
+</FigureProvider>
+
+:::info
+
+If no machine profile is selected when **Single Plane One Shot** is selected, a warning dialog appears: **Create a
+description of a new machine for which a balancing process will be conducted**. Select **Close** to dismiss the dialog, 
+then add or select a machine profile before proceeding. 
+
+:::
+
+### 2 Plane Balance  
+Use **2 Plane Balance** for long, dual-bearing rotors where unbalance forces affect both correction planes simultaneously.
+To run a 2 Plane Balance measurement, proceed as follows:
+
+1. On the Select Machine screen, select the required machine profile from the list.
+2. Select **2 Plane Balance**. The 2 Plane Balance screen appears as shown in <FigureRef id="2-Plane-Balance" />.
+3. This screen displays the measurement instructions, tachometer and phase readings, and the run values for both the Near and Far correction planes.                                                                                     
+
+<FigureProvider>
+    <Figure
+        id="2-Plane-Balance"
+        src="/img/4-SpecialTest/9-Balancing Program/2-Plane-Balance-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-Balancing Program/2-Plane-Balance-Dark.jpg"
+        caption="2 Plane Balance "
+        width="70%"
+    />
+</FigureProvider>
+
+:::info
+
+If no machine profile is selected when **Single Plane One Shot** is selected, a warning dialog appears: **Create a
+description of a new machine for which a balancing process will be conducted.** Select **Close** to dismiss the dialog,
+then add or select a machine profile before proceeding. 
+
+:::
+
+### 2 Plane Balance Screen Description
+
+| Fields/Buttons     | Description                                                          |                                                                                                                                          
+| :----------------- | :--------------------------------------------------------------------|
+| Instructions       |
+| Output             |
+| Tachometer         |
+| Phase (2 Sigma)    |
+| Near               |
+| Far                |
+| Near end Initial   |
+| Far end Initial    |
+| Enter Trial Weight |
+| Near 2nd           |
+| Far 2nd            |
+| Sensor 
+| Options 
+| Display Results 
+| Capture 
+| Less / More 
+

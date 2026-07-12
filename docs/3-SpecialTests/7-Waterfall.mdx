@@ -6,3 +6,164 @@ sidebar_label: '3.7 - Waterfall'
 ---
 
 # Waterfall
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+Use the **Waterfall function** to capture a series of vibration spectra over time or varying machine speeds. This creates a three-dimensional waterfall plot that helps technicians identify how resonance and vibration frequencies shift during changing operating conditions. 
+To open the Waterfall screen, proceed as follows:
+
+1. From the Special Tests submenu, select **Waterfall**. 
+2. The Select Route screen appears as shown in <FigureRef id="Waterfall-Select-Route-Screen" />
+
+<FigureProvider>
+    <Figure
+        id="Waterfall-Select-Route-Screen"
+        src="/img/4-SpecialTest/7-Waterfall/Waterfall-Select-Route-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/7-Waterfall/Waterfall-Select-Route-Screen-Dark.jpg"
+        caption="Waterfall Select Route screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Select Route Screen
+
+:::note 
+
+The **Select Route** screen and its available fields and controls are the same as described in [Section 3.1](1-BumpTest.mdx). 
+Please review that section for a detailed description. 
+
+:::
+
+### Select a route
+To select a route, proceed as follows:
+
+1. On the **Select Route** screen, select the desired route from the list. The selected route is highlighted.
+2. The system redirects you to the **Waterfall Measurement** screen, where you can easily measure the selected route data.
+
+:::info
+If the selected route is more than 2 weeks old, a warning dialog appears. Select **Yes** to download a new route or **No** to proceed with the existing route. 
+The warning and Update Routes flow is the same as described in above sections.
+:::
+
+### Waterfall Measurement screen
+After selecting a route, the Waterfall Measurement screen appears the same as shown in <FigureRef id="Waterfall-Measurement-Screen" />
+
+<FigureProvider>
+    <Figure
+        id="Waterfall-Measurement-Screen"
+        src="/img/4-SpecialTest/7-Waterfall/Waterfall-Measurement-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/7-Waterfall/Waterfall-Measurement-Screen-Dark.jpg"
+        caption="Waterfall Measurement screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Waterfall Measurement screen
+The following fields and controls available on the Waterfall Measurement screen are shown in <FigureRef id="Waterfall-Measurement-Screen" />.
+
+| Fields/Buttons  | Description             	                                                                  |
+|---------------- |---------------------------------------------------------------------------------------------- |
+| Options         | Displays the current measurement configuration.  					                          |
+| Frequency       | Displays the configured analysis frequency range.  <br />**Example:** 50,000 CPM              |
+| Resolution      | Displays the number of spectral lines configured for data collection.  <br />**Example:** 800 |
+| Sensor          | Displays the connected sensor type and sensitivity.  <br />**Example:** 100 mv/g triax        |
+| Type            | Displays the measurement parameter type.  <br />**Example:** Velocity                         | 
+| Time            | Displays the active duration of the capture sequence in seconds.  <br />**Example:** 1.34     |
+| Id              | Displays the measurement identification number. <br />**Example:** 400001                     |
+| Active Channels | Displays the hardware axes enabled for data collection.  <br />**Example:** X, Y, Z           |
+| Channel         | Displays the primary channel currently displayed on the 3D chart.  <br />**Example:** X       |
+| 3D Chart area   | Displays the real-time 3D waterfall plot showing Amplitude, Frequency, and Time axes.         |
+| Start Measuring | Starts the data acquisition process across the selected channels.                             |                                            |
+| Stop            |  Stops the active data collection session.                                                    | 
+| Store Data      | Saves the captured three-dimensional waterfall spectrum to the device.                        |                                     | 
+| Sensor          | Opens the Sensor Selection modal to configure sensor parameters.                              |                                              | 
+| Options         | Opens the Waterfall Options screen to configure measurement parameters.                       |                                    |
+
+### Run a Waterfall measurement
+To run a Waterfall measurement, proceed as follows:
+
+1. On the Waterfall Measurement screen, select **Start Measuring**. The DCU begins data collection from the connected sensor and builds up spectral rows over time. The 3D chart updates in real time.
+2. Monitor the 3D chart as the data updates.
+3. Select **Stop** to halt the measurement session.
+4. Select **Store Data** to save the captured waterfall data to the selected route.
+
+:::info 
+
+When **Start Measuring** is selected, the **Stop** button becomes active and all other controls on the right panel are disabled. When **Stop** is selected to end the measurement, the Stop button becomes disabled and all other controls become available again.
+
+:::
+
+## Additional Configuration Controls
+
+### Sensor
+Use the **Sensor function** to configure the sensor type and sensitivity for the Waterfall measurement.
+To configure the sensor, proceed as follows:
+
+1. On the Waterfall Measurement screen, select **Sensor**. 
+2. The Sensor Selection modal appears as shown in <FigureRef id="Sensor-Selection-Modal" />
+
+
+<FigureProvider>
+    <Figure
+        id="Sensor-Selection-Modal"
+        src="/img/4-SpecialTest/7-Waterfall/Sensor-Selection-Modal-Light-1.jpg"
+        srcDark="/img/4-SpecialTest/7-Waterfall/Sensor-Selection-Modal-Dark-1.jpg"
+        caption="Sensor Selection modal"
+        width="70%"
+    />
+</FigureProvider>
+
+### Sensor Selection Modal
+1. Select the hardware type from the Sensor dropdown menu (e.g., Triaxial Accelerometer).
+2. Select the required scale from the Sensitivity dropdown menu (e.g., 10 mv/g).
+3. Toggle the Checks Cable Integrity checkbox if physical line bias health checks are required.
+4. Select **Ok** to save variables, or **Cancel** to exit without making changes.
+
+### Options
+Use the **Options function** to configure the analysis parameters, channel selection, and display settings for the Waterfall measurement.
+To open the Options screen, proceed as follows:
+
+1. On the Waterfall Measurement screen, select **Options**.
+2. The Waterfall Options screen appears as shown in <FigureRef id="Waterfall-Options-Screen" />
+
+<FigureProvider>
+    <Figure
+        id="Waterfall-Options-Screen"
+        src="/img/4-SpecialTest/7-Waterfall/Waterfall-Options-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/7-Waterfall/Waterfall-Options-Screen-Dark.jpg"
+        caption=" Waterfall Options screen"
+        width="70%"
+    />
+</FigureProvider>
+
+### Options screen
+The following fields and controls available on the Waterfall Options screen are shown in <FigureRef id="Waterfall-Options-Screen" />
+
+| Fields/Buttons | Description             	                                                                                     |
+|--------------- |-------------------------------------------------------------------------------------------------------------- |
+| Frequency      | Sets the analysis frequency range. Select from the dropdown. Example: 50,000 CPM 		                     | 	     
+| Resolution     | Sets the number of spectral lines for data collection. Select from the dropdown.  <br />**Example:** 800      |
+| Type           | Selects the measurement parameter type. Available options: Velocity, Acceleration.                            |
+| Max. chart     | Enables or disables the maximum chart display option.                                                         |
+| Channel        | Selects the individual channels to enable for data collection. Select the checkbox for each required channel. |
+| Show (X/Y/Z)   | Selects the primary display axis on the 3D chart. Select the corresponding radio button.                      | 
+| Reset          | Resets all options to their default values.                      						                     | 
+| Save           | Saves the configured options and returns to the Waterfall Measurement screen.   			                     | 
+| Cancel         | Closes the Options screen without saving changes.  	             						                     |	
+
+
+### Configure the options
+To configure the Waterfall options, proceed as follows:
+
+1. On the Waterfall Measurement screen, select **Options**. The Waterfall Options screen appears.
+2. Select the desired **Frequency** from the dropdown.
+3. Select the desired **Resolution** from the dropdown.
+4. Select the **desired Type**:
+<ul><li>Velocity</li>
+<li>Acceleration</li></ul>
+5. To enable the maximum chart display, select the **Max. chart** checkbox.
+6. Select the checkboxes for the required measurement channels.
+7. Select the radio button for the desired primary display axis (X, Y, or Z).
+8. Select **Save**. The DCU saves the configured options and returns to the Waterfall Measurement screen.
+9. To reset all options to their default values, select **Reset**.
+10. To close the Options screen without saving changes, select **Cancel**.
