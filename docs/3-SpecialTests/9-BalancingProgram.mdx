@@ -18,8 +18,8 @@ To open the Balancing Program, proceed as follows:
 <FigureProvider>
     <Figure
         id="Balancing-Program-Select-Route-Screen"
-        src="/img/4-SpecialTest/9-Balancing Program/Balancing-Program-Select-Route-Screen-Light.jpg"
-        srcDark="/img/4-SpecialTest/9-Balancing Program/Balancing-Program-Select-Route-Screen-Dark.png"
+        src="/img/4-SpecialTest/9-BalancingProgram/Balancing-Program-Select-Route-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/Balancing-Program-Select-Route-Screen-Dark.png"
         caption="Balancing Program Select Route screen "
         width="70%"
     />
@@ -51,8 +51,8 @@ selected machine and provides access to the balancing workflows.
 <FigureProvider>
     <Figure
         id="Select-Machine-Screen"
-        src="/img/4-SpecialTest/9-Balancing Program/Select-Machine-Screen-Light.png"
-        srcDark="/img/4-SpecialTest/9-Balancing Program/Select-Machine-Screen-Dark.png"
+        src="/img/4-SpecialTest/9-BalancingProgram/Select-Machine-Screen-Light.png"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/Select-Machine-Screen-Dark.png"
         caption="Select Machine screen "
         width="70%"
     />
@@ -90,8 +90,8 @@ To run a Single Plane balancing measurement, proceed as follows:
 <FigureProvider>
     <Figure
         id="Single-Plane"
-        src="/img/4-SpecialTest/9-Balancing Program/Single-Plane-Light.jpg"
-        srcDark="/img/4-SpecialTest/9-Balancing Program/Single-Plane-Dark.jpg"
+        src="/img/4-SpecialTest/9-BalancingProgram/Single-Plane-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/Single-Plane-Dark.jpg"
         caption="Single Plane "
         width="70%"
     />
@@ -113,8 +113,8 @@ Single Plane balance. To run a Single Plane One Shot balancing measurement, proc
 <FigureProvider>
     <Figure
         id="Single-Plane-One-Shot"
-        src="/img/4-SpecialTest/9-Balancing Program/Single-Plane-One-Shot-Light.jpg"
-        srcDark="/img/4-SpecialTest/9-Balancing Program/Single-Plane-One-Shot-Dark.jpg"
+        src="/img/4-SpecialTest/9-BalancingProgram/Single-Plane-One-Shot-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/Single-Plane-One-Shot-Dark.jpg"
         caption="Single Plane One Shot"
         width="70%"
     />
@@ -139,8 +139,8 @@ To run a 2 Plane Balance measurement, proceed as follows:
 <FigureProvider>
     <Figure
         id="2-Plane-Balance"
-        src="/img/4-SpecialTest/9-Balancing Program/2-Plane-Balance-Light.jpg"
-        srcDark="/img/4-SpecialTest/9-Balancing Program/2-Plane-Balance-Dark.jpg"
+        src="/img/4-SpecialTest/9-BalancingProgram/2-Plane-Balance-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/2-Plane-Balance-Dark.jpg"
         caption="2 Plane Balance "
         width="70%"
     />
@@ -156,22 +156,122 @@ then add or select a machine profile before proceeding.
 
 ### 2 Plane Balance Screen Description
 
-| Fields/Buttons     | Description                                                          |                                                                                                                                          
-| :----------------- | :--------------------------------------------------------------------|
-| Instructions       |
-| Output             |
-| Tachometer         |
-| Phase (2 Sigma)    |
-| Near               |
-| Far                |
-| Near end Initial   |
-| Far end Initial    |
-| Enter Trial Weight |
-| Near 2nd           |
-| Far 2nd            |
-| Sensor 
-| Options 
-| Display Results 
-| Capture 
-| Less / More 
+| Fields/Buttons     | Description                                                                                             |                                                                                                                                          
+| :----------------- | :------------------------------------------------------------------------------------------------------ |
+| Instructions       | Displays the current measurement instruction. <br />**Example:** Measure on NEAR END                    |
+| Output             | Displays the live diagnostic output.                                                                    |
+| Tachometer         | Displays the tachometer tracking speed.                                                                 |
+| Phase (2 Sigma)    | Displays the phase deviation value.                                                                     |
+| Near               | Displays the run values for the near correction plane: Initial Run, Test, 2nd Run, 3nd Run, Correction. |
+| Far                | Displays the run values for the far correction plane: Initial Run, Test, 2nd Run, 3nd Run, Correction.  |
+| Near end Initial   | Starts the initial measurement run on the near end.                                                     | 
+| Far end Initial    | Starts the initial measurement run on the far e                                                         |              
+| Enter Trial Weight | Opens the trial weight entry for the current run, once an initial run is complete.                      |
+| Near 2nd           | Starts the second measurement run on the near end.                                                      |
+| Far 2nd            | Starts the second measurement run on the far end.                                                       |
+| Sensor             | Opens the Sensor Selection modal.                                                                       |
+| Options            | Opens the Options screen.                                                                               |
+| Display Results    | Displays the calculated correction results, once available.                                             |
+| Capture            | Captures the current measurement reading.                                                               |
+| Less / More        | Collapses or expands the right control panel.                                                           |
 
+### Run a 2 Plane Balance measurement
+To run a 2 Plane Balance measurement, proceed as follows:
+
+1. On the 2 Plane Balance screen, review the instruction shown in the Instructions box (e.g., Measure on NEAR END).
+2. Select **Near end Initial** (or **Far end Initial**, depending on the instruction). The polar diagram screen appears, 
+and the status bar shows the current measurement count (e.g., Measurement: 1).
+
+<FigureProvider>
+    <Figure
+        id="2-Plane-Balance"
+        src="/img/4-SpecialTest/9-BalancingProgram/2-Plane-Balance-Polar-Diagram-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/2-Plane-Balance-Polar-Diagram-Screen-Dark.jpg"
+        caption="2 Plane Balance polar diagram screen"
+        width="70%"
+    />
+</FigureProvider>
+
+3. Follow the on-screen instructions to complete the near and far initial runs, trial weight run, and second runs as prompted.
+4. Select **Capture** to record each measurement reading.
+5. Once all required runs are complete, select **Display Results** to view the calculated correction weight and angle.
+
+### Polar diagram zoom controls
+To enlarge a polar plot for closer inspection of phase and amplitude, proceed as follows:
+
+1. Select **Maximize Near Plot** or **Maximize Far Plot** to enlarge the corresponding polar diagram to full screen.
+2. Select the same button again to return the diagram to its standard size and restore the control panel view.
+
+:::note
+The Sensor and Options screens in the 2-Plane Balance Measurement module are the same as those described in
+[Section 3.8](../3-SpecialTests/8-MeasurementTest.mdx). Please check [Section 3.8] for a detailed description of 
+these screens. 
+
+:::
+
+## Advanced Asset Management (More Options Menu) 
+To manage machine profiles from the **Select Machine** screen, technicians can expand the right-hand utility panel 
+to access advanced database operations like adding new assets. 
+
+### Access the Add Machine Screen 
+To navigate to the new machine configuration dashboard, proceed as follows:
+
+1. On the **Select Machine** screen, select **More** on the right-hand control tray. 
+2. The sidebar expands to reveal additional functions as shown in <FigureRef id="Select-Machine-More-Option-Expand" />.
+
+
+<FigureProvider>
+    <Figure
+        id="Select-Machine-More-Option-Expand"
+        src="/img/4-SpecialTest/9-BalancingProgram/Select-Machine-More-Option-Expand-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/Select-Machine-More-Option-Expand-Dark.jpg"
+        caption="Select Machine (More Option Expand)"
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select **Add**. 
+4. The system redirects the user to the **Add Machine** configuration layout grid screen as shown in 
+<FigureRef id="" />.
+
+<FigureProvider>
+    <Figure
+        id="Add-Machine-Data-Entry-Screen"
+        src="/img/4-SpecialTest/9-BalancingProgram/Add-Machine-Data-Entry-Screen-Light.jpg"
+        srcDark="/img/4-SpecialTest/9-BalancingProgram/Add-Machine-Data-Entry-Screen-Dark.jpg"
+        caption="Add Machine Data Entry Screen "
+        width="70%"
+    />
+</FigureProvider>
+
+### Add Machine screen Detail
+
+| Fields/Control          | Description                                                         |                                                                                                                                          
+| :---------------------- | :------------------------------------------------------------------ |
+| Machine                 | Enter the name of the machine to be balanced.                       |
+| Rotor Weight [Kilogram] | Enter the rotor weight in kilograms.                                |
+| Number of Blades        | Enter the total number of rotor blades.                             |
+| Direction               | Select the rotor rotation direction: Clockwise or Counterclockwise. |
+| Rotor Radius [mm]       | Enter the rotor radius in millimeters.                              |
+| Blade # at Tape         | Enter the blade number where the reflective tape is attached.       |
+
+## Procedure Add New Machine
+To successfully register a new machinery profile into the device memory, proceed as follows:
+
+1. Navigate to the **Add Machine** layout grid by selecting **More** and then click **Add machine**.
+2. Tap inside the individual text data entry blocks to populate asset values **(Machine Name, Rotor Weight, Rotor Radius,** etc.) using the device keypad.
+3. Configure physical shaft properties using the **Direction, Unit System,** and **Weight Unit** radio button selection targets.
+4. Review the configured entries to ensure operational parameters match the physical machine nameplate details.
+5. Select **Save**. The DCU registers the profile parameters, appends the entry to the machine database index list, 
+and redirects the interface back to the updated **Area and Machine View** dashboard panel.
+6. To exit the input screen immediately without preserving data entry modifications, select **Cancel**.
+
+
+### Edit Machine
+
+1. Highlight the target machine profile row from the database list, select **More** and click **Edit machine**.
+2. Modify the dimensional or operational tracking properties inside the entry form, then select **Save** to lock in updates.
+
+### Delete Machine 
+1. Highlight the target machine entry row from the index list, select **More**, and click **Delete machine**.
+2. A deletion confirmation dialog appears; confirm the prompt to permanently purge the selected asset configuration profile from the DCU local storage database memory.
