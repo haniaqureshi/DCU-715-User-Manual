@@ -10,102 +10,160 @@ sidebar_label: '2.2 - Display Measurements'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **Display Measurements** option allows the user to view the recorded measurement data for a selected route, area, and machine. This option helps the user review previously captured measurement results.
-When the user taps **Display Measurements** from the Measurements screen, the **Select Route** screen will appear, as shown in <FigureRef id="" />
+Use the **Display Measurements function** to review previously recorded measurement data for a selected route, area, and machine.
+To open the Display Measurements screen, proceed as follows:
 
-**Procedure:**
-1. From the Dashboard, tap Measurements.
-2. Tap Display Measurements from the measurement menu.
-3. The **Select Route screen** will appear showing the list of available routes.
-4. Select the required route from the list.
-5. Tap **Select**.
+1. From the Dashboard, select **Measurements**.
+2. Select **Display Measurements**.
+3. The Select Route screen appears as shown in <FigureRef id="Display-Measurements-Select-Route-Screen" />
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/2-DisplayMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/		-Dark.png"
+        id="Display-Measurements-Select-Route-Screen"
+        src="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Select-Route-Screen-Light.jpg"
+        srcDark="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Select-Route-Screen-Dark.jpg"
         caption="Measurement Route Select Screen"
         width="70%"
     />
 </FigureProvider>
 
-After selecting the route, the **Area in Route** screen will appear, as shown in <FigureRef id="" />.
+#### Select Route screen Details
+The following fields and controls are available in the screen are shown in the <FigureRef id="Display-Measurements-Select-Route-Screen" />.
 
-6. Select the required **Area**.
-7. Tap **Select**.
+| Fields/Control   | Description                                                       |                                                           
+|----------------- |------------------------------------------------------------------ |
+| Meas             | Displays the number of measurements recorded on the route.        |
+| Trans Date       | Displays the date the route data was last transmitted.            |
+| Trans            | Displays the number of transmissions logged for the route.        |
+| RDate            | Displays the route creation/assignment date.                      | 
+| CVAAcct          | Displays the account number associated with the route.            |
+| Job              | Displays the job reference number.                                |
+| Route            | Displays the route name.                                          |
+| Measurement Date | Displays the date of the last recorded measurement.               |
+| # Meas           | Displays the number of measurements recorded.                     |
+| WSN              | Indicates whether a wireless sensor is associated with the route. |
+| Select           | Confirms the highlighted route.                                   | 
+
+#### Select a route
+To select a route, proceed as follow:
+
+1. On the Select Route screen, select the desired route from the list. The selected route is highlighted.
+2. Select **Select**. The Areas in Route dialog appears.
+
+#### Areas in Route
+After selecting a route, the Areas in Route screen appears, listing the areas contained within the route.
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/2-DisplayMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/		-Dark.png"
-        caption="Measurement Routes Area"
+        id="Areas-In-Route-Screen"
+        src="/img/3-Measurements/2-DisplayMeasurements/Areas-In-Route-Screen-Light.jpg"
+        srcDark="/img/3-Measurements/2-DisplayMeasurements/Areas-In-Route-Screen-Dark.jpg"
+        caption="Areas in Route Screen"
         width="70%"
     />
 </FigureProvider>
 
-The system will then display the **Machine in Area** screen, as shown in <FigureRef id="" />.
+#### Areas in Route Screen Detail
+The Following fields and controls are available in this screen as shown in the <FigureRef id="Areas-In-Route-Screen" />.
 
-8. Select the required **Machine**.
-9. Tap **Select**.
+| Fields/Buttons   | Description                                                          |                                                            
+|----------------- |--------------------------------------------------------------------- |
+| Area list        | Displays each area name and its associated ID.                       |
+| Select           | Confirms the highlighted area and opens the Machines in Area dialog. |
+| Turn off Screen  | Turns off the device screen.                                         |
+| Cancel           | Closes the dialog without selecting an area.                         |
+
+To select an area, proceed as follows:
+
+1. On the Areas in Route dialog, select the desired area from the list.
+2. Select **Select**. The Machines in Area dialog appears Showing the data of selected route and area. 
+
+### Machines in Area
+After selecting an area, the Machines in Area screen appear, listing the machines contained within the selected area.
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/2-DisplayMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/		-Dark.png"
-        caption="Measurement Machine Area"
+        id="Machines-in-Area-Screen"
+        src="/img/3-Measurements/2-DisplayMeasurements/Machines-in-Area-Screen-Light.jpg"
+        srcDark="/img/3-Measurements/2-DisplayMeasurements/Machines-in-Area-Screen-Dark.jpg"
+        caption="Machines in Area Screen"
         width="70%"
     />
 </FigureProvider>
 
-After selecting the machine, the system will open the measurement data screen where the recorded measurements can be viewed. On the measurement data screen, 
-you can view the amplitude and time waveform in graph view. See <FigureRef id="" />
+#### Machines in Area Screen Detail
+The Following fields and controls are available in the machine area screen as shown the <FigureRef id="Machines-in-Area-Screen" />.
+
+| Fields/Control   | Description                                                                 |                                                            
+|----------------- |---------------------------------------------------------------------------- |
+| Machine list     | Displays each machine name, ID, and recorded measurement count.             |
+| Select           | Confirms the highlighted machine and opens the Display Measurements screen. |
+| Area             | Returns to the Areas in Route dialog.                                       |
+| Turn off Screen  | Turns off the device screen.                                                |
+| Cancel           | Closes the dialog without selecting a machine.                              |
+
+Select a machine, proceed as follows:
+
+1. On the Machines in Area dialog, select the desired machine from the list.
+2. Select **Select**. The Display Measurements screen appears, showing data for the selected route, area, and machine.
+
+#### Display Measurements screen 
+After selecting a machine, the Display Measurements screen appears where at the top of the screen shows the selected
+route, area, and machine (e.g., TEST #2 (1289) > MILL DRIVES > MAIN MILL DRIVE).
+
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/2-DisplayMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/		-Dark.png"
-        caption="Measurements Data Screen"
+        id="Display-Measurements-Screen"
+        src="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-Light.jpg"
+        srcDark="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-Dark.jpg"
+        caption="Display Measurements screen"
         width="70%"
     />
 </FigureProvider>
 
-If you want to view the measurement point you can:
+#### Display Measurements screen Detail
+The following fields and controls are available in this screen are shown in <FigureRef id="" />.
 
-**Procedure:**
-1. Click on the **Option button** that displays in the More tab of Measurement Module.
-2. The measurement point list will open on the screen as shown in <FigureRef id="" />.
-
-<FigureProvider>
-    <Figure
-        id=""
-        src="/img/3-Measurements/2-DisplayMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/		-Dark.png"
-        caption="Measurement Option Screen to Select Points"
-        width="70%"
-    />
-</FigureProvider>
-
-## Screen Description (Display Measurement):
-- **Select Route Screen:**
-- Select to:
-    <ul><li> Displays the list of routes along with measurement count and date.</li>
-    <li> Shows transmission status and recorded measurement information.</li></ul>
-- **Area in Route Screen:** Displays all areas available within the selected route.
-- **Machine in Area Screen:** Displays the list of machines available in the selected area.
-- **Next:** Click the Next button, the graph for the next measurement point will be displayed.
-- **Preview:** Click the Previous button, you can view the measurements of the previous page.
+| Fields/Control   | Description                                                                                            |                                                            
+|----------------- |------------------------------------------------------------------------------------------------------- |
+| Options          | Displays the details of the currently selected measurement.                                            |
+| Measurement      | Displays the measurement ID and the date/time it was recorded.                                         |
+| Trouble code     | Displays the trouble code associated with the measurement, if any. <br />**Example:** 100 Hz vibration |
+| Areas / Machines | Returns to the Areas in Route dialog to select a different area or machine.                            |
+| Previous         | Displays the previous measurement point.                                                               |
+| Next             | Displays the next measurement point.                                                                   |
+| More / Less      | Expands or collapses the right panel to show additional controls.                                      |
 
 :::info
 
-Only those routes, areas, and machines that contain recorded measurements will display measurement details.
+Only those routes, areas, and machines that contain recorded measurements will display measurement details. 
 
 :::
 
+### Additional Configuration Controls
+#### More
+Use the **More** button to expand the right panel and access additional controls: **Options, Reset**, and **Compare measurements**.
+To access these controls, proceed as follows:
 
+1. On the Display Measurements screen, select **More**. 
+2. The panel expands to display Options, Reset, and Compare measurements as shown in <FigureRef id="Display-Measurements-Screen-More-Expanded" />
 
+<FigureProvider>
+    <Figure
+        id="Display-Measurements-Screen-More-Expanded"
+        src="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-More-Expanded-Light.jpg"
+        srcDark="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-More-Expanded-Dark.jpg"
+        caption="Display Measurements screen (More expanded)"
+        width="70%"
+    />
+</FigureProvider>
 
+3. Select **Less** to collapse the panel and return to the standard Display Measurements screen view.
 
+#### Options (Measure Point) 
+Use the **Options function** to select a specific measurement point and axis to display.
+To select a measurement point, proceed as follows:
+
+1. On the Display Measurements screen, select **More**, then select **Options**. 
+2.The Measure Point screen appears as shown in Figure-3.3.6.

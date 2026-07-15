@@ -11,13 +11,8 @@ import Figure from "@site/src/components/Figure";
 
 {/* --- Routes Troubleshooting --- */}
 
-## Routes
-While managing measurement routes, executing tests, or transferring data within the Routes module, users may 
-encounter validation warnings or communication errors. This section details the error screens, their root causes,
-and specific steps to resolve them.
-
 ## Route Management Troubleshooting 
-While managing measurement routes, executing tests, or transferring data within the Routes module, users may encounter
+While managing measurement routes, executing tests, or transferring data within the **Routes** module, users may encounter
 validation warnings or communication errors. This section details the error screens, their root causes, and specific
 steps to resolve them.
 
@@ -191,9 +186,10 @@ the current frequency limits to guarantee compliant data logging.
 #### Possible Troubleshooting Steps
 
 - **Review point parameters:**
-- Click Close to accept the automated shift and clear the message box.
-- Before proceeding to collect data, navigate to More > Display Parameters from the side panel.
-- Verify that the updated frequency limits (e.g., 250,000 CPM) and diagnostic parameters match your targeted asset's field conditions.
+    - Click Close to accept the automated shift and clear the message box.
+    - Before proceeding to collect data, navigate to More > Display Parameters from the side panel.
+    - Verify that the updated frequency limits (e.g., 250,000 CPM) and diagnostic parameters match your targeted 
+        asset's field conditions.
 
 ### Error: Measurement Point ID Search Failure
 This error dialog displays on the screen when an operator uses the quick-access shortcut tool to search for an asset profile, but the entered ID does not return a match.
@@ -221,11 +217,11 @@ The 6-digit identification string entered on the numeric pin-pad shortcut screen
 #### Possible Troubleshooting Steps
 
 - **Check ID accuracy:**
-- Verify the physical asset tag on the machine to ensure you didn't mistype the 6 digits.
-- Re-enter the unique ID string carefully via the **Add ID** layout interface.
+    - Verify the physical asset tag on the machine to ensure you didn't mistype the 6 digits.
+    - Re-enter the unique ID string carefully via the **Add ID** layout interface.
 - **Verify route inclusion:**
-- If the ID is correct but continues to fail, check if the specific asset belongs to a completely different operational area or plant route file.
-- Load the correct route asset package via **Measurements > Select Route** or update the device database files through the server update channel.
+    - If the ID is correct but continues to fail, check if the specific asset belongs to a completely different operational area or plant route file.
+    - Load the correct route asset package via **Measurements > Select Route** or update the device database files through the server update channel.
 
 ### Error: No Route Selected for Deletion
 This error or warning dialog appears when a user clicks the Delete action button without first highlighting or selecting any route from the available list.
@@ -254,12 +250,12 @@ If the command is triggered while the selection state is empty, the operation is
 #### Possible Troubleshooting Steps
 
 - **Select a Route:**
-- Dismiss the warning dialog box by clicking **Close**.
-- Look at the route list grid and tap directly on the route profile you wish to remove to highlight it (or check the box in the selection column).
-- Once the row is active, click the **Delete** button again from the operational menu.
+    - Dismiss the warning dialog box by clicking **Close**.
+    - Look at the route list grid and tap directly on the route profile you wish to remove to highlight it (or check the box in the selection column).
+    - Once the row is active, click the **Delete** button again from the operational menu.
 - **Refresh the Route List:**
-- If the list appears completely blank and you cannot select anything, it means no routes are currently stored locally on the device.
-- If you need to clear space or reset the view, use the **Update Routes** menu to sync with the server and refresh your local asset tracking list.
+    - If the list appears completely blank and you cannot select anything, it means no routes are currently stored locally on the device.
+    - If you need to clear space or reset the view, use the **Update Routes** menu to sync with the server and refresh your local asset tracking list.
 
 {/* --- DCU Setup Troubleshooting --- */}
 

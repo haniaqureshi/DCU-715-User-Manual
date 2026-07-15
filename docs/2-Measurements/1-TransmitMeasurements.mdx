@@ -21,15 +21,15 @@ To open the Transmit Measurements screen, proceed as follows:
 <FigureProvider>
     <Figure
         id="Transmit-Measurements-Screen"
-        src="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-Light.png"
-        srcDark="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-Dark.png"
+        src="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-Light.jpg"
+        srcDark="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-Dark.jpg"
         caption="Transmit Measurements screen"
         width="70%"
     />
 </FigureProvider>
 
-###  Transmit Measurements screen 
-The following  fields and controls available on the Transmit Measurements screen as shown in the <FigureRef id="" />.
+####  Transmit Measurements screen 
+The following  fields and controls available on the Transmit Measurements screen as shown in the <FigureRef id="Transmit-Measurements-Screen" />.
 
 | Navigation Button               | Functionality                                                                    |
 |-------------------------------- |--------------------------------------------------------------------------------- |
@@ -45,61 +45,86 @@ The following  fields and controls available on the Transmit Measurements screen
 | Transmit                        | Starts sending the selected measurement data to the configured connection.       | 
 | More / Less                     | Expands or collapses the left panel to show or hide the **Options** button.      |
 
-### Transmit measurement data
+#### Transmit measurement data
 
 To transmit measurement data, proceed as follows:
 
 1. On the Transmit Measurements screen, select the required route from the list, or select **Select All** to select every route.
 2. Select **Transmit**.<br />
-    a. If no route is selected when Transmit is selected, the following dialog appears: You must select at least one 
-    route. Select Close to dismiss the dialog, then select a route before trying again. (see Figure-3.2.2)
+    a. If no route is selected when **Transmit** is selected, the following dialog appears: **You must select at &nbsp; &nbsp; &nbsp; 
+        least one route**. Select **Close** to dismiss the dialog, then select a route before trying again as shown &nbsp; &nbsp; 
+        in the <FigureRef id="Transmit-Measurements-Error-Dialog" />
 
+        <FigureProvider>
+            <Figure
+                id="Transmit-Measurements-Error-Dialog"
+                src="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Error-Dialog-Light.jpg"
+                srcDark="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Error-Dialog-Dark.jpg"
+                caption="Transmit Measurements error dialog"
+                width="70%"
+            />
+        </FigureProvider>
 
+        :::warning
 
+        You must select at least one route.
 
+        :::
 
+    b. If a route is selected, the DCU transmits the route data to the configured connection. <br />
+    c. Once transmission completes, the system returns to the start of the ITR.
 
+### Additional Configuration Controls
+#### More
+Use the **More** button to expand the left panel and access the **Options** button. To access this control, proceed as follows:
 
+1. On the Transmit Measurements screen, select **More**. 
+2. The left panel expands to display **Options**, next to the **Transmit** button same as shown in <FigureRef id="Transmit-Measurements-Screen-More-Expanded" />.
 
-## Screen Description (Transmit Measurement)
+    <FigureProvider>
+            <Figure
+                id="Transmit-Measurements-Screen-More-Expanded"
+                src="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-More-Expanded-Light.jpg"
+                srcDark="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-More-Expanded-Dark.jpg"
+                caption="Transmit Measurements screen (More expanded)"
+                width="70%"
+            />
+    </FigureProvider>
+3. Select **Less** to collapse the panel and return to the standard Transmit Measurements screen view.
 
-| Navigation Button               | Functionality                                                   |
-|-------------------------------- |---------------------------------------------------------------- |
-| Connection 	    	          | Shows the configured connection source (e.g., ITR.com).         |
-| Data not previously transmitted | Indicates whether there is new data available for transmission. |
-| Route List 		              | Displays route ID, route name, and number of measurements.      |
-| Select All                      | Selects all available routes.                                   |
-| Select                          | Confirms the selected route.                                    |
-| Transmit                        | Starts the data transmission process.                           |
+#### Options 
+Use the **Options function** to configure the connection type and transmission settings before sending measurement data.
+To open the Options screen, proceed as follows:
 
-:::note
+1. On the Transmit Measurements screen, select **More**, then select **Options**. 
+2. The Options screen appears as shown in <FigureRef id="Transmit-Data-Options-Screen" />
 
-Ensure that the device is properly connected before starting the transmission process.
+    <FigureProvider>
+            <Figure
+                id="Transmit-Data-Options-Screen"
+                src="/img/3-Measurements/1-TransmitMeasurements/Transmit-Data-Options-Screen-Light.jpg"
+                srcDark="/img/3-Measurements/1-TransmitMeasurements/Transmit-Data-Options-Screen-Dark.jpg"
+                caption="Transmit Data Options Screen"
+                width="70%"
+            />
+    </FigureProvider>
 
-:::
+#### Options screen Detail
+The following fields and controls available on the Options screen.
 
-<FigureProvider>
-    <Figure
-        id=""
-        src="/img/3-Measurements/1-TransmitMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/1-TransmitMeasurements/		-Dark.png"
-        caption="Transmit Measurements"
-        width="70%"
-    />
-</FigureProvider>
+| Fields/Control                  | Description                                                                                                               |
+|-------------------------------- |-------------------------------------------------------------------------------------------------------------------------- |
+| Connection 	    	          | Selects the connection type. Available options: USB Drive, USB Drive - Data from backup, ITR.com, ITR.com via CMAS, CMAS. |         
+| Data not previously transmitted | Enable to limit transmission to data that has not been previously sent.                                                   |
+| Measurements Only		          | Enable to transmit measurement data only, excluding other route information.                                              |
+| High speed transmission         | Enable to use a high-speed transmission mode.                                                                             |
+| Save                            | Saves the configured options and returns to the Transmit Measurements screen.                                             |
+| Cancel                          | Closes the Options screen without saving changes.                                                                         |
 
-If no route is selected for transmission and the user taps the **Transmit** option, a dialog box will appear
-indicating that no route is selected as shown in <FigureRef id="" />. The user must select at least one route to 
-proceed with transmission.
+#### Options screen Configuration
+1. Select the required **Connection** type.
+2. Enable or disable **Data not previously transmitted, Measurements Only**, and **High speed transmission** as required.
+3. Select **Save**.
 
-<FigureProvider>
-    <Figure
-        id=""
-        src="/img/3-Measurements/1-TransmitMeasurements/          -Light.png"
-        srcDark="/img/3-Measurements/1-TransmitMeasurements/		-Dark.png"
-        caption="Notification Dialog Box"
-        width="70%"
-    />
-</FigureProvider>
 
 
