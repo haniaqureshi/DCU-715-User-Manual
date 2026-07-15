@@ -76,51 +76,6 @@ and transfer measurement data during routine condition monitoring and diagnostic
 <FigureRef id="DCU-715-Front-View"/> through <FigureRef id="Sensor-Connection-Cable"/> identify the primary hardware components and 
 accessories supplied with the DCU.
 
-    The **Series 715 Digital Collection Unit** (hereafter referred to as the DCU) is a portable vibration data collection device designed for predictive maintenance and condition monitoring applications. It acquires vibration and process data from industrial equipment, stores the collected measurements, and transfers them to the ITR Graphics™ software platform for analysis and reporting.
-
-    The DCU supports simultaneous multi-channel data acquisition, allowing vibration, auxiliary sensor, and tachometer signals to be collected while maintaining phase relationships between channels. 
-
-    Measurements can be displayed in multiple formats, including spectrum, time waveform, phase, and waterfall views, enabling technicians to verify signal quality before saving data.
-
-    This module introduces the DCU, its operating concept, and the overall workflow used to collect vibration measurements. It also provides an overview of the DCU hardware, user interface, and system capabilities to help technicians become familiar with the device before performing measurements or diagnostics.
-
-    ## System Configuration
-    The Series 715 DCU is designed to operate with the ITR Graphics™ vibration analysis platform.
-
-    Before field work begins, predefined measurement routes are transferred from ITR Graphics™ to the DCU. These routes guide technicians through each inspection by defining the equipment to measure, the order in which measurements are collected, and the acquisition parameters required for each point.
-
-    A measurement route can include:
-
-    - Measurement locations
-    - Machine information
-    - Measurement sequence
-    - Sensor configuration
-    - Data acquisition parameters
-    - Historical measurement information
-    - Scheduled inspection information
-
-    After measurements have been collected, the recorded data is transferred back to ITR Graphics™ for processing, trending, analysis, and report generation.
-
-    ## How the DCU Works
-    The DCU records machine vibration using an accelerometer mounted at predefined measurement locations.
-
-    During data collection, the operator places the sensor on the machine according to the measurement route loaded into the DCU. The device acquires vibration data, processes the measurement in real time, and stores the results as a measurement event.
-
-    Once field data collection is complete, the stored measurements are uploaded to ITR Graphics™, where vibration analysts review the results to evaluate machine condition, identify developing faults, and prepare maintenance recommendations.
-
-    The overall workflow consists of four stages:
-
-    - Measurement routes are created in ITR Graphics™.
-    - Routes are transferred to the DCU.
-    - Measurements are collected in the field using the DCU.
-    - Measurement data is uploaded back to ITR Graphics™ for analysis and reporting.
-
-    ## Hardware Overview
-    The DCU is designed for portable field use in industrial environments. The device combines vibration data acquisition, onboard processing, and a touchscreen interface in a rugged enclosure that enables technicians to perform measurements without requiring a separate computer.
-
-    The DCU supports multiple sensor connections, auxiliary inputs, and communication interfaces that allow technicians to collect, store, and transfer measurement data during routine condition monitoring and diagnostic activities.
-
-    <FigureRef id="DCU-715-Front-View"/> through <FigureRef id="Sensor-Connection-Cable"/> identify the primary hardware components and accessories supplied with the DCU.
 
     <FigureProvider>
     <Figure 
@@ -147,7 +102,7 @@ accessories supplied with the DCU.
     <Figure 
         id="Power-Switch-USB Panel-Cover" 
         src="/img/0-Intro/Power-Switch-USB Panel-Cover.png" 
-        caption="Power Switch USB Panel Cover" 
+        caption="Power Switch/USB Panel Cover" 
         width="75%"
     />
 
@@ -168,7 +123,7 @@ accessories supplied with the DCU.
     <Figure 
         id="DCU-Keypad-Layout" 
         src="/img/0-Intro/DCU-Keypad-Layout.png" 
-        caption="DCU-Keypad-Layout" 
+        caption="DCU Keypad Layout" 
         width="75%"
     />
 
@@ -194,26 +149,26 @@ accessories supplied with the DCU.
     />
     </FigureProvider>
 
-    ### Hardware Components
+### Hardware Components
 
-    The following table describes the primary hardware components of the Series 715 DCU as seen in <FigureRef id="DCU-715-Front-View"/> and <FigureRef id="DCU-715-Back-View"/>.
+The following table describes the primary hardware components of the Series 715 DCU as seen in <FigureRef id="DCU-715-Front-View"/> and <FigureRef id="DCU-715-Back-View"/>.
 
-    | #   | Components            | Description                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                          
-    | :-  | :-------------------  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-    | 1.  | Touchscreen           | Displays the DCU user interface and allows the operator to navigate the application and perform all touchscreen operations.                                                                                                                                                                                                                             |
-    | 2.  | Electronic Case       | Protects the internal electronic components of the DCU. Do not open the enclosure unless instructed by ITR service personnel.                                                                                                                                                                                                                           |
-    | 3.  | Battery Cover         | Protects the battery compartment and secures the battery during operation.                                                                                                                                                                                                                                                                              |
-    | 4.  | Sensor Port           | Connects compatible vibration sensors used to collect measurement data.Supported sensor types include:<br />• Triaxial IEPE (ICP®) accelerometers<br />• Single-axis IEPE (ICP®) accelerometers (adapter required)<br />• Two-axis IEPE (ICP®) accelerometers (adapter required)<br />• Voltage input sensors (external power required, if applicable). |
-    | 5.  | Test Port             | Tests the integrity of the accelerometer sensor cable to help identify damaged or disconnected wiring.                                                                                                                                                                                                                                                  |
-    | 6.  | Power (PWR) Port      | Connects the external AC power adapter to operate the DCU or charge the battery. The DCU can continue operating while the battery is removed when external power is connected.                                                                                                                                                                          |
-    | 7.  | AUX1 Port             | Provides an auxiliary input for additional sensor channels, high-voltage AC/DC signals, and ultrasonic data acquisition.                                                                                                                                                                                                                                |  
-    | 8.  | AUX2 Port             | Provides an auxiliary input for additional sensor channels and high-voltage AC/DC signals. AUX2 can also be configured as an ultrasonic microphone input.                                                                                                                                                                                               |
-    | 9.  | TACH Port             | Connects a tachometer or phase reference sensor for speed and phase measurements.                                                                                                                                                                                                                                                                       |
-    | 10. | Sensor Plate          | Stores the magnetic accelerometer when it is not in use.                                                                                                                                                                                                                                                                                                |
-    | 11. | On/Off Switch         | Turn the DCU on or off. The integrated LED indicates the current power status.                                                                                                                                                                                                                                                                          |
-    | 12. | USB Port              | Connects supported USB 2.0 storage devices and peripherals for data transfer and software updates.                                                                                                                                                                                                                                                      |
-    | 13. | Battery               | Provides portable power for field operation. The rechargeable lithium-ion battery supports extended data collection sessions.                                                                                                                                                                                                                           |
-    | 14. | Battery Release Latch | Releases the battery for removal or replacement. Slide and hold the latch while removing the battery.                                                                                                                                                                                                                                                   |
+    | #   | Components            | Description                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                          
+    | :-  | :-------------------  | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | 1.  | Touchscreen           | Displays the DCU user interface and allows the operator to navigate the application and perform all touchscreen operations.                                                                                                                                                                                                                                              |
+    | 2.  | Electronic Case       | Protects the internal electronic components of the DCU. Do not open the enclosure unless instructed by ITR service personnel.                                                                                                                                                                                                                                            |
+    | 3.  | Battery Cover         | Protects the battery compartment and secures the battery during operation.                                                                                                                                                                                                                                                                                               |
+    | 4.  | Sensor Port           | Connects compatible vibration sensors used to collect measurement data. Supported sensor types include:<ul><li>Triaxial IEPE (ICP®) accelerometers</li> <li>Single-axis IEPE (ICP®) accelerometers (adapter required)</li> <li>Two-axis IEPE (ICP®) accelerometers (adapter required)</li> <li>Voltage input sensors (external power required, if applicable).</li></ul> |
+    | 5.  | Test Port             | Tests the integrity of the accelerometer sensor cable to help identify damaged or disconnected wiring.                                                                                                                                                                                                                                                                   |
+    | 6.  | Power (PWR) Port      | Connects the external AC power adapter to operate the DCU or charge the battery. The DCU can continue operating while the battery is removed when external power is connected.                                                                                                                                                                                           |
+    | 7.  | AUX1 Port             | Provides an auxiliary input for additional sensor channels, high-voltage AC/DC signals, and ultrasonic data acquisition.                                                                                                                                                                                                                                                 |  
+    | 8.  | AUX2 Port             | Provides an auxiliary input for additional sensor channels and high-voltage AC/DC signals. AUX2 can also be configured as an ultrasonic microphone input.                                                                                                                                                                                                                |
+    | 9.  | TACH Port             | Connects a tachometer or phase reference sensor for speed and phase measurements.                                                                                                                                                                                                                                                                                        |
+    | 10. | Sensor Plate          | Stores the magnetic accelerometer when it is not in use.                                                                                                                                                                                                                                                                                                                 |
+    | 11. | On/Off Switch         | Turn the DCU on or off. The integrated LED indicates the current power status.                                                                                                                                                                                                                                                                                           | 
+    | 12. | USB Port              | Connects supported USB 2.0 storage devices and peripherals for data transfer and software updates.                                                                                                                                                                                                                                                                       |
+    | 13. | Battery               | Provides portable power for field operation. The rechargeable lithium-ion battery supports extended data collection sessions.                                                                                                                                                                                                                                            |
+    | 14. | Battery Release Latch | Releases the battery for removal or replacement. Slide and hold the latch while removing the battery.                                                                                                                                                                                                                                                                    |
 
 ## Application Interface 
 The DCU application provides a consistent touchscreen interface across all modules, including Routes, Measurements, Special Tests, and DCU Setup. Most screens share the same layout, allowing technicians to navigate the application and monitor device status regardless of the function being performed.
@@ -248,8 +203,6 @@ The DCU application provides a consistent touchscreen interface across all modul
     | D    | Main Workspace   | Displays the most recent system notification. Double-tap this area to open the System Alerts Panel and review recent system messages.                                |
     
     :::note
-
-    ### System Alert Bar
 
     The layout remains consistent throughout the DCU application. Although the content displayed in the **Main Workspace** changes depending on the selected function, the **Header Bar**, **Task Status Bar**, 
     and **System Alerts Bar** remain available on most screens.
@@ -304,8 +257,16 @@ Notifications provide information about completed operations, software updates, 
     - Battery voltage too high
     - Upgrade completed
 
-Double-tap the **System Alerts Panel** to open the **System Alerts** window as shown in the 
-<FigureRef id=""/> – **System Alerts Panel**
+Double-tap the **System Alerts Panel** to open the **System Alerts** window as shown in the <FigureRef id="System-Alerts-Panel"/>
+
+<FigureProvider>
+    <Figure 
+        id="System-Alerts-Panel" 
+        src="/img/0-Intro/System-Alerts-Panel.png" 
+        caption="System Alerts Panel" 
+        width="70%"
+    />
+    </FigureProvider>
 
 The System Alerts window displays the most recent system notifications in chronological order. The following table
 describes the fields and controls available in the System Alerts window.
@@ -324,10 +285,20 @@ describes the fields and controls available in the System Alerts window.
 
     :::
 
-
 ### Dashboard
 The **Dashboard** provides access to the primary functions of the DCU application. To open the Dashboard, select the
-**Menu** button in the **Header Bar**. The Dashboard appears. The following table describes the available Dashboard modules as shown in the <FigureRef id=""/>.
+**Menu** button in the **Header Bar**. The Dashboard appears. 
+
+<FigureProvider>
+    <Figure 
+        id="Dashboard" 
+        src="/img/0-Intro/Dashboard.png" 
+        caption="Dashboard" 
+        width="70%"
+    />
+    </FigureProvider>
+
+The following table describes the available Dashboard modules as shown in the <FigureRef id="Dashboard"/>.
 
     | Module        | Description                                                                                             |
     |:------------- | :------------------------------------------------------------------------------------------------------ |
@@ -418,14 +389,14 @@ following table summarizes the signal processing capabilities.
 ### Data Storage
 The DCU stores measurement data on an internal solid-state drive for later transfer to the ITR Graphics™ software.
 
-    **Storage Hardware**
+#### Storage Hardware
 
     | Specification  | Description                   |
     |:-------------- | :---------------------------- |
     | Storage Device | 90 GB mSATA Solid-State Drive |
     | System Memory  | 1 GB RAM                      |
 
-    **Logged Measurement Data**
+#### Logged Measurement Data
 
     | Data Type      | Description                               |
     |:-------------- | :---------------------------------------- |

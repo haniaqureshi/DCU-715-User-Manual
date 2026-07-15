@@ -12,15 +12,54 @@ import Figure from "@site/src/components/Figure";
 
 The **Transmit Measurements** option allows the user to send the recorded measurement data from the device to the server or computer for storage and further analysis.
 
-**Procedure:**
-1. Select Measurements from the Dashboard.
-2. After opening the measurement menu click on **Transmit Measurements**.
-3. The **Transmit Measurements** screen will appear showing the list of available routes.
-4. Select the required route from the list, or tap Select All to select all routes.
-5. Select to confirm the selection.
-6. Click Transmit to start sending the measurement data.
+To open the Transmit Measurements screen, proceed as follows:
 
-After tapping Transmit, the system will begin transferring the data to the configured connection as shown in <FigureRef id="" />.
+1. From the Dashboard, select **Routes**.
+2. Select **Transmit Measurements**.
+3. The Transmit Measurements screen appears as shown in <FigureRef id="Transmit-Measurements-Screen" />.
+
+<FigureProvider>
+    <Figure
+        id="Transmit-Measurements-Screen"
+        src="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-Light.png"
+        srcDark="/img/3-Measurements/1-TransmitMeasurements/Transmit-Measurements-Screen-Dark.png"
+        caption="Transmit Measurements screen"
+        width="70%"
+    />
+</FigureProvider>
+
+###  Transmit Measurements screen 
+The following  fields and controls available on the Transmit Measurements screen as shown in the <FigureRef id="" />.
+
+| Navigation Button               | Functionality                                                                    |
+|-------------------------------- |--------------------------------------------------------------------------------- |
+| Options                         | Displays the current transmission configuration.                                 |
+| Connection                      | Displays the configured connection source. <br />**Example:** ITR.com            |
+| Data not previously transmitted | Indicates whether the listed data has not yet been sent. <br />**Example:** True |
+| Selected                        | Indicates whether a route is selected for transmission.                          |
+| Id                              | Displays the route ID.                                                           |
+| Route                           | Displays the route name.                                                         |
+| Meas                            | Displays the number of measurements recorded on the route.                       |
+| Select All                      | Selects all available routes in the list.                                        |
+| Select                          | Selects the highlighted route.                                                   |
+| Transmit                        | Starts sending the selected measurement data to the configured connection.       | 
+| More / Less                     | Expands or collapses the left panel to show or hide the **Options** button.      |
+
+### Transmit measurement data
+
+To transmit measurement data, proceed as follows:
+
+1. On the Transmit Measurements screen, select the required route from the list, or select **Select All** to select every route.
+2. Select **Transmit**.<br />
+    a. If no route is selected when Transmit is selected, the following dialog appears: You must select at least one 
+    route. Select Close to dismiss the dialog, then select a route before trying again. (see Figure-3.2.2)
+
+
+
+
+
+
+
 
 ## Screen Description (Transmit Measurement)
 

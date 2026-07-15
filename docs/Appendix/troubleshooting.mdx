@@ -27,8 +27,8 @@ This alert appears when a selected measurement route contains data that hasn’t
 <FigureProvider>
     <Figure 
         id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
         caption="Select Route Warning Dialogbox" 
         width="70%"
     />
@@ -50,14 +50,15 @@ The system flags this to prevent technicians from collecting data against outdat
 
 - **Acknowledge and proceed temporarily:**
 
-- If you must collect data immediately and are certain no plant modifications occurred, click **YES** on the dialog box to acknowledge the warning and continue using the existing configuration.
-
-- Alternatively, click **NO** to disregard the alert, dismiss the dialog, and proceed straight to the active asset list.
+    <ul><li>If you must collect data immediately and are certain no plant modifications occurred, click **YES** on 
+    the dialog box to acknowledge the warning and continue using the existing configuration.</li>
+    <li>Alternatively, click **NO** to disregard the alert, dismiss the dialog, and proceed straight to the active
+    asset list.</li></ul>
 
 - **Synchronize with the server (Recommended):**
 
-- Exit the measurement sequence and navigate back to the main menu.
-- Open **Update Routes** and establish a stable connection to download the latest route modifications.
+    <ul><li>Exit the measurement sequence and navigate back to the main menu.</li>
+    <li>Open **Update Routes** and establish a stable connection to download the latest route modifications.</li></ul>
 
 ### Error: Missing Plot Measurement Data
 This warning pop-up displays when an operator attempts to access the graphic visualization or trend plot for a measurement point that does not contain any recorded vibration history.
@@ -71,8 +72,8 @@ No measurement data for: Account: 1289, Measurement nr: 0
 <FigureProvider>
     <Figure 
         id="Plot-Screen-Error-Message" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Plot-Screen-Error-Message-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Plot-Screen-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Plot-Screen-Error-Message-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Plot-Screen-Error-Message-Dark.png" 
         caption="Plot Screen Error Message" 
         width="70%"
     />
@@ -87,14 +88,14 @@ the system cannot generate a graphical spectral curve or time-domain waveform.
 #### Possible Troubleshooting Steps
 
 - **Take a live measurement:**
-- Click the **Close** button to exit the warning modal and return to the primary navigation interface.
-- Ensure the physical sensor is properly mounted on the machine asset, then click **Measure** from the side operational panel to record fresh data.
-- Once the live collection completes, re-enter the **Plot** view via the **More** screen.
+    <ul><li>Click the **Close** button to exit the warning modal and return to the primary navigation interface.</li>
+    <li>Ensure the physical sensor is properly mounted on the machine asset, then click **Measure** from the side operational panel to record fresh data.</li>
+    <li>Once the live collection completes, re-enter the **Plot** view via the **More** screen.</li></ul>
 
 - **Verify database sync status:**
+    <ul><li>If the measurements were taken previously or by another technician, the data might not be loaded locally. Navigate to Update Routes to trigger a server 
+    request and pull the latest synchronized asset database files into your device.</li></ul>
 
-- If the measurements were taken previously or by another technician, the data might not be loaded locally. Navigate to Update Routes to trigger a server 
-request and pull the latest synchronized asset database files into your device.
 
 ### Error: Multi-Axis Sensor Conflict on Waterfall Measurement
 This error displays as a warning pop-up when attempting to configure a Waterfall measurement layout while an incompatible multi-axis hardware profile is selected.
@@ -102,8 +103,8 @@ This error displays as a warning pop-up when attempting to configure a Waterfall
 <FigureProvider>
     <Figure 
         id="Add-Points-Waterfall-Measurement-Error-Message" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Dark.png" 
         caption="Add Points Waterfall Measurement Error Message" 
         width="70%"
     />
@@ -123,13 +124,13 @@ It requires a dedicated single-axis hardware sensor configuration locked explici
 #### Possible Troubleshooting Steps
 
 - **Modify the active sensor configuration:**
-- Dismiss the warning by clicking **Close**.
-- On the right-hand panel, click the **Sensor** button to open the Sensor Type dialog box.
-- Change the Sensor Type and Sensitivity dropdown options to match a single-axis specification.
-- Ensure your channel assignment is locked to **Channel Z**, then click **Ok** to save the hardware profile.
+     <ul><li>Dismiss the warning by clicking **Close**.</li>
+    <li>On the right-hand panel, click the **Sensor** button to open the Sensor Type dialog box.</li>
+    <li>Change the Sensor Type and Sensitivity dropdown options to match a single-axis specification.</li>
+    <li>Ensure your channel assignment is locked to **Channel Z**, then click **Ok** to save the hardware profile. </li></ul>
 - **Verify hardware attachment:**
-- Ensure that the physical cable matching your single-axis accelerometer is connected to the correct channel input 
-port on the DCU framework before starting the test.
+    <ul><li>Ensure that the physical cable matching your single-axis accelerometer is connected to the correct channel input 
+    port on the DCU framework before starting the test.</li></ul>
 
 ### Error: Missing Measurement Point ID Number
 This warning appears on the Add New Point module screen when a user attempts to save a custom measurement configuration without providing an identifier.
@@ -137,8 +138,8 @@ This warning appears on the Add New Point module screen when a user attempts to 
 <FigureProvider>
     <Figure 
         id="Add-Points-Add-ID-Error-Message" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Add-Points-Add-ID-Error-Message-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Add-Points-Add-ID-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Add-ID-Error-Message-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Add-ID-Error-Message-Dark.png" 
         caption="Add Points Add ID Error Message" 
         width="70%"
     />
@@ -157,10 +158,10 @@ The software database requires a mandatory unique 6-digit identification string 
 #### Possible Troubleshooting Steps
 
 - **Input a valid identification string:**
-- Click **Close** to dismiss the warning box. The numerical pin-pad dialog overlay will automatically open.
-- Type a valid **6-digit** numeric string into the keypad.
-- Verify that the green status message **"Valid value"** appears, which unlocks the **Ok** action button.
-- Click **Ok** to apply the ID entry.
+    <ul><li>Click **Close** to dismiss the warning box. The numerical pin-pad dialog overlay will automatically open.</li>
+    <li>Type a valid **6-digit** numeric string into the keypad.</li>
+    <li>Verify that the green status message **"Valid value"** appears, which unlocks the **Ok** action button.</li>
+    <li>Click **Ok** to apply the ID entry.</li></ul>
 
 ### Error: Parameter Shift Based on ID Rule
 This notification displays as an informational warning box immediately following a successful manual ID validation entry.
@@ -168,8 +169,8 @@ This notification displays as an informational warning box immediately following
 <FigureProvider>
     <Figure 
         id="Add-Points-Frequency-Change-Error-Message" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Add-Points-Frequency-Change-Error-Message-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Add-Points-Frequency-Change-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Frequency-Change-Error-Message-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Frequency-Change-Error-Message-Dark.png" 
         caption="Add Points Frequency Change Error Message" 
         width="70%"
     />
@@ -200,8 +201,8 @@ This error dialog displays on the screen when an operator uses the quick-access 
 <FigureProvider>
     <Figure 
         id="Add-Points-ID-Not-Found-Error-Message" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Add-Points-ID-Not-Found-Error-Message-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Add-Points-ID-Not-Found-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-ID-Not-Found-Error-Message-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-ID-Not-Found-Error-Message-Dark.png" 
         caption="Add Points ID Not Found Error Message" 
         width="70%"
     />
@@ -232,8 +233,8 @@ This error or warning dialog appears when a user clicks the Delete action button
 <FigureProvider>
     <Figure 
         id="Delete-Route-Error-Message" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Delete-Route-Error-Message-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Delete-Route-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/Delete-Route-Error-Message-Light.png"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/Delete-Route-Error-Message-Dark.png" 
         caption="Delete Route Error Message" 
         width="70%"
     />
