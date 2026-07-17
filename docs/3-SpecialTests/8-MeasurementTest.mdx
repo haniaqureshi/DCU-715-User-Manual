@@ -11,6 +11,7 @@ import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
 Use the **Measurement Tests function** for standard vibration data acquisition and analysis. This test allows real-time monitoring of machine health through spectral and time-waveform data.
+
 To open the Measurement Tests screen, proceed as follows:
 
 1. From the Dashboard, select **Measurement Tests**.
@@ -19,8 +20,8 @@ To open the Measurement Tests screen, proceed as follows:
 <FigureProvider>
     <Figure
         id="Measurement-Tests-Select-Route-Screen"
-        src="/img/4-SpecialTest/8-MeasurementTest/Measurement-Tests-Select-Route-Screen-Light.jpg"
-        srcDark="/img/4-SpecialTest/8-MeasurementTest/Measurement-Tests-Select-Route-Screen-Dark.jpg"
+        src="/img/3-SpecialTests/8-MeasurementTest/Measurement-Tests-Select-Route-Screen-Light.jpg"
+        srcDark="/img/3-SpecialTests/8-MeasurementTest/Measurement-Tests-Select-Route-Screen-Dark.jpg"
         caption=" Measurement Tests Select Route screen "
         width="70%"
     />
@@ -50,8 +51,8 @@ After selecting the required route the **Measurement Tests** screen appears. Thi
 <FigureProvider>
     <Figure
         id="Measurement-Tests-Screen"
-        src="/img/4-SpecialTest/8-MeasurementTest/Measurement-Tests-Screen-Light.jpg"
-        srcDark="/img/4-SpecialTest/8-MeasurementTest/Measurement-Tests-Screen-Dark.jpg"
+        src="/img/3-SpecialTests/8-MeasurementTest/Measurement-Tests-Screen-Light.jpg"
+        srcDark="/img/3-SpecialTests/8-MeasurementTest/Measurement-Tests-Screen-Dark.jpg"
         caption="Measurement Tests screen"
         width="70%"
     />
@@ -66,7 +67,7 @@ The following fields and controls available on the Measurement Tests screen are 
 | Sensor 	      | Displays the active sensor type and sensitivity.  <br />**Example:** 10 mv/g triax |
 | Frequency 	  | Displays the frequency range configured for analysis.  <br />**Example:** 0 CPM    | 
 | Calibrate       | Displays whether sensor calibration is active.  <br />**Example:** Off	           | 
-| Mode            | Displays the current analysis mode.  <br />Example: Spectrum                       |
+| Mode            | Displays the current analysis mode.  <br />**Example:** Spectrum                   |
 | 1 Shot          | Displays whether single-capture mode is enabled. <br />**Example:** No             | 
 | Output          | Displays the measured signal levels                  				               |
 | DC Off          | Displays the DC offset reading for the active channel(s).                          |
@@ -91,8 +92,8 @@ To run a Measurement Test, proceed as follows:
 <FigureProvider>
     <Figure
         id="Cable-Integration"
-        src="/img/4-SpecialTest/8-MeasurementTest/Cable-Integration-Light.jpg"
-        srcDark="/img/4-SpecialTest/8-MeasurementTest/Cable-Integration-Dark.jpg"
+        src="/img/3-SpecialTests/8-MeasurementTest/Cable-Integration-Light.jpg"
+        srcDark="/img/3-SpecialTests/8-MeasurementTest/Cable-Integration-Dark.jpg"
         caption=" Cable Integration "
         width="70%"
     />
@@ -126,8 +127,8 @@ To configure the sensor, proceed as follows:
 <FigureProvider>
     <Figure
         id="Sensor-Selection-Modal"
-        src="/img/4-SpecialTest/8-MeasurementTest/Sensor-Selection-Modal-Light.jpg"
-        srcDark="/img/4-SpecialTest/8-MeasurementTest/Sensor-Selection-Modal-Dark.jpg"
+        src="/img/3-SpecialTests/8-MeasurementTest/Sensor-Selection-Modal-Light.jpg"
+        srcDark="/img/3-SpecialTests/8-MeasurementTest/Sensor-Selection-Modal-Dark.jpg"
         caption=" Sensor Selection Modal "
         width="70%"
     />
@@ -140,7 +141,9 @@ To configure the sensor, proceed as follows:
 4. Select **Ok** to save variables, or **Cancel** to exit without making changes.
 
 ### Options 
-Use the Options function to configure the analysis mode, frequency parameters, and signal conditioning settings for the Measurement Test. To open the Options screen, proceed as follows:
+Use the Options function to configure the analysis mode, frequency parameters, and signal conditioning settings for the Measurement Test. 
+
+To open the Options screen, proceed as follows:
 
 1. On the Measurement Tests screen, select Options. 
 2. The Options screen appears as shown in <FigureRef id="Measurement-Tests-Options-Screen" />.
@@ -148,8 +151,8 @@ Use the Options function to configure the analysis mode, frequency parameters, a
 <FigureProvider>
     <Figure
         id="Measurement-Tests-Options-Screen"
-        src="/img/4-SpecialTest/8-MeasurementTest/Measurement-Tests-Options-Screen-Light.jpg"
-        srcDark="/img/4-SpecialTest/8-MeasurementTest/Measurement-Tests-Options-Screen-Dark.jpg"
+        src="/img/3-SpecialTests/8-MeasurementTest/Measurement-Tests-Options-Screen-Light.jpg"
+        srcDark="/img/3-SpecialTests/8-MeasurementTest/Measurement-Tests-Options-Screen-Dark.jpg"
         caption="Measurement Tests Options screen"
         width="70%"
     />
@@ -160,10 +163,10 @@ The following fields and controls available on the Options screen are shown in <
 
 | Fields/Buttons         | Description             	                                                                   |
 |----------------------- |-------------------------------------------------------------------------------------------- |
-| Frequency              | Sets the frequency range for analysis. <br />Example: 5,000 CPM  			               |
-| Resolution             | Sets the number of spectral lines for the measurement. <br />Example: 200 		           |
-| Averages               | Sets the number of averages required for the test.  <br />Example: 1 			           |
-| Demod                  | Sets the demodulation frequency range.  <br />Example: 5,000 CPM 			               |
+| Frequency              | Sets the frequency range for analysis. <br />**Example:** 5,000 CPM  			               |
+| Resolution             | Sets the number of spectral lines for the measurement. <br />**Example:** 200 		           |
+| Averages               | Sets the number of averages required for the test.  <br />**Example:** 1 			           |
+| Demod                  | Sets the demodulation frequency range.  <br />**Example:** 5,000 CPM 			               |
 | Show Channel           | Selects which axis to display. Available options: X, Y, Z. 				                   |
 | Mode                   | Selects the analysis mode. Available options: Spectrum, Time, Demod, URE, Phase, Waterfall. |
 | 1 Shot                 | Enables single-capture mode for the measurement. 					                       |
@@ -195,6 +198,7 @@ The following fields and controls available on the Options screen are shown in <
 ### More
 
 Use the **More** button to expand the right panel and access additional measurement controls, including Reset, Demod. Options, and expanded Output values.
+
 To access these controls, proceed as follows:
 
 1. On the Measurement Tests screen, select **More**. 
@@ -203,8 +207,8 @@ To access these controls, proceed as follows:
 <FigureProvider>
     <Figure
         id="Measurement-Test-More-Expand"
-        src="/img/4-SpecialTest/8-MeasurementTest/Measurement-Test-More-Expand-Light.jpg"
-        srcDark="/img/4-SpecialTest/8-MeasurementTest/Measurement-Test-More-Expand-Dark.jpg"
+        src="/img/3-SpecialTests/8-MeasurementTest/Measurement-Test-More-Expand-Light.jpg"
+        srcDark="/img/3-SpecialTests/8-MeasurementTest/Measurement-Test-More-Expand-Dark.jpg"
         caption="Measurement Test (More Expand) "
         width="70%"
     />
