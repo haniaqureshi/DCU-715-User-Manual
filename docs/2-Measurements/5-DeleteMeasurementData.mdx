@@ -10,53 +10,87 @@ sidebar_label: '2.5 - Delete Measurement Data'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **Delete Measurement Data** option allows the user to remove recorded measurement data from the device when it is
-no longer required or needs to be cleared.
+Use the **Delete Measurements function** to permanently remove recorded measurement data for one or more routes from the device.
+To open the Delete Measurements screen, proceed as follows:
 
-**Procedure:**
-
-1. Select Measurements from the Dashboard.
-2. Select the Delete Measurement Data option from the measurement menu.
-3. The Select Route screen will appear.
-4. Select the required measurement as shown in <FigureRef id="" />
-5. Click the Delete measurement option.
+1. From the Dashboard, select **Routes**.
+2. Select **Delete Measurements**.
+3. The Delete Measurements screen appears, listing all routes stored on the device  same as shown in <FigureRef id="Delete-Measurements-Screen" />.
 
 <FigureProvider>
-    <Figure 
-        id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
-        caption="Delete Measurement" 
+    <Figure
+        id="Delete-Measurements-Screen"
+        src="/img/2-Measurements/5-DeleteMeasurementData/Delete-Measurements-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/5-DeleteMeasurementData/Delete-Measurements-Screen-Dark.jpg"
+        caption="Delete Measurements screen"
         width="70%"
     />
 </FigureProvider>
 
-After selecting the route, a confirmation message will appear. (See <FigureRef id="" />)
-6. Tap Yes to delete the measurement data, or tap No to cancel the operation.
+#### Delete Measurements screen fields 
+The following fields and controls are available in this screen. 
 
-<FigureProvider>
-    <Figure 
-        id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
-        caption="Confirmation Dialog Box" 
-        width="70%"
-    />
-</FigureProvider>
+| Fields/Button       | Description                                                |                                                           
+|-------------------- |----------------------------------------------------------- |
+| Selected            | Checkbox to mark a route for deletion.                     |
+| Id                  | Displays the account ID associated with the route.         |
+| Route               | Displays the route name.                                   |
+| # Meas              | Displays the number of measurements recorded on the route. |
+| Select All          | Selects every route in the list.                           |
+| Select              | Selects the highlighted route.                             |
+| Delete Measurements | Deletes measurement data for the selected route(s).        |
 
-## Screen Description (Delete Measurement Data)
+#### Delete measurement data 
+To delete measurement data, proceed as follows:
 
-| Navigation Button       | Functionality                                          |                                                                                                                                          
-| :---------------------- | :----------------------------------------------------- |
-| Route List              | Displays available routes containing measurement data. |
-| Confirmation Dialog box | Asks for confirmation before deleting data.            |
+1. On the Delete Measurements screen, select the checkbox next to the required route(s), or select **Select All** to select every route.
+2. Select **Delete Measurements**. <br />
+    a. If no route is selected, the following dialog appears: **Select Routes to delete measurements**. <br />
+    b. Select **Close** to dismiss the dialog, then select at least one route before trying again, same as shown
+    &nbsp; &nbsp; in <FigureRef id="Select-Routes-to-Delete-Measurements-Dialog" />.
 
-:::note 
+:::warning
 
-Deleted measurement data cannot be recovered. Ensure the data is transmitted or backed up before deleting.
+    Select Routes to delete measurements.
 
 :::
 
+<FigureProvider>
+    <Figure
+        id="Select-Routes-to-Delete-Measurements-Dialog"
+        src="/img/2-Measurements/5-DeleteMeasurementData/Select-Routes-to-Delete-Measurements-Dialog-Light.jpg"
+        srcDark="/img/2-Measurements/5-DeleteMeasurementData/Select-Routes-to-Delete-Measurements-Dialog-Dark.jpg"
+        caption="Select Routes to delete measurements dialog"
+        width="70%"
+    />
+</FigureProvider>
+
+&nbsp; &nbsp; c. If one or more routes are selected, the following confirmation dialog appears: **Do you want to delete
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; measurements for the selected routes?** See <FigureRef id="" />.
+
+:::warning
+
+    Do you want to delete measurements for the selected routes?
+
+:::
+
+<FigureProvider>
+    <Figure
+        id="Delete-Measurements-Confirmation-Dialog"
+        src="/img/2-Measurements/5-DeleteMeasurementData/Delete-Measurements-Confirmation-Dialog-Light.jpg"
+        srcDark="/img/2-Measurements/5-DeleteMeasurementData/Delete-Measurements-Confirmation-Dialog-Dark.jpg"
+        caption="Delete Measurements confirmation dialog"
+        width="70%"
+    />
+</FigureProvider>
+
+3. Select **Yes** to permanently delete the measurement data for the selected routes, or select **No** to cancel the operation. 
+
+:::warning
+
+    Deleted measurement data cannot be recovered. Ensure the data has been transmitted or backed up before deleting. 
+
+:::
 
 
 

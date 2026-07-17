@@ -10,112 +10,276 @@ sidebar_label: '2.4 - Customer Signature'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **Customer Signature** option allows the user to capture the customer’s signature after completing the measurement process. This feature is used for verification and documentation purposes.
+Use the Customer Signature function to record the visit results, capture the customer's signature, and email the 
+measurement report to selected recipients after completing the measurement process.
 
-**Procedure:**
-1. Select Measurements from the Dashboard.
-2. Click on **Customer Signature** from the measurement menu.
-3. The Select Route screen will appear as shown in <FigureRef id="" />.
-4. Select the required route.
-5. Tap **Select**.
+To open the Customer Signature screen, proceed as follows:
+
+1. From the Dashboard, select **Measurements**.
+2. Select **Customer Signature**.
+3. The Select Route screen appears as shown in <FigureRef id="Customer-Signature-Select-Route-Screen" />
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
-        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
-        caption="Customer Signature Route Selection"
+        id="Customer-Signature-Select-Route-Screen"
+        src="/img/2-Measurements/4-CustomerSignature/Customer-Signature-Select-Route-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Customer-Signature-Select-Route-Screen-Dark.jpg"
+        caption="Machines Not Measured Select Route screen"
         width="70%"
     />
 </FigureProvider>
 
-6. After selecting the route, the **Signature** screen will open.
-7. Select the appropriate result option:<br />
-    a. We were not able to measure every machine during this visit, or<br />
-    b. We were able to measure all the machines.
-8. After selecting the result, go to the **Signature** area and add the customer’s signature (see <FigureRef id="" />).
-9. Capturing the signature, proceed as required.
-10. Add the  required signature and click the **Select Recipients** option.
+#### Customer signature Select Route Screen (Right Menu)
+#### Select a route
+To select a route, proceed as follows:
+
+1. On the Select Route screen, select the desired route from the list. The selected route is highlighted.
+2. Select **Select**. The Customer Signature screen appears.
+
+:::note
+
+The Select Route screen and its available fields and controls are the same as described in [Section 2.2](2-DisplayMeasurements.mdx). 
+Please review that section for a detailed description.
+
+:::
+
+#### Customer Signature screen
+After selecting a route, the **Customer Signature** screen appears, showing the selected route in the breadcrumb
+(e.g., TEST #2 (1289)).
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
-        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
-        caption="Customer Signature and Results"
+        id="Customer-Signature-Screen"
+        src="/img/2-Measurements/4-CustomerSignature/Customer-Signature-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Customer-Signature-Screen-Dark.jpg"
+        caption="Customer Signature screen"
         width="70%"
     />
 </FigureProvider>
 
-### Select Recipients
-The Select Recipients option allows the user to add, edit, or select recipients who will receive the measurement report via email.
+#### Customer Signature screen fields 
+The following Controls and fields are available in customer signature fields as shown in the <FigureRef id="" />. 
 
-**Procedure**<br />
-1. Select Recipients from the Customer Signature screen.
-2. The Select Recipients window will appear (See <FigureRef id="" />).<br />
+| Fields/Button         | Description                                                                                                                                                                    |                                                           
+|---------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Results               | Selects the visit result. Available options: <ul><li>We were not able to measure every machine during this visit.</li> <li>We were able to measure all the machines.</li></ul> |
+| Signature             | Area where the customer draws their signature.                                                                                                                                 |
+| Memo                  | Text field for entering additional remarks or notes related to the visit                                                                                                       |
+| Customer              | Text field for entering the customer's name.                                                                                                                                   | 
+| Select Recipients     | Opens the Select Recipients screen to choose who receives the report by email.                                                                                                 |
+| Not Measured Machines | Opens the Machines Not Measured screen for the current route.                                                                                                                  |
+| Clear Signature       | Clears the captured signature.                                                                                                                                                 | 
+| Clear Memo            | Clears the text entered in the Memo field.                                                                                                                                     |
+| Submit                | Submits the results, signature, and report to the selected recipients.                                                                                                         |
 
-**To add a new recipient:**
+#### Record the visit and capture a signature
+To complete the **Customer Signature** screen, proceed as follows:
 
-1. Select New Recipient.
-2. Enter the Recipient Name and Email Address.
-3. Click Save Recipient to save new recipient data.<br />
+1. Select the required **Results** option.
+2. In the **Signature** area, have the customer draw their signature.
+3. Enter the customer's name in the **Customer** field.
+4. Enter any additional notes in the **Memo** field, if required.
+5. Click on the **Select Recipients** option to choose who will receive the report by email.
+6. Select **Submit**. <br />
 
-**To select recipients from the list:**
+    a. If no recipients have been selected, the following dialog appears: **Recipients must be selected**. <br /> 
+    b. Select **Close** to dismiss the dialog, then select recipients before submitting again.
 
-1. Choose the required recipient(s).
-2. Select to confirm.
-3. To select all recipients, tap Select All.
+:::note
 
-**To modify recipient details:**
+Recipients must be selected 
+
+:::
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
-        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
-        caption="Select Recipients Screen"
+        id="Recipients-must-be-Selected-Dialog"
+        src="/img/2-Measurements/4-CustomerSignature/Recipients-must-be-Selected-Dialog-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Recipients-must-be-Selected-Dialog-Dark.jpg"
+        caption="Recipients must be selected dialog"
         width="70%"
     />
 </FigureProvider>
 
-### Select Not Measured Machines
-If you select the **Not Measured Machines** option from the Results screen, the report screen will appear with a dialog box confirming that the report has been prepared, as shown in Figure 3.15.
-If you want to **save** this report, click the Save button.
+    &nbsp; &nbsp;c. Once recipients are selected and **Submit** is selected, the task status bar displays **Sending**
+    .... while the &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; report is transmitted.
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
-        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
-        caption="Notification Dialog Box"
+        id="Customer-Signature-Screen-Sending-Report"
+        src="/img/2-Measurements/4-CustomerSignature/Customer-Signature-Screen-Sending-Report-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Customer-Signature-Screen-Sending-Report-Dark.jpg"
+        caption="Customer Signature screen, sending report"
         width="70%"
     />
 </FigureProvider>
 
-### Clear Signature
-Click the **Clear Signature** option on the Results screen. This option removes the existing signature or clears the previously captured signature.
+#### Customer signature Screen (Right Menu)
+If Recipient Already create or you want to select the list of receipt.
 
-### Memo Section
-The Memo field allows the user to enter additional remarks or notes related to the visit or measurement process. See <FigureRef id="" />
+#### Select Recipients
+Use the Select Recipients screen to add, edit, delete, or select the recipients who will receive the measurement 
+report by email.
 
-**Procedure:**
-1. Tap inside the **Memo** text box.
-2. Enter the required notes using the on-screen keyboard.
-3. To remove the entered text, click **Clear Memo**.
+To open the Select Recipients screen, proceed as follows:
+1. On the Customer Signature screen, select **Select Recipients**. The Select Recipients screen appears.
 
-### Screen Description (Customer Signature)
-
-<ul><li>**Signature Area:** The area where the customer can draw their signature.</li>
-<li>**Memo Area:** The area where the user can enter additional remarks or notes related to the visit or measurement.</li>
-<li>**Save Option:** Stores the captured signature.</li>
-<li>**Clear Option:** Removes the signature if the user wants to sign again.</li></ul>
 
 <FigureProvider>
     <Figure
-        id=""
-        src="/img/3-Measurements/3-NotMeasuredMachinesReport/          -Light.png"
-        srcDark="/img/3-Measurements/3-NotMeasuredMachinesReport/		-Dark.png"
-        caption="Memo Section"
+        id="Select-Recipients-Screen"
+        src="/img/2-Measurements/4-CustomerSignature/Select-Recipients-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Select-Recipients-Screen-Dark.jpg"
+        caption="Select Recipients screen"
         width="70%"
     />
 </FigureProvider>
+
+**If the recipient has already been created, select the recipient from the list.**
+
+#### Select Recipients screen fields
+The following fields and controls are available. 
+
+| Fields/Button    | Description                                                                       |                                                           
+|----------------- |---------------------------------------------------------------------------------- |
+| Recipient Name   | Enter or edit the recipient's name.                                               |
+| Email            | Enter or edit the recipient's email address.                                      |  
+| Recipients list  | Displays each saved recipient's selection status and name/email.                  |
+| Save Recipient   | Saves the entered recipient name and email address.                               |
+| Select All       | Selects all recipients in the list.                                               |
+| New Recipient    | Clears the Recipient Name and Email fields to enter a new recipient.              |
+| Clear            | Clears the Recipient Name and Email fields.                                       |
+| Edit Recipient   | Enables editing of the selected recipient's details.                              | 
+| Delete Recipient | Deletes the selected recipient.                                                   |
+| Cancel           | Discards unsaved changes to the recipient fields.                                 |
+| Close            | Closes the Select Recipients screen and returns to the Customer Signature screen. |
+
+#### Select recipients
+
+1. In the Recipients list, select the checkbox to select the required recipient(s), or select **Select All** to select every recipient.
+2. Select **Close** to confirm and return to the Customer Signature screen.
+
+#### Add a new recipient
+1. Select **New Recipient**.
+2. Enter the **Recipient Name** and **Email**.
+3. Select **Save Recipient**. See <FigureRef id="Add-New-Recipients-Screen" />
+
+<FigureProvider>
+    <Figure
+        id="Add-New-Recipients-Screen-Light"
+        src="/img/2-Measurements/4-CustomerSignature/Add-New-Recipients-Screen-Light-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Add-New-Recipients-Screen-Light-Dark.jpg"
+        caption="Add New Recipients screen"
+        width="70%"
+    />
+</FigureProvider>
+
+#### Edit a recipient
+1. Select the desired recipient from the list.
+2. Select **Edit Recipient**.
+3. Modify the **Recipient Name** or **Email**.
+4. Select **Save Recipient**.
+
+#### Delete a recipient
+1. Select the desired recipient from the list.
+2. Select **Delete Recipient**. A confirmation dialog appears: **Do you want to remove email?** See <FigureRef id="" />
+
+:::warning
+
+Do you want to remove email?
+
+:::
+
+3. Select **Yes** to remove the recipient, or **Cancel** to keep it.
+
+<FigureProvider>
+    <Figure
+        id="Add-New-Recipients-Screen1"
+        src="/img/2-Measurements/4-CustomerSignature/Add-New-Recipients-Screen1-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Add-New-Recipients-Screen1-Dark.jpg"
+        caption="Add New Recipients screen"
+        width="70%"
+    />
+</FigureProvider>
+
+#### Not Measured Machines  (Access form the Customer Signature Screen)
+Use the **Not Measured Machines** screen, accessed from the Customer Signature screen, to review machines that were
+not measured and prepare a report for the current route. To open this screen, proceed as follows:
+
+1. On the Customer Signature screen, select **Not Measured Machines**.
+2. A confirmation dialog box opens to inform you that: **The report file has been prepared** as shown in <FigureRef id="" />. 
+
+:::tip[Confirmation]
+
+The Report file has been prepared.
+
+:::
+
+<FigureProvider>
+    <Figure
+        id="Not-Measured-Machine-Confirmation-Dialogbox"
+        src="/img/2-Measurements/4-CustomerSignature/Not-Measured-Machine-Confirmation-Dialogbox-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Not-Measured-Machine-Confirmation-Dialogbox-Dark.jpg"
+        caption="Not Measured Machine (Confirmation Dialogbox)"
+        width="70%"
+    />
+</FigureProvider>
+
+#### Machines Not Measured screen fields 
+This screen as shown in the <FigureRef id="Not-Measured-Machine-Confirmation-Dialogbox" /> displays the following fields and controls.
+
+| Fields/Button                      | Description                                                                                 |                                                           
+|----------------------------------- |-------------------------------------------------------------------------------------------- |
+| Machine                            | Displays the details of the currently highlighted machine: Name, Reason, Last measured, Id. |
+| No / Name / Last measured / Reason | List of machines without recorded measurements.                                             |
+| Save Report                        | Prepares a not-measured machines report for the route.                                      |
+| Cancel                             | Closes the screen without preparing a report, and returns to the Customer Signature screen. |
+
+#### Customer signature Select Route Screen (Right Menu)
+#### Browse Email
+Use the Browse Emails screen to view details of previously sent customer signature reports, including the recipient's signature and email details, without selecting a route.
+To open the Browse Emails screen, proceed as follows:
+
+1. On the Customer Signature Select Route screen, select **Browse Emails**.
+2. The Browse Emails screen appears as shown in <FigureRef id="" />.
+
+<FigureProvider>
+    <Figure
+        id="Browse-Emails-Screen"
+        src="/img/2-Measurements/4-CustomerSignature/Browse-Emails-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/4-CustomerSignature/Browse-Emails-Screen-Dark.jpg"
+        caption="Browse Emails screen"
+        width="70%"
+    />
+</FigureProvider>
+
+#### Browse Emails screen fields 
+The following fields and controls available in <FigureRef id="Browse-Emails-Screen" /> are mentioned below.
+
+| Fields/Button  | Description                                                             |                                                           
+|--------------- |------------------------------------------------------------------------ |
+| Email details  | Displays the details of the currently selected sent report.             |
+| Signature      | Displays the captured customer signature for the selected report.       |
+| Id             | Displays the report ID.                                                 |  
+| Route          | Displays the route name associated with the report.                     | 
+| Tech. name     | Displays the name of the technician who submitted the report.           |
+| Signer name    | Displays the name of the customer who signed the report.                |
+| Date           | Displays the date the report was submitted.                             | 
+| Report         | Opens the full report for the selected entry.                           |
+| Cancel         | Closes the Browse Emails screen and returns to the Select Route screen. |
+
+To review a sent report, proceed as follows:
+
+1. On the Browse Emails screen, select the desired entry from the list.
+2. Review the **Email details** and **Signature** shown for the entry.
+3. Select **Report** to open the full report.
+4. Select **Cancel** to return to the Select Route screen.
+
+
+
+
+
+
+
+
+

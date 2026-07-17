@@ -20,8 +20,8 @@ To open the Display Measurements screen, proceed as follows:
 <FigureProvider>
     <Figure
         id="Display-Measurements-Select-Route-Screen"
-        src="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Select-Route-Screen-Light.jpg"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Select-Route-Screen-Dark.jpg"
+        src="/img/2-Measurements/2-DisplayMeasurements/Display-Measurements-Select-Route-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/2-DisplayMeasurements/Display-Measurements-Select-Route-Screen-Dark.jpg"
         caption="Measurement Route Select Screen"
         width="70%"
     />
@@ -56,8 +56,8 @@ After selecting a route, the Areas in Route screen appears, listing the areas co
 <FigureProvider>
     <Figure
         id="Areas-In-Route-Screen"
-        src="/img/3-Measurements/2-DisplayMeasurements/Areas-In-Route-Screen-Light.jpg"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/Areas-In-Route-Screen-Dark.jpg"
+        src="/img/2-Measurements/2-DisplayMeasurements/Areas-In-Route-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/2-DisplayMeasurements/Areas-In-Route-Screen-Dark.jpg"
         caption="Areas in Route Screen"
         width="70%"
     />
@@ -84,8 +84,8 @@ After selecting an area, the Machines in Area screen appear, listing the machine
 <FigureProvider>
     <Figure
         id="Machines-in-Area-Screen"
-        src="/img/3-Measurements/2-DisplayMeasurements/Machines-in-Area-Screen-Light.jpg"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/Machines-in-Area-Screen-Dark.jpg"
+        src="/img/2-Measurements/2-DisplayMeasurements/Machines-in-Area-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/2-DisplayMeasurements/Machines-in-Area-Screen-Dark.jpg"
         caption="Machines in Area Screen"
         width="70%"
     />
@@ -111,19 +111,18 @@ Select a machine, proceed as follows:
 After selecting a machine, the Display Measurements screen appears where at the top of the screen shows the selected
 route, area, and machine (e.g., TEST #2 (1289) > MILL DRIVES > MAIN MILL DRIVE).
 
-
-<FigureProvider>
-    <Figure
-        id="Display-Measurements-Screen"
-        src="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-Light.jpg"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-Dark.jpg"
-        caption="Display Measurements screen"
-        width="70%"
-    />
-</FigureProvider>
+    <FigureProvider>
+        <Figure
+            id="Display-Measurements-Screen"
+            src="/img/2-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-Light.jpg"
+            srcDark="/img/2-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-Dark.jpg"
+            caption="Display Measurements screen"
+            width="70%"
+        />
+    </FigureProvider>
 
 #### Display Measurements screen Detail
-The following fields and controls are available in this screen are shown in <FigureRef id="" />.
+The following fields and controls are available in this screen are shown in <FigureRef id="Display-Measurements-Screen" />.
 
 | Fields/Control   | Description                                                                                            |                                                            
 |----------------- |------------------------------------------------------------------------------------------------------- |
@@ -152,8 +151,8 @@ To access these controls, proceed as follows:
 <FigureProvider>
     <Figure
         id="Display-Measurements-Screen-More-Expanded"
-        src="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-More-Expanded-Light.jpg"
-        srcDark="/img/3-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-More-Expanded-Dark.jpg"
+        src="/img/2-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-More-Expanded-Light.jpg"
+        srcDark="/img/2-Measurements/2-DisplayMeasurements/Display-Measurements-Screen-More-Expanded-Dark.jpg"
         caption="Display Measurements screen (More expanded)"
         width="70%"
     />
@@ -166,4 +165,81 @@ Use the **Options function** to select a specific measurement point and axis to 
 To select a measurement point, proceed as follows:
 
 1. On the Display Measurements screen, select **More**, then select **Options**. 
-2.The Measure Point screen appears as shown in Figure-3.3.6.
+2. The Measure Point screen appears as shown in <FigureRef id="Measure-Point-Screen" />.
+
+    <FigureProvider>
+        <Figure
+            id="Measure-Point-Screen"
+            src="/img/2-Measurements/2-DisplayMeasurements/Measure-Point-Screen-Light.jpg"
+            srcDark="/img/2-Measurements/2-DisplayMeasurements/Measure-Point-Screen-Dark.jpg"
+            caption="Measure Point screen"
+            width="70%"
+        />
+    </FigureProvider>
+
+    #### Option screen Details
+    The Following controls are available in the screen as shown in the <FigureRef id="Measure-Point-Screen" />.
+
+    | Fields/Control   | Description                                                                                      |                                                            
+    |----------------- |------------------------------------------------------------------------------------------------- |
+    | CVAAcct          | Displays the account number associated with each recorded measurement.                           |
+    | Measurement Date | Displays the date and time each measurement was recorded.                                        |
+    | RMS              | Displays the Root Mean Square vibration level recorded for each axis.                            |
+    | X / Y / Z        | Selects the axis to display on the Display Measurements screen.                                  |
+    | Save             | Applies the selected measurement point and axis, and returns to the Display Measurements screen. |
+    | Cancel           | Closes the screen without applying changes.                                                      |
+
+3. Select the required measurement row from the list.
+4. Select the required axis: X, Y, or Z.
+5. Select Save.
+
+
+#### Compare measurements 
+Use the **Compare measurements function** to view a side-by-side comparison of recorded measurement values for the selected machine.
+
+To compare measurements, proceed as follows:
+1. On the Display Measurements screen, select **More**, then select **Compare measurements**.
+2. The Comparison of measurements dialog appears, showing the selected route, area, and machine path (e.g., NUCOR HICKMAN > MILL DRIVES > MAIN MILL DRIVE). 
+    See <FigureRef id="Comparison-of-Measurements-Dialog" />
+
+    <FigureProvider>
+        <Figure
+            id="Comparison-of-Measurements-Dialog"
+            src="/img/2-Measurements/2-DisplayMeasurements/Comparison-of-Measurements-Dialog-Light.jpg"
+            srcDark="/img/2-Measurements/2-DisplayMeasurements/Comparison-of-Measurements-Dialog-Dark.jpg"
+            caption="Comparison of measurements dialog"
+            width="70%"
+        />
+    </FigureProvider>  
+
+    #### Comparison of Measurements Screen Detail
+    | Fields/Control           | Description                                                                         |                                                            
+    |------------------------- |------------------------------------------------------------------------------------ |
+    | RMS X / RMS Y / RMS Z    | Displays the Root Mean Square vibration level for each axis.                        |
+    | X % / Y % / Z %          | Displays the percentage change in RMS value for each axis compared to the baseline. |
+    | Peak X / Peak Y / Peak Z | Displays the peak vibration level for each axis.                                    | 
+    | Time                     | Displays the date and time of each recorded measurement.                            |
+    | Cancel                   | Closes the dialog.                                                                  |
+
+3. Review the listed measurements for the selected machine.
+4. Select Cancel to close the dialog and return to the Display Measurements screen.
+5. The task status bar displays **Processing...** while the Display Measurements screen reloads. See <FigureRef id="Display-Measurement-Screen-Comparison-Measurement" />
+
+    <FigureProvider>
+        <Figure
+            id="Display-Measurement-Screen-Comparison-Measurement"
+            src="/img/2-Measurements/2-DisplayMeasurements/Display-Measurement-Screen-Comparison-Measurement-Light.jpg"
+            srcDark="/img/2-Measurements/2-DisplayMeasurements/Display-Measurement-Screen-Comparison-Measurement-Dark.jpg"
+            caption="Display Measurement Screen (Comparison Measurement)"
+            width="70%"
+        />
+    </FigureProvider> 
+
+:::info
+
+The status bar displays Processing... while the selected measurement is loading. 
+
+:::
+
+#### Reset 
+Select **Reset** to restore the Display Measurements screen to its default view. 

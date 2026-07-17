@@ -10,53 +10,85 @@ sidebar_label: '2.6 - Display Trouble Code'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **Display Trouble Code** option allows the user to view the trouble codes generated during the measurement process.
-These codes help identify machine faults or abnormal conditions detected during data collection.
+Use the **Display Trouble Code** function to view the trouble codes generated during the measurement process. Trouble codes help identify machine faults or abnormal operating conditions detected during data collection. 
+To open the **Display Trouble Code** screen, proceed as follows:
 
-**Procedure:**
-
-1. Select Measurements from the dashboard.
-2. Click on **Display Trouble Code**.
-3. The **Select Route screen** will appear showing the list of available routes as shown in <FigureRef id="" />
+1. From the **Dashboard**, select **Measurements**.
+2. Select **Display Trouble Code**.
+3. The **Select Route** screen appears, listing all available routes stored on the device, as shown in <FigureRef id="Display-Trouble-Code-Route-Selection-Screen" />.
 4. Select the required route.
-5. Click **Select**.
+5. Select **Select**.
 
 <FigureProvider>
-    <Figure 
-        id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
-        caption="Trouble Code Route Selection" 
+    <Figure
+        id="Display-Trouble-Code-Route-Selection-Screen"
+        src="/img/2-Measurements/6-DisplayTroubleCode/Display-Trouble-Code-Route-Selection-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/6-DisplayTroubleCode/Display-Trouble-Code-Route-Selection-Screen-Dark.jpg"
+        caption="Display Trouble Code Route Selection Screen"
         width="70%"
     />
 </FigureProvider>
 
-After selecting the route, the **Trouble Code** screen will appear, as shown in <FigureRef id="" />. This screen displays the
-trouble code details related to the selected route or machine.
+6. After selecting a route, the **Display Trouble Code** screen appears, displaying all trouble codes associated with
+the selected route, as shown in <FigureRef id="Display-Trouble-Code-Screen" />.
 
 <FigureProvider>
-    <Figure 
-        id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
-        srcDark="/img/Appendix/Appendix B-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
-        caption="Trouble Code Screen" 
+    <Figure
+        id="Display-Trouble-Code-Screen"
+        src="/img/2-Measurements/6-DisplayTroubleCode/Display-Trouble-Code-Screen-Light.jpg"
+        srcDark="/img/2-Measurements/6-DisplayTroubleCode/Display-Trouble-Code-Screen-Dark.jpg"
+        caption="Display Trouble Code Screen"
         width="70%"
     />
 </FigureProvider>
 
-## Screen Description (Display Trouble Code)
+#### Display Trouble Code screen fields
+The following fields and controls are available on this screen.
 
-| Navigation Button | Functionality                                                              |                                                                                                                                          
-| :---------------- | :------------------------------------------------------------------------- |
-| ID                |  Displays the trouble code identification number.                          | 
-| Type              | Shows the type or category of the detected issue.                          | 
-| Date              | Displays the date when the trouble code was recorded.                      | 
-| Tech Name         | Shows the technician name associated with the measurement.                 |
-| Memo              | Allows viewing or entering additional remarks related to the trouble code. |
-| Delete            | Removes the selected trouble code entry.                                   |
+| Fields/Button | Description                                                                 |                                                           
+|-------------- |---------------------------------------------------------------------------- |
+| ID            | Displays the unique identification number of the trouble code.              |
+| Code          | Displays the trouble code assigned to the detected fault.                   |
+| Description   | Displays a brief description of the detected fault or abnormal condition.   |
+| Type          | Displays the type or category of the trouble code.                          |
+| Date          | Displays the date on which the trouble code was recorded.                   |
+| Tech. Name    | Displays the name of the technician associated with the measurement.        |
+| Memo          | Displays or allows entry of additional notes for the selected trouble code. | 
+| Delete        | Deletes the selected trouble code.                                          |
+| Up            | Scrolls up through the list of trouble codes.                               | 
+| Down          | Scrolls down through the list of trouble code                               |
+| Back          | Returns to the previous screen.                                             |
 
-:::info
+:::note
 
-If no trouble cod R.es are available for the selected route, the system may display an empty screen.
+If no trouble codes are available for the selected route, the **Display Trouble Code** screen is displayed without 
+any records. 
 
 :::
+
+#### Delete a Trouble Code
+To delete a trouble code, proceed as follows:
+
+1. On the **Display Trouble Code** screen, select the required trouble code from the list.
+2. Select **Delete**.
+3. The following confirmation dialog appears: **Do you want to delete the selected records?** as shown in <FigureRef id="" />. <br />
+    a. Select **Yes** to permanently delete the selected trouble code. <br />
+    b. Select **No** to cancel the operation. 
+
+:::warning
+
+Do you want to delete the selected records? 
+
+:::
+
+<FigureProvider>
+    <Figure
+        id="Delete-Trouble-Code-Confirmation-Dialog"
+        src="/img/2-Measurements/6-DisplayTroubleCode/Delete-Trouble-Code-Confirmation-Dialog-Light.jpg"
+        srcDark="/img/2-Measurements/6-DisplayTroubleCode/Delete-Trouble-Code-Confirmation-Dialog-Dark.jpg"
+        caption="Delete Trouble Code Confirmation Dialog"
+        width="70%"
+    />
+</FigureProvider>
+
+
