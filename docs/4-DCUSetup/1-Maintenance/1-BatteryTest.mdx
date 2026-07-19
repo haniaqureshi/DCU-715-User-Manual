@@ -9,7 +9,6 @@ sidebar_label: '4.1.1 - Battery Test'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-<FigureProvider>
     Use the **Battery Test** function to verify battery health and review battery performance values, such as voltage, capacity, and test duration. 
 
     To open the Battery Test function, proceed as follows:
@@ -17,6 +16,9 @@ import Figure from "@site/src/components/Figure";
     2. From the **DCU Setup** submenu, select **Maintenance**.
     3. Select **Battery Test**. The **Battery Test** modal appears.
 
+    The **Battery Test** modal appears.
+
+    <FigureProvider>
     <Figure 
         id="Battery-Test-Modal" 
         src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/Battery-Test-Modal-Light.png"
@@ -24,6 +26,7 @@ import Figure from "@site/src/components/Figure";
         caption="Battery Test modal" 
         width="70%"
     />
+    </FigureProvider>
 
     ## Battery Test modal
     The following table describes the fields and controls available in the Battery Test modal as seen in <FigureRef id="Battery-Test-Modal"/>.
@@ -42,6 +45,8 @@ import Figure from "@site/src/components/Figure";
     To enter the battery serial number, proceed as follows:
 
     1. In the **Battery Test** modal, select the **Battery Serial Number** field. The **Battery Serial Number** modal appears.
+    
+    <FigureProvider>
         <Figure 
             id="Battery-Serial-Number-Modal" 
             src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/Battery-Serial-Number-Modal-Light.png" 
@@ -49,6 +54,8 @@ import Figure from "@site/src/components/Figure";
             caption="Battery Serial Number modal" 
             width="70%"
         />
+    </FigureProvider>
+
     2. Use the numeric keypad to enter the battery serial number.
 
     #### Battery Serial Number modal
@@ -69,21 +76,18 @@ import Figure from "@site/src/components/Figure";
     1. Enter a battery serial number that contains 5 to 8 numeric digits in the **Battery Serial Number** field in the **Battery Test** modal.
     2. Select **Start**. The DCU starts the battery test cycle.
     3. Review the following values during the test:<br />
-        - Minutes
-        - Battery Voltage
-        - Battery Capacity
-    4. Select **Stop** to end the battery test.
+        - **Minutes**
+        - **Battery Voltage**
+        - **Battery Capacity**
+    4. Select **Stop** to end the battery test. <br />
+
+The DCU creates a battery test report and displays a message in the System Alert Bar.
 
     ### Battery test report
-    When you select **Stop** the DCU creates a battery test report file and the [system alert bar](../../intro.mdx#) displays the report 
-    location as shown in <FigureRef id="Battery-Test-Report-Created-Message"/>. The DCU saves the report to C:\CVASYS\ITR100\ as Batterytest.txt. 
-    An example of the report contents is shown in <FigureRef id="Battery-Test-Report-File"/>.
+    When the user selects Stop, the **DCU** creates a battery test report file.
+    The System Alert Bar displays the report location.
 
-    :::info
-
-    Please note that other ITR programs may also save data to this folder. 
-
-    :::
+    <FigureProvider>
     <Figure 
         id="Battery-Test-Report-Created-Message" 
         src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/Battery-Test-Report-Created-Message-Light.png" 
@@ -91,7 +95,19 @@ import Figure from "@site/src/components/Figure";
         caption="Battery test report created message" 
         width="100%"
     />
+    </FigureProvider>
 
+    ```
+    The \CVASYS\ITR100\ folder stores data created by DCU
+    ```
+
+    :::info
+
+    Please note that other ITR programs may also save data to this folder. 
+
+    :::
+    
+    <FigureProvider>
     <Figure 
         id="Battery-Test-Report-File" 
         src="/img/4-DCUSetup/1-Maintenance/1-BatteryTest/Battery-Test-Report-File-Light.png" 
@@ -99,15 +115,11 @@ import Figure from "@site/src/components/Figure";
         caption="Battery test report file" 
         width="70%"
     />
+    </FigureProvider>
 
-    #### Battery test report detailss
-    The first line of the report identifies the battery test record and the DCU used for the test.
-
-    ```jsx title="C:\CVASYS\ITR100\Batterytest.txt"
-        12345, 860, 07150997, Indiana Jones
-    ```
-
-    The following table describes the above fields in detail.
+    The first line of the report identifies the battery test record and the DCU used for the test. <br /><br />
+    **Example**: <br /><br />
+    55444;834;07150002;Indiana Jones
 
     | Field/Button          | Description                                                                                                                                                                                       | 
     | :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | 
@@ -116,14 +128,9 @@ import Figure from "@site/src/components/Figure";
     | DCU number            | Identifies the DCU number. This value is available in [Show System Settings](../3-Settings/8-ShowSystemSettings.mdx).<br /><br />**Example:** 07150002                                            |
     | Technician name       | Identifies the technician assigned to the DCU. This value is available in [Show System Settings](../3-Settings/8-ShowSystemSettings.mdx).<br /><br />**Example:** Indiana Jones                   | 
 
-    The remaining lines contain the battery readings captured during the test.
-
-    ```jsx title="C:\CVASYS\ITR100\Batterytest.txt"
-        0 5/14/2026 5:11:43 AM 100.00% 18.443
-        1 5/14/2026 5:11:43 AM 100.00% 18.418
-    ```
-
-    The following table describes the above fields in detail.
+    The remaining lines contain the battery readings captured during the test. The DCU records one reading every 1 minute. <br /><br />
+    **Example**: <br /><br />
+    0 5/14/2026 5:11:43 AM 100.00% 18.288
 
     | Field/Button     | Description                                                                                                     | 
     | :--------------- | :-------------------------------------------------------------------------------------------------------------- | 
@@ -132,6 +139,5 @@ import Figure from "@site/src/components/Figure";
     | Test time        | Records the time when the reading was captured. <br /><br />**Example:** 5:11:43 AM                             |
     | Battery capacity | Records the battery capacity as a percentage at the time of the reading. <br /><br />**Example:** 100.00%       |
     | Battery voltage  | Records the battery voltage in volts (V) at the time of the reading. <br /><br />**Example:** 18.288            |
-
-    After reviewing the test results or generating the battery test report, select **Cancel** to close the Battery Test modal.
-</FigureProvider>
+    
+    To close the Battery Test modal without continuing the test, select **Cancel**.
