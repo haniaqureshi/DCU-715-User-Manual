@@ -22,8 +22,8 @@ This alert appears when a selected measurement route contains data that hasn’t
 <FigureProvider>
     <Figure 
         id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Select-Route-Warning-Dialogbox-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Select-Route-Warning-Dialogbox-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Select-Route-Warning-Dialogbox-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Select-Route-Warning-Dialogbox-Dark.jpg" 
         caption="Select Route Warning Dialogbox" 
         width="70%"
     />
@@ -67,8 +67,8 @@ No measurement data for: Account: 1289, Measurement nr: 0
 <FigureProvider>
     <Figure 
         id="Plot-Screen-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Plot-Screen-Error-Message-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Plot-Screen-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Plot-Screen-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Plot-Screen-Error-Message-Dark.jpg" 
         caption="Plot Screen Error Message" 
         width="70%"
     />
@@ -98,8 +98,8 @@ This error displays as a warning pop-up when attempting to configure a Waterfall
 <FigureProvider>
     <Figure 
         id="Add-Points-Waterfall-Measurement-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Dark.jpg" 
         caption="Add Points Waterfall Measurement Error Message" 
         width="70%"
     />
@@ -133,8 +133,8 @@ This warning appears on the Add New Point module screen when a user attempts to 
 <FigureProvider>
     <Figure 
         id="Add-Points-Add-ID-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Add-ID-Error-Message-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Add-ID-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Add-ID-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Add-ID-Error-Message-Dark.jpg" 
         caption="Add Points Add ID Error Message" 
         width="70%"
     />
@@ -164,8 +164,8 @@ This notification displays as an informational warning box immediately following
 <FigureProvider>
     <Figure 
         id="Add-Points-Frequency-Change-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Frequency-Change-Error-Message-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-Frequency-Change-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Frequency-Change-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Frequency-Change-Error-Message-Dark.jpg" 
         caption="Add Points Frequency Change Error Message" 
         width="70%"
     />
@@ -197,8 +197,8 @@ This error dialog displays on the screen when an operator uses the quick-access 
 <FigureProvider>
     <Figure 
         id="Add-Points-ID-Not-Found-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Add-Points-ID-Not-Found-Error-Message-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Add-Points-ID-Not-Found-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-ID-Not-Found-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-ID-Not-Found-Error-Message-Dark.jpg" 
         caption="Add Points ID Not Found Error Message" 
         width="70%"
     />
@@ -229,8 +229,8 @@ This error or warning dialog appears when a user clicks the Delete action button
 <FigureProvider>
     <Figure 
         id="Delete-Route-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/Delete-Route-Error-Message-Light.png"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/Delete-Route-Error-Message-Dark.png" 
+        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Delete-Route-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Delete-Route-Error-Message-Dark.jpg" 
         caption="Delete Route Error Message" 
         width="70%"
     />
@@ -257,9 +257,298 @@ If the command is triggered while the selection state is empty, the operation is
     - If the list appears completely blank and you cannot select anything, it means no routes are currently stored locally on the device.
     - If you need to clear space or reset the view, use the **Update Routes** menu to sync with the server and refresh your local asset tracking list.
 
+{/* --- Measurement Troubleshooting --- */}
+
+## Measurement Troubleshooting 
+
+While transmitting measurement data, exporting reports, managing customer reports, or deleting measurement records, users may encounter validation warnings dialogs.
+This section explains the possible causes of these messages and provides recommended troubleshooting steps. 
+
+### Error: No Route Selected for Transmission 
+
+This warning dialog appears when the **Transmit** button is selected without choosing any route for transmission. 
+
+
+<FigureProvider>
+    <Figure 
+        id="Transmit Measurements Warning Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Transmit-Measurements-Warning-Dialog-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Transmit-Measurements-Warning-Dialog-Dark.jpg" 
+        caption="Transmit Measurements Warning Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+You must select at least one route. 
+
+:::
+
+#### Root Cause
+
+The system requires at least one route to be selected before measurement data can be transmitted. If no route is selected, the transmission process is blocked. 
+
+#### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning dialog.
+- Select the required route from the route list, or select **Select All** to transmit all available routes.
+- Select **Transmit** again to begin the data transfer.
+
+###  Error: USB Stick Not Found
+
+This warning dialog appears when the user attempts to save the **Not-Measured Machines Report** to a USB device, but no USB storage device is detected.
+
+<FigureProvider>
+    <Figure 
+        id="Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Dark.jpg" 
+        caption="Not Measured Machines Report USB Stick Not Found Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+USB Stick not found.
+
+:::
+
+#### Root Cause
+
+The DCU could not detect a connected USB storage device or the USB device was not properly inserted before the export operation.
+
+#### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning.
+- Insert a compatible USB flash drive into the DCU.
+- Verify that the USB device is fully connected and recognized.
+- Select **Save Copy to USB** again to export the report.
+
+###  Error: No Recipients Selected
+
+This warning dialog appears when the user attempts to submit the Customer Signature report without selecting any email recipients.
+
+<FigureProvider>
+    <Figure 
+        id="Customer-Signature-Recipients-Must-Be-Selected-Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Dark.jpg" 
+        caption="Customer Signature Recipients Must Be Selected Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+Recipients must be selected.
+
+:::
+
+#### Root Cause
+
+The report cannot be submitted because no recipient has been selected to receive the measurement report by email.
+
+#### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning dialog.
+- Choose **Select Recipients** option.
+- Choose one or more recipients from the list or create a new recipient.
+- Return to the Customer Signature screen and select **Submit** again.
+
+#### Confirmation: Delete Recipient
+
+This confirmation dialog appears when the user attempts to delete a saved email recipient.
+
+
+<FigureProvider>
+    <Figure 
+        id="Select-Recipients-Delete-Recipient-Confirmation-Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Dark.jpg" 
+        caption="Select Recipients Delete Recipient Confirmation Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+Do you want to remove email?
+
+:::
+
+#### Root Cause
+
+The system requests confirmation before permanently deleting the selected email recipient from the recipient list.
+
+#### Possible Troubleshooting Steps
+
+- Verify that the correct recipient is selected.
+- Select **Yes** to permanently remove the recipient.
+- Select **Cancel** if the deletion was initiated by mistake.
+
+### Error: No Route Selected for Deletion
+
+This warning dialog appears when the **Delete Measurements** button is selected without selecting any route.
+
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Measurements-Warning-Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Warning-Dialog-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Warning-Dialog-Dark.jpg" 
+        caption="Delete Measurements Warning Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+Select Routes to delete measurements.
+
+:::
+
+#### Root Cause
+
+The system requires at least one route to be selected before measurement data can be deleted.
+
+#### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning.
+- Select one or more routes from the list.
+- Select **Delete Measurements** again.
+
+####  Confirmation: Delete Measurements
+
+This confirmation dialog appears before permanently deleting the selected measurement data.
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Measurements-Confirmation-Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Confirmation-Dialog.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Confirmation-Dialog.jpg" 
+        caption="Delete Measurements Confirmation Dialog" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+Do you want to delete measurements for the selected routes?
+
+:::
+
+#### Root Cause
+The system requests confirmation before permanently removing measurement data from the selected routes.
+
+#### Possible Troubleshooting Steps
+
+- Verify that the correct routes are selected.
+- Ensure the measurement data has already been transmitted or backed up.
+- Select **Yes** to continue with the deletion, or **No** to cancel the operation.
+
+#### Confirmation: Delete Trouble Code
+This confirmation dialog appears when the user attempts to delete a trouble code record.
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Measurements-Confirmation-Dialog" 
+        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Dark.jpg" 
+        caption="Display Trouble Code (Delete Confirmation Dialog)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+Do you want to delete the selected records?
+
+:::
+
+#### Root Cause
+The system requests confirmation before permanently deleting the selected trouble code record.
+
+#### Possible Troubleshooting Steps
+
+- Verify that the correct trouble code is selected.
+- Select **Yes** to permanently delete the record.
+- Select **No** to cancel the deletion and return to the Display Trouble Code screen.
+
+{/* --- Special Test Troubleshooting --- */}
+
+## Special Test Troubleshooting
+### Error: Route Configuration is More Than Two Weeks Old
+This warning dialog appears on the **Bump Test – Select Route** screen when the user selects a route that has not been
+updated for more than two weeks before starting a **Bump Test**.
+
+<FigureProvider>
+    <Figure 
+        id="Bump-Test-(Route-Age-Warning-Dialog)" 
+        src="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Bump-Test-(Route-Age-Warning-Dialog)-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Bump-Test-(Route-Age-Warning-Dialog)-Dark.jpg" 
+        caption="Bump Test (Route Age Warning Dialog)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+The route is more than 2 weeks old. Please download a new route before proceeding! Press **'Yes'** to exit and download
+a new ROUTE or **'No'** to proceed with the old **ROUTE**.
+
+:::
+
+#### Root Cause
+The selected route has not been synchronized with the DCMS server for more than 14 days. As a result, the route may
+not contain the latest machine information, updated measurement points, or current test parameters required for the
+Bump Test.
+
+#### Possible Troubleshooting Steps
+- Select **Yes** to exit the current screen and download the latest route from the server (recommended).
+- Ensure the DCU is connected to the network before updating the route.
+- After updating the route, reopen the **Bump Test** module and select the updated route.
+- If an updated route is not available and you are certain that no changes have been made to the route configuration,
+    select **No** to continue using the existing route.
+This version matches the style and level of detail used in your Chapter 3 troubleshooting section while referring
+specifically to the **Bump Test** module.
+
+### Error: Machine Description Required
+This warning dialog appears on the **Balancing Program – Select Machine** screen when the user attempts to start a
+balancing operation without creating or selecting a machine description.
+
+<FigureProvider>
+    <Figure 
+        id="Balancing-Program-(Machine-Description-Warning-Dialog)" 
+        src="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Balancing-Program-(Machine-Description-Warning-Dialog)-Light.jpg"
+        srcDark="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Balancing-Program-(Machine-Description-Warning-Dialog)-Dark.jpg" 
+        caption="Balancing Program (Machine Description Warning Dialog)" 
+        width="70%"
+    />
+</FigureProvider>
+
+:::warning
+
+Create a description of a new machine for which a balancing process will be conducted.
+
+:::
+
+#### Root Cause
+The balancing program requires a machine description before a balancing procedure can begin. No machine information
+has been created or selected for the current balancing job.
+
+#### Possible Troubleshooting Steps
+- Select **Close** to dismiss the warning dialog.
+- Select **Add Machine** from the right-side menu.
+- Enter the required machine information, such as machine name, rotor weight, rotor radius, operating speed, and other applicable parameters.
+- Save the machine description.
+- Select the newly created machine and start the balancing procedure again.
+
+
 {/* --- DCU Setup Troubleshooting --- */}
 
-## DCU Setup
+## DCU Setup TroubleShooting
 
 While working in **DCU Setup**, the user might come across errors while performing certain actions. In this section, 
 the user will see the errors associated with DCU Setup along with the remediation steps.
@@ -276,8 +565,8 @@ CMAS is another ITR system that can exchange data with the DCU. The CMAS system 
 <FigureProvider>
     <Figure 
         id="CMAS-Update-Download-Error" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/12-TroubleShooting/                    -Light.png"
-        srcDark="/img/4-DCUSetup/4-AdvanceSettings/12-TroubleShooting/                -Dark.png" 
+        src="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/CMAS-Update-Download-Error-Light.png"
+        srcDark="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/CMAS-Update-Download-Error-Dark.png" 
         caption="CMAS update download error" 
         width="70%"
     />
@@ -299,7 +588,7 @@ is not available from the selected source.
 3. Review the log file:<br />
     a. Check the DCU log for more information about the failed download.<br />
     b. **Action Required:** Resolve the issue shown in the log, and then run the software upgrade again.
-4. Contact support:
+4. Contact support: <br />
     a. If the error continues after completing the checks above, contact the system administrator or ITR support.
 
 ### Error: The touch screen has not been tested properly
@@ -308,8 +597,8 @@ This error may appear when the user exits the **Touchscreen Test** screen withou
 <FigureProvider>
     <Figure 
         id="Touchscreen-Test-Warning-Dialog-Box" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/12-TroubleShooting/                    -Light.png"
-        srcDark="/img/4-DCUSetup/4-AdvanceSettings/12-TroubleShooting/                -Dark.png" 
+        src="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Touchscreen-test-warning-dialog-box-Light.png"
+        srcDark="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Touchscreen-test-warning-dialog-box-Dark.png" 
         caption="Touchscreen test warning dialog box " 
         width="70%"
     />
@@ -320,16 +609,16 @@ The DCU did not detect touch input before the user exited the **Touchscreen Test
 user selects **Close** without touching, tapping, or swiping across the touchscreen.
 
 #### Possible Troubleshooting Steps
-1. **Run the touchscreen test again:**<br />
+1. Run the touchscreen test again:<br />
     a. Return to **DCU Setup > Maintenance**.<br />
     b. Select **Touchscreen Test.**<br />
-2. **Test the touchscreen before exiting:**<br />
+2. Test the touchscreen before exiting:<br />
     a. Touch, tap, or swipe different areas of the touchscreen with your finger.<br />
     b. Test the center, corners, and edges of the display.<br />
-3. **Exit the test correctly:**<br />
+3. Exit the test correctly:<br />
     a. Double-tap the **Double tap to exit** box.<br />
     b. Confirm that the message **The touch screen is working properly** appears.<br />
-4. **Repeat the test if required:**<br />
+4. Repeat the test if required:<br />
     a. If the warning appears again, repeat the test and make sure the screen shows touch paths before exiting.
 
 #### Action Required
@@ -341,8 +630,8 @@ This error may appear when the DCU cannot detect a valid tachometer signal durin
 <FigureProvider>
     <Figure 
         id="Tachometer-Test-No-Signal-Condition" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/12-TroubleShooting/                    -Light.png"
-        srcDark="/img/4-DCUSetup/4-AdvanceSettings/12-TroubleShooting/                -Dark.png" 
+        src="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Tachometer-Test-No-Signal-Condition-Light.png"
+        srcDark="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Tachometer-Test-No-Signal-Condition-Dark.png" 
         caption="Tachometer Test No signal condition" 
         width="70%"
     />
