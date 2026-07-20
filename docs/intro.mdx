@@ -14,35 +14,29 @@ import Figure from "@site/src/components/Figure";
 In this module, we provide a brief overview of the **Series 715 Digital Collection Unit (DCU)**, including its main 
 functions, features, and operating concept.
 
-### DCU Application Screen Layout
-The DCU application screen is divided into 3 main areas: the **header bar**, the **main workspace**, and the **footer notification
-area**. <br /> 
-**Insert figure here:** Screenshot of the DCU application screen with the header bar, main workspace, task status
-bar, and System Alert Bar labeled.
+## DCU Application Screen Layout
+The DCU screen is divided into 3 main areas: the **header bar**, the **main workspace**, and the **footer notification
+area** as shown in figure <FigureRef id="DCU-Application-Screen-Layout"/>.
 
 <FigureProvider>
-<Figure 
-        id="ITR Screen" 
-        src="/img/0-Intro/DCU-Application-Screen-Layout.png" 
-        caption="" 
-        width="70%"
-    />
+    <Figure 
+            id="DCU-Application-Screen-Layout" 
+            src="/img/0-Intro/DCU-Application-Screen-Layout.png" 
+            caption="DCU Application Screen Layout" 
+            width="70%"
+        />
 </FigureProvider>
 
-## Main Screen layout
-The DCU interface is divided into four main areas:
-
-| #   | Components                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+| #   | Components                              | Description                                                                                                                                                                                                                         | 
 | :-  | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.  | Header bar                              | Displays the current screen title, instruction, or navigation path. It also shows the screenshot icon, battery charge, date and time, and the **Menu button**. The **Menu** button returns the user to the main menu from submenus. |                                                                                                                                                                                                       
-| 2.  | Task status bar                         | Displays short status messages related to the current task or operation. These messages may be standard recurring messages or messages specific to the current screen.                                                              |
-| 3.  | System Alert bar -> System Alerts Panel | Displays the most recent system message. Double-clicking this area opens the **System Alerts Panel**, which shows the recent system message history.                                                                                |                                                                                                                                                                                                               
-| 4.  | Main workspace                          | Displays the main content of the selected screen. This is where the user performs tests, views data, configures settings, and completes operational tasks.                                                                          |
+| A   | Header bar                              | Displays the current screen title, instruction, or navigation path. It also shows the screenshot icon, battery charge, date and time, and the **Menu button**. The **Menu** button returns the user to the main menu from submenus. |                                                                                                                                                                                                       
+| B   | Main workspace                          | Displays the main content of the selected screen. This is where the user performs tests, views data, configures settings, and completes operational tasks.                                                                          |   
+| C   | Task status bar                         | Displays short status messages related to the current task or operation. These messages may be standard recurring messages or messages specific to the current screen.                                                              |
+| D   | System Alert bar                        | Displays the most recent system message. Double-clicking this area opens the **System Alerts Panel**, which shows the recent system message history.                                                                                |                                                                                                                                                                                                               
 
 #### Task Status Bar
 The **Task status** bar is displayed at the bottom of the screen and provides real-time feedback on the current state of
 the active operation. The status bar updates automatically as the DCU processes tasks. The following table describes the status indicators displayed in the task status bar.
-
 
 | Status              | Description                                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                     
 |:------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -80,9 +74,11 @@ Predefined measurement routes are loaded into the unit to guide the operator dur
 These routes define:
 - Desired Order of Data Collection
 - Measurement Parameters such as
-    <ul><li>Data acquisition parameters</li>
-    <li>Vibration data Comparison with previous readings and reports</li>
-    <li>Schedule information to show the operator which machines need to be measured.</li></ul>
+    <ul>
+        <li>Data acquisition parameters</li>
+        <li>Vibration data Comparison with previous readings and reports</li>
+    <li>Schedule information to show the operator which machines need to be measured.</li>
+    </ul>
 
 ## How It Works
 This equipment is measured by placing the magnet-mounted accelerometer at specific points and orientations on a 
@@ -95,142 +91,142 @@ individuals responsible for maintaining the equipment.
 ## Operating System and Interface
 **DCU** features a 1.6 GHz Intel E-Series CPU with onboard central processing, memory, and high integration data 
 acquisition circuitry. 
-- Embedded Windows 7 OS with preinstalled DCU program
-- Touchscreen and optional Bluetooth keyboard
-- 6.5” 640x480 TFT LCD display
-- Multiple language capabilities include Chinese, German, Spanish, French, and Italian
+    - Embedded Windows 7 OS with preinstalled DCU program
+    - Touchscreen and optional Bluetooth keyboard
+    - 6.5” 640x480 TFT LCD display
+    - Multiple language capabilities include Chinese, German, Spanish, French, and Italian
 
 ## Communication
 This device communicates via
-- USB 2.0
-- Bluetooth 2.0
-- WIFI 802.11b/g/n
+    - USB 2.0
+    - Bluetooth 2.0
+    - WIFI 802.11b/g/n
 
 ## Data Inputs
 Input Data through:
-- 80dB dynamic measurement range
-- 20V, 2.7mA constant-current excitation power source to power the sensor, such as triaxial/single axial IEPE (ICP®) accelerometers
-- All channels can be configured to accept voltage inputs 
-- Signal clipping detection (±5 volts AC Peak to Peak maximum) 
-- Two auxiliary channels (Aux1 & Aux2) can be configured to accept 50 VDC signals
-- Aux2 can be used as a microphone input channel, processing ultrasonic signals up to 80 KHz, ±8V Peak to Peak
-- One Phasor / Tachometer Pulse input, one pulse per revolution, low to high or high to low, TTL compatible 
-- Cable fault detection (Used to diagnose accelerometer sensor cable problems)
+    - 80dB dynamic measurement range
+    - 20V, 2.7mA constant-current excitation power source to power the sensor, such as triaxial/single axial IEPE (ICP®) accelerometers
+    - All channels can be configured to accept voltage inputs 
+    - Signal clipping detection (±5 volts AC Peak to Peak maximum) 
+    - Two auxiliary channels (Aux1 & Aux2) can be configured to accept 50 VDC signals
+    - Aux2 can be used as a microphone input channel, processing ultrasonic signals up to 80 KHz, ±8V Peak to Peak
+    - One Phasor / Tachometer Pulse input, one pulse per revolution, low to high or high to low, TTL compatible 
+    - Cable fault detection (Used to diagnose accelerometer sensor cable problems)
 
 ## Signal Processing
 The Signal processing contains:
-- 16-bit ADC with 64K sample rate per channel
-- Hanning windowing 
-- FFT resolution is selectable to 200, 400, 800, 1600, 3200, 6400, 12800, 25600 lines
-- Normal averaging mode
-- Selectable acceleration or velocity modes  
-- RMS calculation 
-- Selectable FFT linear averaging, up to 512 averages 
-- Waterfall generation on a specified channel; number of spectra, spectral resolution, and time between spectra are selectable 
-- Enveloping function automatically performed on the vertical channel 
-- 50%-time domain overlap for FFT in normal mode, 0% overlap in Phasor / Tachometer Mode 
-- 2,3,4 & 5 channel simultaneous measurements 
-- ODS analysis data collection
-- Ultrasonic channel sample up to 80KHz 
-- Continuous waveform collection for transient analysis
+    - 16-bit ADC with 64K sample rate per channel
+    - Hanning windowing 
+    - FFT resolution is selectable to 200, 400, 800, 1600, 3200, 6400, 12800, 25600 lines
+    - Normal averaging mode
+    - Selectable acceleration or velocity modes  
+    - RMS calculation 
+    - Selectable FFT linear averaging, up to 512 averages 
+    - Waterfall generation on a specified channel; number of spectra, spectral resolution, and time between spectra are selectable 
+    - Enveloping function automatically performed on the vertical channel 
+    - 50%-time domain overlap for FFT in normal mode, 0% overlap in Phasor / Tachometer Mode 
+    - 2,3,4 & 5 channel simultaneous measurements 
+    - ODS analysis data collection
+    - Ultrasonic channel sample up to 80KHz 
+    - Continuous waveform collection for transient analysis
 
 ## Data Storage
 Storage data in:
-- 90GB mSATA Solid State Disk
-- 1 GB RAM
+    - 90GB mSATA Solid State Disk
+    - 1 GB RAM
 
 ## Logged Data
 Logged date in:
-- RMS values 
-- Narrow band FFT data 
-- Envelope data 
-- Time Domain data 
-- Spectral waterfalls, speed, load, and trouble code information
+    - RMS values 
+    - Narrow band FFT data 
+    - Envelope data 
+    - Time Domain data 
+    - Spectral waterfalls, speed, load, and trouble code information
 
 ## Power
 DCU power contains:
-- High-density smart Li-ion battery supports continuous data collection up to 7 hours
-- Easy and quick to replace and recharge 
-- Smart on/off switch with LED display and voltage indication function
+    - High-density smart Li-ion battery supports continuous data collection up to 7 hours
+    - Easy and quick to replace and recharge 
+    - Smart on/off switch with LED display and voltage indication function
 
 ## Mechanical, Electrical, Environmental
 It Contains:
-- Dimensions: 9.6 x 7.4 x 5.2 inches
-- Weight: 5.0 lbs. with battery
-- Environmental: -40 to +85°C ambient operating temperature, IP-65 rated environments
+    - Dimensions: 9.6 x 7.4 x 5.2 inches
+    - Weight: 5.0 lbs. with battery
+    - Environmental: -40 to +85°C ambient operating temperature, IP-65 rated environments
 
 ## Hardware Overview
-**Figures 1 (front)** and **2 (back)** provide a detailed overview of the hardware components
+<FigureRef id="DCU-715-Front-View"/> and <FigureRef id="Sensor-Connection-Cable"/> provide a detailed overview of the hardware components:
 
 <FigureProvider>
     <Figure 
         id="DCU-715-Front-View" 
         src="/img/0-Intro/DCU-715-Front-View.png" 
         caption="DCU 715 Hardware Components (Front)" 
-        width="75%"
+        width="50%"
     />
 
     <Figure 
         id="DCU-715-Back-View" 
         src="/img/0-Intro/DCU-715-Back-View.png" 
         caption="DCU 715 Hardware Component (Back)" 
-        width="75%"
+        width="50%"
     />
 
     <Figure                                                 
         id="Battery-Cover" 
         src="/img/0-Intro/Battery-Cover.png" 
         caption="Battery Cover" 
-        width="75%"
+        width="20%"
     />
 
     <Figure 
         id="Power-Switch-USB Panel-Cover" 
         src="/img/0-Intro/Power-Switch-USB Panel-Cover.png" 
         caption="Power Switch/USB Panel Cover" 
-        width="75%"
+        width="20%"
     />
 
     <Figure 
         id="Battery-Pack" 
         src="/img/0-Intro/Battery-Pack.png" 
         caption="Battery Pack" 
-        width="75%"
+        width="30%"
     />
 
     <Figure 
         id="Battery-Charger-Dock" 
         src="/img/0-Intro/Battery-Charger- Dock.png" 
         caption="Battery Charger Dock" 
-        width="75%"
+        width="30%"
     />
 
     <Figure 
         id="DCU-Keypad-Layout" 
         src="/img/0-Intro/DCU-Keypad-Layout.png" 
         caption="DCU Keypad Layout" 
-        width="75%"
+        width="30%"
     />
 
     <Figure 
         id="Headset" 
         src="/img/0-Intro/Headset.png" 
         caption="Headset" 
-        width="75%"
+        width="30%"
     />
 
     <Figure 
         id="Triaxial-Accelerometer-Sensor" 
         src="/img/0-Intro/Triaxial-Accelerometer-Sensor.png" 
         caption="Triaxial Accelerometer Sensor" 
-        width="75%"
+        width="30%"
     />
 
     <Figure 
         id="Sensor-Connection-Cable" 
         src="/img/0-Intro/Sensor-Connection-Cable.png" 
         caption="Sensor Connection Cable" 
-        width="25%"
+        width="30%"
     />
 </FigureProvider>
 
@@ -240,7 +236,7 @@ It Contains:
 | Touchscreen           | All DCU operations are performed and viewed via the screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 | Electronic Case       | Do not open this compartment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Battery Cover         | Seals and protects the battery.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| SENSOR                | Main input port for collecting sensor data. Four circumstances to use this connector:<ul><li>**Triaxial IEPE (ICP®) accelerometers**</li> <li>**Single-axis IEPE (ICP®) accelerometers**</li>Requires an adapter to convert a two-conductor cable to a four-conductor cable. <li>**Two-axis IEPE (ICP®) accelerometers**</li> Requires an adapter to convert a three-conductor cable to a four-conductor cable. <li>**Voltage input – No ICP**</li> IEPE power is disabled; external power must be provided if the sensor needs it. <li>**Requirements for Voltage Input – No ICP:**</li> <li>**DC voltage sensor:** ≤20V Peak, not powered by DCU</li> <li>**AC voltage sensor:** F ≤25 KHz, ≤ ±5V peak (no DC offset), not powered by DCU</li></ul> |
+| Sensor                | Main input port for collecting sensor data. Four circumstances to use this connector:<ul><li>**Triaxial IEPE (ICP®) accelerometers**</li> <li>**Single-axis IEPE (ICP®) accelerometers**</li>Requires an adapter to convert a two-conductor cable to a four-conductor cable. <li>**Two-axis IEPE (ICP®) accelerometers**</li> Requires an adapter to convert a three-conductor cable to a four-conductor cable. <li>**Voltage input – No ICP**</li> IEPE power is disabled; external power must be provided if the sensor needs it. <li>**Requirements for Voltage Input – No ICP:**</li> <li>**DC voltage sensor:** ≤20V Peak, not powered by DCU</li> <li>**AC voltage sensor:** F ≤25 KHz, ≤ ±5V peak (no DC offset), not powered by DCU</li></ul> |
 | TEST                  | Output port used to test the integrity of the DCU sensor cable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | PWR                   | <ul><li>2-pin Amphenol connection to provide constant power from an AC wall adapter (18 V).</li> <li>The battery can be disconnected without interrupting the power supply.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | AUX1                  | Used for: <ul><li>Additional channel for simultaneous sampling</li> <li>High voltage AC/DC input</li> <li>Ultrasonic data collection</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |  

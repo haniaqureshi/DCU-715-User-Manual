@@ -22,10 +22,10 @@ This alert appears when a selected measurement route contains data that hasn’t
 <FigureProvider>
     <Figure 
         id="Select-Route-Warning-Dialogbox" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Select-Route-Warning-Dialogbox-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Select-Route-Warning-Dialogbox-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Select-Route-Warning-Dialogbox-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Select-Route-Warning-Dialogbox-Dark.jpg" 
         caption="Select Route Warning Dialogbox" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -45,15 +45,19 @@ The system flags this to prevent technicians from collecting data against outdat
 
 - **Acknowledge and proceed temporarily:**
 
-    <ul><li>If you must collect data immediately and are certain no plant modifications occurred, click **YES** on 
-    the dialog box to acknowledge the warning and continue using the existing configuration.</li>
-    <li>Alternatively, click **NO** to disregard the alert, dismiss the dialog, and proceed straight to the active
-    asset list.</li></ul>
+    <ul>
+        <li>If you must collect data immediately and are certain no plant modifications occurred, click **YES** on 
+        the dialog box to acknowledge the warning and continue using the existing configuration.</li>
+        <li>Alternatively, click **NO** to disregard the alert, dismiss the dialog, and proceed straight to the active
+        asset list.</li>
+    </ul>
 
 - **Synchronize with the server (Recommended):**
 
-    <ul><li>Exit the measurement sequence and navigate back to the main menu.</li>
-    <li>Open **Update Routes** and establish a stable connection to download the latest route modifications.</li></ul>
+    <ul>
+        <li>Exit the measurement sequence and navigate back to the main menu.</li>
+        <li>Open **Update Routes** and establish a stable connection to download the latest route modifications.</li>
+    </ul>
 
 ### Error: Missing Plot Measurement Data
 This warning pop-up displays when an operator attempts to access the graphic visualization or trend plot for a measurement point that does not contain any recorded vibration history.
@@ -67,10 +71,10 @@ No measurement data for: Account: 1289, Measurement nr: 0
 <FigureProvider>
     <Figure 
         id="Plot-Screen-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Plot-Screen-Error-Message-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Plot-Screen-Error-Message-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Plot-Screen-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Plot-Screen-Error-Message-Dark.jpg" 
         caption="Plot Screen Error Message" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -98,10 +102,10 @@ This error displays as a warning pop-up when attempting to configure a Waterfall
 <FigureProvider>
     <Figure 
         id="Add-Points-Waterfall-Measurement-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Waterfall-Measurement-Error-Message-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Add-Points-Waterfall-Measurement-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Add-Points-Waterfall-Measurement-Error-Message-Dark.jpg" 
         caption="Add Points Waterfall Measurement Error Message" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -119,13 +123,17 @@ It requires a dedicated single-axis hardware sensor configuration locked explici
 #### Possible Troubleshooting Steps
 
 - **Modify the active sensor configuration:**
-     <ul><li>Dismiss the warning by clicking **Close**.</li>
-    <li>On the right-hand panel, click the **Sensor** button to open the Sensor Type dialog box.</li>
-    <li>Change the Sensor Type and Sensitivity dropdown options to match a single-axis specification.</li>
-    <li>Ensure your channel assignment is locked to **Channel Z**, then click **Ok** to save the hardware profile. </li></ul>
+        <ul>
+            <li>Dismiss the warning by clicking **Close**.</li>
+            <li>On the right-hand panel, click the **Sensor** button to open the Sensor Type dialog box.</li>
+            <li>Change the Sensor Type and Sensitivity dropdown options to match a single-axis specification.</li>
+            <li>Ensure your channel assignment is locked to **Channel Z**, then click **Ok** to save the hardware profile. </li>
+        </ul>
 - **Verify hardware attachment:**
-    <ul><li>Ensure that the physical cable matching your single-axis accelerometer is connected to the correct channel input 
-    port on the DCU framework before starting the test.</li></ul>
+    <ul>
+        <li>Ensure that the physical cable matching your single-axis accelerometer is connected to the correct channel input 
+        port on the DCU framework before starting the test.</li>
+    </ul>
 
 ### Error: Missing Measurement Point ID Number
 This warning appears on the Add New Point module screen when a user attempts to save a custom measurement configuration without providing an identifier.
@@ -133,10 +141,10 @@ This warning appears on the Add New Point module screen when a user attempts to 
 <FigureProvider>
     <Figure 
         id="Add-Points-Add-ID-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Add-ID-Error-Message-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Add-ID-Error-Message-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Add-Points-Add-ID-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Add-Points-Add-ID-Error-Message-Dark.jpg" 
         caption="Add Points Add ID Error Message" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -153,10 +161,12 @@ The software database requires a mandatory unique 6-digit identification string 
 #### Possible Troubleshooting Steps
 
 - **Input a valid identification string:**
-    <ul><li>Click **Close** to dismiss the warning box. The numerical pin-pad dialog overlay will automatically open.</li>
-    <li>Type a valid **6-digit** numeric string into the keypad.</li>
-    <li>Verify that the green status message **"Valid value"** appears, which unlocks the **Ok** action button.</li>
-    <li>Click **Ok** to apply the ID entry.</li></ul>
+    <ul>
+        <li>Click **Close** to dismiss the warning box. The numerical pin-pad dialog overlay will automatically open.</li>
+        <li>Type a valid **6-digit** numeric string into the keypad.</li>
+        <li>Verify that the green status message **"Valid value"** appears, which unlocks the **Ok** action button.</li>
+        <li>Click **Ok** to apply the ID entry.</li>
+    </ul>
 
 ### Error: Parameter Shift Based on ID Rule
 This notification displays as an informational warning box immediately following a successful manual ID validation entry.
@@ -164,10 +174,10 @@ This notification displays as an informational warning box immediately following
 <FigureProvider>
     <Figure 
         id="Add-Points-Frequency-Change-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Frequency-Change-Error-Message-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-Frequency-Change-Error-Message-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Add-Points-Frequency-Change-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Add-Points-Frequency-Change-Error-Message-Dark.jpg" 
         caption="Add Points Frequency Change Error Message" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -197,10 +207,10 @@ This error dialog displays on the screen when an operator uses the quick-access 
 <FigureProvider>
     <Figure 
         id="Add-Points-ID-Not-Found-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-ID-Not-Found-Error-Message-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Add-Points-ID-Not-Found-Error-Message-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Add-Points-ID-Not-Found-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Add-Points-ID-Not-Found-Error-Message-Dark.jpg" 
         caption="Add Points ID Not Found Error Message" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -229,10 +239,10 @@ This error or warning dialog appears when a user clicks the Delete action button
 <FigureProvider>
     <Figure 
         id="Delete-Route-Error-Message" 
-        src="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Delete-Route-Error-Message-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/RouteTroubleshooting/Delete-Route-Error-Message-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/1-Routes/Delete-Route-Error-Message-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/1-Routes/Delete-Route-Error-Message-Dark.jpg" 
         caption="Delete Route Error Message" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -272,10 +282,10 @@ This warning dialog appears when the **Transmit** button is selected without cho
 <FigureProvider>
     <Figure 
         id="Transmit Measurements Warning Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Transmit-Measurements-Warning-Dialog-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Transmit-Measurements-Warning-Dialog-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Transmit-Measurements-Warning-Dialog-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Transmit-Measurements-Warning-Dialog-Dark.jpg" 
         caption="Transmit Measurements Warning Dialog" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -302,10 +312,10 @@ This warning dialog appears when the user attempts to save the **Not-Measured Ma
 <FigureProvider>
     <Figure 
         id="Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Dark.jpg" 
         caption="Not Measured Machines Report USB Stick Not Found Dialog" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -333,10 +343,10 @@ This warning dialog appears when the user attempts to submit the Customer Signat
 <FigureProvider>
     <Figure 
         id="Customer-Signature-Recipients-Must-Be-Selected-Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Dark.jpg" 
         caption="Customer Signature Recipients Must Be Selected Dialog" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -365,10 +375,10 @@ This confirmation dialog appears when the user attempts to delete a saved email 
 <FigureProvider>
     <Figure 
         id="Select-Recipients-Delete-Recipient-Confirmation-Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Dark.jpg" 
         caption="Select Recipients Delete Recipient Confirmation Dialog" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -396,10 +406,10 @@ This warning dialog appears when the **Delete Measurements** button is selected 
 <FigureProvider>
     <Figure 
         id="Delete-Measurements-Warning-Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Warning-Dialog-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Warning-Dialog-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Delete-Measurements-Warning-Dialog-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Delete-Measurements-Warning-Dialog-Dark.jpg" 
         caption="Delete Measurements Warning Dialog" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -426,10 +436,10 @@ This confirmation dialog appears before permanently deleting the selected measur
 <FigureProvider>
     <Figure 
         id="Delete-Measurements-Confirmation-Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Confirmation-Dialog.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Delete-Measurements-Confirmation-Dialog.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Delete-Measurements-Confirmation-Dialog-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Delete-Measurements-Confirmation-Dialog-Dark.jpg" 
         caption="Delete Measurements Confirmation Dialog" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -454,10 +464,10 @@ This confirmation dialog appears when the user attempts to delete a trouble code
 <FigureProvider>
     <Figure 
         id="Delete-Measurements-Confirmation-Dialog" 
-        src="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/MeasurementTroubleshooting/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Dark.jpg" 
         caption="Display Trouble Code (Delete Confirmation Dialog)" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -486,10 +496,10 @@ updated for more than two weeks before starting a **Bump Test**.
 <FigureProvider>
     <Figure 
         id="Bump-Test-(Route-Age-Warning-Dialog)" 
-        src="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Bump-Test-(Route-Age-Warning-Dialog)-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Bump-Test-(Route-Age-Warning-Dialog)-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Bump-Test-(Route-Age-Warning-Dialog)-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Bump-Test-(Route-Age-Warning-Dialog)-Dark.jpg" 
         caption="Bump Test (Route Age Warning Dialog)" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -521,8 +531,8 @@ balancing operation without creating or selecting a machine description.
 <FigureProvider>
     <Figure 
         id="Balancing-Program-(Machine-Description-Warning-Dialog)" 
-        src="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Balancing-Program-(Machine-Description-Warning-Dialog)-Light.jpg"
-        srcDark="/img/Appendix/AppendixB-Troubleshooting/SpecialTestTroubleshooting/Balancing-Program-(Machine-Description-Warning-Dialog)-Dark.jpg" 
+        src="/img/Appendix/Troubleshooting/2-Measurements/Balancing-Program-(Machine-Description-Warning-Dialog)-Light.jpg"
+        srcDark="/img/Appendix/Troubleshooting/2-Measurements/Balancing-Program-(Machine-Description-Warning-Dialog)-Dark.jpg" 
         caption="Balancing Program (Machine Description Warning Dialog)" 
         width="70%"
     />
@@ -545,9 +555,6 @@ has been created or selected for the current balancing job.
 - Save the machine description.
 - Select the newly created machine and start the balancing procedure again.
 
-
-{/* --- DCU Setup Troubleshooting --- */}
-
 ## DCU Setup TroubleShooting
 
 While working in **DCU Setup**, the user might come across errors while performing certain actions. In this section, 
@@ -565,10 +572,10 @@ CMAS is another ITR system that can exchange data with the DCU. The CMAS system 
 <FigureProvider>
     <Figure 
         id="CMAS-Update-Download-Error" 
-        src="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/CMAS-Update-Download-Error-Light.png"
-        srcDark="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/CMAS-Update-Download-Error-Dark.png" 
+        src="/img/Appendix/Troubleshooting/4-DCUSetup/CMAS-Update-Download-Error-Light.png"
+        srcDark="/img/Appendix/Troubleshooting/4-DCUSetup/CMAS-Update-Download-Error-Dark.png" 
         caption="CMAS update download error" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -579,16 +586,16 @@ is not available from the selected source.
 
 #### Possible Troubleshooting Steps
 
-1. Check the network connection:<br />
-    a. Confirm that the DCU has an active internet connection.<br />
-    b. Run **Internet Test** from the **Maintenance** submenu to verify connectivity.<br />
-2. Check CMAS availability:<br />
-    a. Confirm that the CMAS server is online and reachable from the DCU network.<br />
-    b. If the server is unavailable, wait until the connection is restored and try the upgrade again.<br />
-3. Review the log file:<br />
-    a. Check the DCU log for more information about the failed download.<br />
+1. Check the network connection:
+    a. Confirm that the DCU has an active internet connection.
+    b. Run **Internet Test** from the **Maintenance** submenu to verify connectivity.
+2. Check CMAS availability:
+    a. Confirm that the CMAS server is online and reachable from the DCU network.
+    b. If the server is unavailable, wait until the connection is restored and try the upgrade again.
+3. Review the log file:
+    a. Check the DCU log for more information about the failed download.
     b. **Action Required:** Resolve the issue shown in the log, and then run the software upgrade again.
-4. Contact support: <br />
+4. Contact support:
     a. If the error continues after completing the checks above, contact the system administrator or ITR support.
 
 ### Error: The touch screen has not been tested properly
@@ -597,10 +604,10 @@ This error may appear when the user exits the **Touchscreen Test** screen withou
 <FigureProvider>
     <Figure 
         id="Touchscreen-Test-Warning-Dialog-Box" 
-        src="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Touchscreen-test-warning-dialog-box-Light.png"
-        srcDark="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Touchscreen-test-warning-dialog-box-Dark.png" 
+        src="/img/Appendix/Troubleshooting/4-DCUSetup/Touchscreen-Test-Warning-Dialog-Box-Light.png.png"
+        srcDark="/img/Appendix/Troubleshooting/4-DCUSetup/Touchscreen-Test-Warning-Dialog-Box-Dark.png.png" 
         caption="Touchscreen test warning dialog box " 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -609,16 +616,16 @@ The DCU did not detect touch input before the user exited the **Touchscreen Test
 user selects **Close** without touching, tapping, or swiping across the touchscreen.
 
 #### Possible Troubleshooting Steps
-1. Run the touchscreen test again:<br />
-    a. Return to **DCU Setup > Maintenance**.<br />
-    b. Select **Touchscreen Test.**<br />
-2. Test the touchscreen before exiting:<br />
-    a. Touch, tap, or swipe different areas of the touchscreen with your finger.<br />
-    b. Test the center, corners, and edges of the display.<br />
-3. Exit the test correctly:<br />
-    a. Double-tap the **Double tap to exit** box.<br />
-    b. Confirm that the message **The touch screen is working properly** appears.<br />
-4. Repeat the test if required:<br />
+1. Run the touchscreen test again:
+    a. Return to **DCU Setup > Maintenance**.
+    b. Select **Touchscreen Test.**
+2. Test the touchscreen before exiting:
+    a. Touch, tap, or swipe different areas of the touchscreen with your finger.
+    b. Test the center, corners, and edges of the display.
+3. Exit the test correctly:
+    a. Double-tap the **Double tap to exit** box.
+    b. Confirm that the message **The touch screen is working properly** appears.
+4. Repeat the test if required:
     a. If the warning appears again, repeat the test and make sure the screen shows touch paths before exiting.
 
 #### Action Required
@@ -630,10 +637,10 @@ This error may appear when the DCU cannot detect a valid tachometer signal durin
 <FigureProvider>
     <Figure 
         id="Tachometer-Test-No-Signal-Condition" 
-        src="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Tachometer-Test-No-Signal-Condition-Light.png"
-        srcDark="/img/4-DCUSetup/Appendix/AppendixB-Troubleshooting/DCUTroubleshooting/Tachometer-Test-No-Signal-Condition-Dark.png" 
+        src="/img/Appendix/Troubleshooting/4-DCUSetup/Tachometer-Test-No-Signal-Condition-Light.png"
+        srcDark="/img/Appendix/Troubleshooting/4-DCUSetup/Tachometer-Test-No-Signal-Condition-Dark.png" 
         caption="Tachometer Test No signal condition" 
-        width="70%"
+        width="50%"
     />
 </FigureProvider>
 
@@ -643,28 +650,38 @@ disconnected, improperly positioned, connected to the wrong input, or when the m
 generating a detectable speed signal.
 
 #### Possible Troubleshooting Steps
-1. **Verify the tachometer sensor connection:**<br />
-    <ul><li>Confirm that the tachometer sensor is securely connected to the DCU.</li>
-    <li>Check that the connector is fully seated.</li></ul>
-2. **Inspect the sensor cable:**<br />
-    <ul><li>Examine the cable for cuts, bends, loose connections, or other visible damage.</li>
-    <li>Replace the cable if damage is suspected.</li></ul>
-3. **Verify sensor positioning:**<br />
-    <ul><li>Ensure that the tachometer sensor is correctly aligned with the target.</li>
-    <li>Confirm that the sensor is within the recommended operating distance.</li></ul>
-4. **Verify equipment operation:**<br />
-    <ul><li>Confirm that the monitored equipment is running.</li>
-    <li>Ensure that the rotating component is producing a measurable speed signal.</li></ul>
-5. **Check the selected measurement unit:**<br />
-    <ul><li>Switch between **Hertz** and **CPM (Cycles Per Minute)** if necessary.</li>
-    <li>Verify that the signal is still not detected.</li></ul>
-6. **Repeat the tachometer test:**<br />
-    <ul><li>Close the Tachometer Test modal.</li>
-    <li>Reopen **DCU Setup > Diagnostics > Tachometer Tests.**</li>
-    <li>Allow the DCU 1 to 2 seconds to stabilize the measurement.</li></ul>
+1. **Verify the tachometer sensor connection:**
+    <ul>
+        <li>Confirm that the tachometer sensor is securely connected to the DCU.</li>
+        <li>Check that the connector is fully seated.</li>
+    </ul>
+2. **Inspect the sensor cable:**
+    <ul>
+        <li>Examine the cable for cuts, bends, loose connections, or other visible damage.</li>
+        <li>Replace the cable if damage is suspected.</li>
+    </ul>
+3. **Verify sensor positioning:**
+    <ul>
+        <li>Ensure that the tachometer sensor is correctly aligned with the target.</li>
+        <li>Confirm that the sensor is within the recommended operating distance.</li>
+    </ul>
+4. **Verify equipment operation:**
+    <ul>
+        <li>Confirm that the monitored equipment is running.</li>
+        <li>Ensure that the rotating component is producing a measurable speed signal.</li>
+    </ul>
+5. **Check the selected measurement unit:**
+    <ul>
+        <li>Switch between **Hertz** and **CPM (Cycles Per Minute)** if necessary.</li>
+        <li>Verify that the signal is still not detected.</li>
+    </ul>
+6. **Repeat the tachometer test:**
+    <ul>
+        <li>Close the Tachometer Test modal.</li>
+        <li>Reopen **DCU Setup > Diagnostics > Tachometer Tests.**</li>
+        <li>Allow the DCU 1 to 2 seconds to stabilize the measurement.</li>
+    </ul>
 
 #### Action Required:
 If the No signal condition remains after verifying the sensor connection, cable condition, sensor positioning, 
 and equipment operation, contact the system administrator or ITR support for further assistance.
-
-

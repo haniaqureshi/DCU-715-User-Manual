@@ -148,12 +148,16 @@ const config = {
                 to: '/',
               },
               {
-                label: 'Appendix A: Glossary',
-                to: '/Appendix/glossary',
+                label: 'Appendix A: URE Measurements',
+                to: '/Appendix/UREMeasurements',
               },
               {
                 label: 'Appendix B: Troubleshooting',
                 to: '/Appendix/troubleshooting',
+              },
+              {
+                label: 'Appendix C: Glossary',
+                to: '/Appendix/glossary',
               },
             ],
           },
