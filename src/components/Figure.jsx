@@ -2,29 +2,25 @@
 // Author:  Hania Qureshi
 // Date:    July 3, 2026
 // Purpose: Renders a numbered figure (image + caption).
-//          Reads its number from the pre-populated map in
-//          FigureContext. Supports light and dark mode images.
+//          The num prop is injected automatically at build time
+//          by the remark plugin — never written manually.
+//          Supports light/dark mode image swapping via srcDark.
 //
 // Props:
-//   src      — light mode image path (required)
-//   srcDark  — dark mode image path (optional, falls back to src)
-//   id       — must match an entry in the figures array (required)
-//   caption  — text shown below the image (required)
-//   width    — image width e.g. "50%" or "400px" (default "100%")
+//   src     — light mode image path (required)
+//   srcDark — dark mode image path (optional, falls back to src)
+//   id      — unique identifier for this figure (required)
+//   caption — text shown below the image (required)
+//   width   — image width e.g. "50%" or "400px" (default "100%")
+//   num     — figure number, injected automatically by plugin
 // ============================================================
 
-import React, { useContext } from "react";
+import React from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import ThemedImage from "@theme/ThemedImage";
-import { FigureContext } from "./FigureContext";
 
-export default function Figure({ src, srcDark, id, caption, width = "100%" }) {
-
-  // Read the pre-populated map from FigureProvider
-  const map = useContext(FigureContext);
-
-  // Look up this figure's number using its id
-  const num = map?.[id];
+export default function Figure({ src, srcDark, id, caption, width = "100%", num }) {
+  console.log("Figure:", id, "num:", num); // ← add this line temporarily
 
   const resolvedSrc = useBaseUrl(src);
 
@@ -39,14 +35,14 @@ export default function Figure({ src, srcDark, id, caption, width = "100%" }) {
 
       <figure style={{ textAlign: "center", margin: "1.5rem 0" }}>
 
-        {/* Swaps between light and dark image automatically */}
+        {/* Swaps between light and dark image based on theme */}
         <ThemedImage
           alt={caption}
           sources={{ light: resolvedSrc, dark: resolvedSrcDark }}
           style={{ maxWidth: width, display: "block", margin: "0 auto" }}
         />
 
-        {/* Caption — color switches automatically in dark mode */}
+        {/* Caption with themed color and branded figure label */}
         <figcaption style={{ marginTop: "0.5rem", color: "var(--ifm-font-color-base)" }}>
           <span className="figure-label">Figure {num}: </span>
           {caption}
