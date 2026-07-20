@@ -1,46 +1,32 @@
 // ============================================================
 // Author:  Hania Qureshi
 // Date:    July 3, 2026
-// Purpose: FigureProvider pre-registers all figure IDs upfront
-//          so FigureRef always resolves correctly, including
-//          forward references (FigureRef before Figure).
-//          FigureRef renders a clickable "Figure N" link.
+// Purpose: FigureProvider stores the figureMap (injected at
+//          build time by the remark plugin) in React context
+//          so FigureRef can look up figure numbers by id.
+//          FigureRef renders a clickable link to any figure.
 // ============================================================
 
 import React, { createContext, useContext } from "react";
-import figureStore from "./figureStore";
 
-export const FigureContext = createContext(null);
+export const FigureContext = createContext({});
 
 // ─────────────────────────────────────────────────────────────
 // FigureProvider
-// Place ONE of these per page, wrapping only the figures.
-// Pass all figure IDs in the order they appear on the page
-// using the figures prop. This pre-populates the map so
-// FigureRef works anywhere on the page — before or after
-// the actual Figure component.
+// Wrap each individual Figure with this. The remark plugin
+// automatically injects the figureMap prop at build time —
+// you never write this prop manually.
 //
 // Usage:
-//   export const figures = ["fig1", "fig2", "fig3"];
-//
-//   <FigureProvider figures={figures}>
+//   <FigureProvider>
 //     <Figure src="..." id="fig1" caption="..." />
 //   </FigureProvider>
 // ─────────────────────────────────────────────────────────────
-export function FigureProvider({ children, figures = [] }) {
-
-  // Reset the store and pre-populate the map using the figures array
-  // The order of IDs in the array determines the figure numbers
-  // fig1 → Figure 1, fig2 → Figure 2, fig3 → Figure 3 etc.
-  figureStore.counter = figures.length;
-  figureStore.map = {};
-  figures.forEach((id, index) => {
-    figureStore.map[id] = index + 1;
-  });
-
+export function FigureProvider({ children, figureMap = {} }) {
   return (
-    // Pass the map down so Figure and FigureRef can read it
-    <FigureContext.Provider value={figureStore.map}>
+    // Pass the full page figure map down to any FigureRef
+    // or Figure components that are children
+    <FigureContext.Provider value={figureMap}>
       {children}
     </FigureContext.Provider>
   );
@@ -48,12 +34,15 @@ export function FigureProvider({ children, figures = [] }) {
 
 // ─────────────────────────────────────────────────────────────
 // FigureRef
-// Renders a clickable "Figure N" link that scrolls to the figure.
-// Works anywhere on the page — before or after the Figure.
-// Shows "Figure ?" if the id is not in the figures array.
+// Renders a clickable "Figure N" link that scrolls to the
+// figure. Can appear anywhere on the page — before or after
+// the Figure — because the map is pre-built at build time.
+//
+// Usage:
+//   As shown in <FigureRef id="fig1" />, the modal appears.
 // ─────────────────────────────────────────────────────────────
 export function FigureRef({ id }) {
-  const map = useContext(FigureContext);
-  const num = map?.[id];
+  const figureMap = useContext(FigureContext);
+  const num = figureMap[id];
   return <a href={`#${id}`}>Figure {num ?? "?"}</a>;
 }
