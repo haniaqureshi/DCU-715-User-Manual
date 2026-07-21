@@ -7,170 +7,170 @@ sidebar_label: 'Appendix C - Glossary'
 
 # Glossary
 ## Module 1: Introduction
-**DCU (Digital Collection Unit)** <br />
+- **DCU (Digital Collection Unit)**: 
 The Series 715 portable device used to acquire, process, display, and store vibration and machine condition data. <br />
-**Task Status Bar** <br />
+- **Task Status Bar**: 
 The interface element at the bottom of the DCU screen that displays real-time status indicators for the current operation (e.g., Ready, Measurement, Processing). <br />
-**System Alerts Panel** <br />
+- **System Alerts Panel**: 
 The interface area that displays the most recent system message and provides access to recent system message history. <br />
-**ICP / IEPE Sensor** <br />
+- **ICP / IEPE Sensor**: 
 Integrated Circuit Piezoelectric / Integrated Electronics Piezoelectric sensor; an accelerometer type powered by a constant-current source from the DCU. <br />
-**Aux1 / Aux2 (Auxiliary Channels)** <br />
+- **Aux1 / Aux2 (Auxiliary Channels)**: 
 Additional input channels on the DCU used for simultaneous sampling, high-voltage AC/DC input, or ultrasonic data collection (Aux2). <br />
-**FFT (Fast Fourier Transform)** <br />
+- **FFT (Fast Fourier Transform)**: 
 A mathematical algorithm that converts a time-domain vibration signal into a frequency-domain spectrum. <br />
-**Enveloping** <br />
+- **Enveloping**: 
 A signal-processing function automatically applied to the vertical channel to highlight repetitive impact events within a vibration signal. <br />
-**Overlap** <br />
+- **Overlap**: 
 The percentage of data reused between successive FFT calculations during signal processing (e.g., 50% in Normal mode, 0% in Phasor/Tachometer mode). <br />
-**ITR Graphics™** <br />
+- **ITR Graphics™**: 
 The vibration analysis software platform used by trained analysts to review and interpret Measure Event data collected by the DCU. <br />
-**Measure Event** <br />
+- **Measure Event**: 
 The recorded vibration data captured when an accelerometer is placed on a machine measurement point and a reading is taken. <br />
 
 ## Module 2: Routes
-**Route** <br />
+- **Route**: 
 A predefined, ordered set of measurement points and parameters, downloaded to the DCU, that guides the technician through data collection on specific machines or areas. <br />
-**Measurement Point** <br />
+- **Measurement Point**: 
 A specific, uniquely identified (6-digit ID) location and orientation on a machine where vibration data is collected. <br />
-**SQL Server** <br /> 
+- **SQL Server**: 
 The backend database that stores and synchronizes route, measurement, and configuration data with the DCU. <br />
-**ITR.com** <br />
+- **ITR.com**: 
 A cloud-based connection source used to transmit, receive, and synchronize routes, measurements, and software updates with the DCU. <br />
-**Cable Integrity Check (Cable Check)** <br />
+- **Cable Integrity Check (Cable Check)**: 
 A diagnostic check that verifies the sensor cable and connections are free of faults before or during measurement. <br />
-**Sensitivity** <br />
+- **Sensitivity**: 
 The calibration value (e.g., mV/g) that defines how a sensor's output voltage relates to the physical quantity it measures. <br />
-**Trouble Code** <br />
+- **Trouble Code**: 
 A standardized or custom diagnostic code assigned to a measurement point to flag a specific machine condition or observation. <br />
-**Not-Measured Code** <br />
+- **Not-Measured Code**: 
 A reason code assigned to a measurement point when a reading cannot be taken (e.g., machine not running, under maintenance). <br />
-**Waterfall (Waterfall Plot)** <br />
+- **Waterfall (Waterfall Plot)**: 
 A three-dimensional plot showing a series of vibration spectra collected over time or varying machine speed, used to observe how frequencies shift under changing conditions. <br />
 
 ## Module 3: Measurements
-**RMS (Root Mean Square)** <br />
+- **RMS (Root Mean Square)**: 
 A calculated value representing the effective magnitude of a vibration signal, commonly used to trend overall vibration severity. <br />
-**Job Number** <br />
+- **Job Number**: 
 A 6-digit identification number assigned to a route to associate it with a specific work order or client job. <br />
-**URE (Ultrasonic Resonance Excitation)** <br />
+- **URE (Ultrasonic Resonance Excitation)**: 
 A measurement technique that uses the natural frequency of an accelerometer combined with enveloping to detect impulsive (impact) behavior, commonly used on slow-speed equipment. <br />
-**CMAS** <br />
+- **CMAS**: 
 A companion ITR system that exchanges data with the DCU using OPC (OLE for Process Control) for communication, used as an alternate connection source for routes, measurements, and software updates. <br />
 
 ## Module 4: Special Test
-**Bump Test** <br />
+- **Bump Test**: 
 A diagnostic test that determines the natural frequencies and resonance characteristics of a machine by striking it with an impact hammer and measuring the vibration response. <br />
-**Coast Down Test** <br />
+- **Coast Down Test**: 
 A test that analyzes how a machine's vibration levels change as it decelerates from operating speed to a complete stop, used to identify resonance zones and critical speeds. <br />
-**Extended Time Domain Measurement** <br />
+- **Extended Time Domain Measurement**: 
 A special test that captures long-duration, high-resolution raw time waveform data, used for transient event analysis or Operating Deflection Shape (ODS) studies. <br />
-**ODS (Operating Deflection Shape)** <br />
+- **ODS (Operating Deflection Shape)**: 
 An analysis technique that visualizes the deflection pattern of a structure or machine during operation, supported by Extended Time Domain measurements. <br />
-**Orbit Plot** <br />
+- **Orbit Plot**: 
 A test that visualizes the path of a rotating shaft's centerline within a bearing, using vibration data from two orthogonal (horizontal/vertical) sensors. <br />
-**Time Synchronous Averaging (TSA)** <br />
+- **Time Synchronous Averaging (TSA)**: 
 A technique that extracts periodic waveforms from noisy vibration data by synchronizing acquisition with shaft rotation via a tachometer signal, used to isolate gear mesh frequencies. <br />
-**Torsional Measurement** <br />
+- **Torsional Measurement**: 
 A test that analyzes fluctuations in the angular velocity of a rotating shaft to identify torque-related issues or mechanical defects. <br />
-**Demodulation (Demod)** <br />
+- **Demodulation (Demod)**: 
 A signal-processing technique that extracts the amplitude envelope of a high-frequency signal, used to detect impact-related faults such as bearing defects. <br />
-**Tachometer** <br />
+- **Tachometer**: 
 A sensor input (TTL-compatible pulse) used to measure shaft rotational speed and provide a phase reference for measurements. <br />
-**Phase** <br />
+- **Phase**: 
 The timing relationship between a vibration signal and a reference point (such as a tachometer pulse), used to diagnose imbalance, misalignment, and other faults. <br />
-**Trigger Level / Trigger Value** <br />
+- **Trigger Level / Trigger Value**: 
 A configured signal threshold that initiates data capture, used in tests such as Bump Test and 1 Shot measurements. <br />
-**1 Shot Mode** <br /> 
+- **1 Shot Mode**: 
 A single-capture measurement mode that acquires one data block based on a configured trigger, rather than continuous averaging. <br />
-**Frequency Range** <br />
+- **Frequency Range**: 
 The configured span of frequencies (in CPM or Hz) over which a measurement is analyzed. <br />
-**Resolution** <br />
+- **Resolution**: 
 The number of spectral lines (e.g., 200, 400, 800…25,600) used in an FFT measurement; determines the level of frequency detail in a spectrum. <br />
-**CPM (Cycles Per Minute)** <br />
+- **CPM (Cycles Per Minute)**: 
 A unit of frequency measurement equal to 60 times the frequency in Hertz; commonly used for machine speed and vibration frequency values. <br />
-**Averaging** <br />
+- **Averaging**: 
 A signal-processing technique that combines multiple measurement samples to reduce noise and improve data accuracy (e.g., FFT linear averaging, Time Synchronous Averaging). <br />
-**Balancing Program** <br />
+- **Balancing Program**: 
 A DCU function used to correct rotor unbalance by calculating the correction weight and angle needed on one or two correction planes (Single Plane, Single Plane One Shot, 2 Plane Balance). <br />
-**Bias Voltage** <br />
+- **Bias Voltage**: 
 The DC voltage level output by an ICP/IEPE sensor, used to verify sensor connection and cable integrity. <br />
-**HiPass Filter** <br />
+- **HiPass Filter**: 
 A filter that removes low-frequency signal content below a configured cutoff frequency. <br />
 
 
 ## Module 5: DCU Setup
-**Battery Test** <br />
+- **Battery Test**: 
 A Maintenance function that verifies battery health by running a discharge cycle and recording voltage, capacity, and duration values to a report file. <br />
-**Battery Capacity** <br />
+- **Battery Capacity**: 
 The remaining charge of the DCU battery, displayed as a percentage during the Battery Test and in the Show Battery Table. <br />
-**Battery Cutout** <br />
+- **Battery Cutout**: 
 The minimum battery voltage threshold below which the DCU will automatically shut down, shown in the Show Battery Table. <br />
-**Internet Test** <br />
+- **Internet Test**: 
 A Maintenance function that confirms the DCU has an active network connection and displays connection status, interface name, type, and speed. <br />
-**Touchscreen Calibration** <br />
+- **Touchscreen Calibration**: 
 A Maintenance function that aligns the touchscreen sensors with the visual display by having the user tap a series of calibration points. <br />
-**Touchscreen Test** <br />
+- **Touchscreen Test**: 
 A Maintenance function that verifies the touchscreen detects finger input accurately across the display area. <br />
-**Software Upgrade** <br />
+- **Software Upgrade**: 
 A Maintenance function used to update the DCU software from ITR.com, a USB drive, or ITR.com via CMAS. <br />
-**Accelerometer Tests** <br />
+- **Accelerometer Tests**: 
 A diagnostic function (DCU Setup > Diagnostics) that verifies accelerometer operation, sensor connectivity, and signal quality using Real Time or RMS Trend plots. <br />
-**Tachometer Tests** <br />
+- **Tachometer Tests**: 
 A Diagnostics function that verifies the tachometer sensor connection and displays the measured speed signal in Hertz or CPM. <br />
-**Voltage Tests** <br />
+- **Voltage Tests**: 
 A Diagnostics function that verifies DCU power rails, signal channels, and auxiliary inputs are operating within acceptable voltage ranges. <br />
-**Limit Tests** <br />
+- **Limit Tests**: 
 A Voltage Tests function that compares measured voltages against predefined operating limits and counts limit violations per channel. <br />
-**Screenshots (Display Screenshots)** <br />
+- **Screenshots (Display Screenshots)**: 
 A Diagnostics function used to view, send, or delete screen captures stored on the DCU. <br />
-**Filter Test (Test Filters)** <br />
+- **Filter Test (Test Filters)**: 
 A Diagnostics function that verifies the performance of dynamic filters (Low Pass, High Pass, Band Pass, Band Stop) using a Range Test or Filter Test on a live frequency chart. <br />
-**Screen Blanking** <br />
+- **Screen Blanking**: 
 A Settings option that controls whether the DCU display automatically turns off after a period of inactivity; disabling it keeps the screen active. <br />
-**Technician Name** <br />
+- **Technician Name**: 
 A Settings field used to enter or update the name of the technician associated with the DCU, referenced on reports and in Show System Settings. <br />
-**Dark/Light Theme** <br />
+- **Dark/Light Theme**: 
 A Settings option that switches the DCU software's visual appearance between a bright (Light) and high-contrast (Dark) display mode. <br />
-**Units (Imperial/Metric)** <br />
+- **Units (Imperial/Metric)**: 
 A Settings function used to configure the measurement units for temperature, velocity, acceleration, and frequency, and to select the overall unit system. <br />
-**Update Job Numbers** <br />
+- **Update Job Numbers**: 
 A Settings function used to assign or update a 6-digit job ID number for a selected route. <br />
-**Show System Settings** <br />
+- **Show System Settings**: 
 A read-only Settings screen that displays current device configuration values such as DCU Type, Board, Device ID, SID, DFPID, and software version. <br />
-**CMAS Server** <br />
+- **CMAS Server**: 
 A Settings function used to add, edit, select, and delete CMAS server connection entries on the DCU. <br />
-**WiFi Setup** <br />
+- **WiFi Setup**: 
 A Settings function used to turn Wi-Fi on or off, scan for available wireless networks, and connect the DCU to a network. <br />
-**Advanced Settings** <br />
+- **Advanced Settings**: 
 A password-protected submenu (7-digit password) under DCU Setup that provides access to low-level device configuration options such as Device ID, DFPID, DCU Type, and System Switches. <br />
-**Aux DC Offset Test** <br />
+- **Aux DC Offset Test**: 
 An Advanced Settings function that calibrates and verifies the DC offset levels on the Aux1 and Aux2 auxiliary input channels using shorting caps. <br />
-**Bias Stability Test** <br />
+- **Bias Stability Test**: 
 An Advanced Settings function that configures the voltage threshold used to verify a sensor is electrically stable before a measurement begins. <br />
-**DCU Type** <br />
+- **DCU Type**: 
 An Advanced Settings function used to define the hardware model of the DCU (e.g., DCU 714, DCU 715) so the correct processing and calibration constants are applied. <br />
-**Device ID** <br />
+- **Device ID**: 
 A unique numerical identification code assigned to a specific DCU unit, used to track field units and attribute measurement data correctly. <br />
-**DFPID (Digital Filter Profile ID)** <br />
+- **DFPID (Digital Filter Profile ID)**: 
 An identifier that assigns a specific digital filter profile to the DCU's signal-processing engine. <br />
-**Master Battery Curve** <br />
+- **Master Battery Curve**: 
 A discharge-characteristic profile generated for the DCU's battery, used by the system to provide accurate battery percentage readings.<br />
-**Sequence Number** <br />
+- **Sequence Number**: 
 An internal counter that tracks data packets transmitted to the CMAS server; can be manually reset for troubleshooting synchronization issues. <br />
-**System Switches** <br />
+- **System Switches**: 
 An Advanced Settings screen used to enable or disable core hardware functions, software behaviors, and diagnostic modes (e.g., Simulation Mode, Legacy View, Aging Route Notifications). <br />
-**Test Micro Programs** <br />
+- **Test Micro Programs**: 
 An Advanced Settings function used to run diagnostic commands (e.g., Restart, Shutdown, Battery Capacity) on the DCU microcontroller. <br />
-**Show Filter Table** <br />
+- **Show Filter Table**: 
 A read-only Advanced Settings screen that displays the digital filter profiles stored in the DCU's signal-processing library. <br />
-**Show Battery Table** <br />
+- **Show Battery Table**: 
 A read-only Advanced Settings screen that displays stored battery discharge data and voltage levels for monitoring battery health. <br />
 
 ## Module 6: Power
-**Power Off** <br />
+- **Power Off**: 
 A Power menu option that performs a full hardware shutdown of the DCU after a confirmation prompt. <br />
-**Minimize Application** <br />
+- **Minimize Application**: 
 A Power menu option that hides the DCU software and returns to the desktop while keeping the application session active in the background. <br />
-**Exit Application** <br />
+- **Exit Application**: 
 A Power menu option that closes the DCU software and ends the current session without shutting down the hardware. <br />
