@@ -5,17 +5,16 @@ toc_max_heading_level: 4
 slug: /
 ---
 
-# Introduction
-
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-## Overview
+# Introduction
+
 In this module, we provide a brief overview of the **Series 715 Digital Collection Unit (DCU)**, including its main 
 functions, features, and operating concept.
 
 ## DCU Application Screen Layout
-The DCU screen is divided into 3 main areas: the **header bar**, the **main workspace**, and the **footer notification
+The DCU screen is divided into 3 main areas: the **header bar**, the **main workspace**, and the **footer notification**
 area** as shown in figure <FigureRef id="DCU-Application-Screen-Layout"/>.
 
 <FigureProvider>
@@ -38,22 +37,21 @@ area** as shown in figure <FigureRef id="DCU-Application-Screen-Layout"/>.
 The **Task status** bar is displayed at the bottom of the screen and provides real-time feedback on the current state of
 the active operation. The status bar updates automatically as the DCU processes tasks. The following table describes the status indicators displayed in the task status bar.
 
-| Status                                                                                 | Description                                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                     
-|:-------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="/img/0-Intro/ready.png" alt="ready" width="70%" />                           | Indicates that the current function is ready for user interaction or that an operation has completed successfully.                                 |
-| <img src="/img/0-Intro/measurement.png" alt="measurement" width="70%" />               | Indicates that the DCU is actively acquiring measurement data from the connected sensor.                                                           |
-| <img src="/img/0-Intro/stopRequest.png" alt="Stop request" width="70%" />              | Indicates that the current operation is in the process of stopping. The DCU is completing any remaining tasks before returning to the Ready state. |
-| <img src="/img/0-Intro/error.png" alt="error" width="70%" />                           | Indicates that an error has occurred during the current operation. Review the system message bar for details about the error.                      |
-| <img src="/img/0-Intro/ConnectionError.png" alt="Connection Error" width="71%" />      | Indicates that a connection error has occurred during the current operation.                                                                       |
-| <img src="/img/0-Intro/processing.png" alt="processing" width="70%" />                 | Indicates that the DCU is processing the current operation.                                                                                        |
-| <img src="/img/0-Intro/waiting1.png" alt="waiting1" width="70%" />                     | Indicates that the system is waiting before proceeding to the next operation.                                                                      |
-| <img src="/img/0-Intro/measurementNR3.png" alt="measurementNR3" width="70%" />         | Indicates the current measurement number being performed.                                                                                          |
-| <img src="/img/0-Intro/storeCompleted.png" alt="storeCompleted" width="70%" />         | Indicates that the measurement data has been stored successfully.                                                                                  |
-| <img src="/img/0-Intro/waitingForTach.png" alt="waitingForTach" width="70%" />         | Indicates that the DCU is waiting for a tachometer signal before continuing the measurement.                                                       |
-| <img src="/img/0-Intro/correctMeasurement.png" alt="correctMeasurement" width="70%" /> | Indicates that the measurement was completed successfully and is valid.                                                                            |
-| <img src="/img/0-Intro/measurement1.png" alt="measurement1" width="70%" />             | Indicates the current measurement count in the measurement sequence.                                                                               |
-| <img src="/img/0-Intro/updateProcess.png" alt="updateProcess" width="70%" />           | Indicates that the route or system update process is currently in progress.                                                                        | 
-
+| Status                                                                                         | Description                                                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                     
+|:---------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="/img/0-Intro/status/ready.png" alt="Ready" width="70%" />                            | Indicates that the current function is ready for user interaction or that an operation has completed successfully.                                 |
+| <img src="/img/0-Intro/status/measurement.png" alt="Measurement" width="70%" />                | Indicates that the DCU is actively acquiring measurement data from the connected sensor.                                                           |
+| <img src="/img/0-Intro/status/stopRequest.png" alt="Stop request" width="70%" />               | Indicates that the current operation is in the process of stopping. The DCU is completing any remaining tasks before returning to the Ready state. |
+| <img src="/img/0-Intro/status/error.png" alt="Error" width="70%" />                            | Indicates that an error has occurred during the current operation. Review the system message bar for details about the error.                      |
+| <img src="/img/0-Intro/status/connectionError.png" alt="Connection error" width="71%" />       | Indicates that a connection error has occurred during the current operation.                                                                       |
+| <img src="/img/0-Intro/status/processing.png" alt="Processing..." width="70%" />               | Indicates that the DCU is processing the current operation.                                                                                        |
+| <img src="/img/0-Intro/status/waiting1.png" alt="Waiting 1" width="70%" />                     | Indicates that the system is waiting before proceeding to the next operation.                                                                      |
+| <img src="/img/0-Intro/status/measurementNR3.png" alt="Measurement nr: 3" width="70%" />       | Indicates the current measurement number being performed.                                                                                          |
+| <img src="/img/0-Intro/status/storeCompleted.png" alt="Store completed" width="70%" />         | Indicates that the measurement data has been stored successfully.                                                                                  |
+| <img src="/img/0-Intro/status/waitingForTach.png" alt="Waiting for tach" width="70%" />        | Indicates that the DCU is waiting for a tachometer signal before continuing the measurement.                                                       |
+| <img src="/img/0-Intro/status/correctMeasurement.png" alt="Correct measurement" width="70%" /> | Indicates that the measurement was completed successfully and is valid.                                                                            |
+| <img src="/img/0-Intro/status/measurement1.png" alt="Measurement 1" width="70%" />             | Indicates the current measurement count in the measurement sequence.                                                                               |
+| <img src="/img/0-Intro/status/updateProcess.png" alt="Update process" width="70%" />           | Indicates that the route or system update process is currently in progress.                                                                        | 
 
 ## General Information
 The **Series 715 Digital Collection Unit (DCU)** is a high-performance portable system designed for **advanced vibration 
@@ -162,70 +160,70 @@ It Contains:
 <FigureProvider>
     <Figure 
         id="DCU-715-Front-View" 
-        src="/img/0-Intro/DCU-715-Front-View.png" 
+        src="/img/0-Intro/hardware/DCU-715-Front-View.png" 
         caption="DCU 715 Hardware Components (Front)" 
         width="50%"
     />
 
     <Figure 
         id="DCU-715-Back-View" 
-        src="/img/0-Intro/DCU-715-Back-View.png" 
+        src="/img/0-Intro/hardware/DCU-715-Back-View.png" 
         caption="DCU 715 Hardware Component (Back)" 
         width="50%"
     />
 
     <Figure                                                 
         id="Battery-Cover" 
-        src="/img/0-Intro/Battery-Cover.png" 
+        src="/img/0-Intro/hardware/Battery-Cover.png" 
         caption="Battery Cover" 
         width="20%"
     />
 
     <Figure 
         id="Power-Switch-USB Panel-Cover" 
-        src="/img/0-Intro/Power-Switch-USB Panel-Cover.png" 
+        src="/img/0-Intro/hardware/Power-Switch-USB Panel-Cover.png" 
         caption="Power Switch/USB Panel Cover" 
         width="20%"
     />
 
     <Figure 
         id="Battery-Pack" 
-        src="/img/0-Intro/Battery-Pack.png" 
+        src="/img/0-Intro/hardware/Battery-Pack.png" 
         caption="Battery Pack" 
         width="30%"
     />
 
     <Figure 
         id="Battery-Charger-Dock" 
-        src="/img/0-Intro/Battery-Charger-Dock.png" 
+        src="/img/0-Intro/hardware/Battery-Charger-Dock.png" 
         caption="Battery Charger Dock" 
         width="30%"
     />
 
     <Figure 
         id="DCU-Keypad-Layout" 
-        src="/img/0-Intro/DCU-Keypad-Layout.png" 
+        src="/img/0-Intro/hardware/DCU-Keypad-Layout.png" 
         caption="DCU Keypad Layout" 
         width="30%"
     />
 
     <Figure 
         id="Headset" 
-        src="/img/0-Intro/Headset.png" 
+        src="/img/0-Intro/hardware/Headset.png" 
         caption="Headset" 
         width="30%"
     />
 
     <Figure 
         id="Triaxial-Accelerometer-Sensor" 
-        src="/img/0-Intro/Triaxial-Accelerometer-Sensor.png" 
+        src="/img/0-Intro/hardware/Triaxial-Accelerometer-Sensor.png" 
         caption="Triaxial Accelerometer Sensor" 
         width="30%"
     />
 
     <Figure 
         id="Sensor-Connection-Cable" 
-        src="/img/0-Intro/Sensor-Connection-Cable.png" 
+        src="/img/0-Intro/hardware/Sensor-Connection-Cable.png" 
         caption="Sensor Connection Cable" 
         width="30%"
     />
@@ -259,7 +257,6 @@ status.
     <Figure 
         id="DCU-Initialization-Screen" 
         src="/img/0-Intro/DCU-Initialization-Screen-Light.jpg"
-        srcDark="/img/0-Intro/DCU-Initialization-Screen-Dark.jpg" 
         caption="DCU Initialization Screen" 
         width="70%"
     />
@@ -286,7 +283,7 @@ Dashboard provides access to the main functional modules of the device.
 3. The Dashboard screen opens automatically.
 4. Tap any module to access its corresponding menu and options.
 
-The Dashboard displays the following options as shown in the <FigureRef id="" />
+The Dashboard displays the following options as shown in the <FigureRef id="DCU-Dashboard" />
 - Routes
 - Measurements
 - Special Test
@@ -297,8 +294,7 @@ The Dashboard displays the following options as shown in the <FigureRef id="" />
     <Figure 
         id="DCU-Dashboard" 
         src="/img/0-Intro/DCU-Dashboard-Light.jpg"
-        srcDark="/img/0-Intro/DCU-Dashboard-Dark.jpg" 
-        caption="DCU Initialization Screen" 
+        caption="DCU Dashboard" 
         width="70%"
     />
 </FigureProvider>
