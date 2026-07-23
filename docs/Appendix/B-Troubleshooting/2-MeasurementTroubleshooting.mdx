@@ -1,0 +1,173 @@
+---
+sidebar_position: 2
+toc_min_heading_level: 2
+toc_max_heading_level: 2
+sidebar_label: 'Measurement Troubleshooting'
+---
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+# Measurement Troubleshooting 
+
+While transmitting measurement data, exporting reports, managing customer reports, or deleting measurement records, users may encounter validation warnings dialogs.
+This section explains the possible causes of these messages and provides recommended troubleshooting steps. 
+
+## Error: No Route Selected for Transmission 
+
+This warning dialog appears when the **Transmit** button is selected without choosing any route for transmission. 
+
+<FigureProvider>
+    <Figure 
+        id="Transmit-Measurements-Warning-Dialog-Box" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Transmit-Measurements-Warning-Dialog-Light.jpg"
+        caption="Transmit Measurements Warning Dialog" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The system requires at least one route to be selected before measurement data can be transmitted. If no route is selected, the transmission process is blocked. 
+
+### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning dialog.
+- Select the required route from the route list, or select **Select All** to transmit all available routes.
+- Select **Transmit** again to begin the data transfer.
+
+## Error: USB Stick Not Found
+
+This warning dialog appears when the user attempts to save the **Not-Measured Machines Report** to a USB device, but no USB storage device is detected.
+
+<FigureProvider>
+    <Figure 
+        id="Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Not-Measured-Machines-Report-USB-Stick-Not-Found-Dialog-Light.jpg"
+        caption="Not Measured Machines Report USB Stick Not Found Dialog" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The DCU could not detect a connected USB storage device or the USB device was not properly inserted before the export operation.
+
+### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning.
+- Insert a compatible USB flash drive into the DCU.
+- Verify that the USB device is fully connected and recognized.
+- Select **Save Copy to USB** again to export the report.
+
+## Error: No Recipients Selected
+
+This warning dialog appears when the user attempts to submit the Customer Signature report without selecting any email recipients.
+
+<FigureProvider>
+    <Figure 
+        id="Customer-Signature-Recipients-Must-Be-Selected-Dialog" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Customer-Signature-Recipients-Must-Be-Selected-Dialog-Light.jpg"
+        caption="Customer Signature Recipients Must Be Selected Dialog" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The report cannot be submitted because no recipient has been selected to receive the measurement report by email.
+
+### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning dialog.
+- Choose **Select Recipients** option.
+- Choose one or more recipients from the list or create a new recipient.
+- Return to the Customer Signature screen and select **Submit** again.
+
+## Error: Delete Recipient
+
+This confirmation dialog appears when the user attempts to delete a saved email recipient.
+
+<FigureProvider>
+    <Figure 
+        id="Select-Recipients-Delete-Recipient-Confirmation-Dialog" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Select-Recipients-Delete-Recipient-Confirmation-Dialog-Light.jpg"
+        caption="Select Recipients Delete Recipient Confirmation Dialog" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The system requests confirmation before permanently deleting the selected email recipient from the recipient list.
+
+### Possible Troubleshooting Steps
+
+- Verify that the correct recipient is selected.
+- Select **Yes** to permanently remove the recipient.
+- Select **Cancel** if the deletion was initiated by mistake.
+
+## Error: No Route Selected for Deletion
+
+This warning dialog appears when the **Delete Measurements** button is selected without selecting any route.
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Measurements-Warning-Dialog" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Delete-Measurements-Warning-Dialog-Light.jpg"
+        caption="Delete Measurements Warning Dialog" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The system requires at least one route to be selected before measurement data can be deleted.
+
+### Possible Troubleshooting Steps
+
+- Select **Close** to dismiss the warning.
+- Select one or more routes from the list.
+- Select **Delete Measurements** again.
+
+## Error: Delete Measurements
+
+This confirmation dialog appears before permanently deleting the selected measurement data.
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Measurements-Confirmation-Dialog" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Delete-Measurements-Confirmation-Dialog-Light.jpg"
+        caption="Delete Measurements Confirmation Dialog" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+The system requests confirmation before permanently removing measurement data from the selected routes.
+
+### Possible Troubleshooting Steps
+
+- Verify that the correct routes are selected.
+- Ensure the measurement data has already been transmitted or backed up.
+- Select **Yes** to continue with the deletion, or **No** to cancel the operation.
+
+## Error: Delete Trouble Code
+This confirmation dialog appears when the user attempts to delete a trouble code record.
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Measurements-Confirmation-Dialog" 
+        src="../../img/Appendix/B-Troubleshooting/2-Measurements/Display-Trouble-Code-(Delete-Confirmation-Dialog)-Light.jpg"
+        caption="Display Trouble Code (Delete Confirmation Dialog)" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+The system requests confirmation before permanently deleting the selected trouble code record.
+
+### Possible Troubleshooting Steps
+
+- Verify that the correct trouble code is selected.
+- Select **Yes** to permanently delete the record.
+- Select **No** to cancel the deletion and return to the Display Trouble Code screen.

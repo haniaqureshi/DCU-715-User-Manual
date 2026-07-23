@@ -1,0 +1,213 @@
+---
+sidebar_position: 1
+toc_min_heading_level: 2
+toc_max_heading_level: 2
+sidebar_label: 'Routes Troubleshooting'
+---
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+# Routes Troubleshooting
+
+While managing measurement routes, executing tests, or transferring data within the [**Routes**](../../1-Routes/index.mdx) module, users may encounter
+validation warnings or communication errors. This section details the error screens, their root causes, and specific
+steps to resolve them.
+
+## Error: Stale Route Configuration Data
+This alert appears when a selected measurement route contains data that hasn’t been updated for more than 14 days.
+
+<FigureProvider>
+    <Figure 
+        id="Select-Route-Warning-Dialogbox" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Select-Route-Warning-Dialogbox-Light.jpg"
+        caption="Select Route Warning Dialogbox" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The active route file stored locally on the device was synchronized with the server more than two weeks (14 days) ago. 
+The system flags this to prevent technicians from collecting data against outdated machinery configurations or threshold parameters.
+
+### Possible Troubleshooting Steps
+
+- **Acknowledge and proceed temporarily:**
+
+    <ul>
+        <li>If you must collect data immediately and are certain no plant modifications occurred, click **YES** on the dialog box to acknowledge the warning and continue using the existing configuration.</li>
+        <li>Alternatively, click **NO** to disregard the alert, dismiss the dialog, and proceed straight to the active asset list.</li>
+    </ul>
+
+- **Synchronize with the server (Recommended):**
+
+    <ul>
+        <li>Exit the measurement sequence and navigate back to the main menu.</li>
+        <li>Open **Update Routes** and establish a stable connection to download the latest route modifications.</li>
+    </ul>
+
+## Error: Missing Plot Measurement Data
+This warning pop-up displays when an operator attempts to access the graphic visualization or trend plot for a measurement point that does not contain any recorded vibration history.
+
+<FigureProvider>
+    <Figure 
+        id="Plot-Screen-Error-Message" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Plot-Screen-Error-Message-Light.jpg"
+        caption="Plot Screen Error Message" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The Route Management system has successfully loaded the measurement point configuration (Meas. Point: 682052, Mode: Spectrum), 
+but no actual readings have been saved for this specific asset account yet. Because the X, Y, and Z values are entirely zero ($0.000$), 
+the system cannot generate a graphical spectral curve or time-domain waveform.
+
+### Possible Troubleshooting Steps
+
+- **Take a live measurement:**
+    <ul>
+        <li>Click the **Close** button to exit the warning modal and return to the primary navigation interface.</li>
+        <li>Ensure the physical sensor is properly mounted on the machine asset, then click **Measure** from the side operational panel to record fresh data.</li>
+        <li>Once the live collection completes, re-enter the **Plot** view via the **More** screen.</li>
+    </ul>
+
+- **Verify database sync status:**
+    <ul>
+        <li>If the measurements were taken previously or by another technician, the data might not be loaded locally. Navigate to Update Routes to trigger a server request and pull the latest synchronized asset database files into your device.</li>
+    </ul>
+
+## Error: Multi-Axis Sensor Conflict on Waterfall Measurement
+This error displays as a warning pop-up when attempting to configure a Waterfall measurement layout while an incompatible multi-axis hardware profile is selected.
+
+<FigureProvider>
+    <Figure 
+        id="Add-Points-Waterfall-Measurement-Error-Message" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Add-Points-Waterfall-Measurement-Error-Message-Light.jpg"
+        caption="Add Points Waterfall Measurement Error Message" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The Waterfall measurement type within the DCU software architecture does not support triaxial or multi-channel acquisition settings.
+It requires a dedicated single-axis hardware sensor configuration locked explicitly to Channel Z.
+
+### Possible Troubleshooting Steps
+
+- **Modify the active sensor configuration:**
+    <ul>
+        <li>Dismiss the warning by clicking **Close**.</li>
+        <li>On the right-hand panel, click the **Sensor** button to open the Sensor Type dialog box.</li>
+        <li>Change the Sensor Type and Sensitivity dropdown options to match a single-axis specification.</li>
+        <li>Ensure your channel assignment is locked to **Channel Z**, then click **Ok** to save the hardware profile. </li>
+    </ul>
+- **Verify hardware attachment:**
+    <ul>
+        <li>Ensure that the physical cable matching your single-axis accelerometer is connected to the correct channel input port on the DCU framework before starting the test.</li>
+    </ul>
+
+## Error: Missing Measurement Point ID Number
+This warning appears on the Add New Point module screen when a user attempts to save a custom measurement configuration without providing an identifier.
+
+<FigureProvider>
+    <Figure 
+        id="Add-Points-Add-ID-Error-Message" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Add-Points-Add-ID-Error-Message-Light.jpg"
+        caption="Add Points Add ID Error Message" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The software database requires a mandatory unique 6-digit identification string to index and store new or custom measurement points in the SQL Server database schema.
+
+### Possible Troubleshooting Steps
+
+- **Input a valid identification string:**
+    <ul>
+        <li>Click **Close** to dismiss the warning box. The numerical pin-pad dialog overlay will automatically open.</li>
+        <li>Type a valid **6-digit** numeric string into the keypad.</li>
+        <li>Verify that the green status message **"Valid value"** appears, which unlocks the **Ok** action button.</li>
+        <li>Click **Ok** to apply the ID entry.</li>
+    </ul>
+
+## Error: Parameter Shift Based on ID Rule
+This notification displays as an informational warning box immediately following a successful manual ID validation entry.
+
+<FigureProvider>
+    <Figure 
+        id="Add-Points-Frequency-Change-Error-Message" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Add-Points-Frequency-Change-Error-Message-Light.jpg"
+        caption="Add Points Frequency Change Error Message" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The DCU software features built-in automation rules that automatically link specific equipment types and diagnostic 
+frequencies to defined ID number blocks. When a matching 6-digit ID is validated, the application automatically overwrites 
+the current frequency limits to guarantee compliant data logging.
+
+### Possible Troubleshooting Steps
+
+- **Review point parameters:**
+    - Click Close to accept the automated shift and clear the message box.
+    - Before proceeding to collect data, navigate to More > Display Parameters from the side panel.
+    - Verify that the updated frequency limits (e.g., 250,000 CPM) and diagnostic parameters match your targeted asset's field conditions.
+
+## Error: Measurement Point ID Search Failure
+This error dialog displays on the screen when an operator uses the quick-access shortcut tool to search for an asset profile, but the entered ID does not return a match.
+
+<FigureProvider>
+    <Figure 
+        id="Add-Points-ID-Not-Found-Error-Message" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Add-Points-ID-Not-Found-Error-Message-Light.jpg"
+        caption="Add Points ID Not Found Error Message" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The 6-digit identification string entered on the numeric pin-pad shortcut screen does not exist within the active route file currently loaded into the local memory of the DCU device.
+
+### Possible Troubleshooting Steps
+
+- **Check ID accuracy:**
+    - Verify the physical asset tag on the machine to ensure you didn't mistype the 6 digits.
+    - Re-enter the unique ID string carefully via the **Add ID** layout interface.
+- **Verify route inclusion:**
+    - If the ID is correct but continues to fail, check if the specific asset belongs to a completely different operational area or plant route file.
+    - Load the correct route asset package via **Measurements > Select Route** or update the device database files through the server update channel.
+
+## Error: No Route Selected for Deletion
+This error or warning dialog appears when a user clicks the Delete action button without first highlighting or selecting any route from the available list.
+
+<FigureProvider>
+    <Figure 
+        id="Delete-Route-Error-Message" 
+        src="../../img/Appendix/B-Troubleshooting/1-Routes/Delete-Route-Error-Message-Light.jpg"
+        caption="Delete Route Error Message" 
+        width="50%"
+    />
+</FigureProvider>
+
+### Root Cause
+
+The DCU software requires an active selection checkbox or highlighted row index to execute a deletion command from the local SQL Server database.
+If the command is triggered while the selection state is empty, the operation is blocked to prevent database errors.
+
+### Possible Troubleshooting Steps
+
+- **Select a Route:**
+    - Dismiss the warning dialog box by clicking **Close**.
+    - Look at the route list grid and tap directly on the route profile you wish to remove to highlight it (or check the box in the selection column).
+    - Once the row is active, click the **Delete** button again from the operational menu.
+- **Refresh the Route List:**
+    - If the list appears completely blank and you cannot select anything, it means no routes are currently stored locally on the device.
+    - If you need to clear space or reset the view, use the **Update Routes** menu to sync with the server and refresh your local asset tracking list.

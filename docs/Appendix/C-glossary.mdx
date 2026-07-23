@@ -6,7 +6,6 @@ sidebar_label: 'Appendix C - Glossary'
 ---
 
 # Glossary
-## Module 1: Introduction
 - **DCU (Digital Collection Unit)**: 
 The Series 715 portable device used to acquire, process, display, and store vibration and machine condition data. <br />
 - **Task Status Bar**: 
@@ -27,8 +26,6 @@ The percentage of data reused between successive FFT calculations during signal 
 The vibration analysis software platform used by trained analysts to review and interpret Measure Event data collected by the DCU. <br />
 - **Measure Event**: 
 The recorded vibration data captured when an accelerometer is placed on a machine measurement point and a reading is taken. <br />
-
-## Module 2: Routes
 - **Route**: 
 A predefined, ordered set of measurement points and parameters, downloaded to the DCU, that guides the technician through data collection on specific machines or areas. <br />
 - **Measurement Point**: 
@@ -47,8 +44,6 @@ A standardized or custom diagnostic code assigned to a measurement point to flag
 A reason code assigned to a measurement point when a reading cannot be taken (e.g., machine not running, under maintenance). <br />
 - **Waterfall (Waterfall Plot)**: 
 A three-dimensional plot showing a series of vibration spectra collected over time or varying machine speed, used to observe how frequencies shift under changing conditions. <br />
-
-## Module 3: Measurements
 - **RMS (Root Mean Square)**: 
 A calculated value representing the effective magnitude of a vibration signal, commonly used to trend overall vibration severity. <br />
 - **Job Number**: 
@@ -57,8 +52,6 @@ A 6-digit identification number assigned to a route to associate it with a speci
 A measurement technique that uses the natural frequency of an accelerometer combined with enveloping to detect impulsive (impact) behavior, commonly used on slow-speed equipment. <br />
 - **CMAS**: 
 A companion ITR system that exchanges data with the DCU using OPC (OLE for Process Control) for communication, used as an alternate connection source for routes, measurements, and software updates. <br />
-
-## Module 4: Special Test
 - **Bump Test**: 
 A diagnostic test that determines the natural frequencies and resonance characteristics of a machine by striking it with an impact hammer and measuring the vibration response. <br />
 - **Coast Down Test**: 
@@ -97,9 +90,6 @@ A DCU function used to correct rotor unbalance by calculating the correction wei
 The DC voltage level output by an ICP/IEPE sensor, used to verify sensor connection and cable integrity. <br />
 - **HiPass Filter**: 
 A filter that removes low-frequency signal content below a configured cutoff frequency. <br />
-
-
-## Module 5: DCU Setup
 - **Battery Test**: 
 A Maintenance function that verifies battery health by running a discharge cycle and recording voltage, capacity, and duration values to a report file. <br />
 - **Battery Capacity**: 
@@ -160,17 +150,3 @@ A discharge-characteristic profile generated for the DCU's battery, used by the 
 An internal counter that tracks data packets transmitted to the CMAS server; can be manually reset for troubleshooting synchronization issues. <br />
 - **System Switches**: 
 An Advanced Settings screen used to enable or disable core hardware functions, software behaviors, and diagnostic modes (e.g., Simulation Mode, Legacy View, Aging Route Notifications). <br />
-- **Test Micro Programs**: 
-An Advanced Settings function used to run diagnostic commands (e.g., Restart, Shutdown, Battery Capacity) on the DCU microcontroller. <br />
-- **Show Filter Table**: 
-A read-only Advanced Settings screen that displays the digital filter profiles stored in the DCU's signal-processing library. <br />
-- **Show Battery Table**: 
-A read-only Advanced Settings screen that displays stored battery discharge data and voltage levels for monitoring battery health. <br />
-
-## Module 6: Power
-- **Power Off**: 
-A Power menu option that performs a full hardware shutdown of the DCU after a confirmation prompt. <br />
-- **Minimize Application**: 
-A Power menu option that hides the DCU software and returns to the desktop while keeping the application session active in the background. <br />
-- **Exit Application**: 
-A Power menu option that closes the DCU software and ends the current session without shutting down the hardware. <br />

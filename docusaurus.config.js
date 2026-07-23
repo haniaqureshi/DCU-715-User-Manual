@@ -114,9 +114,9 @@ const config = {
             title: 'Resources',
             items: [
               { label: 'Introduction', to: '/' },
-              { label: 'Appendix A: URE Measurements', to: '/Appendix/UREMeasurements' },
-              { label: 'Appendix B: Troubleshooting', to: '/Appendix/troubleshooting' },
-              { label: 'Appendix C: Glossary', to: '/Appendix/glossary' },
+              { label: 'Appendix A: URE Measurements', to: '/Appendix/A-UREMeasurements' },
+              { label: 'Appendix B: Troubleshooting', to: '/Appendix/B-Troubleshooting' },
+              { label: 'Appendix C: Glossary', to: '/Appendix/C-Glossary' },
             ],
           },
           {
