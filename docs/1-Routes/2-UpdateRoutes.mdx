@@ -14,30 +14,22 @@ The **Update Routes** option is used to load, refresh, or download routes from t
 All routes are maintained on the backend server, and this option ensures that the latest routes are synchronized 
 with the DCU device.
 
-**Key Points:**
-<ul><li>Routes created or updated on the server are reflected here.</li>
-<li>Deleted routes are automatically removed from the list after synchronization.</li>
-<li>The route list is retrieved from the server and stored locally on the device.</li>
-<li>Routes are arranged in alphabetical order for easy access.</li>
-<li>Users can select, download, or clear routes easily.</li></ul>
+:::info 
+    - Routes created or updated on the server are reflected here.
+    - Deleted routes are automatically removed from the list after synchronization.
+    - The route list is retrieved from the server and stored locally on the device.
+    - Routes are arranged in alphabetical order for easy access.
+    - Users can select, download, or clear routes easily.
+:::
 
-**Procedure:**
 1. Click **Update Routes** from the main menu interface.
-2. The Update Routes layout will open as shown in <FigureRef id="Update-Route-Route-List-Screen" />. 
-3. If the device cannot establish a proper link with the remote server upon opening this layout, 
-    an orange alert bar with the status **"Connection error"** and message "No connection to the server" 
-    will pop up at the very bottom of the screen.
-4. Click the **Load Route List** button on the upper-right control section to initiate a server database 
-    request and retrieve available updates.
-5. If the system fails to sync or fetch the data after clicking this button, the bottom orange "Connection error"
-    warning notification will persist or reappear.
-6. Once a stable sync is established, the application grid updates and displays all configured client profiles
-    retrieved directly from the database server.
-7. Select the required path sequences by tapping them individually, or use the Select All option button to 
-    mass-highlight the files.
-8. Click the active Select action button to transfer and **download** the selected parameters down onto your local 
-    handheld device storage setup.
-
+2. The Update Routes layout will open as shown in <FigureRef id="Update-Route-Route-List-Screen"/>. 
+3. If the device cannot establish a proper link with the remote server upon opening this layout, an orange alert bar with the status **"Connection error"** and message "No connection to the server" will pop up at the very bottom of the screen.
+4. Click the **Load Route List** button on the upper-right control section to initiate a server database request and retrieve available updates.
+5. If the system fails to sync or fetch the data after clicking this button, the bottom orange "Connection error"warning notification will persist or reappear.
+6. Once a stable sync is established, the application grid updates and displays all configured client profiles retrieved directly from the database server.
+7. Select the required path sequences by tapping them individually, or use the Select All option button to mass-highlight the files.
+8. Click the active Select action button to transfer and **download** the selected parameters down onto your local handheld device storage setup.
 <FigureProvider>
     <Figure 
         id="Update-Route-Route-List-Screen" 
@@ -53,37 +45,29 @@ The **Connection Options** feature allows operators to verify or change the data
 or synchronizing machinery profiles. This ensures flexibility by letting the user choose between a direct cloud 
 server download or a localized hardware connection based on current plant field conditions. 
 
-**Procedure:**
 1. Access **More > Options** from the menu. 
 2. Click the **Options** block button from the side control panel.
-3. The system will open the **Options** connection management screen as shown in <FigureRef id="Configuration-Connection-Route-Update-Screen" />.
+3. The system will open the **Options** connection management screen as shown in <FigureRef id="Configuration-Connection-Route-Update-Screen"/>.
 
-**USB Memory Stick**
+### USB Memory Stick
 
-**Procedure:**
 1. Copy the new measurement route file(s) onto the USB memory stick.
 2. Insert the USB memory stick into the USB port located under the sensor connection ports next to the power button.
 3. Wait a few seconds for the device to recognize the USB memory stick.
 4. Once the device detects the USB, the **USB Drive** option will become enabled on the screen.
 5. Select the **USB Drive** option and press **OK** to load the routes.
 
-**<u>ITR.com & ITR.com</u> (High Speed)**
+### ITR.com & ITR.com (High Speed)
 1. Ensure that the local diagnostic hardware unit is connected to an active internet network interface.
-2. **Standard Sync Mode (ITR.com)**:<br />
-    a. Select the **ITR.com** radio button option to download the active asset sequences directly from the &nbsp; &nbsp; &nbsp; &nbsp; 
-        DCMS cloud database server infrastructure.
-3. **High-Speed Sync Mode (ITR.com High Speed)**:<br />
-    a. Select the **ITR.com High Speed** radio button option to enable expedited multi-thread data &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        downloading workflows.
-
+2. **Standard Sync Mode (ITR.com)**:
+    - Select the **ITR.com** radio button option to download the active asset sequences directly from the DCMS cloud database server infrastructure.
+3. **High-Speed Sync Mode (ITR.com High Speed)**:
+    - Select the **ITR.com High Speed** radio button option to enable expedited multi-thread data downloading workflows.
 :::note
-
-When the High-Speed Route Download option is selected, newly generated data tracks at ITR may take up to 10 minutes to populate and index across 
-the active web service. If a newly created route is needed instantly, select the standard **ITR.com** option instead so it appears immediately, though 
-the file transfer time itself may take roughly 30% longer to complete.
-
+    When the High-Speed Route Download option is selected, newly generated data tracks at ITR may take up to 10 minutes to populate and index across 
+    the active web service. If a newly created route is needed instantly, select the standard **ITR.com** option instead so it appears immediately, though 
+    the file transfer time itself may take roughly 30% longer to complete.
 :::
-
 4. Click **Save** to apply your selected connection profile and return to the route update interface.
 5. Click **Cancel** to exit the setup layout without changing the source configuration.
 
@@ -98,8 +82,6 @@ the file transfer time itself may take roughly 30% longer to complete.
 </FigureProvider>
 
 :::info
-
-- Ensure the device connection is properly configured before updating routes.
-- The **Update Routes** module can also be accessed directly from within the **Select Route** screen workspace. 
-
+    - Ensure the device connection is properly configured before updating routes.
+    - The **Update Routes** module can also be accessed directly from within the **Select Route** screen workspace. 
 :::

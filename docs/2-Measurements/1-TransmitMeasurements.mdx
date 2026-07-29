@@ -4,11 +4,10 @@ toc_min_heading_level: 2
 toc_max_heading_level: 4
 sidebar_label: '2.1 - Transmit Measurements'
 ---
-
-# Transmit Measurements
-
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
+
+# Transmit Measurements
 
 The **Transmit Measurements** option allows the user to send the recorded measurement data from the device to the server or computer for storage and further analysis.
 
@@ -28,7 +27,7 @@ To open the Transmit Measurements screen, proceed as follows:
     />
 </FigureProvider>
 
-####  Transmit Measurements screen 
+##  Transmit Measurements screen 
 The following  fields and controls available on the Transmit Measurements screen as shown in the <FigureRef id="Transmit-Measurements-Screen" />.
 
 | Navigation Button               | Functionality                                                                    |
@@ -45,45 +44,31 @@ The following  fields and controls available on the Transmit Measurements screen
 | Transmit                        | Starts sending the selected measurement data to the configured connection.       | 
 | More / Less                     | Expands or collapses the left panel to show or hide the **Options** button.      |
 
-#### Transmit measurement data
+## Transmit measurement data
 
 To transmit measurement data, proceed as follows:
 
 1. On the Transmit Measurements screen, select the required route from the list, or select **Select All** to select every route.
 2. Select **Transmit**.<br />
-    a. If no route is selected when **Transmit** is selected, the following dialog appears: **You must select at &nbsp; &nbsp; &nbsp; 
-        least one route**. Select **Close** to dismiss the dialog, then select a route before trying again as shown &nbsp; &nbsp; 
-        in the <FigureRef id="Transmit-Measurements-Error-Dialog" />
-
+    1. If no route is selected when **Transmit** is selected, the following dialog appears: **You must select at least one route**. Select **Close** to dismiss the dialog, then select a route before trying again as shown in the <FigureRef id="Transmit-Measurements-Error-Dialog-Box" />
         <FigureProvider>
             <Figure
-                id="Transmit-Measurements-Error-Dialog"
+                id="Transmit-Measurements-Error-Dialog-Box"
                 src="/img/2-Measurements/1-TransmitMeasurements/Transmit-Measurements-Error-Dialog-Light.jpg"
                 srcDark="/img/2-Measurements/1-TransmitMeasurements/Transmit-Measurements-Error-Dialog-Dark.jpg"
-                caption="Transmit Measurements error dialog"
+                caption="Transmit Measurements error dialog box"
                 width="70%"
             />
         </FigureProvider>
+    2. If a route is selected, the DCU transmits the route data to the configured connection. <br />
+    3. Once transmission completes, the system returns to the start of the ITR.
 
-        :::warning
-
-        You must select at least one route.
-
-        :::
-
-    b. If a route is selected, the DCU transmits the route data to the configured connection. <br />
-    c. Once transmission completes, the system returns to the start of the ITR.
-
-### Additional Configuration Controls
-#### More
+## Additional Configuration Controls
+### More
 Use the **More** button to expand the left panel and access the **Options** button. To access this control, proceed as follows:
-
-**Navigation:** <br />
-Dashboard → Measurements → Transmit Measurements → More
 
 1. On the Transmit Measurements screen, select **More**. 
 2. The left panel expands to display **Options**, next to the **Transmit** button same as shown in <FigureRef id="Transmit-Measurements-Screen-More-Expanded" />.
-
     <FigureProvider>
             <Figure
                 id="Transmit-Measurements-Screen-More-Expanded"
@@ -95,11 +80,8 @@ Dashboard → Measurements → Transmit Measurements → More
     </FigureProvider>
 3. Select **Less** to collapse the panel and return to the standard Transmit Measurements screen view.
 
-#### Options 
+### Options 
 Use the **Options function** to configure the connection type and transmission settings before sending measurement data.
-
-**Navigation:**
-Dashboard → Measurements → Transmit Measurements → More → Options
 
 To open the Options screen, proceed as follows:
 
