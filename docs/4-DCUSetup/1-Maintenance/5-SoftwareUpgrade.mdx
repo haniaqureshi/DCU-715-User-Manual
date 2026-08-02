@@ -4,23 +4,22 @@ toc_min_heading_level: 2
 toc_max_heading_level: 4
 sidebar_label: '4.1.5 - Software Upgrade'
 ---
-
-# Software Upgrade
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
+# Software Upgrade
+
+Use the **Software Upgrade** function to update the DCU software when a new approved version is available. Software updates help keep the DCU current with the latest features, fixes, and security updates.
+
+To open the Software Upgrade function, proceed as follows:
+
+1. From the **Main Menu**, select **DCU Setup**.
+2. From the **DCU Setup** submenu, select **Maintenance**.
+3. From the **Maintenance** submenu, select **Software Upgrade**.
+
+The **Software Upgrade** screen appears.
+
 <FigureProvider>
-    Use the **Software Upgrade** function to update the DCU software when a new approved version is available.
-    Software updates help keep the DCU current with the latest features, fixes, and security updates.
-
-    To open the Software Upgrade function, proceed as follows:
-
-    1. From the **Main Menu**, select **DCU Setup**.
-    2. From the **DCU Setup** submenu, select **Maintenance**.
-    3. Select **Software Upgrade**.
-
-    The **Software Upgrade** screen appears.
-    
     <Figure 
         id="Software-Upgrade-Screen"   
         src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/Software-Upgrade-Screen-Light.png" 
@@ -28,88 +27,70 @@ import Figure from "@site/src/components/Figure";
         caption="Software Upgrade screen"
         width="70%"
     /> 
+</FigureProvider>
 
-    ## Software Upgrade screen
-    The following table describes the fields and controls available on the Software Upgrade screen as seen in <FigureRef id="Software-Upgrade-Screen"/>.
+## Software Upgrade screen
 
-    | Field/Button       | Description                                                                                                                                                                                                                                                                                                                 
-    | :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
-    | Connection options | **<u>USB Drive</u>** <br />Selects a USB drive as the source for the software upgrade package. After the user selects this option, the DCU waits for a USB flash drive to be inserted into the USB port. <br  /><br />**<u>ITR.com</u>** <br />Selects ITR.com as the source for the software upgrade package. When this option is selected, the DCU automatically checks for the available version when the Software Upgrade screen opens. <br /><br />**<u>ITR.com via CMAS</u>** <br />Selects ITR.com through CMAS as the source for the software upgrade package. |                                                                                                      |                                                                                                                                                                                             
-    | Current version    | Displays the software version currently installed on the DCU. <br /><br />**Example:** 0.3.0.3                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                                              
-    | Version available  | Displays the software version available from the selected upgrade source. <br /><br />**Example:** 0.3.0.4                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                                              
-    | Upgrade now        | Starts the software upgrade process. This button becomes available only when a newer software version is available from the selected source.                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                               
-    | Update process     | Displays the software update progress after the upgrade starts.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                                               
-    | Exit               | Closes the Software Upgrade screen and returns to the previous menu.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                               
-    | Menu               | Opens the main navigation menu.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                                                               
-    | Task status bar    | Displays the status of the active upgrade task. <br /><br />**Example:** Update process <br /><br />**Note:** See [Task Status Bar](../../intro.mdx#task-status-bar) for details.                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                                              
-    | System alert bar   | Displays the most recent system message at the bottom of the screen. <br /><br />**Example:** Software is up to date. <br /><br />**Note:** See [Application Interface](../../intro.mdx/#application-interface) for details.                                                                                                                                                                                                                                                                                                                                                  |                  
+The following table describes the fields and controls available on the Software Upgrade screen as seen in <FigureRef id="Software-Upgrade-Screen"/>.
 
-    ## Upgrade through ITR.com
-    To upgrade the DCU software from **ITR.com**, proceed as follows:
+| Field/Button        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Connections Options | Specifies the source of the software upgrade package. <br /><br />**USB Drive:** Uses a USB flash drive as the upgrade source. After you select this option, the DCU waits for you to insert a USB flash drive into the USB port. <br /><br />**ITR.com:** Uses ITR.com as the upgrade source. The DCU automatically checks the available version when the Software Upgrade screen opens. <br /><br />**ITR.com via CMAS:** Uses ITR.com through CMAS as the upgrade source. |
+| Current version     | Displays the software version currently installed on the DCU. <br /><br />**Example:** 0.3.0.3                                                                                                                                                                                                                                                                                                                                                                               |
+| Version available   | Displays the software version available from the selected upgrade source. <br /><br />**Example:** 0.3.0.4                                                                                                                                                                                                                                                                                                                                                                   |
+| Upgrade Now         | Starts the software upgrade. This button becomes available only when a newer software version is available from the selected source.                                                                                                                                                                                                                                                                                                                                         |
+| Exit                | Closes the Software Upgrade screen and returns to the **Maintenance** submenu.                                                                                                                                                                                                                                                                                                                                                                                               |
+| Menu                | Opens the **Main Menu**.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Task status bar     | Displays the status of the active upgrade task. <br /><br />**Example:** Update process <br /><br />**Note:** See [Task Status Bar](../../intro.mdx#task-status-bar) for details.                                                                                                                                                                                                                                                                                            |
+| System Alert Bar    | Displays the most recent system message at the bottom of the screen. <br /><br />**Example:** Software is up to date. <br /><br />**Note:** See [Application Screen Layout](../../intro.mdx#dcu-application-screen-layout) for details.                                                                                                                                                                                                                                      |
 
-    1. Open the **Software Upgrade** function. The **Software Upgrade** screen appears.
-    2. Select **ITR.com**. The DCU checks for the available software version automatically.
-    3. Review the following version information: <br />
-        a. **Current version** <br />
-        b. **Version available**
-    4. Confirm that the **Version available** is newer than the **Current version**.
-    5. Select **Upgrade Now**. The upgrade starts, and the task status bar displays the update status.
+## Select the upgrade source
 
-    <Figure 
-        id="Software-Upgrade-Update-Process" 
-        src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/Software-Upgrade-Update-Process-Light.png" 
-        srcDark="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/Software-Upgrade-Update-Process-Dark.png"
-        caption="Software Upgrade update process"
-        width="70%"
-    /> 
+Select one of the following upgrade sources:
 
-    ## Upgrade through a USB drive
-    To upgrade the DCU software from a USB drive, proceed as follows:
+- **USB Drive:** Select **USB Drive**, and then insert the USB flash drive that contains the approved software upgrade package into the USB port.
+- **ITR.com:** The DCU checks for the available software version automatically.
+- **ITR.com via CMAS:** Select **ITR.com via CMAS**, and then wait for the DCU to check the selected upgrade source.
 
-    1. Open the **Software Upgrade** function. The **Software Upgrade** screen appears.
-    2. Select **USB drive**.
-    3. Insert the USB flash drive that contains the approved software upgrade package into the USB port.
-    4. Review the following version information: <br />
-        a. **Current version** <br />
-        b. **Version available**
-    5. Confirm that the **Version available** is newer than the **Current version**.
-    6. Select **Upgrade Now**. The upgrade starts, and the task status bar displays the update status.
-    7. Wait until the upgrade process is complete.
-    8. Follow any on-screen prompts to finish the upgrade.
+### Upgrade the DCU software
 
-    ## Upgrade through CMAS
-    To upgrade the DCU software through ITR.com via CMAS, proceed as follows:
+To upgrade the DCU software, proceed as follows:
 
-    1. Open the **Software Upgrade** function. The **Software Upgrade** screen appears.
-    2. Select **ITR.com via CMAS**. 
-    3. Wait for the DCU to check the selected upgrade source.
-    4. Review the following version information: <br />
-        a. **Current version** <br />
-        b. **Version available**
-    5. Confirm that the **Version available** is newer than the **Current version**.
-    6. Select **Upgrade Now**. The upgrade starts, and the task status bar displays the update status.
-    7. Wait until the upgrade process is complete.
-    8. Follow any on-screen prompts to finish the upgrade.
-
-    ## Check software upgrade messages
-    The Software Upgrade screen displays the most recent **system message** in the system message bar at the bottom of the screen.
-    
-    If the DCU already has the latest approved software version, the system message bar displays: Software is up to date.
-    
-    No further action is required.
-    To review recent system messages, proceed as follows:
-    1. Double-tap the **system message bar**. The **System Alerts** modal appears.
+1. Select the required upgrade source.
+2. Review the following version information:
+    - **Current version**
+    - **Version available**
+3. Confirm that **Version available** is newer than **Current version**.
+4. Select **Upgrade Now**. The software upgrade starts, and the task status bar displays the update status as shown in <FigureRef id="Software-Upgrade-Update-Process"/>.
+    <FigureProvider>
         <Figure 
-            id="System-Alerts-Modal"
-            src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/System-Alerts-Modal-Light.png" 
-            srcDark="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/System-Alerts-Modal-Dark.png"
-            caption="System Alerts modal"
+            id="Software-Upgrade-Update-Process" 
+            src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/Software-Upgrade-Update-Process-Light.png" 
+            srcDark="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/Software-Upgrade-Update-Process-Dark.png"
+            caption="Software Upgrade update process"
             width="70%"
         /> 
-    2. Review the system messages.
-    3. Select **Clear** to clear the displayed messages, or select **Close** to return to the Software Upgrade screen.
+    </FigureProvider>
+5. Wait until the upgrade process is complete.
 
-    To return to the **Main Menu**, select the **Exit** button in the **Software Upgrade screen**. Alternatively, 
-    select the **Menu** button in the header.
+#### Check software upgrade messages
+If the DCU already has the latest approved software version, the System Alert Bar displays `Software is up to date`.
 
+To review recent system messages, proceed as follows:
+
+1. Double-tap the **System Alert Bar**. The **System Alerts** modal appears.
+
+<FigureProvider>
+    <Figure 
+        id="System-Alerts-Modal"
+        src="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/System-Alerts-Modal-Light.png" 
+        srcDark="/img/4-DCUSetup/1-Maintenance/5-SoftwareUpgrade/System-Alerts-Modal-Dark.png"
+        caption="System Alerts modal"
+        width="70%"
+    /> 
 </FigureProvider>
+
+2. Review the system messages.
+3. Select **Clear** to remove the displayed messages, or select **Close** to return to the Software Upgrade screen.
+
+To return to the **Maintenance** submenu, select **Exit** in the **Software Upgrade** screen.

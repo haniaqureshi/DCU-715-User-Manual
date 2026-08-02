@@ -4,22 +4,22 @@ toc_min_heading_level: 2
 toc_max_heading_level: 4
 sidebar_label: '4.1.2 - Internet Test'
 ---
-
-# Internet Test
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
+# Internet Test
+
+Use the **Internet Test** function to confirm that the DCU is connected to a network and ready for data transmission. The **Internet connection status** modal displays the connection status, number of active connections, interface name, interface type, and connection speed.
+
+To open the Internet Test function, proceed as follows:
+
+1. From the **Main Menu**, select **DCU Setup**.
+2. From the **DCU Setup** submenu, select **Maintenance**.
+3. From the **Maintenance** submenu, select **Internet Test**.
+
+The **Internet connection status** modal appears.
+
 <FigureProvider>
-    Use the **Internet Test** function to confirm that the DCU is connected to a network and ready for data transmission. The Internet Test screen shows the connection status, number of active connections, interface name, interface type, and connection speed.
-
-    To open the Internet Test function, proceed as follows:
-
-    1. From the **Main Menu**, select **DCU Setup**.
-    2. From the **DCU Setup** submenu, select **Maintenance**.
-    3. Select **Internet Test**.
-
-    The **Internet connection status** modal appears.
-
     <Figure 
         id="Internet-Connection-Status-Modal" 
         src="/img/4-DCUSetup/1-Maintenance/2-InternetTest/Internet-Connection-Status-Modal-Light.png" 
@@ -27,29 +27,31 @@ import Figure from "@site/src/components/Figure";
         caption="Internet connection status modal" 
         width="70%"
     /> 
-
-    ## Internet connection status modal
-    The following table describes the information displayed in the Internet connection status modal as seen in <FigureRef id="Internet-Connection-Status-Modal"/>.
-
-    | Field/Button               | Description                                                                                                                                    | 
-    | :------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | 
-    | Internet connection status | Displays whether an internet connection is available. <br /><br />**Example:** Internet connection is available                                |
-    | Active connection(s)       | Displays the number of active network connections detected by the DCU. <br /><br />**Example:** 2                                              |
-    | Internet Interface Name    | Displays the name of each detected network interface. <br /><br />**Example:** Hamachi, Ethernet 5                                             |
-    | Internet Interface Type    | Displays the type of network interface. <br /><br />**Example:** Ethernet                                                                      |
-    | Connection Speed           | Displays the connection speed for each network interface in megabits per second (Mbps). <br /><br />**Example:** 1,000.00 Mbps, 10,000.00 Mbps |
-    | Close                      | Closes the Internet connection status modal and returns to the Maintenance submenu.                                                            |
-
-    ## Check internet connection status
-    To check the internet connection status, proceed as follows:
-
-    1. Open the **Internet Test** function. The **Internet connection status** modal appears.
-    2. Review the **Internet connection status** message. Confirm that the modal displays "Internet connection is available".
-    3. Review the **Active connection(s)** value. Confirm that the DCU detects at least 1 active connection.
-    4. Review the interface details for each connection:
-        - Internet Interface Name
-        - Internet Interface Type
-        - Connection Speed
-    5. Select **Close** to return to the Maintenance submenu.
-    
 </FigureProvider>
+
+## Internet connection status modal
+
+The following table describes the fields and controls available in the Internet connection status modal as seen in <FigureRef id="Internet-Connection-Status-Modal"/>.
+
+| Field/Button               | Description                                                                                                                    | 
+| :------------------------- | :----------------------------------------------------------------------------------------------------------------------------- | 
+| Internet connection status | Displays whether an internet connection is available. <br /><br />**Example:** Internet connection is available                |
+| Active connection(s)       | Displays the number of active network connections detected by the DCU. <br /><br />**Example:** 2                              |
+| Internet Interface Name    | Displays the name of each detected network interface. <br /><br />**Example:** Ethernet 5                                      |
+| Internet Interface Type    | Displays the type of each detected network interface. <br /><br />**Example:** Ethernet                                        |
+| Connection Speed           | Displays the connection speed for each network interface in megabits per second (Mbps). <br /><br />**Example:** 1,000.00 Mbps |
+| Close                      | Closes the Internet connection status modal and returns to the **Maintenance** submenu.                                        |
+
+## Check the internet connection status
+
+To check the internet connection status, proceed as follows:
+
+1. In the **Internet connection status** modal, review the internet connection status message.
+2. Confirm that the modal displays **Internet connection is available**.
+3. Review the **Active connection(s)** value and confirm that the DCU detects at least one active connection.
+4. Review the following details for each active connection:
+    - **Internet Interface Name**
+    - **Internet Interface Type**
+    - **Connection Speed**
+
+To return to the **Maintenance** submenu, select **Close** in the **Internet connection status** modal.
