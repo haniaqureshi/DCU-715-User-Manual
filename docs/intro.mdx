@@ -51,46 +51,18 @@ the active operation. The status bar updates automatically as the DCU processes 
   </thead>
 
   <tbody>
+    
     <tr>
       <td style={{ textAlign: "center" }}>
         <img
-          src="/img/0-Intro/status/ready.png"
-          alt="Ready"
+          src="/img/0-Intro/status/connectionError.png"
+          alt="Connection error"
           style={{ width: "100%" }}
         />
       </td>
       <td>
-        Indicates that the current function is ready for user interaction or
-        that an operation has completed successfully.
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <img
-          src="/img/0-Intro/status/measurement.png"
-          alt="Measurement"
-          style={{ width: "100%" }}
-        />
-      </td>
-      <td>
-        Indicates that the DCU is actively acquiring measurement data from the
-        connected sensor.
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <img
-          src="/img/0-Intro/status/stopRequest.png"
-          alt="Stop request"
-          style={{ width: "100%" }}
-        />
-      </td>
-      <td>
-        Indicates that the current operation is in the process of stopping. The
-        DCU is completing any remaining tasks before returning to the Ready
-        state.
+        Indicates that a connection error has occurred during the current
+        operation.
       </td>
     </tr>
 
@@ -111,20 +83,6 @@ the active operation. The status bar updates automatically as the DCU processes 
     <tr>
       <td style={{ textAlign: "center" }}>
         <img
-          src="/img/0-Intro/status/connectionError.png"
-          alt="Connection error"
-          style={{ width: "100%" }}
-        />
-      </td>
-      <td>
-        Indicates that a connection error has occurred during the current
-        operation.
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <img
           src="/img/0-Intro/status/processing.png"
           alt="Processing"
           style={{ width: "100%" }}
@@ -132,6 +90,47 @@ the active operation. The status bar updates automatically as the DCU processes 
       </td>
       <td>
         Indicates that the DCU is processing the current operation.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "center" }}>
+        <img
+          src="/img/0-Intro/status/updateProcess.png"
+          alt="Update process"
+          style={{ width: "100%" }}
+        />
+      </td>
+      <td>
+        Indicates that the route or system update process is currently in
+        progress.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "center" }}>
+        <img
+          src="/img/0-Intro/status/measurement.png"
+          alt="Measurement"
+          style={{ width: "100%" }}
+        />
+      </td>
+      <td>
+        Indicates that the DCU is actively acquiring measurement data from the
+        connected sensor.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "center" }}>
+        <img
+          src="/img/0-Intro/status/measurement1.png"
+          alt="Measurement 1"
+          style={{ width: "100%" }}
+        />
+      </td>
+      <td>
+        Indicates the current measurement count in the measurement sequence.
       </td>
     </tr>
 
@@ -152,13 +151,28 @@ the active operation. The status bar updates automatically as the DCU processes 
     <tr>
       <td style={{ textAlign: "center" }}>
         <img
-          src="/img/0-Intro/status/measurementNR3.png"
-          alt="Measurement number 3"
+          src="/img/0-Intro/status/waitingForTach.png"
+          alt="Waiting for tach"
           style={{ width: "100%" }}
         />
       </td>
       <td>
-        Indicates the current measurement number being performed.
+        Indicates that the DCU is waiting for a tachometer signal before
+        continuing the measurement.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "center" }}>
+        <img
+          src="/img/0-Intro/status/ready.png"
+          alt="Ready"
+          style={{ width: "100%" }}
+        />
+      </td>
+      <td>
+        Indicates that the current function is ready for user interaction or
+        that an operation has completed successfully.
       </td>
     </tr>
 
@@ -178,14 +192,13 @@ the active operation. The status bar updates automatically as the DCU processes 
     <tr>
       <td style={{ textAlign: "center" }}>
         <img
-          src="/img/0-Intro/status/waitingForTach.png"
-          alt="Waiting for tach"
+          src="/img/0-Intro/status/measurementNR3.png"
+          alt="Measurement number 3"
           style={{ width: "100%" }}
         />
       </td>
       <td>
-        Indicates that the DCU is waiting for a tachometer signal before
-        continuing the measurement.
+        Indicates the current measurement number being performed.
       </td>
     </tr>
 
@@ -205,27 +218,15 @@ the active operation. The status bar updates automatically as the DCU processes 
     <tr>
       <td style={{ textAlign: "center" }}>
         <img
-          src="/img/0-Intro/status/measurement1.png"
-          alt="Measurement 1"
+          src="/img/0-Intro/status/stopRequest.png"
+          alt="Stop request"
           style={{ width: "100%" }}
         />
       </td>
       <td>
-        Indicates the current measurement count in the measurement sequence.
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "center" }}>
-        <img
-          src="/img/0-Intro/status/updateProcess.png"
-          alt="Update process"
-          style={{ width: "100%" }}
-        />
-      </td>
-      <td>
-        Indicates that the route or system update process is currently in
-        progress.
+        Indicates that the current operation is in the process of stopping. The
+        DCU is completing any remaining tasks before returning to the Ready
+        state.
       </td>
     </tr>
   </tbody>
@@ -435,6 +436,7 @@ status.
     <Figure 
         id="DCU-Initialization-Screen" 
         src="/img/0-Intro/DCU-Initialization-Screen-Light.jpg"
+        srcDark="/img/0-Intro/DCU-Initialization-Screen-Dark.png"
         caption="DCU Initialization Screen" 
         width="70%"
     />
@@ -466,6 +468,7 @@ The Dashboard displays the following options as shown in the <FigureRef id="DCU-
     <Figure 
         id="DCU-Dashboard" 
         src="/img/0-Intro/DCU-Dashboard-Light.jpg"
+        srcDark="/img/0-Intro/DCU-Dashboard-Dark.png" 
         caption="DCU Dashboard" 
         width="70%"
     />
