@@ -2,25 +2,36 @@
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **Power** submenu lets you manage the application and the device's power status. Use this submenu to safely shut down the device, minimize the application to access the operating system, or close the software while keeping the hardware powered on.
+Use the **Power** submenu to turn off the DCU 715, minimize the application to use the Windows desktop, or close the application while the DCU 715 stays on.
 
 :::info
 
-Always ensure that all data has been saved before using any Power function.
+Save all your data before you use any **Power** function.
 
 :::
 
-To open the Power submenu, proceed as follows:
+## Open the Power submenu
 
-1. From the **Main Menu**, select **Power**.
-
-The **Power** submenu appears and provides access to the following functions:
+1. From the **Main Menu**, select **Power**. The **Power** submenu appears, as shown in <FigureRef id="Power-Sub-Menu" />.
 
 <FigureProvider>
-    <Figure 
-        id="Power-Sub-Menu" 
-        src="/img/5-Power/Power-Sub-Menu-Light.png" 
-        caption="Power Submenu" 
+    <Figure
+        id="Power-Sub-Menu"
+        src="/img/5-Power/Power-Sub-Menu-Light.png"
+        caption="Power submenu"
+        alt="Power submenu with three functions, Power Off, Minimize Application, and Exit Application, and a Cancel button."
         width="70%"
     />
 </FigureProvider>
+
+## Power functions
+
+The **Power** submenu contains the following functions:
+
+- [**Power Off**](./1-PowerOff.mdx): Turns off the DCU 715.
+- [**Minimize Application**](./2-MinimizeApplication.mdx): Hides the application and shows the Windows desktop. The application keeps running.
+- [**Exit Application**](./3-ExitApplication.mdx): Closes the application. The DCU 715 stays on.
+
+## Close the Power submenu
+
+To close the **Power** submenu without selecting a function, select **Cancel**. The **Dashboard** appears.
