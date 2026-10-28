@@ -126,6 +126,18 @@ const config = {
               { label: 'Website', href: 'https://www.itr.com/' },
             ],
           },
+          {
+            title: 'Conformance',
+            items: [
+              {
+                html: `
+                  <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance">
+                    <img height="31" width="88" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA" alt="Level AA conformance, W3C Web Content Accessibility Guidelines 2.2" />
+                  </a>
+                `,
+              },
+            ],
+          },
         ],
         copyright: `Copyright © 2016 - ${new Date().getFullYear()} ITR - Built with Docusaurus.`,
       },
