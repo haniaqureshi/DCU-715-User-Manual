@@ -112,3 +112,9 @@
   min-height: 24px;
   text-align: center;
 }
+
+/* Search box placeholder and "ctrl K" hint: at least 4.5:1 in the light theme (1.4.3).
+   The default light value is only 1.5:1 on the search box background. Dark theme is unchanged. */
+html[data-theme='light'] {
+  --ifm-navbar-search-input-placeholder-color: #606770;
+}

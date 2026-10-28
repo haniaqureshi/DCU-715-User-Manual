@@ -10,51 +10,55 @@ sidebar_label: '4.4.11 - Show Battery Table'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Show Battery Table** function to view the battery discharge data and voltage levels stored on the DCU. This
-screen is read-only and allows technicians to monitor battery health and verify that the battery voltage remains 
-above the cutout threshold. To open the Show Battery Table modal, proceed as follows:
+Use the **Show Battery Table** function to view the battery discharge data and voltage levels stored on the DCU. This dialog is read-only. Use it to monitor battery health and verify that the battery voltage stays above the cutout threshold.
 
-1. From the Advanced Settings submenu, select **Show Battery Table**. 
-2. The Show Battery Table modal appears as shown in the <FigureRef id="Show-Battery-Table-Modal" />
+To open the Show Battery Table dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Show Battery Table**.
+
+The **Show Battery Table** dialog appears, as shown in <FigureRef id="Show-Battery-Table-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Show-Battery-Table-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/11-ShowBatteryTable/Show-Battery-Table-Modal-Light.jpg"
-        caption="Show Battery Table modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/11-ShowBatteryTable/ShowBatteryTableModal-Light.jpg"
+        caption="Show Battery Table dialog" 
+        alt={"Show Battery Table dialog for DCU Type 715 with a battery cutout of 12.50 V, listing Sequence, Battery Level and Voltage Level, with Up, Down and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
 
-## Show Battery Table modal
-The following fields and columns displayed in the Show Battery Table modal.
+## Show Battery Table dialog
 
-| Column      | Description                                                                                         |                                                                                                                                          
-| :---------- | :-------------------------------------------------------------------------------------------------- |
-| DCU Type | Displays the DCU hardware model associated with the battery table. <br />**Example:** 715 |
-| Battery Cutout | Displays the minimum voltage threshold below which the DCU will shut down. <br />**Example:** 12.50V |
-| Sequence | Displays the sequence number for each battery discharge reading. <br />**Example:** 1 |
-| Battery Level | Displays the battery level as a decimal percentage for each sequence entry. <br />**Example:** 0.01 |
-| Voltage Level | Displays the battery voltage recorded at each sequence entry. <br />**Example:** 16.180 |
-| ∧ (Up) | Scrolls up through the battery table list. |
-| ∨ (Down) | Scrolls down through the battery table list. |
-| Cancel | Closes the Show Battery Table modal and returns to the Advanced Settings submenu. |
+The following table describes the fields, columns, and controls in the Show Battery Table dialog.
+
+| Field/Column   | Description |
+| :------------- | :---------- |
+| DCU Type       | Displays the DCU hardware model associated with the battery table. <br />**Example:** 715 |
+| Battery Cutout | Displays the minimum voltage threshold. If the voltage drops below this value, the DCU shuts down. <br />**Example:** 12.50V |
+| Sequence       | Displays the sequence number for each battery discharge reading. <br />**Example:** 1 |
+| Battery Level  | Displays the battery level as a decimal percentage for each sequence entry. <br />**Example:** 0.01 |
+| Voltage Level  | Displays the battery voltage recorded at each sequence entry. <br />**Example:** 16.180 |
+| ∧ (Up)         | Scrolls up through the battery table list. |
+| ∨ (Down)       | Scrolls down through the battery table list. |
+| Cancel         | Closes the Show Battery Table dialog and returns to the Advanced Settings submenu. |
 
 :::info
 
-The Show Battery Table modal is read-only. No values can be edited from this screen. 
+The Show Battery Table dialog is read-only. You can't edit any values here. 
 
 :::
 
 ## View the battery table
-To view the battery table, proceed as follows:
 
-1. From the Advanced Settings submenu, select **Show Battery Table**. The Show Battery Table modal appears.
-2. Review the **DCU Type** and **Battery Cutout** values displayed at the top of the modal.
-3. Use the **∧** and **∨** buttons to scroll through the battery table.
-4. Review the **Voltage Level** column to verify that the battery is discharging consistently and that no sudden voltage drops are present.
-5. Confirm that the current voltage level is above the **Battery Cutout** threshold for safe field operation.
-6. Select **Cancel** to close the Show Battery Table modal and return to the Advanced Settings submenu.
+To view the battery table, follow these steps:
 
+1. In the **Show Battery Table** dialog, review the **DCU Type** and **Battery Cutout** values at the top of the dialog.
+2. To scroll through the battery table, select **∧** or **∨**.
+3. Review the **Voltage Level** column to verify that the battery discharges consistently and that there are no sudden voltage drops.
+4. Confirm that the current voltage level is above the **Battery Cutout** threshold for safe field operation.
 
-
+To close the **Show Battery Table** dialog and return to the **Advanced Settings** submenu, select **Cancel**.

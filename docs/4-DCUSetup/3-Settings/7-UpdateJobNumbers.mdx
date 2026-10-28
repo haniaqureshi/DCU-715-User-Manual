@@ -10,69 +10,69 @@ sidebar_label: '4.3.7 - Update Job Numbers'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Update Job Numbers** function to assign or update a job ID number for a selected route. The job ID number 
-must be exactly 6 digits. To open the **Update Job Number** screen, proceed as follows:
+Use the **Update Job Numbers** function to assign or update a job ID number for a selected route. The job ID number must be exactly 6 digits.
 
-1. From the Settings submenu, select **Update Job Numbers**.
-2. The Update Job Number screen appears, displaying the list of available routes as shown in the <FigureRef id="Update-Job-Number-Screen" />.
+To open the Update Job Number screen, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Settings**.
+4. From the **Settings** submenu, select **Update Job Numbers**.
+
+The **Update Job Number** screen appears and lists the available routes, as shown in <FigureRef id="Update-Job-Number-Screen" />.
 
 <FigureProvider>
     <Figure 
         id="Update-Job-Number-Screen" 
-        src="/img/4-DCUSetup/3-Settings/7-UpdateJobNumbers/Update-Job-Number-Screen-Light.jpg"
+        src="/img/4-DCUSetup/3-Settings/7-UpdateJobNumbers/UpdateJobNumberScreen-Light.jpg"
+        srcDark="/img/4-DCUSetup/3-Settings/7-UpdateJobNumbers/UpdateJobNumberScreen-Dark.jpg"
         caption="Update Job Number screen" 
+        alt={"Update Job Number screen listing routes with Id, Route Name and Job Id columns, route 1289 TEST #2 with Job Id 123458 highlighted, and Update Job Number, Up and Down buttons."}
         width="70%"
     />
 </FigureProvider>
 
 ## Update Job Number screen
-The following fields and controls available on the Update Job Number screen.
 
-| Field/Button      | Description                                                                         |                                                                                                                                          
-| :---------------- | :---------------------------------------------------------------------------------- |
-| Id                | Displays the route ID number. <br />**Example:**1289                                |
-| Route Name        | Displays the name of the route. <br />**Example:** TEST #2                          |
-| Job Id            | Displays the current job ID number assigned to the route. <br />**Example:** 123458 |
-| ∧ (Up)            | Scrolls up through the route list.                                                  |
-| ∨ (Down)          | Scrolls down through the route list.                                                |
-| Update Job Number | Opens the Enter Job ID Number modal for the selected route.                         |
+The following table describes the fields and controls available on the Update Job Number screen.
+
+| Field/Button      | Description |
+| :---------------- | :---------- |
+| Id                | Displays the route ID number. <br />**Example:** 1289 |
+| Route Name        | Displays the name of the route. <br />**Example:** TEST #2 |
+| Job Id            | Displays the job ID number assigned to the route. <br />**Example:** 123458 |
+| ∧ (Up)            | Scrolls up through the route list. |
+| ∨ (Down)          | Scrolls down through the route list. |
+| Update Job Number | Opens the Enter Job ID Number dialog for the selected route. |
 
 ## Update the job number
-To update the job number for a route, proceed as follows:
-1. From the Settings submenu, select **Update Job Numbers**. The Update Job Number screen appears.
-2. Select the desired route from the list. The selected route is highlighted.
-3. If you want to update the job click on the Update **Job Number** option. 
-4. The Enter Job ID Number modal appears as shown in the <FigureRef id="Enter-Job-ID-Number-(pin-pad)" />.
 
-<FigureProvider>
-    <Figure 
-        id="Enter-Job-ID-Number-(pin-pad)" 
-        src="/img/4-DCUSetup/3-Settings/7-UpdateJobNumbers/Enter-Job-ID-Number-(pin-pad)-Light.jpg"
-        caption="Enter Job ID Number (pin-pad)" 
-        width="40%"
-    />
-</FigureProvider>
+To update the job number for a route, follow these steps:
 
-5. Use the numeric keypad to enter a 6-digit job ID number. The modal displays **Valid value** below the entry field 
-    when exactly 6 digits are entered. 
+1. On the **Update Job Number** screen, select the route from the list. The selected route is highlighted.
+2. Select **Update Job Number**. The **Enter Job ID Number** dialog appears, as shown in <FigureRef id="Enter-Job-ID-Number-(pin-pad)" />.
 
-:::info
+    <FigureProvider>
+        <Figure 
+            id="Enter-Job-ID-Number-(pin-pad)" 
+            src="/img/4-DCUSetup/3-Settings/7-UpdateJobNumbers/EnterJobIDNumberPinPad-Light.jpg"
+            srcDark="/img/4-DCUSetup/3-Settings/7-UpdateJobNumbers/EnterJobIDNumberPinPad-Dark.jpg"
+            caption="Enter Job ID Number (numeric keypad)" 
+            alt={"Enter Job ID Number (6 Digits) keypad showing 123456 and the message Valid value, with number keys, Backspace, Clear All, Cancel and Ok buttons."}
+            width="40%"
+        />
+    </FigureProvider>
 
-The job ID number must be exactly 6 digits. If fewer or more than 6 digits are entered, the **Ok** button remains 
-disabled and the entry is not accepted. The **Ok** button becomes available only when exactly 6 digits are entered.
+3. Use the numeric keypad to enter a 6-digit job ID number. When you enter exactly 6 digits, "Valid value" appears under the entry field.
 
-:::
+    :::info
 
-6. Select **Ok**. The DCU saves the job ID number and returns to the Update Job Number screen.
-7. Select **Cancel**, to close the Enter Job ID Number modal without saving changes,.
-8. **Select Menu**, to return to the Main Menu.
+    The job ID number must be exactly 6 digits. **Ok** is available only when you enter exactly 6 digits.
 
+    :::
 
+4. Select **Ok**. The DCU saves the job ID number and returns to the **Update Job Number** screen.
 
+To close the **Enter Job ID Number** dialog without saving changes, select **Cancel**.
 
-
-
-
-
-
-
+To return to the **Main Menu**, select **Menu**.

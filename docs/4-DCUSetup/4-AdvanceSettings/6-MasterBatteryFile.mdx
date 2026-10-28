@@ -10,56 +10,57 @@ sidebar_label: '4.4.6 - Master Battery File'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Master Battery File function** to generate a Master Battery Curve for the DCU. This process maps the discharge characteristics of the internal battery, which the DCU uses to provide accurate battery percentage readings during operation.
-To open the Generate Master Battery Curve modal, proceed as follows:
+Use the **Master Battery File** function to generate a master battery curve for the DCU. This process maps the discharge characteristics of the internal battery. The DCU uses this curve to show accurate battery percentage readings during operation.
 
-1. From the Advanced Settings submenu, select **Master Battery File**. 
-2. The Generate Master Battery Curve modal appears as shown in <FigureRef id="Generate-Master-Battery-Curve-Modal" />.
+To open the Generate Master Battery Curve dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Master Battery File**.
+
+The **Generate Master Battery Curve** dialog appears, as shown in <FigureRef id="Generate-Master-Battery-Curve-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Generate-Master-Battery-Curve-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/6-MasterBatteryFile/Generate-Master-Battery-Curve-Modal-Light.jpg"
-        caption="Generate Master Battery Curve modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/6-MasterBatteryFile/GenerateMasterBatteryCurveModal-Light.jpg"
+        caption="Generate Master Battery Curve dialog" 
+        alt={"Generate Master Battery Curve dialog showing '1. Battery Voltage: 18.392 volt', with Start, Stop and Cancel buttons."}
         width="40%"
     />
 </FigureProvider>
 
-## Generate Master Battery Curve modal 
-The following fields and controls available in the Generate Master Battery Curve modal are shown in <FigureRef id="Generate-Master-Battery-Curve-Modal" />.
+## Generate Master Battery Curve dialog
 
-| Field/Button    | Description                                                                                            |                                                                                                                                          
-| :-------------- | :----------------------------------------------------------------------------------------------------- |
-| Battery Voltage | Displays the DFPID value entered by the user. A minimum of 2 digits is required. <br />**Example:** 16 |
-| Start           | Starts the Master Battery Curve generation process.                                                    |
-| Stop            | Stops the Master Battery Curve generation process and saves the collected data.                        |
-| Cancel          | Closes the Generate Master Battery Curve modal and returns to the Advanced Settings submenu.           | 
+The following table describes the fields and controls available in the Generate Master Battery Curve dialog, as shown in <FigureRef id="Generate-Master-Battery-Curve-Modal" />.
+
+| Field/Button    | Description |
+| :-------------- | :---------- |
+| Battery Voltage | Displays the current battery voltage reading while the curve is being generated. |
+| Start           | Starts generating the master battery curve. |
+| Stop            | Stops generating the master battery curve and saves the collected data. |
+| Cancel          | Closes the Generate Master Battery Curve dialog and returns to the Advanced Settings submenu. |
 
 :::info
 
-When the process is complete, the DCU creates a battery curve file. The system message bar at the bottom of the
-screen displays the file location. Example: File 'C:\CVASYS\ITR100\Master Battery Curve.txt' has been created. 
+When the process is complete, the DCU creates a battery curve file. The System Alert Bar at the bottom of the screen displays the file location, such as "File 'C:\CVASYS\ITR100\Master Battery Curve.txt' has been created."
 
 :::
 
-## Generate the Master Battery Curve
-To generate the Master Battery Curve, proceed as follows:
+## Generate the master battery curve
 
-1. From the Advanced Settings submenu, select **Master Battery File**. The Generate Master Battery Curve modal appears.
-2. Ensure the DCU is fully charged and disconnected from any external power source before starting the process.
-3. Select **Start**. The DCU begins the Master Battery Curve generation process. The **Battery Voltage** field displays the current voltage reading in real time.
-4. Allow the process to run until sufficient data has been collected.
-5. Select **Stop**. The DCU stops the generation process and saves the battery curve data. The system message bar displays the file location of the generated Master Battery Curve file.
-6. To close the Generate Master Battery Curve modal without completing the process, select **Cancel**.
+To generate the master battery curve, follow these steps:
+
+1. Make sure that the DCU is fully charged and disconnected from any external power source.
+2. In the **Generate Master Battery Curve** dialog, select **Start**. The DCU starts generating the master battery curve, and the **Battery Voltage** field displays the current voltage reading in real time.
+3. Let the process run until enough data is collected.
+4. Select **Stop**. The DCU stops the process and saves the battery curve data. The System Alert Bar displays the location of the master battery curve file.
+
+To close the **Generate Master Battery Curve** dialog, select **Cancel**.
 
 :::note
 
-
-When the generation process starts, the **Cancel** button becomes disabled. The **Cancel** button becomes enabled again 
-only after **Stop** is selected to end the generation process.
+After the process starts, **Cancel** is unavailable. **Cancel** becomes available again only after you select **Stop**.
 
 :::
-
-
-
-

@@ -1,65 +1,81 @@
-# Advance Settings
+# Advanced Settings
 
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-## Access Advanced Settings using Password
+Use the **Advanced Settings** submodule to configure advanced device options on the DCU. This submodule is password protected. You need a valid 7-digit password to open its submenu.
 
-The **Advanced Settings** submenu provides access to advanced device configuration options on the DCU. This submenu is password protected. 
-A valid **7-digit** password is required to access the Advanced Settings submenu. 
+## Open the Advanced Settings submenu
 
-To open the **Advanced Settings** submenu, proceed as follows:
+To open the Advanced Settings submenu, follow these steps:
 
-1. From the Main Menu, select **DCU Setup**.
-2. From the DCU Setup submenu, select **Advanced Settings**. The Enter Password modal will appear as shown in <FigureRef id="Enter-Password-Modal" />
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**. The **Enter Password** dialog appears, as shown in <FigureRef id="Enter-Password-Modal" />.
 
-<FigureProvider>
-    <Figure 
-        id="Enter-Password-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/Enter-Password-Modal-Light.jpg"
-        caption="Enter Password Modal" 
-        width="40%"
-    />
-</FigureProvider>
+    <FigureProvider>
+        <Figure 
+            id="Enter-Password-Modal" 
+            src="/img/4-DCUSetup/4-AdvanceSettings/EnterPasswordModal-Light.jpg"
+            srcDark="/img/4-DCUSetup/4-AdvanceSettings/EnterPasswordModal-Dark.jpg"
+            caption="Enter Password dialog" 
+            alt={"Enter Password keypad with an empty password box, number keys, Backspace, Clear All and Cancel buttons."}
+            width="40%"
+        />
+    </FigureProvider>
 
-3. Use the numeric keypad to enter the 7-digit password.
+4. Use the numeric keypad to enter the 7-digit password.
 
-:::info
+    :::info
 
-The password must be exactly 7 digits. The **Ok** button remains disabled until exactly 7 digits are entered. If fewer 
-than 7 digits are entered, the DCU does not accept the entry.
+    The password must be exactly 7 digits. **Ok** stays unavailable until you enter exactly 7 digits.
 
-:::
+    :::
 
-4. Select **Ok**. <br />
-    a. If the password is correct, the Advanced Settings submenu appears. <br />
-    b. If the password is incorrect, a warning dialog appears as shown in <FigureRef id="Wrong-Password-Dialog" />. <br />
-    c. Select **Close** to dismiss the dialog and re-enter the correct password. 
-
-
-:::warning
-
-If an incorrect password is entered, the following message appears: **Wrong password**.
-
-:::
+5. Select **Ok**.
+    - If the password is correct, the **Advanced Settings** submenu appears, as shown in <FigureRef id="Advanced-Settings-Submenu" />.
+    - If the password is incorrect, the message "Wrong password" appears, as shown in <FigureRef id="Wrong-Password-Dialog" />. Select **Close**, and then enter the correct password.
 
 <FigureProvider>
     <Figure 
         id="Wrong-Password-Dialog" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/Wrong-Password-Dialog-Light.jpg"
+        src="/img/4-DCUSetup/4-AdvanceSettings/WrongPasswordDialog-Light.jpg"
+        srcDark="/img/4-DCUSetup/4-AdvanceSettings/WrongPasswordDialog-Dark.jpg"
         caption="Wrong password dialog" 
+        alt={"Warning dialog with a yellow warning icon and the message 'Wrong password', with a Close button."}
         width="50%"
     />
 </FigureProvider>
 
-d. When you enter the valid password the **Advanced Settings** submenu will appear as shown in <FigureRef id="Advanced-Settings-Submenu" />. <br />
-e. To close the Enter Password modal without proceeding, select **Cancel**. 
-
 <FigureProvider>
     <Figure 
         id="Advanced-Settings-Submenu" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/Advanced-Settings-Submenu-Light.jpg"
+        src="/img/4-DCUSetup/4-AdvanceSettings/AdvancedSettingsSubmenu-Light.jpg"
         caption="Advanced Settings submenu" 
+        alt={"Advanced Settings submenu with the Aux DC Offset Test, Bias Stability Test, DCU Type, Device ID, DFPID, Master Battery File, Sequence Number Reset, System Switches, Test Micro Programs, Show Filter Table and Show Battery Table buttons, and Back and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
+
+To close the **Enter Password** dialog without opening the submenu, select **Cancel**.
+
+## Advanced Settings functions
+
+The **Advanced Settings** submenu contains the following functions:
+
+- [**Aux DC Offset Test**](./1-AuxDCOffsetTest.mdx): Calibrates the DC offset for the auxiliary inputs.
+- [**Bias Stability Test**](./2-BiasStabilityTest.mdx): Sets the bias stability level for sensors.
+- [**DCU Type**](./3-DCUType.mdx): Sets the DCU hardware model.
+- [**Device ID**](./4-DeviceId.mdx): Sets the device ID.
+- [**DFPID**](./5-DFPID.mdx): Sets the digital filter profile ID.
+- [**Master Battery File**](./6-MasterBatteryFile.mdx): Generates the master battery curve.
+- [**Sequence Number Reset**](./7-SequenceNumberReset.mdx): Resets the data transmission counter.
+- [**System Switches**](./8-SystemSwitches.mdx): Turns system features on or off.
+- [**Test Micro Programs**](./9-TestMicroPrograms.mdx): Runs microcontroller diagnostic commands.
+- [**Show Filter Table**](./10-ShowFilterTable.mdx): Shows the stored filter profiles.
+- [**Show Battery Table**](./11-ShowBatteryTable.mdx): Shows the stored battery discharge data.
+
+## Close the Advanced Settings submenu
+
+- To return to the **DCU Setup** submenu, select **Back**.
+- To return to the Home screen, select **Cancel**.

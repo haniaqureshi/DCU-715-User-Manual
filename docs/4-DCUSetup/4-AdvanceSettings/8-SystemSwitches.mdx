@@ -10,89 +10,88 @@ sidebar_label: '4.4.8 - System Switches'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the System Switches function to enable or disable core hardware functionalities, software behaviors, and 
-diagnostic modes on the DCU. Each switch controls a specific system feature and can be toggled on or off as required. 
-To open the System Switches screen, proceed as follows:
+Use the **System Switches** function to turn core hardware functions, software behaviors, and diagnostic modes on or off on the DCU. Each switch controls a specific system feature.
 
-1. From the Advanced Settings submenu, select **System Switches**.
-2. The System Switches screen appears as shown in <FigureRef id="System-Switches-Screen" />
+To open the System Switches screen, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **System Switches**.
+
+The **System Switches** screen appears, as shown in <FigureRef id="System-Switches-Screen" />.
 
 <FigureProvider>
     <Figure 
         id="System-Switches-Screen" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/8-SystemSwitches/System-Switches-Screen-Light.jpg"
+        src="/img/4-DCUSetup/4-AdvanceSettings/8-SystemSwitches/SystemSwitchesScreen-Light.jpg"
         caption="System Switches screen" 
+        alt={"System Switches screen with checkboxes such as Apply low frequency patch, Allow CMAS OPC Transfers, Disable Job Numbers, Disable Customer Signatures, Legacy View, Use virtual keyboard, Aging Route Notifications and Simulation Mode, and an Exit button."}
         width="70%"
     />
 </FigureProvider>
 
 ## System Switches screen
-The following switches available on the System Switches screen
 
-| Switches                                      | Description                                                                                                                                           |                                                                                                                                          
-| :-------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apply low frequency patch                     | Enables or disables the low frequency patch on the DCU.                                                                                               |
-| Allow CMAS OPC Transfers                      | Enables or disables CMAS OPC data transfers.                                                                                                          |
-| Reset Storage Id Numbers                      | Enables or disables the reset of storage ID numbers.                                                                                                  |
-| Disable Job Numbers                           | Enables or disables the job number field across the DCU software.                                                                                     | 
-| Disable Customer Signatures                   | Enables or disables the customer signature requirement.                                                                                               | 
-| Disable UserName Entry                        | Enables or disables the username entry field. When this switch is enabled and selected, a confirmation dialog appears to change the current username. |
-| Simulation Mode                               | Enables or disables simulation mode. When enabled, the **Manual entry for balancing** option becomes available.                                       |
-| Manual entry for balancing                    | Enables manual entry for balancing. This option is only available when Simulation Mode is enabled.                                                    |
-| Measure Cycle Mode (For Offline Testing Only) | Enables or disables the measure cycle mode for offline testing purposes only.                                                                         |
-| Z Channel to Ultrasonic Input patch installed | Enables or disables the Z channel to ultrasonic input patch.                                                                                          |
-| Legacy View                                   | Enables or disables the legacy view display mode.                                                                                                     | 
-| Use virtual keyboard                          | Enables or disables the on-screen virtual keyboard.                                                                                                   |
-| Enable Primetals Xtools                       | Enables or disables the Primetals Xtools integration.                                                                                                 |
-| Aging Route Notifications                     | Enables or disables aging route notifications.                                                                                                        |
-| Exit                                          | Saves the configured system switches and returns to the Advanced Settings submenu.                                                                    |
+The following table describes the switches available on the System Switches screen.
+
+| Switch                                        | Description |
+| :-------------------------------------------- | :---------- |
+| Apply low frequency patch                     | Turns the low frequency patch on or off. |
+| Allow CMAS OPC Transfers                      | Turns CMAS OPC data transfers on or off. |
+| Reset Storage Id Numbers                      | Turns the reset of storage ID numbers on or off. |
+| Disable Job Numbers                           | Turns the job number field on or off across the DCU software. |
+| Disable Customer Signatures                   | Turns the customer signature requirement on or off. |
+| Disable UserName Entry                        | Turns the username entry field on or off. When you select this checkbox, a confirmation dialog asks whether you want to change the current username. |
+| Simulation Mode                               | Turns simulation mode on or off. When simulation mode is on, the **Manual entry for balancing** option becomes available. |
+| Manual entry for balancing                    | Turns on manual entry for balancing. This option is available only when **Simulation Mode** is on. |
+| Measure Cycle Mode (For Offline Testing Only) | Turns measure cycle mode on or off. Use this mode only for offline testing. |
+| Z Channel to Ultrasonic Input patch installed | Turns the Z channel to ultrasonic input patch on or off. |
+| Legacy View                                   | Turns the legacy view display mode on or off. |
+| Use virtual keyboard                          | Turns the on-screen virtual keyboard on or off. |
+| Enable Primetals Xtools                       | Turns the Primetals Xtools integration on or off. |
+| Aging Route Notifications                     | Turns aging route notifications on or off. |
+| Exit                                          | Saves the configured system switches and returns to the Advanced Settings submenu. |
 
 ## Configure system switches
-To configure the system switches, proceed as follows:
 
-1. From the Advanced Settings submenu, select **System Switches**. The System Switches screen appears.
-2. Review the list of available switches and select or deselect the checkboxes as required.
-3. Select **Exit**. The DCU saves the configured system switches and returns to the ITR main menu.
+To configure the system switches, follow these steps:
+
+1. On the **System Switches** screen, select or clear the checkboxes as needed.
+2. Select **Exit**. The DCU saves the configured system switches and returns to the **Main Menu**.
 
 ## Change the username
-When the **Disable UserName Entry** switch is enabled and selected, the DCU prompts the technician to change the current
-username. To change the username, proceed as follows:
 
-1. On the System Switches screen, select the **Disable UserName Entry** checkbox.
-2. A confirmation dialog appears as shown in <FigureRef id="Change-Username-Confirmation-Dialog-Box" />
+When you select the **Disable UserName Entry** checkbox, the DCU asks whether you want to change the current username.
 
-<FigureProvider>
-    <Figure 
-        id="Change-Username-Confirmation-Dialog-Box" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/8-SystemSwitches/Change-Username-Confirmation-Dialog-Box-Light.jpg"
-        caption="Change username confirmation dialog box" 
-        width="70%"
-    />
-</FigureProvider>
+To change the username, follow these steps:
 
-3. Review the confirmation message: **Do you want to change the user name? The last user was 'savcd'**.
+1. On the **System Switches** screen, select the **Disable UserName Entry** checkbox. A confirmation dialog appears with a message such as "Do you want to change the user name? The last user was 'savcd'," as shown in <FigureRef id="Change-Username-Confirmation-Dialog-Box" />.
 
-:::warning
+    <FigureProvider>
+        <Figure 
+            id="Change-Username-Confirmation-Dialog-Box" 
+            src="/img/4-DCUSetup/4-AdvanceSettings/8-SystemSwitches/ChangeUsernameConfirmationDialogBox-Light.jpg"
+            caption="Change username confirmation dialog" 
+            alt={"Confirmation dialog, outlined in red, over the System Switches screen asking 'Do you want to change the user name? The last User was 'savcd'', with No and Yes buttons."}
+            width="70%"
+        />
+    </FigureProvider>
 
-Do you want to change the user name? The last user was 'savcd'.
+2. Select **Yes**. The **Enter Technician Name** dialog appears, as shown in <FigureRef id="Enter-Technician-Name-Modal" />.
 
-:::
+    <FigureProvider>
+        <Figure 
+            id="Enter-Technician-Name-Modal" 
+            src="/img/4-DCUSetup/4-AdvanceSettings/8-SystemSwitches/EnterTechnicianNameModal-Light.jpg"
+            caption="Enter Technician Name dialog" 
+            alt={"Enter Technician Name dialog with savcd in the Name box, and Cancel and Ok buttons."}
+            width="70%"
+        />
+    </FigureProvider>
 
-4. Select **Yes**. The Enter Technician Name modal appears as shown in the <FigureRef id="Enter-Technician-Name-Modal" />
+3. Select the **Name** field. The on-screen keyboard appears.
+4. Use the on-screen keyboard to enter the new technician name.
+5. Select **Ok**. The DCU saves the new technician name and returns to the **System Switches** screen.
 
-<FigureProvider>
-    <Figure 
-        id="Enter-Technician-Name-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/8-SystemSwitches/Enter-Technician-Name-Modal-Light.jpg"
-        caption="Enter Technician Name modal" 
-        width="70%"
-    />
-</FigureProvider>
-
-5. Select the **Name** field. The on-screen keyboard appears.
-6. Use the on-screen keyboard to enter the new technician name.
-7. Select **Ok**. The DCU saves the new technician name and returns to the System Switches screen.
-8. To keep the current username without making changes, select **No** in the confirmation dialog.
-
-
-
+To keep the current username, in the confirmation dialog, select **No**.

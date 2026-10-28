@@ -10,49 +10,50 @@ sidebar_label: '4.2.5 - Screenshots'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-    Use the **Screenshots option**  to view, send, or delete screenshots that are stored on the DCU. 
-    If no screenshots are available, the screen displays a message indicating that no screenshots are stored on the device.
+Use the **Screenshots** function to view, send, or delete screenshots that are stored on the DCU. If no screenshots are available, the screen displays a message that says so.
 
-    To open the Display Screenshots screen, proceed as follows:
+To open the Display Screenshots screen, follow these steps:
 
-    1. From the Main Menu, select **Diagnostics**.
-    2. From the Diagnostics submenu, select **Screenshots**.
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Diagnostics**.
+4. From the **Diagnostics** submenu, select **Screenshots**.
 
-    The Display Screenshots screen appears as show in the <FigureRef id="Display Screenshots screen" />.
+The **Display Screenshots** screen appears, as shown in <FigureRef id="Display-Screenshots-Screen" />.
 
-    <FigureProvider>
-        <Figure 
-            id="Display-Screenshots-Screen" 
-            src="/img/4-DCUSetup/2-Diagnostics/5-Screenshots/Display-Screenshots-Screen-Light.jpg"
-            caption="Display Screenshots screen" 
-            width="70%"
-        />
-    </FigureProvider>
+<FigureProvider>
+    <Figure 
+        id="Display-Screenshots-Screen" 
+        src="/img/4-DCUSetup/2-Diagnostics/5-Screenshots/DisplayScreenshotsScreen-Light.jpg"
+        srcDark="/img/4-DCUSetup/2-Diagnostics/5-Screenshots/DisplayScreenshotsScreen-Dark.jpg"
+        caption="Display Screenshots screen" 
+        alt={"Display screenshots screen showing '0 of 0' and the message 'No screenshots available', with Up, Down, Send, Delete and Cancel buttons."}
+        width="70%"
+    />
+</FigureProvider>
 
-    ## View and manage screenshots
+## Display Screenshots screen
 
-    To view and manage screenshots, proceed as follows:
-        1. Open the Display Screenshots screen.<br />
-            a. If no screenshots are available, the screen displays **No screenshots available.**<br />
-            b. Select **Cancel** to return to the Diagnostics submenu.<br />
-            c. If screenshots are available, proceed with the steps below. <br />
-                &nbsp; &nbsp; i.   Review the screenshot counter at the top of the screen to confirm the total number of available &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; screenshots.<br />
-                &nbsp; &nbsp; ii.  Use the **up** and **down** arrow buttons to scroll through the available screenshots.<br />
-                &nbsp; &nbsp; iii. To send a screenshot, select the desired screenshot and select **Send**. The DCU sends the selected &nbsp; &nbsp; &nbsp; &nbsp; screenshot.<br />
-                &nbsp; &nbsp; iv.  To delete a screenshot, select the desired screenshot and select **Delete**. The DCU removes the &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; selected screenshot from the device.
+The following table describes the fields and controls available on the Display Screenshots screen, as shown in <FigureRef id="Display-Screenshots-Screen" />.
 
-    ## Display Screenshots screen
+| Option                       | Description |
+| :--------------------------- | :---------- |
+| Display screenshots (0 of 0) | Displays the total number of screenshots on the DCU and the position of the screenshot that's shown. <br />**Example:** 0 of 0 |
+| Screenshot area              | Displays the selected screenshot. If no screenshots are available, the screen displays "No screenshots available." |
+| ∧ (Up)                       | Scrolls to the previous screenshot in the list. |
+| ∨ (Down)                     | Scrolls to the next screenshot in the list. |
+| Send                         | Sends the selected screenshot. |
+| Delete                       | Deletes the selected screenshot from the DCU. |
+| Cancel                       | Closes the Display Screenshots screen and returns to the Diagnostics submenu. |
 
-    The following fields and controls available on the Display Screenshots screen are shown in <FigureRef id="Display-Screenshots-Screen" />.
+## View and manage screenshots
 
-    | Options                      | Description                                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-    | :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- |
-    | Display screenshots (0 of 0) | Displays the total number of screenshots available on the DCU and the index of the currently displayed screenshot. <br />**Example:** 0 of 0 |  
-    | Screenshot area              | Displays the currently selected screenshot. If no screenshots are available, the screen displays: **“No screenshots available”**             |
-    | ∧ (Up)                       | Scrolls to the previous screenshot in the list.                                                                                              |
-    | ∨ (Down)                     | Scrolls to the next screenshot in the list.                                                                                                  |
-    | Send                         | Send the currently selected screenshot.                                                                                                      |
-    | Delete                       | Deletes the currently selected screenshot from the DCU.                                                                                      |  
-    | Cancel                       | Closes the Display Screenshots screen and returns to the Diagnostics submenu.                                                                |
+To view and manage screenshots, follow these steps:
 
-    Select **Cancel** to return to the Diagnostics submenu.
+1. Open the **Display Screenshots** screen. If the screen displays "No screenshots available," there are no screenshots to manage. To return to the **Diagnostics** submenu, select **Cancel**.
+2. To check the total number of screenshots, review the screenshot counter at the top of the screen.
+3. To scroll through the screenshots, select **∧** or **∨**.
+4. To send a screenshot, select the screenshot, and then select **Send**. The DCU sends the selected screenshot.
+5. To delete a screenshot, select the screenshot, and then select **Delete**. The DCU removes the selected screenshot from the device.
+
+To return to the **Diagnostics** submenu, select **Cancel**.

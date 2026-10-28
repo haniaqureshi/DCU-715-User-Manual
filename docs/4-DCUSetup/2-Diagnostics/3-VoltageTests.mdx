@@ -10,28 +10,31 @@ import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
 <FigureProvider>
-    Use the Voltage Tests function to verify that the DCU power rails, signal channels, and auxiliary 
-    inputs are operating within acceptable voltage ranges. This diagnostic function helps technicians
-    identify power supply issues, abnormal sensor inputs, and hardware faults before performing 
+    Use the **Voltage Tests** function to verify that the DCU power rails, signal channels, and auxiliary 
+    inputs are operating within acceptable voltage ranges. This diagnostic function helps you
+    identify power supply issues, abnormal sensor inputs, and hardware faults before you take 
     measurements.
 
-    To open the Voltage Tests function, proceed as follows:
+    To open the Voltage Tests function, follow these steps:
 
-    1. From the **Main Menu**, select **DCU Setup**.
-    2. From the **DCU Setup** submenu, select **Diagnostics**.
-    3. Select **Voltage Tests**.
+    1. On the Home screen, select **Menu**. The **Main Menu** appears.
+    2. From the **Main Menu**, select **DCU Setup**.
+    3. From the **DCU Setup** submenu, select **Diagnostics**.
+    4. From the **Diagnostics** submenu, select **Voltage Tests**.
 
-    The **Start Voltage Tests** screen appears as shown in <FigureRef id="Start-Voltage-Tests-Screen"/>.
+    The **Start Voltage Tests** screen appears, as shown in <FigureRef id="Start-Voltage-Tests-Screen"/>.
 
     <Figure
         id="Start-Voltage-Tests-Screen"  
-        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Start-Voltage-Tests-Screen-Light.png" 
-        caption="Start Voltage Tests Screen"
+        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTests/StartVoltageTestsScreen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/3-VoltageTests/StartVoltageTestsScreen-Dark.png"
+        caption="Start Voltage Tests screen"
+        alt={"Start Voltage Tests screen before a test, with all Internal Voltages, Signal Channels, Auxiliary Channels and Other channels readings at 0.000, an Adjust Backlight slider, and the Start voltage tests, Pause and Limit Tests buttons."}
         width="70%"
     /> 
 
-    ## Start Voltage Tests Screen
-    The following table describes the fields and controls available in the Start Voltage Tests screen. <FigureRef id="Start-Voltage-Tests-Screen"/>
+    ## Start Voltage Tests screen
+    The following table describes the fields and controls available on the Start Voltage Tests screen, as shown in <FigureRef id="Start-Voltage-Tests-Screen"/>.
 
     | Field/Button               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
     | :------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,16 +44,17 @@ import Figure from "@site/src/components/Figure";
     | Auxiliary Channels: AC     | Displays AC auxiliary channel voltages. <br /><br />**Example:** Aux1 = 0.001 V                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
     | Auxiliary Channels: DC     | Displays DC auxiliary channel voltages. <br /><br />**Example:**  Aux2 = -0.049 V                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
     | Other Channels             | Displays additional hardware values. <br /><br />**Example:** Temperature = 92.5 °F                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-    | Adjust Backlight           | Adjusts display brightness using the slider control.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | Adjust Backlight           | Adjusts display brightness with the slider.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
     | Test Status Panel          | **<u>Total Count</u>**<br />Displays the total number of detected limit violations. <br /><br />**Example:** 2 <hr />**<u>Saturated</u>**<br />Indicates whether any measured value has exceeded a saturation threshold. <br /><br />**Example:** False <hr />**<u>Message Area</u>** <br />Displays a warning when a measured value exceeds an acceptable operating limit. <br /><br />**Example:** Battery voltage too high <br /><br />**Note:** This message appears only when an error condition is detected during testing. |    
-    | Start Voltage Tests Button | Starts real-time voltage monitoring.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-    | Pause Button               | Stops updating the displayed values and freezes the current readings.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-    | Limit Tests Button         | Opens the Limit Tests screen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+    | Start Voltage Tests        | Starts real-time voltage monitoring.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+    | Pause                      | Stops updating the displayed values and freezes the current readings.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+    | Limit Tests                | Opens the Limit Tests screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
     ## Run Voltage Tests
 
-    To run voltage tests, proceed as follows:
-    1. In the **Start Voltage Tests** screen, select **Start voltage tests.**
+    To run voltage tests, follow these steps:
+
+    1. On the **Start Voltage Tests** screen, select **Start voltage tests**.
     2. Observe the displayed voltage values as the DCU evaluates each channel.
     3. Review the following sections:
         - Internal Voltages
@@ -59,75 +63,69 @@ import Figure from "@site/src/components/Figure";
         - Auxiliary Channels: DC
         - Other channels
     4. Verify that voltage readings remain stable and within expected operating ranges.
-    5. Select **Pause** to stop updating the displayed values and review the current readings.
+    5. To stop updating the displayed values and review the current readings, select **Pause**.
 
     <Figure 
         id="Voltage-TestsIn-Progress" 
-        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Voltage-TestsIn-Progress-Light.png" 
-        caption="Voltage Tests in Progress"
+        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTests/VoltageTestsInProgress-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/3-VoltageTests/VoltageTestsInProgress-Dark.png"
+        caption="Voltage tests in progress"
+        alt={"Start Voltage Tests screen during a test with live readings. Red callouts mark the +5 V reading (B), the -5(A) V reading (C), the Battery reading of 18.434 volts in orange (D), and the warning 'Battery voltage too high' at the bottom right (D1)."}
         width="70%"
     />
 
-    When a test is running:
+    While a test is running, as shown in <FigureRef id="Voltage-TestsIn-Progress" />:
 
-    1. Measured values update in real time.
-    2. Values within the acceptable operating range are displayed in **light green**, see <FigureRef id="" />.
-    3. The value currently being tested is highlighted in **dark green**, see <FigureRef id="Voltage-TestsIn-Progress" />.
-    4. Values outside the acceptable operating range are displayed in **orange**, see <FigureRef id="Voltage-TestsIn-Progress" />.
-        1. When an out-of-range condition is detected, the associated warning message is displayed in the lower-right corner of the screen, <FigureRef id="Voltage-TestsIn-Progress" />.
-            1. **Example:** Battery voltage too high
+    - Measured values update in real time.
+    - Values within the acceptable operating range appear in light green.
+    - The value that's being tested is highlighted in dark green.
+    - Values outside the acceptable operating range appear in orange. When the DCU detects an out-of-range value, a warning message appears in the lower-right corner of the screen, such as "Battery voltage too high."
     
     :::warning 
 
-    If a voltage value is displayed in orange, the measured value is outside the expected operating
-    range and may indicate a hardware, power supply, or sensor-related issue.
+    If a voltage value appears in orange, the measured value is outside the expected operating
+    range and might indicate a hardware, power supply, or sensor-related issue.
 
     :::
 
-    ## Run Limit Tests
+    ## Run limit tests
 
-    Use the Limit Tests function to compare measured voltages against predefined operating limits.
+    Use the **Limit Tests** function to compare measured voltages against predefined operating limits.
 
-    To run limit tests, proceed as follows:
+    To run limit tests, follow these steps:
 
-    :::note
-
-    The limit test starts automatically when **Limit Tests** are selected from the **Start Voltage Tests** screen.
-
-    :::
-
-    In the **Start Voltage Tests** screen, select **Limit Tests**.
-
-    1. The **Limit Tests** screen appears with the test already running. 
+    1. On the **Start Voltage Tests** screen, select **Limit Tests**. The **Limit Tests** screen appears, and the limit test starts automatically. 
     2. Review the displayed voltage values and limit violation counts.
-    3. Observe any channels that exceed their configured limits.
-    4. Select **Pause** to stop the running limit test.
+    3. Check for any channels that exceed their configured limits.
+    4. To stop the limit test, select **Pause**.
 
     :::note
 
-    When **Pause** is selected in the **Limit Tests** screen, the system message bar displays **Stop request**. 
-    After the test has stopped, the system message bar displays **Ready**.
+    When you select **Pause** on the **Limit Tests** screen, the system message bar displays "Stop request." 
+    After the test stops, the system message bar displays "Ready."
     
     :::
 
     <Figure 
         id="Limit-Tests-Screen"
-        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTest/Limit-Tests-Screen-Light.png" 
-        caption="Limit Tests Screen"
+        src="/img/4-DCUSetup/2-Diagnostics/3-VoltageTests/LimitTestsScreen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/3-VoltageTests/LimitTestsScreen-Dark.png"
+        caption="Limit Tests screen"
+        alt={"Limit Tests screen showing the device number, software version and user, then voltage readings with a limit violation count beside each value for Internal Voltages, Signal Channels and Auxiliary Channels, with Total Count 2 and Saturated False."}
         width="70%"
     />
 
-    The following table describes the fields and controls available in the Limit Tests screen as seen in <FigureRef id="Limit-Tests-Screen"/>.
+    The following table describes the fields and controls available on the Limit Tests screen, as shown in <FigureRef id="Limit-Tests-Screen"/>.
 
     | Field/Button       | Description                                                                                                                                                                                                                                       |
     | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
     | Internal Voltages  | Displays voltage readings and associated limit violation counts. <br /><br />**Example:** Battery = 18.445, Count = 2                                                                                                                             |
     | Signal Channels    | Displays channel voltages and associated limit violation counts. <br /><br />**Example:** Channel X = 0.895, Count = 0                                                                                                                            |
     | Auxiliary Channels | Displays auxiliary channel voltages and associated limit violation counts. <br /><br />**Example:** Aux1 = 2.701, Count = 0                                                                                                                       |
-    | Test Status Panel  | **<u>Total Count</u>**<br />Displays the total number of detected limit violations.  <br /><br />**Example:** 2 <hr />**<u>Saturated</u>** <br />Indicates whether a channel has exceeded a saturation threshold. <br /><br />**Example:** Falsex |
+    | Test Status Panel  | **<u>Total Count</u>**<br />Displays the total number of detected limit violations.  <br /><br />**Example:** 2 <hr />**<u>Saturated</u>** <br />Indicates whether a channel has exceeded a saturation threshold. <br /><br />**Example:** False |
     | Start Limit Tests  | Starts automatic limit testing.                                                                                                                                                                                                                   |
-    | Pause              | Stop the running limit test.                                                                                                                                                                                                                      |
+    | Pause              | Stops the running limit test.                                                                                                                                                                                                                     |
 
-    To return to the Main Menu, select the **Menu** button in the header.
+    To return to the **Main Menu**, in the header, select **Menu**.
 
 </FigureProvider>

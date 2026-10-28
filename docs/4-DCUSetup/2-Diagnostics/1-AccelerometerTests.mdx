@@ -12,115 +12,124 @@ import Figure from "@site/src/components/Figure";
 <FigureProvider>
     Use the **Accelerometer Tests** function to verify accelerometer operation, sensor connectivity, and 
     signal quality. The function displays measurement data and provides diagnostic tools that help 
-    identify sensor, cable, or connection issues before performing field measurements.
+    identify sensor, cable, or connection issues before you take field measurements.
 
-    To open the Accelerometer Tests function, proceed as follows:
+    To open the Accelerometer Tests function, follow these steps:
 
-    1. From the **Main Menu**, select **DCU Setup**.
-    2. From the **DCU Setup** submenu, select **Diagnostics**.
-    3. Select **Accelerometer Tests**.
+    1. On the Home screen, select **Menu**. The **Main Menu** appears.
+    2. From the **Main Menu**, select **DCU Setup**.
+    3. From the **DCU Setup** submenu, select **Diagnostics**.
+    4. From the **Diagnostics** submenu, select **Accelerometer Tests**.
 
     The **Accelerometer Tests** screen appears.
 
     :::note
 
-    When the **Accelerometer Tests** screen opens, the DCU automatically starts a measurement using the 
-    most recently saved test configuration. The graph begins displaying data immediately, and the 
-    [Task status bar displays](../../intro.mdx#task-status-bar) **Measurement** to indicate that a measurement is currently in progress.
+    When the **Accelerometer Tests** screen opens, the DCU automatically starts a measurement that uses the 
+    most recently saved test configuration. The graph starts displaying data immediately, and the 
+    [task status bar](../../intro.mdx#task-status-bar) displays **Measurement** to show that a measurement is in progress.
 
     :::
 
     <Figure 
         id="AccelerometerTests-Screen" 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-Light.png" 
-        caption="Accelerometer Tests Screen"
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreen-Dark.png"
+        caption="Accelerometer Tests screen"
+        alt={"Accelerometer Tests screen with an Options summary (Plot Type Real Time, Source Accel, Cable Test Off, bias voltages for X, Y and Z) above three amplitude-versus-time waveform plots, one for each channel, and the Options, Stop, Reset, Up and Down buttons."}
         width="70%"
     /> 
 
-    ## Accelerometer Tests Screen
+    ## Accelerometer Tests screen
 
-    The following table describes the fields and controls available in the Accelerometer Tests screen in <FigureRef id="AccelerometerTests-Screen"/>.
+    The following table describes the fields and controls available on the Accelerometer Tests screen, as shown in <FigureRef id="AccelerometerTests-Screen"/>.
 
     | Field/Button      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | 
     | :---------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
-    | Options           | **<u>Plot Type</u>** <br />Displays the currently selected plot type. Available options include: <br /><ul><li>**Real Time**</li><li>**RMS Trend**</li></ul><hr />**<u>Source</u>** <br />Displays the currently selected measurement source. Available options include:<br /><ul><li>**Accel**</li><li>**Bias**</li></ul>**<u><hr />Cable Test</u>** <br />Shows whether cable test mode is turned on or off. <br /><br />**Example:** off <br /><hr />**<u>Bias X</u>** <br />Displays the bias voltage measured on the X-axis. <br /><br />**Example:** 1.989 V <br /><hr />**<u>Bias Y</u>** <br />Displays the bias voltage measured on the Y-axis. <br /><br />**Example:** 1.994 V <br /><hr />**<u>Bias Z</u>** <br />Displays the bias voltage measured on the Z-axis. <br /><br />**Example:** 1.992 V <br /><hr />**<u>Meas. nr</u>** <br />Displays the current measurement number. <br /><br />**Example:** 49   |                                                                                  
+    | Options           | **<u>Plot Type</u>** <br />Displays the currently selected plot type. Available options include: <br /><ul><li>**Real Time**</li><li>**RMS Trend**</li></ul><hr />**<u>Source</u>** <br />Displays the currently selected measurement source. Available options include:<br /><ul><li>**Accel**</li><li>**Bias**</li></ul>**<u><hr />Cable Test</u>** <br />Shows whether cable test mode is on or off. <br /><br />**Example:** off <br /><hr />**<u>Bias X</u>** <br />Displays the bias voltage measured on the X-axis. <br /><br />**Example:** 1.989 V <br /><hr />**<u>Bias Y</u>** <br />Displays the bias voltage measured on the Y-axis. <br /><br />**Example:** 1.994 V <br /><hr />**<u>Bias Z</u>** <br />Displays the bias voltage measured on the Z-axis. <br /><br />**Example:** 1.992 V <br /><hr />**<u>Meas. nr</u>** <br />Displays the current measurement number. <br /><br />**Example:** 49   |                                                                                  
     | Graph Area        | Displays measurement data for the selected channels.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-    | Task status bar   | Displays the status of the currently running task. <br /><br />**Example:** Measurement <br /><br />**Note:** See [Task status bar](../../intro.mdx#task-status-bar) for details.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-    | Options Button    | Opens the Accelerometer Tests Options screen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-    | Stop Button       | Stops the current measurement.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-    | Reset Button      | Clears the displayed measurement data and restarts the graph display.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-    | Up Arrow Button   | Scrolls upward through the graph display when applicable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-    | Down Arrow Button | Scrolls downward through the graph display when applicable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                                                      
+    | Task status bar   | Displays the status of the currently running task. <br /><br />**Example:** Measurement <br /><br />**Note:** For details, see [Task status bar](../../intro.mdx#task-status-bar).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+    | Options           | Opens the Accelerometer Tests Options screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    | Stop              | Stops the current measurement.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+    | Reset             | Clears the displayed measurement data and restarts the graph display.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+    | Up arrow          | Scrolls up through the graph display, if available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+    | Down arrow        | Scrolls down through the graph display, if available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                                      
 
     ## Configure Accelerometer Tests settings
 
-    To configure Accelerometer Tests options, proceed as follows:
+    To open the Accelerometer Tests options:
 
-        1. In the **Accelerometer Tests** screen, select the **Options** button.
+    - On the **Accelerometer Tests** screen, select **Options**.
 
     The **Accelerometer Tests Options** screen appears.
 
     <Figure 
         id="AccelerometerTests-Options-Screen"
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Options-Screen-Light.png" 
-        caption="Accelerometer Tests Options Screen"
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsOptionsScreen-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsOptionsScreen-Dark.png"
+        caption="Accelerometer Tests Options screen"
+        alt={"Accelerometer Tests Options screen with Plot Type (RMS Trend or Real Time, selected), Source (Accel, selected, or Bias), a Cable Test checkbox, X, Y and Z channel checkboxes all selected, and Cancel and Save buttons."}
         width="70%"
     />
 
-    ### Accelerometer Tests Options Screen
-    The following table describes the available configuration options in <FigureRef id="AccelerometerTests-Options-Screen"/>.
+    ### Accelerometer Tests Options screen
+    The following table describes the configuration options, as shown in <FigureRef id="AccelerometerTests-Options-Screen"/>.
 
     | Option     | Description                                                                                                                                                                                                                                 |
     | :--------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Plot Type  | **<u>RMS Trend</u>** <br />Displays measurement data as RMS trend values over time. <br /><hr /> **<u>Real Time</u>** <br />Displays live accelerometer signals in real time.                                                               |
-    | Source     | **<u>Accel</u>** <br />Displays accelerometer measurement data. <br /><hr /> **<u>Bias</u>** <br />Displays sensor bias voltage values. <br /><br />**Note:** If the **Source** options are disabled, uncheck the **Cable Test** check box  |
-    | Cable Test | Enables or disables cable integrity testing. <br /><br /> **Note:** Selecting the **Cable Test** check box disables the **Source** options.                                                                                                 |
-    | Channel    | **<u>X</u>** <br />Enables or disables the X-axis channel.<hr />**<u>Y</u>** <br />Enables or disables the Y-axis channel. <br /><hr /> **<u>Z</u>** <br />Enables or disables the Z-axis channel.                                          |
+    | Source     | **<u>Accel</u>** <br />Displays accelerometer measurement data. <br /><hr /> **<u>Bias</u>** <br />Displays sensor bias voltage values. <br /><br />**Note:** If the **Source** options are unavailable, clear the **Cable Test** checkbox.|
+    | Cable Test | Turns cable integrity testing on or off. <br /><br /> **Note:** When you select the **Cable Test** checkbox, the **Source** options become unavailable.                                                                                               |
+    | Channel    | **<u>X</u>** <br />Turns the X-axis channel on or off.<hr />**<u>Y</u>** <br />Turns the Y-axis channel on or off. <br /><hr /> **<u>Z</u>** <br />Turns the Z-axis channel on or off.                                          |
     | Cancel     | Closes the Options screen without saving changes.                                                                                                                                                                                           |
     | Save       | Saves the selected settings and returns to the Accelerometer Tests screen.                                                                                                                                                                  |  
 
     #### Example: Channel selection
-    The DCU allows individual accelerometer channels to be enabled or disabled during testing.
+    You can turn individual accelerometer channels on or off during testing.
 
-    For example, when only the **X** channel is enabled, the screen displays a single graph.
+    For example, when only the **X** channel is on, the screen displays a single graph, as shown in <FigureRef id="Accelerometer-Tests-Screen-With-X-axis-ChannelEnabled" />.
 
     <Figure
         id="Accelerometer-Tests-Screen-With-X-axis-ChannelEnabled" 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/Accelerometer-Tests-Screen-With-X-axis-ChannelEnabled-Light.png" 
-        caption="Accelerometer Tests Screen with X-axis Channel Enabled"
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenWithXAxisChannelEnabled-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenWithXAxisChannelEnabled-Dark.png"
+        caption="Accelerometer Tests screen with only the X-axis channel on"
+        alt={"Accelerometer Tests screen showing one large amplitude-versus-time waveform plot for the X channel only, with the bias for X shown in the Options summary."}
         width="70%"
     />
 
     :::note
 
-    Enable only the channels required for the test. This can simplify graph analysis and help isolate 
+    Turn on only the channels that the test needs. This makes the graph easier to analyze and helps isolate 
     issues on a specific accelerometer axis.
 
     :::
 
     #### Example: Plot type selection
-    The DCU supports two plot display modes **Real Time** and **RMS Trend**.
+    The DCU supports two plot display modes: **Real Time** and **RMS Trend**.
 
-    The following example shows the RMS Trend display.
+    <FigureRef id="AccelerometerTests-Screen-Using-RMSTrendPlotType" /> shows the RMS Trend display.
 
     <Figure 
         id="AccelerometerTests-Screen-Using-RMSTrendPlotType" 
-        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTests-Screen-Using-RMSTrendPlotType-Light.png" 
-        caption="Accelerometer Tests Screen using RMS Trend Plot Type"
+        src="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenUsingRMSTrendPlotType-Light.png" 
+        srcDark="/img/4-DCUSetup/2-Diagnostics/1-AccelerometerTests/AccelerometerTestsScreenUsingRMSTrendPlotType-Dark.png"
+        caption="Accelerometer Tests screen with the RMS Trend plot type"
+        alt={"Accelerometer Tests screen with Plot Type set to RMS Trend, showing three amplitude-versus-time trend plots with a flat line, one for each channel."}
         width="70%"
     />
 
-    ## Run an Accelerometer Test
-    To run an accelerometer test, proceed as follows:
+    ## Run an accelerometer test
+    To run an accelerometer test, follow these steps:
 
     1. Connect the accelerometer sensor and cable to the DCU.
-    2. Open the **Accelerometer Tests** screen. The DCU automatically starts a measurement using the previously saved configuration.
-    3. If necessary, select the **Options** button and configure the following settings:
+    2. Open the **Accelerometer Tests** screen. The DCU automatically starts a measurement that uses the previously saved configuration.
+    3. If necessary, select **Options**, and then configure the following settings:
         - Plot Type
         - Source
         - Cable Test
         - Channel
-    4. Select the Save button. The DCU applies the new settings and continues displaying measurement data.
+    4. Select **Save**. The DCU applies the new settings and continues displaying measurement data.
     5. Review the following values during the test:
         - Plot Type
         - Source
@@ -131,21 +140,21 @@ import Figure from "@site/src/components/Figure";
     
     :::warning
 
-    Do not disconnect the accelerometer cable during a measurement unless you are intentionally checking 
-    cable connectivity. Disconnecting the cable may interrupt the signal shown on the graph.
+    Don't disconnect the accelerometer cable during a measurement unless you're checking cable 
+    connectivity. Disconnecting the cable might interrupt the signal shown on the graph.
 
     :::
 
-    6. Select the **Stop** button to stop the measurement. The **Measurement** indicator is removed from the **Task Status Bar**.
-    7. Select the **Reset** button to clear the displayed graph data and begin a new measurement session.
+    6. To stop the measurement, select **Stop**. The **Measurement** indicator no longer appears in the task status bar.
+    7. To clear the displayed graph data and start a new measurement session, select **Reset**.
 
     :::warning
 
-    The **Reset** button clears the currently displayed graph data. Record any required observations before 
-    selecting **Reset.**
+    **Reset** clears the displayed graph data. Record any observations that you need before you 
+    select **Reset**.
 
     :::
 
-    To return to the Main Menu, select the **Menu** button in the header.
+    To return to the **Main Menu**, in the header, select **Menu**.
 
 </FigureProvider>

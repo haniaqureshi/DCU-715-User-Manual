@@ -10,44 +10,51 @@ sidebar_label: '4.3.8 - Show System Settings'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the Show System Settings function to view the current system configuration values stored on the DCU. This screen
-is read-only and displays device information such as the DCU type, board, device ID, technician name, and software 
-version. To open the System Settings screen, proceed as follows:
+Use the **Show System Settings** function to view the current system configuration values stored on the DCU. This dialog is read-only. It displays device information such as the DCU type, board, device ID, technician name, and software version.
 
-1. From the Settings submenu, select **Show System Settings**. The System Settings modal appears as shown in the <FigureRef id="System-Settings-modal" />.
+:::info
+
+The System Settings dialog is read-only. You can't edit any values here. 
+
+:::
+
+To open the System Settings dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Settings**.
+4. From the **Settings** submenu, select **Show System Settings**.
+
+The **System Settings** dialog appears, as shown in <FigureRef id="System-Settings-modal" />.
 
 <FigureProvider>
     <Figure 
         id="System-Settings-modal" 
-        src="/img/4-DCUSetup/3-Settings/8-ShowSystemSettings/System-Settings-Modal-Light.jpg"
-        caption="System Settings modal" 
+        src="/img/4-DCUSetup/3-Settings/8-ShowSystemSettings/SystemSettingsModal-Light.jpg"
+        srcDark="/img/4-DCUSetup/3-Settings/8-ShowSystemSettings/SystemSettingsModal-Dark.jpg"
+        caption="System Settings dialog" 
+        alt={"System Settings dialog listing system variables and their values, such as DCU Type DCU 715, Board Athena IV, DCU number 07150997, Device ID 860, DFPID 16, Tech. name savcd and Version 0.3.1.28, with Up, Down and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
 
-## System Settings modal
-The following system variables displayed in the System Settings modal.
+## System Settings dialog
 
-| System Variable           | Description                                                                                                           |                                                                                                                                          
-| :------------------------ | :-------------------------------------------------------------------------------------------------------------------- |
-| DCU Type                  | Displays the DCU device type. <br />**Example:** DCU 715                                                              |
-| Board                     | Displays the board type installed in the DCU. <br />**Example:** Athena IV                                            |
-| Apply low frequency patch | Displays whether the low frequency patch is applied. <br />**Example:** False                                         |
-| DCU number                | Displays the DCU serial number. <br />**Example:** 07150997                                                           |
-| Device ID                 | Displays the unique device ID assigned to the DCU. <br />**Example:** 860                                             |
-| SID                       | Displays the security identifier assigned to the DCU. <br />**Example:** S-1-5-21-3254971474-1783749283-93584685-1001 |
-|DFPID                      | Displays the DFPID value assigned to the DCU. <br />**Example:** 16                                                   |
-| Device                    | Displays the device name. <br />**Example:** DCU-07150997                                                             |
-| Tech. name                | Displays the technician name currently assigned to the DCU. <br />**Example:** savcd                                  |
-| Version                   | Displays the current software version installed on the DCU. <br />**Example:** 0.3.1.28                               |
-| Use virtual keyboard      | Displays whether the virtual keyboard is enabled. <br />**Example:** True                                             |
-| ∧ (Up)                    | Scrolls up through the system settings list.                                                                          |
-| ∨ (Down)                  | Scrolls down through the system settings list.                                                                        |
-| Cancel                    | Closes the System Settings modal and returns to the Settings submenu                                                  | 
+The following table describes the system variables displayed in the System Settings dialog.
 
-:::info
-
-The System Settings modal is read-only. No values can be edited from this screen. 
-
-:::
-
+| System variable           | Description |
+| :------------------------ | :---------- |
+| DCU Type                  | Displays the DCU device type. <br />**Example:** DCU 715 |
+| Board                     | Displays the board type installed in the DCU. <br />**Example:** Athena IV |
+| Apply low frequency patch | Displays whether the low frequency patch is applied. <br />**Example:** False |
+| DCU number                | Displays the DCU serial number. <br />**Example:** 07150997 |
+| Device ID                 | Displays the unique device ID assigned to the DCU. <br />**Example:** 860 |
+| SID                       | Displays the security identifier (SID) assigned to the DCU. <br />**Example:** S-1-5-21-3254971474-1783749283-93584685-1001 |
+| DFPID                     | Displays the DFPID value assigned to the DCU. <br />**Example:** 16 |
+| Device                    | Displays the device name. <br />**Example:** DCU-07150997 |
+| Tech. name                | Displays the technician name assigned to the DCU. <br />**Example:** savcd |
+| Version                   | Displays the software version installed on the DCU. <br />**Example:** 0.3.1.28 |
+| Use virtual keyboard      | Displays whether the virtual keyboard is turned on. <br />**Example:** True |
+| ∧ (Up)                    | Scrolls up through the system settings list. |
+| ∨ (Down)                  | Scrolls down through the system settings list. |
+| Cancel                    | Closes the System Settings dialog and returns to the Settings submenu. |

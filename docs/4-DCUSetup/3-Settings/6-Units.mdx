@@ -10,46 +10,52 @@ sidebar_label: '4.3.6 - Units'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the Units function to configure the units of measurement used across the DCU software. Technicians can set 
-individual units for temperature, velocity, acceleration, and frequency, and select the overall unit system. To open the Select Units modal, proceed as follows:
+Use the **Units (Imperial/Metric)** function to configure the units of measurement used across the DCU software. You can set individual units for temperature, velocity, acceleration, and frequency, and select the overall unit system.
 
-1. From the Settings submenu, select **Units (Imperial/Metric)**. The Select units popup will appear the same as shown in the <FigureRef id="Select-Unit-Screen" />
+To open the Select units dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Settings**.
+4. From the **Settings** submenu, select **Units (Imperial/Metric)**.
+
+The **Select units** dialog appears, as shown in <FigureRef id="Select-Unit-Screen" />.
 
 <FigureProvider>
     <Figure 
         id="Select-Unit-Screen" 
-        src="/img/4-DCUSetup/3-Settings/6-Units/Select-Unit-Screen-Light.jpg"
-        caption="Select Unit Screen" 
+        src="/img/4-DCUSetup/3-Settings/6-Units/SelectUnitScreen-Light.jpg"
+        srcDark="/img/4-DCUSetup/3-Settings/6-Units/SelectUnitScreen-Dark.jpg"
+        caption="Select units dialog" 
+        alt={"Select units dialog with lists for Temperature (°F), Velocity (in/s), Acceleration (g0), Frequency (hz) and Unit System (Imperial), and Cancel and Ok buttons."}
         width="40%"
     />
 </FigureProvider>
 
-## Select units  
-The following fields and controls available in the Select units modal. 
+## Select units dialog
 
-| Field/Button | Description                                                                                       |                                                                                                                                          
-| :----------- | ------------------------------------------------------------------------------------------------- |
-| Temperature  | Selects the unit of measurement for temperature. <br />**Example:** °F                            |
-| Velocity     | Selects the unit of measurement for velocity. <br />**Example:** in/s                             |
-| Acceleration | Selects the unit of measurement for acceleration. **Example:** g0                                 |
-| Frequency    | Selects the unit of measurement for frequency. <br />**Example:** hz                              |
+The following table describes the fields and controls available in the Select units dialog, as shown in <FigureRef id="Select-Unit-Screen" />.
+
+| Field/Button | Description |
+| :----------- | :---------- |
+| Temperature  | Selects the unit of measurement for temperature. <br />**Example:** °F |
+| Velocity     | Selects the unit of measurement for velocity. <br />**Example:** in/s |
+| Acceleration | Selects the unit of measurement for acceleration. <br />**Example:** g0 |
+| Frequency    | Selects the unit of measurement for frequency. <br />**Example:** hz |
 | Unit System  | Selects the overall unit system. Available options: Imperial, Metric. <br />**Example:** Imperial |
-| Ok           | Saves the selected units and returns to the Settings submenu.                                     |
-| Cancel       | Closes the Select units modal without saving changes.                                             |
+| Ok           | Saves the selected units and returns to the Settings submenu. |
+| Cancel       | Closes the Select units dialog without saving changes. |
 
 ## Configure the units
-To configure the units of measurement, proceed as follows:
 
-1. From the Settings submenu, select **Units (Imperial/Metric)**. The Select units popup will appear.
-2. Select the desired unit for each of the following fields using the dropdown:
-    <ul><li>**Temperature**</li>
-    <li>**Velocity**</li>
-    <li>**Acceleration**</li>
-    <li>**Frequency**</li>
-    <li>**Unit System**</li></ul>
-3. After selecting the required information click on **Ok** button. The DCU saves the selected units and returns to the Settings submenu.
-4. To close the Select units modal without saving changes, select **Cancel**.
+To configure the units of measurement, follow these steps:
 
+1. In the **Select units** dialog, select a unit from the list for each of the following fields:
+    - **Temperature**
+    - **Velocity**
+    - **Acceleration**
+    - **Frequency**
+    - **Unit System**
+2. Select **Ok**. The DCU saves the selected units and returns to the **Settings** submenu.
 
-
-
+To close the **Select units** dialog without saving changes, select **Cancel**.

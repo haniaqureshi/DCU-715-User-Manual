@@ -10,87 +10,83 @@ sidebar_label: '4.4.9 - Test Micro Programs'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Test Micro Programs** function to run diagnostic commands on the DCU micro controller. Technicians can select 
-a specific command from the Micro Controller list and run the test individually or in a loop. To open the Test 
-Micro Programs modal, proceed as follows:
+Use the **Test Micro Programs** function to run diagnostic commands on the DCU microcontroller. You can select a command from the **Micro Controller** list and run the test once or in a loop.
 
-1. From the Advanced Settings submenu, select **Test Micro Programs**. 
-2. The Test Micro Programs modal appears as shown in <FigureRef id="" />.
+To open the Test Micro Programs dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Test Micro Programs**.
+
+The **Test Micro Programs** dialog appears, as shown in <FigureRef id="Test-Micro-Programs-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Test-Micro-Programs-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/9-TestMicroPrograms/Test-Micro-Programs-Modal-Light.jpg"
-        caption="Test Micro Programs modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/9-TestMicroPrograms/TestMicroProgramsModal-Light.jpg"
+        caption="Test Micro Programs dialog" 
+        alt={"Test Micro Programs dialog with a Battery panel (Type, Status, Good, Bad, Optional), Micro Controller options from Restart to Battery Capacity (selected), a Loop Test checkbox, Number Of Tests 999, and Start, Stop and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
 
-## Test Micro Programs modal 
-The following fields and controls available in the Test Micro Programs modal are shown in <FigureRef id="Test-Micro-Programs-Modal" />. 
+## Test Micro Programs dialog
 
-| Fields/Control   | Description                                                                                                                                                                                               |                                                                                                                                          
-| :--------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Battery          | Displays the battery test results section.                                                                                                                                                                |
-| Type             | Displays the type of test currently selected. <br />**Example:** Battery Capacity                                                                                                                         |
-| Status           | Displays the current status of the test.                                                                                                                                                                  |
-| Good             | Displays the number of successful test results. <br />**Example:** 0                                                                                                                                      | 
-| Bad              | Displays the number of failed test results. <br />**Example:** 0                                                                                                                                          |
-| Optional         | Displays the number of optional test results. <br />**Example:** 0                                                                                                                                        |
-| Micro Controller | Displays the list of available micro controller commands. Select one option using the radio button. Available options include: Restart, Shutdown, WD On, WD Off, WD Trigger, Battery SN, Battery Capacity. |
-| Loop Test        | Enables or disables loop test mode. When enabled, the **Number of Tests** field appears, allowing the technician to specify how many times the test should run.                                           |
-| Number Of Tests  | Displays the number of times the test will run when Loop Test is enabled. <br />**Example:** 999                                                                                                          |
-| Start            | Starts the selected micro controller test. If no test type is selected, a warning dialog appears.                                                                                                          |
-| Stop             | Stop the currently running test.                                                                                                                                                                          |
-| Cancel           | Closes the Test Micro Programs modal and returns to the Advanced Settings submenu.                                                                                                                        |
+The following table describes the fields and controls available in the Test Micro Programs dialog, as shown in <FigureRef id="Test-Micro-Programs-Modal" />.
+
+| Field/Control    | Description |
+| :--------------- | :---------- |
+| Battery          | Displays the battery test results section. |
+| Type             | Displays the selected test type. <br />**Example:** Battery Capacity |
+| Status           | Displays the current status of the test. |
+| Good             | Displays the number of successful test results. <br />**Example:** 0 |
+| Bad              | Displays the number of failed test results. <br />**Example:** 0 |
+| Optional         | Displays the number of optional test results. <br />**Example:** 0 |
+| Micro Controller | Lists the available microcontroller commands. Select one option. Available options include: Restart, Shutdown, WD On, WD Off, WD Trigger, Battery SN, Battery Capacity. |
+| Loop Test        | Turns loop test mode on or off. When loop test mode is on, the **Number Of Tests** field appears so that you can specify how many times the test runs. |
+| Number Of Tests  | Displays the number of times the test runs when **Loop Test** is on. <br />**Example:** 999 |
+| Start            | Starts the selected microcontroller test. If no test type is selected, a warning dialog appears. |
+| Stop             | Stops the running test. |
+| Cancel           | Closes the Test Micro Programs dialog and returns to the Advanced Settings submenu. |
 
 ## Run a micro program test
-To run a micro program test, proceed as follows:
-1. From the Advanced Settings submenu, select **Test Micro Programs**. The Test Micro Programs modal appears.
-2. Select the desired command from the **Micro Controller** list:
-    <ul><li>Restart</li>
-    <li>Shutdown</li>
-    <li>WD On</li>
-    <li>WD Off</li>
-    <li>WD Trigger</li>
-    <li>Battery SN</li>
-    <li>Battery Capacity</li></ul>
 
-:::note
+To run a micro program test, follow these steps:
 
-If **Start** is selected without choosing a command from the Micro Controller list, a warning dialog appears displaying:
-**Select test type**. Select **Close** to dismiss the dialog and select a command before proceeding shown in <FigureRef id="Test-Micro-Warning-Dialog-box" /> below.
+1. In the **Test Micro Programs** dialog, select a command from the **Micro Controller** list:
+    - Restart
+    - Shutdown
+    - WD On
+    - WD Off
+    - WD Trigger
+    - Battery SN
+    - Battery Capacity
 
-:::
+    :::note
 
-<FigureProvider>
-    <Figure 
-        id="Test-Micro-Warning-Dialog-box" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/9-TestMicroPrograms/Test-Micro-Warning-Dialogbox-Light.jpg"
-        caption="Test Micro Warning Dialogbox" 
-        width="70%"
-    />
-</FigureProvider>
+    If you select **Start** without selecting a command, a warning dialog with the message "Select test type" appears, as shown in <FigureRef id="Test-Micro-Warning-Dialog-box" />. Select **Close**, and then select a command.
 
-3. To run the test in loop mode, select the **Loop Test** checkbox. The **Number Of Tests** field appears. Enter 
-    the desired number of test repetitions in the **Number Of Tests** field.
-4. Select **Start.** The DCU runs the selected micro controller command and displays the test results in the **Battery** section.
-5. Monitor the following values during the test:
+    :::
 
-    <ul><li>Type</li>
-    <li>Status</li>
-    <li>Good</li>
-    <li>Bad</li>
-    <li>Optional</li></ul>
+    <FigureProvider>
+        <Figure 
+            id="Test-Micro-Warning-Dialog-box" 
+            src="/img/4-DCUSetup/4-AdvanceSettings/9-TestMicroPrograms/TestMicroWarningDialogBox-Light.jpg"
+            caption="Test Micro warning dialog" 
+            alt={"Warning dialog, outlined in red, over the Test Micro Programs dialog with the message 'Select test type' and a Close button."}
+            width="70%"
+        />
+    </FigureProvider>
 
-6. Select **Stop** to end the test.
-7. Select **Cancel** to close the Test Micro Programs modal and return to the Advanced Settings submenu.
+2. To run the test in a loop, select the **Loop Test** checkbox. The **Number Of Tests** field appears. In the **Number Of Tests** field, enter the number of test repetitions.
+3. Select **Start**. The DCU runs the selected microcontroller command and displays the test results in the **Battery** section.
+4. During the test, monitor the following values:
+    - Type
+    - Status
+    - Good
+    - Bad
+    - Optional
+5. To end the test, select **Stop**.
 
-
-
-
-
-
-
-
-
+To close the **Test Micro Programs** dialog and return to the **Advanced Settings** submenu, select **Cancel**.

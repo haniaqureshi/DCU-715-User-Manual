@@ -10,54 +10,55 @@ sidebar_label: '4.4.4 - Device ID'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Device ID function** to assign or update the unique numerical identification code for the DCU. The device ID
-is used to track field units and ensure that measurement data is correctly attributed to the specific device during
-synchronization. To open the Enter Device ID modal, proceed as follows:
+Use the **Device ID** function to assign or update the unique numeric ID for the DCU. The device ID is used to track field units and to make sure that measurement data is linked to the correct device during synchronization.
 
-1. From the Advanced Settings submenu, select **Device ID**. 
-2. The Enter Device ID modal appears as shown in <FigureRef id="Enter-Device-ID-Modal" />
+To open the Enter Device ID dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Device ID**.
+
+The **Enter Device ID** dialog appears, as shown in <FigureRef id="Enter-Device-ID-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Enter-Device-ID-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/4-DeviceId/Enter-Device-ID-Modal-Light.jpg"
-        caption="Enter Device ID modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/4-DeviceId/EnterDeviceIDModal-Light.jpg"
+        caption="Enter Device ID dialog" 
+        alt={"Enter Device ID (min 2 digits) keypad showing 860, with number keys, a +/- key, Backspace, Clear All, Up, Down, Cancel and Ok buttons."}
         width="40%"
     />
 </FigureProvider>
 
-## Enter Device ID modal
-The following fields and controls available in the Enter Device ID modal are shown in <FigureRef id="" />
+## Enter Device ID dialog
 
-| Field/Button           | Description                                                          |                                                                                                                                          
-| :--------------        | :--------------------------------------------------------------------|
-| Enter Device ID (min 2 digits) | Displays the device ID entered by the user. A minimum of 2 digits is required. <br />**Example:** 860 |
-| Numeric Keypad | Enter numeric digits from 0 through 9. |
-| +/- | Toggles the entered value between positive and negative. |
-| Backspace | Removes the last entered digit from the field. |
-| Clear All | Removes all digits from the field. |
-| ∧ (Up) | Scrolls up to the previous field. |
-| ∨ (Down) | Scrolls down to the next field. |
-| Ok | Saves the entered device ID and closes the modal. |
-| Cancel | Closes the Enter Device ID modal without saving changes |
+The following table describes the fields and controls available in the Enter Device ID dialog, as shown in <FigureRef id="Enter-Device-ID-Modal" />.
+
+| Field/Button                   | Description |
+| :----------------------------- | :---------- |
+| Enter Device ID (min 2 digits) | Displays the device ID that you entered. The device ID must have at least 2 digits. <br />**Example:** 860 |
+| Numeric keypad                 | Enters numeric digits from 0 through 9. |
+| +/-                            | Switches the entered value between positive and negative. |
+| Backspace                      | Removes the last entered digit from the field. |
+| Clear All                      | Removes all digits from the field. |
+| ∧ (Up)                         | Scrolls up to the previous field. |
+| ∨ (Down)                       | Scrolls down to the next field. |
+| Ok                             | Saves the device ID and closes the dialog. |
+| Cancel                         | Closes the Enter Device ID dialog without saving changes. |
 
 ## Enter the device ID
-To enter the device ID, proceed as follows:
 
-1. From the Advanced Settings submenu, select **Device ID**. The Enter Device ID modal appears.
-2. Use the numeric keypad to enter the device ID.
+To enter the device ID, follow these steps:
 
-:::note
+1. In the **Enter Device ID** dialog, use the numeric keypad to enter the device ID.
 
-The device ID must contain a minimum of 2 digits. If fewer than 2 digits are entered, the **Ok** button remains 
-disabled and the entry is not accepted.
+    :::note
 
-:::
+    The device ID must have at least 2 digits. **Ok** stays unavailable until you enter at least 2 digits.
 
-3. Select **Ok**. The DCU saves the device ID and returns to the Advanced Settings submenu.
-4. To close the Enter Device ID modal without saving changes, select **Cancel**.
+    :::
 
+2. Select **Ok**. The DCU saves the device ID and returns to the **Advanced Settings** submenu.
 
-
-
-
+To close the **Enter Device ID** dialog without saving changes, select **Cancel**.

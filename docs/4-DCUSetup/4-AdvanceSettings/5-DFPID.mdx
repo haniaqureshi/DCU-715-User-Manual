@@ -10,58 +10,53 @@ sidebar_label: '4.4.5 - DFPID'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **DFPID function** to assign a Digital Filter Profile ID to the DCU signal processing engine. This ensures 
-the hardware applies the correct filtering logic for vibration analysis. To open the Enter DFPID modal, proceed as follows:
+Use the **DFPID** function to assign a digital filter profile ID (DFPID) to the DCU signal processing engine. The DFPID makes sure that the hardware applies the correct filtering for vibration analysis.
 
-1. From the Advanced Settings submenu, select **DFPID**. 
-2. The Enter DFPID modal appears as shown in <FigureRef id="Enter-DFPID-Modal" />
+To open the Enter DFPID dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **DFPID**.
+
+The **Enter DFPID** dialog appears, as shown in <FigureRef id="Enter-DFPID-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Enter-DFPID-Modal" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/5-DFPID/Enter-DFPID-Modal-Light.jpg"
-        caption="Enter DFPID Modal" 
+        src="/img/4-DCUSetup/4-AdvanceSettings/5-DFPID/EnterDFPIDModal-Light.jpg"
+        caption="Enter DFPID dialog" 
+        alt={"Enter DFPID (min 2 digits) keypad showing 16, with number keys, Backspace, Clear All, Cancel and Ok buttons."}
         width="40%"
     />
 </FigureProvider>
 
-## Enter DFPID modal 
-The following fields and controls available in the Enter DFPID modal are shown in <FigureRef id="Enter-DFPID-Modal" />.
+## Enter DFPID dialog
 
-| Field/Button               | Description                                                                                            |                                                                                                                                          
-| :------------------------- | :----------------------------------------------------------------------------------------------------- |
-| Enter DFPID (min 2 digits) | Displays the DFPID value entered by the user. A minimum of 2 digits is required. <br />**Example:** 16 |
-| Numeric Keypad             | Enter numeric digits from 0 through 9.                                                                 | 
-| Backspace                  | Removes the last entered digit from the field.                                                         |
-| Backspace                  | Removes the last entered digit from the field.                                                         |
-| Clear All                  | Removes all digits from the field.                                                                     |
-| Ok                         | Saves the entered DFPID value and closes the modal.                                                    |
-| Cancel                     | Closes the Enter DFPID modal without saving changes                                                    |
+The following table describes the fields and controls available in the Enter DFPID dialog, as shown in <FigureRef id="Enter-DFPID-Modal" />.
+
+| Field/Button               | Description |
+| :------------------------- | :---------- |
+| Enter DFPID (min 2 digits) | Displays the DFPID value that you entered. The DFPID must have at least 2 digits. <br />**Example:** 16 |
+| Numeric keypad             | Enters numeric digits from 0 through 9. |
+| Backspace                  | Removes the last entered digit from the field. |
+| Clear All                  | Removes all digits from the field. |
+| Ok                         | Saves the DFPID value and closes the dialog. |
+| Cancel                     | Closes the Enter DFPID dialog without saving changes. |
 
 ## Enter the DFPID
-To enter the DFPID, proceed as follows:
 
-1. From the Advanced Settings submenu, select **DFPID**. The Enter DFPID modal appears.
-2. Use the numeric keypad to enter the required DFPID value.
+To enter the DFPID, follow these steps:
 
-:::note
+1. In the **Enter DFPID** dialog, use the numeric keypad to enter the DFPID value.
 
-The DFPID value must contain a minimum of 2 digits. If fewer than 2 digits are entered, the **Ok** button remains
-disabled and the entry is not accepted
+    :::note
 
-:::
+    The DFPID value must have at least 2 digits. **Ok** stays unavailable until you enter at least 2 digits.
 
-3. Review the value displayed in the entry field to confirm the correct DFPID is entered.
-4. Select **Ok**. The DCU saves the DFPID value and returns to the Advanced Settings submenu.
-5. To close the Enter DFPID modal without saving changes, select **Cancel**.
+    :::
 
+2. Check the value in the entry field to confirm that you entered the correct DFPID.
+3. Select **Ok**. The DCU saves the DFPID value and returns to the **Advanced Settings** submenu.
 
-
-
-
-
-
-
-
-
-
+To close the **Enter DFPID** dialog without saving changes, select **Cancel**.
