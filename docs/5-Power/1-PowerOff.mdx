@@ -9,22 +9,22 @@ sidebar_label: '5.1 - Power Off'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-<FigureProvider>
+Use the **Power Off** function to turn off the DCU 715. A dialog asks you to confirm before the
+device turns off. This helps prevent you from turning it off by accident.
 
-    Use the **Power Off** function to turn off the DCU 715 (Digital Collection Unit). A dialog asks you to confirm before the
-    device turns off. This helps prevent you from turning it off by accident.
+:::warning
 
-    :::warning
+Any unsaved data is lost. Save all measurement data before you turn off the DCU 715.
 
-    Any unsaved data is lost. Save all measurement data before you turn off the DCU 715.
+:::
 
-    :::
+## Turn off the DCU 715
 
-    ## Turn off the DCU 715
-
-    1. Make sure that all measurement tasks are complete and your data is saved.
-    2. From the **Main Menu**, select **Power**.
-    3. On the **Power** submenu, select **Power Off**. A dialog appears, as shown in <FigureRef id="PowerOff-Confirmation-Dialog-Box" />. The dialog asks "Do you really want to Shutdown?"
+1. Make sure that all measurement tasks are complete and your data is saved.
+2. On the Home screen, select **Menu**. The **Main Menu** appears.
+3. From the **Main Menu**, select **Power**.
+4. From the **Power** submenu, select **Power Off**. A dialog appears, as shown in <FigureRef id="PowerOff-Confirmation-Dialog-Box" />. The dialog asks, "Do you really want to Shutdown?"
+    <FigureProvider>
         <Figure
             id="PowerOff-Confirmation-Dialog-Box"
             src="/img/5-Power/PowerOffConfirmationDialogBox-Light.png"
@@ -33,7 +33,6 @@ import Figure from "@site/src/components/Figure";
             alt='Warning dialog asking "Do you really want to Shutdown?" with No and Yes buttons.'
             width="80%"
         />
-    4. Select **Yes**. The DCU 715 turns off.
-
-        To keep the DCU 715 on, select **No** instead. The dialog closes and the **Main Menu** appears.
-</FigureProvider>
+    </FigureProvider>
+5. Select **Yes**. The DCU 715 turns off.
+6. To keep the DCU 715 on, select **No** instead. The dialog closes and the **Main Menu** appears.

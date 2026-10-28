@@ -1,17 +1,16 @@
 # Settings
-
-The Settings submenu provides options to configure device preferences and system settings on the DCU. 
-Use this submenu to manage screen behavior, email configuration, display preferences, network connectivity and 
-more. To open the Settings submenu, proceed as follows:
-
-1. From the Main Menu, select **DCU Setup**.
-2. From the DCU Setup submenu, select **Settings**.
-
-The **Settings submenu** appears as shown in the <FigureRef id="Settings-Submenu" />.
-
-{/* --- Image Block --- */}
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
+
+Use the **Settings** submodule to configure device preferences and system settings on the DCU. Its functions let you manage screen behavior, email configuration, display preferences, network connectivity, and more.
+
+To open the Settings submenu, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Settings**.
+
+The **Settings** submenu appears, as shown in <FigureRef id="Settings-Submenu" />.
 
 <FigureProvider>
     <Figure 
@@ -19,9 +18,27 @@ import Figure from "@site/src/components/Figure";
         src="/img/4-DCUSetup/3-Settings/SettingsSubmenu-Light.jpg"
         srcDark="/img/4-DCUSetup/3-Settings/SettingsSubmenu-Dark.jpg"
         caption="Settings submenu" 
+        alt={"Settings submenu with the Disable Screen Blanking, Email Settings, Technician Name, Language, Theme (Dark/Light), Units (Imperial/Metric), Update Job Numbers, Show System Settings, CMAS Server and WiFi setup buttons, and Back and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
 
+## Settings functions
 
+The **Settings** submenu contains the following functions:
 
+- [**Disable Screen Blanking**](./1-DisableScreenBlanking.mdx): Keeps the display on during periods of inactivity.
+- [**Email Settings**](./2-EmailSettings.mdx): Sets the email address for the DCU.
+- [**Technician Name**](./3-TechnicianName.mdx): Sets the technician name for the DCU.
+- [**Language**](./4-Language.mdx): Changes the display language.
+- [**Theme (Dark/Light)**](./5-Theme.mdx): Sets the theme and backlight brightness.
+- [**Units (Imperial/Metric)**](./6-Units.mdx): Sets the units of measurement.
+- [**Update Job Numbers**](./7-UpdateJobNumbers.mdx): Assigns job ID numbers to routes.
+- [**Show System Settings**](./8-ShowSystemSettings.mdx): Shows the current system configuration.
+- [**CMAS Server**](./9-CMASServer.mdx): Manages CMAS server connections.
+- [**WiFi Setup**](./10-WifiSetup.mdx): Configures the wireless network connection.
+
+## Close the Settings submenu
+
+- To return to the **DCU Setup** submenu, select **Back**.
+- To return to the Home screen, select **Cancel**.

@@ -10,50 +10,48 @@ sidebar_label: '4.4.1 - Aux DC Offset Test'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the Aux DC Offset Test function to calibrate and verify the DC offset levels for the auxiliary input channels
-(Aux1 and Aux2) on the DCU. This test ensures signal accuracy during data collection. To open the Aux DC Offset Test modal, proceed as follows:
+Use the **Aux DC Offset Test** function to calibrate and verify the DC offset levels for the auxiliary input channels (Aux1 and Aux2) on the DCU. This test helps keep signals accurate during data collection.
 
-1. From the Advanced Settings submenu, select **Aux DC Offset Test**. 
-2. The Aux DC Offset Test modal appears as shown in <FigureRef id="Aux-DC-Offset-Test-Modal" />. 
+To open the Aux DC Offset Test dialog, follow these steps:
 
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Aux DC Offset Test**.
+
+The **Aux DC Offset Test** dialog appears, as shown in <FigureRef id="Aux-DC-Offset-Test-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Aux-DC-Offset-Test-Modal" 
         src="/img/4-DCUSetup/4-AdvanceSettings/1-AuxDCOffsetTest/AuxDCOffsetTestModal-Light.jpg"
-        caption="Aux DC Offset Test modal" 
+        caption="Aux DC Offset Test dialog" 
+        alt={"Aux DC Offset Test dialog with the instruction 'Place shorting caps on Aux1 and Aux2', Aux1 and Aux2 DC Offset readings of 0.000000, and the Measure, Zero Values, Store and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
 
-## Aux DC Offset Test modal 
-The following  fields and controls available in the Aux DC Offset Test modal are shown in <FigureRef id="Aux-DC-Offset-Test-Modal" /> 
+## Aux DC Offset Test dialog
 
-| Field/Button   | Description                                                                                    |                                                                                                                                          
-| :------------- | :----------------------------------------------------------------------------------------------|
-| Instruction    | Displays the hardware preparation instruction: **Place shorting caps on Aux1 and Aux2.**       | 
+The following table describes the fields and controls available in the Aux DC Offset Test dialog, as shown in <FigureRef id="Aux-DC-Offset-Test-Modal" />.
+
+| Field/Button   | Description |
+| :------------- | :---------- |
+| Instruction    | Displays the hardware preparation instruction "Place shorting caps on Aux1 and Aux2." |
 | Aux1 DC Offset | Displays the current DC offset value measured on the Aux1 channel. <br />**Example:** 0.000000 |
-| Aux2 DC Offset | Displays the current DC offset value measured on the Aux2 channel. <br />**Example:** 0.000000 | 
-| Measure        | Measures the current DC offset values for Aux1 and Aux2 channels and displays the results.     |
-| Zero Values    | Resets the DC offset values to zero for calibration.                                           |
-| Store          | Saves the calibrated offset values to the DCU.                                                 |
-| Cancel         | Closes the Aux DC Offset Test modal and returns to the Advanced Settings submenu.              |
+| Aux2 DC Offset | Displays the current DC offset value measured on the Aux2 channel. <br />**Example:** 0.000000 |
+| Measure        | Measures the current DC offset values for the Aux1 and Aux2 channels and displays the results. |
+| Zero Values    | Resets the DC offset values to zero for calibration. |
+| Store          | Saves the calibrated offset values to the DCU. |
+| Cancel         | Closes the Aux DC Offset Test dialog and returns to the Advanced Settings submenu. |
 
 ## Run the Aux DC Offset Test
-To run the Aux DC Offset Test, proceed as follows:
 
-1. From the **Advanced Settings** submenu, select **Aux DC Offset Test**. The **Aux DC Offset Test modal** appears.
-2. Place shorting caps securely on the Aux1 and Aux2 ports of the DCU.
-3. Select **Measure**. The DCU measures the current DC offset values and displays the results in the Aux1 DC Offset and Aux2 DC Offset fields.
-4. Review the offset values.
-<ul><li>If the values require calibration, select **Zero Values** to reset the offset values to zero.</li></ul>
-5. Select Store. The DCU saves the calibrated offset values.
-6. Select Cancel to close the Aux DC Offset Test modal and return to the Advanced Settings submenu.
+To run the Aux DC Offset Test, follow these steps:
 
+1. Place shorting caps securely on the Aux1 and Aux2 ports of the DCU.
+2. In the **Aux DC Offset Test** dialog, select **Measure**. The DCU measures the current DC offset values and displays the results in the **Aux1 DC Offset** and **Aux2 DC Offset** fields.
+3. Review the offset values. If the values need calibration, select **Zero Values** to reset them to zero.
+4. Select **Store**. The DCU saves the calibrated offset values.
 
-
-
-
-
-
-
+To close the **Aux DC Offset Test** dialog and return to the **Advanced Settings** submenu, select **Cancel**.

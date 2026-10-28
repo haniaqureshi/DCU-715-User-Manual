@@ -2,20 +2,35 @@
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **DCU Setup** menu provides access to the main configuration, diagnostic, and maintenance functions for the DCU. Technicians and authorized users can use this menu to review system status, configure device settings, run hardware diagnostics, and perform maintenance tasks before field deployment.
+Use the **DCU Setup** module to maintain, test, and configure the DCU before field deployment.
 
-To open the DCU Setup submenu, proceed as follows:
+## Open the DCU Setup submenu
+To open the DCU Setup submenu, follow these steps:
 
-1. From the **Main Menu**, select **DCU Setup**.
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
 
-The **DCU Setup** submenu appears and provides access to the following functions as shown in Figure 1.
+The **DCU Setup** submenu appears, as shown in <FigureRef id="DCU-Setup-Submenu" />.
 
 <FigureProvider>
     <Figure 
         id="DCU-Setup-Submenu" 
         src="/img/4-DCUSetup/DCUSetupSubmenu-Light.png"
         srcDark="/img/4-DCUSetup/DCUSetupSubmenu-Dark.png"
-        caption="DCU Setup Submenu" 
+        caption="DCU Setup submenu" 
+        alt={"DCU Setup submenu with the Maintenance, Diagnostics, Settings and Advanced Settings buttons below the Main Menu row, and a Cancel button."}
         width="70%"
     />
 </FigureProvider>
+
+## DCU Setup submodules
+
+The **DCU Setup** submenu contains the following submodules. Each submodule opens its own submenu of functions.
+
+- [**Maintenance**](./1-Maintenance/index.mdx): Runs health checks and hardware tests on the DCU.
+- [**Diagnostics**](./2-Diagnostics/index.mdx): Tests communication between the DCU and connected hardware.
+- [**Settings**](./3-Settings/index.mdx): Configures device preferences and system settings.
+- [**Advanced Settings**](./4-AdvanceSettings/index.mdx): Configures advanced device options. This submodule requires a password.
+
+## Close the DCU Setup submenu
+To return to the Home screen, select **Cancel**.

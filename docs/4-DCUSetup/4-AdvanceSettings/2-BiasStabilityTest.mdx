@@ -10,57 +10,64 @@ sidebar_label: '4.4.2 - Bias Stability Test'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Bias Stability Test** function to configure the bias stability level for connected vibration sensors. This 
-setting determines the voltage threshold used to verify that sensors are electrically stable before a measurement 
-begins. To open the Set Bias Stability Level modal, proceed as follows:
+Use the **Bias Stability Test** function to configure the bias stability level for connected vibration sensors. This setting determines the voltage threshold that the DCU uses to verify that sensors are electrically stable before a measurement starts.
 
-1. From the Advanced Settings submenu, select **Bias Stability Test**. 
-2. The Set Bias Stability Level modal appears as shown in <FigureRef id="Set-Bias-Stability-Level-Modal" />
+To open the Set Bias Stability Level dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Bias Stability Test**.
+
+The **Set Bias Stability Level** dialog appears, as shown in <FigureRef id="Set-Bias-Stability-Level-Modal" />.
 
 <FigureProvider>
     <Figure 
         id="Set-Bias-Stability-Level-Modal" 
         src="/img/4-DCUSetup/4-AdvanceSettings/2-BiasStabilityTest/SetBiasStabilityLevelModal-Light.jpg"
-        caption="Set Bias Stability Level modal" 
+        caption="Set Bias Stability Level dialog" 
+        alt={"Set Bias Stability Level dialog with the Enable Bias level for Stability Check checkbox selected, a level of 0.01 Volts, and Cancel and Ok buttons."}
         width="70%"
     />
 </FigureProvider>
 
-## Set Bias Stability Level modal
-The following fields and controls available in the Set Bias Stability Level modal are shown in <FigureRef id="" />. 
+## Set Bias Stability Level dialog
 
-| Field/Button                          | Description                                                                                                                                                    |                                                                                                                                          
-| :------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable Bias level for Stability Check | Enables or disables the bias stability check. When selected, the DCU performs a bias stability check before each measurement.                                  |
-| Set Bias Stability Level              | Displays the current bias stability threshold value in volts. Select the field to open the numeric keypad and enter a new value.<br /> **Example:** 0.01 Volts |
-| Ok                                    | Saves the configured bias stability level and closes the modal.                                                                                                |
-| Cancel                                | Closes the Set Bias Stability Level modal without saving changes.                                                                                              |
+The following table describes the fields and controls available in the Set Bias Stability Level dialog, as shown in <FigureRef id="Set-Bias-Stability-Level-Modal" />.
+
+| Field/Button                          | Description |
+| :------------------------------------ | :---------- |
+| Enable Bias level for Stability Check | Turns the bias stability check on or off. When this checkbox is selected, the DCU performs a bias stability check before each measurement. |
+| Set Bias Stability Level              | Displays the current bias stability threshold value in volts. To enter a new value, select the field to open the numeric keypad.<br />**Example:** 0.01 Volts |
+| Ok                                    | Saves the configured bias stability level and closes the dialog. |
+| Cancel                                | Closes the Set Bias Stability Level dialog without saving changes. |
 
 ## Configure the bias stability level
-To configure the bias stability level, proceed as follows:
 
-1. From the Advanced Settings submenu, select **Bias Stability Test**. The Set Bias Stability Level modal appears.
-2. Select the **Enable Bias level for Stability Check** checkbox to activate the bias stability check.
-3. Select the **Set Bias Stability Level** field. The numeric keypad appears as shown in <FigureRef id="Set-Bias-Stability-Level-Numeric-Keypad" />.
+To configure the bias stability level, follow these steps:
 
-<FigureProvider>
-    <Figure 
-        id="Set-Bias-Stability-Level-Numeric-Keypad" 
-        src="/img/4-DCUSetup/4-AdvanceSettings/2-BiasStabilityTest/SetBiasStabilityLevelNumericKeypad-Light.jpg"
-        caption="Set Bias Stability Level numeric keypad" 
-        width="40%"
-    />
-</FigureProvider>
+1. In the **Set Bias Stability Level** dialog, select the **Enable Bias level for Stability Check** checkbox to turn on the bias stability check.
+2. Select the **Set Bias Stability Level** field. The numeric keypad appears, as shown in <FigureRef id="Set-Bias-Stability-Level-Numeric-Keypad" />.
 
-4. Use the numeric keypad to enter the desired stability threshold value.
-5. Select **Ok** on the numeric keypad to confirm the entered value.
-6. Select **Ok** on the Set Bias Stability Level modal. The DCU saves the configured bias stability level and returns to the Advanced Settings submenu.
-7. To close the modal without saving changes, select **Cancel**.
+    <FigureProvider>
+        <Figure 
+            id="Set-Bias-Stability-Level-Numeric-Keypad" 
+            src="/img/4-DCUSetup/4-AdvanceSettings/2-BiasStabilityTest/SetBiasStabilityLevelNumericKeypad-Light.jpg"
+            caption="Set Bias Stability Level numeric keypad" 
+            alt={"Set Bias Stability Level keypad showing 0.01, with number keys, a decimal point, Backspace, Clear All, Up, Down, Cancel and Ok buttons."}
+            width="40%"
+        />
+    </FigureProvider>
 
-:::note
+3. Use the numeric keypad to enter the stability threshold value.
 
-The value must contain exactly **2 digits** after the decimal point. If only **1 digit** is entered after the decimal point,
-the DCU displays an error. A minimum of **2 decimal** places are required for a valid entry . 
+    :::note
 
-:::
+    The value must have exactly 2 digits after the decimal point. If you enter only 1 digit after the decimal point, the DCU displays an error.
 
+    :::
+
+4. On the numeric keypad, select **Ok** to confirm the value.
+5. In the **Set Bias Stability Level** dialog, select **Ok**. The DCU saves the configured bias stability level and returns to the **Advanced Settings** submenu.
+
+To close the dialog without saving changes, select **Cancel**.

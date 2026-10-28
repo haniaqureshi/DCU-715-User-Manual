@@ -1,30 +1,40 @@
 # Diagnostics
-
-The **Diagnostics** submenu provides tools that help technicians verify communication between the DCU and 
-connected hardware components. Use this submenu to test communication interfaces, review measurement 
-values, and verify software and hardware version information.
-
-To open the Diagnostics submenu, proceed as follows:
-
-To open the Diagnostics submenu, proceed as follows:
-
-    1. From the **Main Menu**, select **DCU Setup**.
-    2. From the **DCU Setup** submenu, select **Diagnostics**.
-    3. The **Diagnostics** submenu appears.
-
-
-{/* --- Image Block --- */}
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
+
+Use the **Diagnostics** submodule to verify communication between the DCU and connected hardware components. Its functions let you test communication interfaces, review measurement values, and verify software and hardware version information.
+
+To open the Diagnostics submenu, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Diagnostics**.
+
+The **Diagnostics** submenu appears, as shown in <FigureRef id="DCUSetup-Diagnostics-Submenu" />.
 
 <FigureProvider>
     <Figure 
         id="DCUSetup-Diagnostics-Submenu" 
         src="/img/4-DCUSetup/2-Diagnostics/DCUSetupDiagnosticsSubmenu-Light.png"
         srcDark="/img/4-DCUSetup/2-Diagnostics/DCUSetupDiagnosticsSubmenu-Dark.png"
-        caption="DCU Setup Diagnostics Submenu" 
+        caption="DCU Setup Diagnostics submenu" 
+        alt={"Diagnostics submenu with the Accelerometer Tests, Tachometer Tests, Voltage Tests, Measurement Tests, Screen shots and Filter Test buttons, and Back and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
 
-        
+## Diagnostics functions
+
+The **Diagnostics** submenu contains the following functions:
+
+- [**Accelerometer Tests**](./1-AccelerometerTests.mdx): Checks accelerometer operation, connectivity, and signal quality.
+- [**Tachometer Tests**](./2-TachometerTests.mdx): Checks the tachometer speed signal.
+- [**Voltage Tests**](./3-VoltageTests.mdx): Checks power rails, signal channels, and auxiliary inputs.
+- [**Measurement Tests**](./4-MeasurementTests.mdx): Collects real-time vibration data from connected sensors.
+- [**Screenshots**](./5-Screenshots.mdx): Views, sends, or deletes stored screenshots.
+- [**Test Filters**](./6-FilterTest.mdx): Checks the performance of dynamic filters.
+
+## Close the Diagnostics submenu
+
+- To return to the **DCU Setup** submenu, select **Back**.
+- To return to the Home screen, select **Cancel**.

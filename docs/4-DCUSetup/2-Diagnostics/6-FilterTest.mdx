@@ -10,169 +10,149 @@ sidebar_label: '4.2.6 - Filter Test'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-    Use the **Test Filters option** to verify the performance of dynamic filters configured on the DCU. 
-    Technicians can run a range test or a filter test and review the results on a live frequency chart.
-    The Options screen allows the technician to configure the filter type and related parameters before running a test.
+Use the **Test Filters** function to verify the performance of dynamic filters configured on the DCU. You can run a range test or a filter test and review the results on a live frequency chart. On the **Options** screen, you can configure the filter type and related parameters before you run a test.
 
-    To open the Test Filters screen, proceed as follows:
+To open the Test Filters screen, follow these steps:
 
-    1. From the Main Menu, select **Diagnostics**.
-    2. From the Diagnostics submenu, select **Test Filters**.
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Diagnostics**.
+4. From the **Diagnostics** submenu, select **Test Filters**.
 
-    The Test Filters screen appears as show in the <FigureRef id="Test-Filters-Screen-1" />.
+The **Test Filters** screen appears, as shown in <FigureRef id="Test-Filters-Screen-1" />.
 
-    <FigureProvider>
-        <Figure 
-            id="Test-Filters-Screen-1" 
-            src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreen-Light.jpg"
-            srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreen-Dark.jpg"
-            caption="Test Filters screen" 
-            width="70%"
-        />
-    </FigureProvider>
+<FigureProvider>
+    <Figure 
+        id="Test-Filters-Screen-1" 
+        src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreen-Light.jpg"
+        srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreen-Dark.jpg"
+        caption="Test Filters screen" 
+        alt={"Test Filters screen with an Options summary of the pre-selected range 50,000 CPM (4 Code) and the dynamic filter settings, and the Run Range Test, Run Filter Test, Up, Down and Options buttons."}
+        width="70%"
+    />
+</FigureProvider>
 
-    ## Test Filters screen
-    
-    The following fields, sections, and controls available on the Test Filters screen as shown in <FigureRef id="Test-Filters-Screen-1" />.
+## Test Filters screen
 
-    | Options         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                                                                                                                                                                                
-    | :-------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Options         | **<u>Pre-Selected Ranges</u>**<br />Displays the currently selected frequency range. Example: 50,000 CPM (4 Code)<br /><br />**<u>Dynamic Filter (all in hertz)</u>**<br />Displays the dynamic filter parameters.<br /> <ul><li>**Filter**<br />Displays the selected filter type.<br />**Example:** LP </li></ul><hr /> <ul><li>**Sample Rate**<br />Displays the sample rate value in hertz.<br />**Example:** 12,800</li></ul><hr /> <ul><li>**fsamp (fmax x 2.56)**<br />Displays the calculated sampling frequency.<br />**Example:** 2133.333</li></ul><hr /> <ul><li>**Fmax**<br />Displays the maximum frequency value.<br />**Example:** 833.333</li></ul><hr /> <ul><li>**Taps**<br />Displays the number of filter taps.<br />**Example:** 1,500</li></ul> |                                  
-    | Chart area      | Displays a live frequency chart showing amplitude (g's) versus frequency (Hertz). The chart updates after running a range test or filter test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-    | Run Range Test  | Runs the range test and displays the result on the frequency chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-    | Run Filter Test | Runs the filter test and displays the result on the frequency chart.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | ∧ (Up)          | Scrolls up in the chart view.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-    | ∨ (Down)        | Scrolls down in the chart view.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-    | Option          | Open the Options screen to configure filter parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+The following table describes the fields, sections, and controls available on the Test Filters screen, as shown in <FigureRef id="Test-Filters-Screen-1" />.
 
-    ## Run Range Test
+| Option          | Description |
+| :-------------- | :---------- |
+| Options         | **<u>Pre-Selected Ranges</u>**<br />Displays the selected frequency range.<br />**Example:** 50,000 CPM (4 Code)<br /><br />**<u>Dynamic Filter (all in hertz)</u>**<br />Displays the dynamic filter parameters.<br /> <ul><li>**Filter**<br />Displays the selected filter type.<br />**Example:** LP </li></ul><hr /> <ul><li>**Sample Rate**<br />Displays the sample rate value in hertz.<br />**Example:** 12,800</li></ul><hr /> <ul><li>**fsamp (fmax x 2.56)**<br />Displays the calculated sampling frequency.<br />**Example:** 2133.333</li></ul><hr /> <ul><li>**Fmax**<br />Displays the maximum frequency value.<br />**Example:** 833.333</li></ul><hr /> <ul><li>**Taps**<br />Displays the number of filter taps.<br />**Example:** 1,500</li></ul> |
+| Chart area      | Displays a live frequency chart of amplitude (g's) versus frequency (hertz). The chart updates after you run a range test or filter test. |
+| Run Range Test  | Runs the range test and displays the result on the frequency chart. |
+| Run Filter Test | Runs the filter test and displays the result on the frequency chart. |
+| ∧ (Up)          | Scrolls up in the chart view. |
+| ∨ (Down)        | Scrolls down in the chart view. |
+| Options         | Opens the **Options** screen so that you can configure filter parameters. |
 
-    Use the **Run Range Test function** to test the pre-selected frequency range and display the result on the frequency chart.
-    To run a range test, proceed as follows:
+## Run a range test
 
-    1. On the Test Filters screen, select **Run Range Test**. 
-    2. The DCU runs the range test and displays the frequency chart according to the selected range configuration. 
-    3. Review the frequency chart to verify the filter performance across the selected range as shown in the <FigureRef id="Test-Filters-Screen-2" />.
+Use **Run Range Test** to test the pre-selected frequency range and display the result on the frequency chart.
 
-    <FigureProvider>
-        <Figure 
-            id="Test-Filters-Screen-2" 
-            src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunRangeTestResult-Light.jpg"
-            srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunRangeTestResult-Dark.jpg"
-            caption="Test Filters screen (Run Range Test result)" 
-            width="70%"
-        />
-    </FigureProvider>
+To run a range test, follow these steps:
 
-    ## Run Filter Test
+1. On the **Test Filters** screen, select **Run Range Test**. The DCU runs the range test and displays the frequency chart based on the selected range configuration.
+2. Review the frequency chart to verify the filter performance across the selected range, as shown in <FigureRef id="Test-Filters-Screen-2" />.
 
-    Use the **Run Filter Test function** to test the configured dynamic filter and display the result on the frequency 
-    chart. To run a filter test, proceed as follows:
+<FigureProvider>
+    <Figure 
+        id="Test-Filters-Screen-2" 
+        src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunRangeTestResult-Light.jpg"
+        srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunRangeTestResult-Dark.jpg"
+        caption="Test Filters screen (Run Range Test result)" 
+        alt={"Test Filters screen after Run Range Test, with a plot of amplitude in g's on a log scale against frequency in hertz that is flat and then drops sharply, and 'Ready' in the task status bar."}
+        width="70%"
+    />
+</FigureProvider>
 
-    1. On the Test Filters screen, select **Run Filter Test**. The DCU runs the filter test and displays the frequency chart according to the configured filter settings. 
-    2. Review the frequency chart as shown in <FigureRef id="Test-Filters-Screen-3" /> to verify the dynamic filter performance.
+## Run a filter test
 
-    <FigureProvider>
-        <Figure 
-            id="Test-Filters-Screen-3" 
-            src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunFilterTestResult-Light.jpg"
-            srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunFilterTestResult-Dark.jpg"
-            caption="Test Filters screen (Run Filter Test result)" 
-            width="70%"
-        />
-    </FigureProvider>
+Use **Run Filter Test** to test the configured dynamic filter and display the result on the frequency chart.
 
-    ## Options
+To run a filter test, follow these steps:
 
-    Use the **Options screen** to configure the filter type and related parameters before running a test. To open the Options screen, 
-    proceed as follows:
+1. On the **Test Filters** screen, select **Run Filter Test**. The DCU runs the filter test and displays the frequency chart based on the configured filter settings. 
+2. To verify the dynamic filter performance, review the frequency chart, as shown in <FigureRef id="Test-Filters-Screen-3" />.
 
-    1. On the Test Filters screen, select **Options**. The Options screen appears.
+<FigureProvider>
+    <Figure 
+        id="Test-Filters-Screen-3" 
+        src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunFilterTestResult-Light.jpg"
+        srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersScreenRunFilterTestResult-Dark.jpg"
+        caption="Test Filters screen (Run Filter Test result)" 
+        alt={"Test Filters screen after Run Filter Test, with a plot of amplitude in g's on a log scale against frequency in hertz that is flat and then rolls off at higher frequencies, and 'Ready' in the task status bar."}
+        width="70%"
+    />
+</FigureProvider>
 
-    <FigureProvider>
-        <Figure 
-            id="Test-Filters-Options-Screen" 
-            src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersOptionsScreen-Light.jpg"
-            srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersOptionsScreen-Dark.jpg"
-            caption="Test Filters(Options screen)" 
-            width="70%"
-        />
-    </FigureProvider>
+## Configure filter options
 
-    ## Options screen
+Use the **Options** screen to configure the filter type and related parameters before you run a test.
 
-    The following fields and controls available on the Options screen are shown in <FigureRef id="Test-Filters-Options-Screen" />.
+To open the Options screen:
 
-    | Options                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 
-    | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
-    | Pre-Selected Ranges           | Selects the frequency range from the dropdown.<br /> **Example:** 50,000 CPM (4 Code)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-    | Dynamic Filter (all in hertz) | Displays the dynamic filter configuration section <br /><ul><li>**LP:**<br />Selects the Low Pass filter type. When selected, the Fmax field becomes active and displays the upper corner frequency value.</li></ul><hr /> <ul><li>**HP:**<br />Selects the High Pass filter type. When selected, the upper corner frequency field name becomes active. All other corner fields are disabled.</li></ul><hr /> <ul><li>**BP:**<br />Selects the Band Pass filter type. When selected, the upper and lower corner frequency fields become active.</li></ul><hr /> <ul><li>**BS:**<br />Selects the Band Stop filter type. When selected, the upper and lower corner frequency fields become active.</li></ul> | 
-    | fsamp (fmax x 2.56)           | Displays the calculated sampling frequency in hertz.<br /> **Example:** 2133.3333                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 
-    | Sample Rate                   | Displays the sample rate in hertz. <br />**Example:** 12800                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-    | Fmax                          | Displays the maximum frequency value in hertz. <br />**Example:** 833.333                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | Taps                          | Displays the number of filter taps. <br />**Example:** 1500                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-    | Max. chart                    | Enables or disables the maximum chart display option.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-    | Reset                         | Resets the filter configuration to the default values.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-    | Cancel                        | Closes the Options screen without saving changes and returns to the Test Filters screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-    | Save                          | Saves the filter configuration changes and returns to the Test Filters screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+- On the **Test Filters** screen, select **Options**. The **Options** screen appears, as shown in <FigureRef id="Test-Filters-Options-Screen" />.
 
-    ## Configure filter options
-    To configure the filter options, proceed as follows:
+<FigureProvider>
+    <Figure 
+        id="Test-Filters-Options-Screen" 
+        src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersOptionsScreen-Light.jpg"
+        srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersOptionsScreen-Dark.jpg"
+        caption="Test Filters (Options screen)" 
+        alt={"Test Filters Options screen with the Pre-Selected Ranges list set to 50,000 CPM (4 Code), Dynamic Filter options LP (selected), HP, BP and BS, boxes for fsamp, Sample Rate, Fmax and Taps, a Max. chart checkbox, and Reset, Cancel and Save buttons."}
+        width="70%"
+    />
+</FigureProvider>
 
-    1. Select the desired frequency range from the **Pre-Selected Ranges** dropdown.
-    2. Under **Dynamic Filter (all in hertz)**, select the desired filter type:
+### Options screen
 
-        a. **LP** - Low Pass filter. When selected, the Fmax field becomes active and displays the upper corner &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; frequency value.<br />
-        b. **HP** - High Pass filter. When selected, the upper corner frequency field becomes active. All other &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; corner fields are disabled.<br />
-        c. **BP** - Band Pass filter. When selected, both the lower and upper corner frequency fields become &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; active.<br />
-        d. **BS** - Band Stop filter. When selected, both the lower and upper corner frequency fields become &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; active.<br />
+The following table describes the fields and controls available on the Options screen, as shown in <FigureRef id="Test-Filters-Options-Screen" />.
 
-    3. To enter values for the following fields, select the field. The numeric keypad appears as shown in <FigureRef id="Test-Filters-Pin-Pad" />. 
-    4. Enter the desired value using the numeric keypad.
+| Option                        | Description |
+| :---------------------------- | :---------- |
+| Pre-Selected Ranges           | Selects the frequency range from the list.<br /> **Example:** 50,000 CPM (4 Code) |
+| Dynamic Filter (all in hertz) | Displays the dynamic filter configuration section. <br /><ul><li>**LP:**<br />Selects the low-pass filter type. When selected, the **Fmax** field becomes available and displays the upper corner frequency value.</li></ul><hr /> <ul><li>**HP:**<br />Selects the high-pass filter type. When selected, the upper corner frequency field becomes available. All other corner fields are unavailable.</li></ul><hr /> <ul><li>**BP:**<br />Selects the band-pass filter type. When selected, the upper and lower corner frequency fields become available.</li></ul><hr /> <ul><li>**BS:**<br />Selects the band-stop filter type. When selected, the upper and lower corner frequency fields become available.</li></ul> |
+| fsamp (fmax x 2.56)           | Displays the calculated sampling frequency in hertz.<br /> **Example:** 2133.3333 |
+| Sample Rate                   | Displays the sample rate in hertz. <br />**Example:** 12800 |
+| Fmax                          | Displays the maximum frequency value in hertz. <br />**Example:** 833.333 |
+| Taps                          | Displays the number of filter taps. <br />**Example:** 1500 |
+| Max. chart                    | Turns the maximum chart display on or off. |
+| Reset                         | Resets the filter configuration to the default values. |
+| Cancel                        | Closes the Options screen without saving changes and returns to the Test Filters screen. |
+| Save                          | Saves the filter configuration changes and returns to the Test Filters screen. |
 
-        &nbsp; a.  **fsamp (fmax x 2.56)** - Enter the sampling frequency value.<br /> 
-        &nbsp; b. **Sample Rate** - Enter the sample rate value.<br />
-        &nbsp; c. **Fmax** - Enter the maximum frequency value.<br />
-        &nbsp; d. **Taps** - Enter the number of filter taps.<br />
+### Set the filter options
 
-    5. To enable the maximum chart display, select the **Max. chart** checkbox.
-    6. Select **Save**. The DCU saves the configured filter options and returns to the Test Filters screen, where the frequency chart displays the filter results according to the selected configuration. 
-    7. To reset the filter configuration to default values, select **Reset**.
-    8. To close the Options screen without saving changes, select **Cancel**.
+To configure the filter options, follow these steps:
+
+1. From the **Pre-Selected Ranges** list, select the frequency range.
+2. Under **Dynamic Filter (all in hertz)**, select the filter type:
+    - **LP** (low-pass filter): The **Fmax** field becomes available and displays the upper corner frequency value.
+    - **HP** (high-pass filter): The upper corner frequency field becomes available. All other corner fields are unavailable.
+    - **BP** (band-pass filter): The lower and upper corner frequency fields become available.
+    - **BS** (band-stop filter): The lower and upper corner frequency fields become available.
+3. To enter a value, select the field. The numeric keypad appears, as shown in <FigureRef id="Test-Filters-Pin-Pad" />.
 
     <FigureProvider>
         <Figure 
             id="Test-Filters-Pin-Pad" 
             src="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersPinPad-Light.jpg"
             srcDark="/img/4-DCUSetup/2-Diagnostics/6-FilterTest/TestFiltersPinPad-Dark.jpg"
-            caption="Test Filters(Pin-Pad)" 
+            caption="Test Filters (numeric keypad)" 
+            alt={"Numeric keypad for fsamp (fmax x 2.56) showing 2133.3333, with number keys, a decimal point, Backspace, Clear All, Up, Down and Cancel buttons."}
             width="40%"
         />
     </FigureProvider>
 
-To Return to the Main Menu, select the **Menu** button in the header.
+4. Use the numeric keypad to enter values in the following fields:
+    - **fsamp (fmax x 2.56)**: The sampling frequency value.
+    - **Sample Rate**: The sample rate value.
+    - **Fmax**: The maximum frequency value.
+    - **Taps**: The number of filter taps.
+5. To turn on the maximum chart display, select the **Max. chart** checkbox.
+6. Select **Save**. The DCU saves the configured filter options and returns to the **Test Filters** screen. The frequency chart displays the filter results based on the selected configuration. 
 
+To reset the filter configuration to the default values, select **Reset**. To close the **Options** screen without saving changes, select **Cancel**.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+To return to the **Main Menu**, in the header, select **Menu**.

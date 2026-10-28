@@ -2,21 +2,38 @@
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-The **Maintenance** submenu provides tools that help technicians verify DCU operation before deployment. Use this submenu to run system health checks, test hardware components, and confirm that the device is ready for field use.
+Use the **Maintenance** submodule to verify DCU operation before deployment. Its functions let you run system health checks, test hardware components, and confirm that the device is ready for field use.
 
-To open the Maintenance submenu, proceed as follows:
+To open the Maintenance submenu, follow these steps:
 
-1. From the **Main Menu**, select **DCU Setup**.
-2. From the **DCU Setup** submenu, select **Maintenance**.
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Maintenance**.
 
-The **Maintenance** submenu appears.
+The **Maintenance** submenu appears, as shown in <FigureRef id="DCU-Setup-Maintenance-Submenu" />.
 
 <FigureProvider>
     <Figure
         id="DCU-Setup-Maintenance-Submenu"
         src="/img/4-DCUSetup/1-Maintenance/DCUSetupMaintenanceSubmenu-Light.png"
         srcDark="/img/4-DCUSetup/1-Maintenance/DCUSetupMaintenanceSubmenu-Dark.png"
-        caption="DCU Setup Maintenance Submenu"
+        caption="DCU Setup Maintenance submenu"
+        alt={"Maintenance submenu with the Battery Test, Internet Test, Touchscreen Calibration, Touchscreen Test and Software Upgrade buttons, and Back and Cancel buttons."}
         width="70%"
     />
 </FigureProvider>
+
+## Maintenance functions
+
+The **Maintenance** submenu contains the following functions:
+
+- [**Battery Test**](./1-BatteryTest.mdx): Checks battery health and records voltage and capacity.
+- [**Internet Test**](./2-InternetTest.mdx): Checks the DCU network connection.
+- [**Touchscreen Calibration**](./3-TouchscreenCalibration.mdx): Aligns the touchscreen with the display.
+- [**Touchscreen Test**](./4-TouchscreenTest.mdx): Checks that the touchscreen responds across the display.
+- [**Software Upgrade**](./5-SoftwareUpgrade.mdx): Updates the DCU software.
+
+## Close the Maintenance submenu
+
+- To return to the **DCU Setup** submenu, select **Back**.
+- To return to the Home screen, select **Cancel**.

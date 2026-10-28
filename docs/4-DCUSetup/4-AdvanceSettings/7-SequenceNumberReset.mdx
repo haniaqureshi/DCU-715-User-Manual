@@ -10,44 +10,42 @@ sidebar_label: '4.4.7 - Sequence Number Reset'
 import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
 import Figure from "@site/src/components/Figure";
 
-Use the **Sequence Number Reset function** to manually reset the internal counter that tracks the transmission of 
-data packets to the CMAS server. This function is used when troubleshooting data synchronization issues. To open 
-the Sequence Number Reset confirmation dialog, proceed as follows: 
+Use the **Sequence Number Reset** function to manually reset the internal counter that tracks the data packets sent to the CMAS server. Use this function when you troubleshoot data synchronization issues.
 
-1. From the Advanced Settings submenu, select **Sequence Number Reset**. 
-2. A confirmation dialog appears as shown in <FigureRef id="Sequence-Number-Reset-Confirmation-Dialog" />
+To open the Sequence Number Reset confirmation dialog, follow these steps:
+
+1. On the Home screen, select **Menu**. The **Main Menu** appears.
+2. From the **Main Menu**, select **DCU Setup**.
+3. From the **DCU Setup** submenu, select **Advanced Settings**, and then enter the password. For details, see [Open the Advanced Settings submenu](./index.mdx#open-the-advanced-settings-submenu).
+4. From the **Advanced Settings** submenu, select **Sequence Number Reset**.
+
+A confirmation dialog appears, as shown in <FigureRef id="Sequence-Number-Reset-Confirmation-Dialog" />.
 
 <FigureProvider>
     <Figure 
         id="Sequence-Number-Reset-Confirmation-Dialog" 
         src="/img/4-DCUSetup/4-AdvanceSettings/7-SequenceNumberReset/SequenceNumberResetConfirmationDialog-Light.jpg"
         caption="Sequence Number Reset confirmation dialog" 
+        alt={"Confirmation dialog with a yellow warning icon asking 'Are you sure you want to reset the sequence Number?', with No and Yes buttons."}
         width="50%"
     />
 </FigureProvider>
 
 ## Sequence Number Reset confirmation dialog
-The following controls are available in the Sequence Number Reset confirmation dialog. 
 
-| Control              | Description                                                                   |                                                                                                                                          
-| :------------------- | :---------------------------------------------------------------------------- |
-| Confirmation message | Displays the message: **Are you sure you want to reset the sequence Number?** |
-| Yes                  | Confirms the reset and returns to the Advanced Settings submenu.              |
-| No                   | Cancels the reset and returns to the Advanced Settings submenu.               |  
+The following table describes the controls available in the Sequence Number Reset confirmation dialog.
+
+| Control              | Description |
+| :------------------- | :---------- |
+| Confirmation message | Displays the message "Are you sure you want to reset the sequence Number?" |
+| Yes                  | Confirms the reset and returns to the Advanced Settings submenu. |
+| No                   | Cancels the reset and returns to the Advanced Settings submenu. |
 
 ## Reset the sequence number
-To reset the sequence number, proceed as follows:
 
-1. From the Advanced Settings submenu, select **Sequence Number Reset**. A confirmation dialog appears.
-2. Review the confirmation message: **Are you sure you want to reset the sequence Number?**
+To reset the sequence number, follow these steps:
 
-:::warning
+1. In the confirmation dialog, review the message "Are you sure you want to reset the sequence Number?"
+2. To confirm the reset, select **Yes**. The DCU resets the sequence number and returns to the **Advanced Settings** submenu.
 
-Are you sure you want to reset the sequence Number?
-
-:::
-
-3. Select **Yes** to confirm the reset. The DCU resets the sequence number and returns to the Advanced Settings submenu.
-4. To cancel the reset without making changes, select **No**.The DCU returns to the Advanced Settings submenu in both cases.
-
-
+To cancel the reset, select **No**. The DCU returns to the **Advanced Settings** submenu without making changes.
