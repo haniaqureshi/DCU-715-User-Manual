@@ -1,5 +1,5 @@
 // ============================================================
-// Author:  Hania Qureshi
+// Author:  Javeria Qureshi (on behalf of Hania Qureshi)
 // Date:    July 3, 2026
 // Purpose: FigureProvider stores the figureMap injected at
 //          build time by the remark plugin. FigureRef reads

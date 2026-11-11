@@ -1,0 +1,83 @@
+/* ============================================================
+   Author:  Hania Qureshi and Javeria Qureshi
+   Date:    November 11, 2026
+   Purpose: Styles for the PDF only. scripts/build-pdf.mjs applies
+            this file when it creates the PDF; the website never
+            loads it.
+   ============================================================ */
+
+/* Colors used throughout the PDF */
+:root {
+  --pdf-brand: #0056a0; /* ITR blue */
+  --pdf-text: #1c1e21;
+  --pdf-muted: #5f6368;
+}
+
+/* Page text: white background, print-friendly size */
+html, body {
+  background: #fff !important;
+  color: var(--pdf-text);
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+
+/* ---------- Hide website-only parts ---------- */
+/* Navbar, sidebars, "on this page" box, Next/Previous buttons, etc. */
+.navbar, .footer, .theme-doc-sidebar-container, .theme-doc-toc-desktop,
+.theme-doc-toc-mobile, .theme-doc-footer, .pagination-nav,
+.theme-doc-breadcrumbs, .theme-doc-version-badge, .theme-doc-version-banner,
+.theme-back-to-top-button, .hash-link, [class*="tocCollapsible"],
+[class*="sidebarToggle"], [class*="SidebarToggle"] {
+  display: none !important;
+}
+
+/* Let the content use the full page width */
+main .container, main .row, main .col, article {
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ---------- Contents page ---------- */
+.toc-page .toc-header { font-size: 22pt; color: var(--pdf-brand); margin-bottom: 8mm; }
+.toc-page ul { list-style: none; padding: 0; }
+.toc-item { margin: 1.5mm 0; }
+.toc-item a { color: var(--pdf-text); text-decoration: none; }
+.toc-item-1 { font-weight: 700; margin-top: 4mm; font-size: 11pt; } /* chapters */
+.toc-item-3 { font-size: 9.5pt; }                                  /* sections */
+.toc-item-4 { font-size: 9pt; color: var(--pdf-muted); }            /* sub-sections */
+
+/* ---------- Chapter and section headings ---------- */
+h1 {
+  font-size: 22pt;
+  color: var(--pdf-brand);
+  border-bottom: 2px solid var(--pdf-brand);
+  padding-bottom: 2mm;
+  margin-bottom: 6mm;
+}
+h2 { font-size: 16pt; color: var(--pdf-brand); margin-top: 8mm; }
+h3 { font-size: 13pt; margin-top: 6mm; }
+h4 { font-size: 11pt; }
+
+/* Chapter titles ("2  Routes") are a little bigger.
+   Each page already starts on a new sheet, so no page breaks are set here. */
+.pdf-chapter { font-size: 26pt; margin-bottom: 10mm; }
+
+/* ---------- Figures, tables and notes ---------- */
+/* Don't split these across two pages */
+figure, img, table, .theme-admonition, pre { break-inside: avoid; }
+figure img { max-height: 120mm; width: auto; } /* keep screenshots on one page */
+table { font-size: 9pt; }
+a { color: var(--pdf-brand); }
+
+/* Remove extra space at the end of each page so it can't spill onto a blank sheet */
+main, main .container, [class*="docItemContainer"], article, .theme-doc-markdown {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.theme-doc-markdown > :last-child { margin-bottom: 0 !important; }
+
+/* Remove the website's leftover space above each page.
+   (A plain "padding-top: 0" can't override it, so we pull the content up instead.) */
+main .container > .row { margin-top: -1rem !important; }

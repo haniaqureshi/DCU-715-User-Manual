@@ -1,8 +1,6 @@
 {
-  "label": "Module 4: DCU Setup",
+  "label": "DCU Setup",
   "position": 5,
-  "link": {
-    "type": "doc",
-    "id": "DCUSetup/index"
-  }
+  "link": null,
+  "collapsible": false
 }

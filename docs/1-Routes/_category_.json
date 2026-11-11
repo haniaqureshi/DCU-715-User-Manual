@@ -1,8 +1,6 @@
 {
-  "label": "Module 1: Routes",
+  "label": "Routes",
   "position": 2,
-  "link": {
-    "type": "doc",
-    "id": "Routes/index"
-  }
+  "link": null,
+  "collapsible": false
 }

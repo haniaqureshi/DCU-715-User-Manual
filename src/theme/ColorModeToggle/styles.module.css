@@ -1,0 +1,40 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.2rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  background: var(--ifm-background-surface-color);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  color: var(--ifm-color-emphasis-600);
+  transition: background var(--ifm-transition-fast), color var(--ifm-transition-fast);
+}
+
+.option:hover {
+  color: var(--ifm-color-emphasis-900);
+}
+
+.option:disabled {
+  cursor: not-allowed;
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+/* Highlight the theme that is showing right now (works before the page loads too) */
+[data-theme='light'] .light,
+[data-theme='dark'] .dark {
+  color: var(--ifm-color-emphasis-900);
+  background: var(--ifm-color-emphasis-200);
+}
