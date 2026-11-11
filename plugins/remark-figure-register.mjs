@@ -1,5 +1,5 @@
 // ============================================================
-// Author:  Hania Qureshi
+// Author:  Javeria Qureshi (on behalf of Hania Qureshi)
 // Date:    July 3, 2026
 // Purpose: Remark plugin that runs at build time on every MDX
 //          file. Scans for all <Figure id="..."> components,

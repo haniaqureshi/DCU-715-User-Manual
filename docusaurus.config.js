@@ -1,5 +1,11 @@
 import {themes as prismThemes} from 'prism-react-renderer';
-import figureRegister from "./plugins/remark-figure-register.mjs";
+import figureRegister from "./plugins/remark-pdf-numbering.mjs";
+
+// PDF numbering plugin (see plugins/remark-pdf-numbering.mjs)
+import pdfNumbering from "./plugins/remark-pdf-numbering.mjs";
+
+// true only while "yarn pdf" runs, so the numbers never appear on the website
+const IS_PDF_BUILD = process.env.PDF_BUILD === 'true';
 
 // Docs version shown in the navbar. Update this when you tag a new release on GitHub.
 const DOCS_VERSION = 'v1.0';
@@ -56,7 +62,8 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
-          remarkPlugins: [figureRegister],
+          // add chapter/section numbers only when building the PDF
+          remarkPlugins: IS_PDF_BUILD ? [figureRegister, pdfNumbering] : [figureRegister],
           // Put the Introduction page under a "Getting Started" heading in the sidebar
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
             const items = await defaultSidebarItemsGenerator(args);

@@ -1,5 +1,5 @@
 // ============================================================
-// Author:  Hania Qureshi
+// Author:  Javeria Qureshi (on behalf of Hania Qureshi)
 // Date:    July 3, 2026
 // Purpose: Renders a numbered figure (image + caption).
 //          The num prop is injected automatically at build time
