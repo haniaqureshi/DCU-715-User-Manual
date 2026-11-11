@@ -118,3 +118,735 @@
 html[data-theme='light'] {
   --ifm-navbar-search-input-placeholder-color: #606770;
 }
+
+/* ============================================================
+   Navbar (Tonder-style)
+   Row 1: "DCU 715" wordmark | wide centred search | Support,
+          language, sun/moon switch, sidebar button
+   Row 2: version | divider | Home, Documentation tabs
+   ============================================================ */
+
+/* Wordmark: no hover or colour change */
+.navbar__brand,
+.navbar__brand:hover,
+.navbar__brand:focus {
+  color: var(--ifm-heading-color);
+  text-decoration: none;
+}
+
+.navbar__title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ifm-heading-color);
+}
+
+.navbar__title::after {
+  content: 'DOCS';
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.05rem 0.4rem 0.1rem;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.18em;
+  vertical-align: 0.3em;
+  color: var(--ifm-color-primary);
+  border: 1.5px solid var(--ifm-color-primary);
+  border-radius: 5px;
+}
+
+/* Support link: plain text, no "external" arrow */
+.navbar-support {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.navbar-support svg {
+  display: none;
+}
+
+/* Language: icon only (the name stays available to screen readers) */
+.navbar__items--right .dropdown > .navbar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  font-size: 0;
+  border-radius: 8px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.navbar__items--right .dropdown > .navbar__link:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.navbar__items--right .dropdown > .navbar__link svg {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.navbar__items--right .dropdown > .navbar__link::after {
+  display: none;
+}
+
+/* Sidebar show/hide button: bordered rounded square */
+.navbar-sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin-left: 0.25rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 10px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.navbar-sidebar-toggle:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.navbar-sidebar-toggle[aria-pressed='true'] {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.navbar-sidebar-toggle:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Only show the sidebar button on pages that have a sidebar */
+html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
+  display: none;
+}
+
+/* Desktop layout */
+@media (min-width: 997px) {
+  :root {
+    --ifm-navbar-height: 6.6rem;
+  }
+
+  .navbar {
+    height: auto;
+    padding-top: 0.6rem;
+    padding-bottom: 0;
+  }
+
+  /* Full-width line between the two rows */
+  .navbar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3.95rem;
+    height: 1px;
+    background: var(--ifm-color-emphasis-200);
+  }
+
+  .navbar__inner {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  /* Let every item sit directly in the wrapping row so they can be ordered */
+  .navbar__items:not(.navbar__items--right),
+  .navbar__items--right {
+    display: contents;
+  }
+
+  .navbar__brand {
+    order: 0;
+    height: 2.75rem;
+    margin-right: 1.5rem;
+  }
+
+  /* Search: centred on the page, wide */
+  .navbar__inner [class*='navbarSearchContainer'] {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(24rem, 40vw, 44rem);
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar__inner [class*='navbarSearchContainer'] .navbar__search {
+    width: 100%;
+  }
+
+  .navbar__inner .navbar__search-input {
+    width: 100%;
+    height: 2.6rem;
+    padding-left: 2.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 10px;
+    background-color: var(--ifm-background-surface-color);
+  }
+
+  /* Right-hand group, in Tonder's order */
+  .navbar-support {
+    order: 1;
+    display: flex;
+    align-items: center;
+    height: 2.75rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+
+  .navbar__items--right .dropdown {
+    order: 2;
+    padding: 0 0.25rem;
+  }
+
+  .navbar__inner [class*='colorModeToggle'] {
+    order: 3;
+    margin: 0 0.35rem;
+  }
+
+  .navbar-sidebar-toggle {
+    order: 4;
+  }
+
+  /* Forces the tabs onto their own row, below the line */
+  .navbar__inner::after {
+    content: '';
+    order: 5;
+    flex-basis: 100%;
+    height: 0;
+    margin-top: 0.6rem;
+  }
+
+  .navbar__items:not(.navbar__items--right) > .navbar__item:not(.navbar__brand) {
+    order: 6;
+  }
+
+  /* Version label: plain bold text, not a tab */
+  .navbar-version {
+    padding: 0.55rem 0 0.75rem;
+    line-height: var(--ifm-line-height-base);
+    font-weight: 700;
+  }
+
+  .navbar-version a {
+    color: var(--ifm-navbar-link-color);
+    text-decoration: none;
+  }
+
+  .navbar-version a:hover {
+    color: var(--ifm-navbar-link-hover-color);
+  }
+
+  /* Thin grey divider after the version */
+  .navbar-divider {
+    padding: 0.65rem 0 0.75rem;
+    margin: 0 1rem;
+  }
+
+  .navbar-divider span {
+    display: block;
+    width: 1px;
+    height: 1.25rem;
+    background: var(--ifm-color-emphasis-300);
+  }
+
+  /* Tabs: grey text, underline on the active one */
+  .navbar-tab {
+    position: relative;
+    margin-right: 1.5rem;
+    padding: 0.55rem 0 0.75rem;
+    color: var(--ifm-color-emphasis-700);
+  }
+
+  .navbar-tab:hover {
+    color: var(--ifm-navbar-link-hover-color);
+  }
+
+  .navbar-tab.navbar__link--active {
+    color: var(--ifm-heading-color);
+    font-weight: 600;
+  }
+
+  .navbar-tab.navbar__link--active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ifm-color-primary);
+  }
+}
+
+/* Phones: no divider line, and no sidebar button (the menu button
+   already opens the sidebar) */
+@media (max-width: 996px) {
+  .navbar-divider,
+  .navbar-sidebar-toggle {
+    display: none;
+  }
+
+  /* The search plugin pins itself to the right edge on small screens and
+     would cover the theme switch, so put it back in line after the switch */
+  .navbar__inner [class*='navbarSearchContainer'] {
+    position: static;
+    margin-left: 0.5rem;
+  }
+
+  /* Keyboard-shortcut hint isn't useful on touch screens and covers the placeholder */
+  .navbar__inner [class*='searchHintContainer'] {
+    display: none;
+  }
+
+  .navbar__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar__title::after {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Sidebar: same regular font as the rest of the site,
+   section headings in the brand blue, pages indented under
+   them, small inline arrow for sub-sections, pill for the
+   current page
+   ============================================================ */
+:root {
+  --sidebar-hover-bg: rgba(0, 0, 0, 0.04);
+  --sidebar-active-bg: #e8f1fa;
+  --sidebar-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23999fab' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m9 6 6 6-6 6'/%3E%3C/svg%3E");
+}
+
+[data-theme='dark'] {
+  --sidebar-hover-bg: rgba(255, 255, 255, 0.05);
+  --sidebar-active-bg: rgba(77, 159, 214, 0.16);
+  --sidebar-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23868c96' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m9 6 6 6-6 6'/%3E%3C/svg%3E");
+}
+
+/* Regular body font weight (the sidebar is semi-bold by default) */
+.theme-doc-sidebar-container .menu {
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+/* Room at the bottom so the list doesn't stop abruptly */
+.theme-doc-sidebar-menu {
+  padding-bottom: 3rem;
+}
+
+/* Page links: rounded hover */
+.theme-doc-sidebar-menu .menu__link {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-radius: 8px;
+}
+
+.theme-doc-sidebar-menu .menu__link:hover {
+  background-color: var(--sidebar-hover-bg);
+}
+
+/* Current page: soft blue pill */
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist),
+.theme-doc-sidebar-menu .menu__link[aria-current='page'] {
+  color: var(--ifm-color-primary);
+  background-color: var(--sidebar-active-bg);
+}
+
+/* Section headings (Getting Started, Routes, ...): brand blue, always open, not clickable */
+.theme-doc-sidebar-item-category-level-1 {
+  margin-top: 1.5rem;
+}
+
+.theme-doc-sidebar-menu > .theme-doc-sidebar-item-category-level-1:first-child {
+  margin-top: 0;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible,
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible:hover {
+  background: none;
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
+  color: var(--ifm-color-primary);
+  background: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Pages under a section: indented so they read as children of the heading */
+.theme-doc-sidebar-item-category-level-1 > .menu__list {
+  padding-left: 0.75rem;
+  margin-top: 0.1rem;
+}
+
+/* Sub-sections (Maintenance, Diagnostics, ...): arrow right after the label */
+.theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible,
+.theme-doc-sidebar-item-category-level-3 > .menu__list-item-collapsible {
+  justify-content: flex-start;
+  border-radius: 8px;
+}
+
+.theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible:hover,
+.theme-doc-sidebar-item-category-level-3 > .menu__list-item-collapsible:hover {
+  background-color: var(--sidebar-hover-bg);
+}
+
+.theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible > .menu__link,
+.theme-doc-sidebar-item-category-level-3 > .menu__list-item-collapsible > .menu__link {
+  flex: 0 1 auto;
+  padding-right: 0.25rem;
+}
+
+.theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible > .menu__link:hover,
+.theme-doc-sidebar-item-category-level-3 > .menu__list-item-collapsible > .menu__link:hover {
+  background: none;
+}
+
+/* When a sub-section's own page is open, the pill covers label + arrow */
+.theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible--active,
+.theme-doc-sidebar-item-category-level-3 > .menu__list-item-collapsible--active {
+  background-color: var(--sidebar-active-bg);
+}
+
+.theme-doc-sidebar-item-category-level-2 > .menu__list-item-collapsible--active > .menu__link,
+.theme-doc-sidebar-item-category-level-3 > .menu__list-item-collapsible--active > .menu__link {
+  background: none;
+}
+
+.theme-doc-sidebar-menu .menu__caret {
+  padding: 0 0.4rem;
+  background: none;
+}
+
+.theme-doc-sidebar-menu .menu__caret::before,
+.theme-doc-sidebar-menu .menu__link--sublist-caret::after {
+  width: 0.8rem;
+  height: 0.8rem;
+  min-width: 0.8rem;
+  margin-left: 0.35rem;
+  background: var(--sidebar-arrow) center / contain no-repeat;
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+  filter: none;
+}
+
+.theme-doc-sidebar-menu .menu__caret::before {
+  margin-left: 0;
+}
+
+.theme-doc-sidebar-menu .menu__list-item:not(.menu__list-item--collapsed) > .menu__list-item-collapsible > .menu__caret::before,
+.theme-doc-sidebar-menu .menu__list-item:not(.menu__list-item--collapsed) > .menu__link--sublist-caret::after {
+  transform: rotate(90deg);
+}
+
+/* Pages inside a sub-section: indented a little more */
+.theme-doc-sidebar-item-category-level-2 > .menu__list,
+.theme-doc-sidebar-item-category-level-3 > .menu__list {
+  padding-left: 0.9rem;
+}
+
+/* "Powered by [logo] Docusaurus" at the bottom of the sidebar, in grey */
+.sidebar-powered-by {
+  margin-top: 2.5rem;
+  padding: 0 var(--ifm-menu-link-padding-horizontal);
+}
+
+.sidebar-powered-by a {
+  display: inline-flex;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.sidebar-powered-by img {
+  margin-left: 0.45rem;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.sidebar-powered-by__name {
+  margin-left: 0.3rem;
+  font-weight: var(--ifm-font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+.sidebar-powered-by a:hover {
+  color: var(--ifm-color-emphasis-800);
+}
+
+.sidebar-powered-by a:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+[data-theme='dark'] .sidebar-powered-by a {
+  color: #8b919a;
+}
+
+[data-theme='dark'] .sidebar-powered-by a:hover {
+  color: #c4c8cf;
+}
+
+/* ============================================================
+   Sidebar scrollbar: hidden until you hover over the sidebar
+   ============================================================ */
+.theme-doc-sidebar-container .menu {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.theme-doc-sidebar-container .menu:hover {
+  scrollbar-color: var(--ifm-scrollbar-thumb-background-color) transparent;
+}
+
+.theme-doc-sidebar-container .menu::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.theme-doc-sidebar-container .menu:hover::-webkit-scrollbar-thumb {
+  background-color: var(--ifm-scrollbar-thumb-background-color);
+}
+
+/* ============================================================
+   Page width: the same left and right edge for the top bar and
+   the docs, like Nayax. The sidebar's text lines up with
+   "DCU 715" and the right sidebar ends where the top bar ends.
+   (The footer keeps its own layout.)
+   ============================================================ */
+@media (min-width: 997px) {
+  :root {
+    --site-side-margin: clamp(1.5rem, 4.5vw, 5.5rem);
+    --site-max-width: 1760px;
+  }
+
+  .navbar {
+    padding-left: var(--site-side-margin);
+    padding-right: var(--site-side-margin);
+  }
+
+  .navbar__inner {
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+  }
+
+  /* Docs area: same edges as the navbar. The sidebar list has 1.25rem of
+     its own inner padding, so we take that off on the left. */
+  div:has(> .theme-doc-sidebar-container) {
+    width: 100%;
+    max-width: calc(var(--site-max-width) + 2 * var(--site-side-margin));
+    margin: 0 auto;
+    padding-left: calc(var(--site-side-margin) - 1.25rem);
+    padding-right: var(--site-side-margin);
+  }
+
+  /* Let the page content fill the space between the two sidebars
+     (Docusaurus caps it at 1320px and centres it), and end the
+     right sidebar exactly at the top bar's right edge */
+  main[class*='docMainContainer'] > .container {
+    max-width: none;
+  }
+
+  main[class*='docMainContainer'] .row > .col--3 {
+    padding-right: 0;
+  }
+
+  /* Sidebar hidden with the top-bar button */
+  html[data-sidebar-hidden='true'] .theme-doc-sidebar-container {
+    display: none;
+  }
+
+  html[data-sidebar-hidden='true'] main[class*='docMainContainer'] {
+    max-width: 100%;
+  }
+}
+
+/* Footer: each column's heading and links centred under the column */
+.footer__col {
+  text-align: center;
+}
+
+.footer__col img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* No hard line between the sidebar and the page */
+.theme-doc-sidebar-container {
+  border-right: none !important;
+}
+
+/* ============================================================
+   Right sidebar ("On this page") with the animated track
+   (modelled on Tonder's docs)
+   ============================================================ */
+.toc-wrapper {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - var(--ifm-navbar-height));
+  padding-top: 1.5rem;
+}
+
+.toc-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--toc-link-color);
+}
+
+/* Scrolls on its own if the list is long, with soft faded edges */
+.toc-scroll {
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.75rem 0;
+  scrollbar-width: none;
+  mask-image: linear-gradient(to bottom, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+}
+
+.toc-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* The wrapper is now the sticky part; also drop Docusaurus' straight left border */
+.toc-wrapper .theme-doc-toc-desktop {
+  position: static;
+  top: auto;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border-left: none;
+}
+
+.table-of-contents.toc-animated,
+.table-of-contents.toc-animated.table-of-contents__left-border {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-left: none;
+  font-size: 0.875rem;
+}
+
+.toc-animated ul {
+  margin: 0;
+  padding: 0;
+}
+
+.toc-animated li {
+  margin: 0;
+}
+
+:root {
+  --toc-link-color: #6b7280;
+}
+
+[data-theme='dark'] {
+  --toc-link-color: #8b919a;
+}
+
+.toc-animated .table-of-contents__link {
+  position: relative;
+  display: block;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  line-height: 1.4;
+  color: var(--toc-link-color);
+  transition: color 0.2s ease;
+}
+
+/* Docusaurus' own single-heading highlight is replaced by ours */
+.toc-animated .table-of-contents__link--active {
+  color: var(--toc-link-color);
+}
+
+.toc-animated .table-of-contents__link:hover,
+.toc-animated .table-of-contents__link[data-active] {
+  color: var(--ifm-heading-color);
+}
+
+/* The track: one grey line, a coloured copy clipped to the visible sections, and a dot */
+.toc-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.toc-track svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+.toc-track path {
+  fill: none;
+  stroke-width: 1;
+}
+
+.toc-track__base path {
+  stroke: var(--ifm-color-emphasis-300);
+}
+
+.toc-track__active {
+  clip-path: polygon(
+    0 var(--track-top, 0),
+    100% var(--track-top, 0),
+    100% var(--track-bottom, 0),
+    0 var(--track-bottom, 0)
+  );
+}
+
+.toc-track__active path {
+  stroke: var(--ifm-color-primary);
+  stroke-width: 1.5;
+}
+
+.toc-track__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  offset-rotate: 0deg;
+}
+
+.toc-track--ready .toc-track__active {
+  transition: clip-path 0.3s ease;
+}
+
+.toc-track--ready .toc-track__dot {
+  transition: offset-distance 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toc-track--ready .toc-track__active,
+  .toc-track--ready .toc-track__dot,
+  .toc-animated .table-of-contents__link {
+    transition: none;
+  }
+}

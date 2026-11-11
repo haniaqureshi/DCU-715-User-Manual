@@ -1,6 +1,12 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import figureRegister from "./plugins/remark-figure-register.mjs";
 
+// Docs version shown in the navbar. Update this when you tag a new release on GitHub.
+const DOCS_VERSION = 'v1.0';
+const GITHUB_REPO = 'https://github.com/haniaqureshi/DCU-715-User-Manual';
+// The "Support" link in the top bar opens an email to this address
+const SUPPORT_URL = 'mailto:support@ITR.com';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'DCU 715',
@@ -14,6 +20,16 @@ const config = {
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
+
+  // Re-applies "sidebar hidden" before the page paints, so the sidebar doesn't flash
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML:
+        "try{if(localStorage.getItem('itr-docs-sidebar-hidden')==='true'){document.documentElement.setAttribute('data-sidebar-hidden','true')}}catch(e){}",
+    },
+  ],
 
   i18n: {
     defaultLocale: 'en',
@@ -41,6 +57,25 @@ const config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.js',
           remarkPlugins: [figureRegister],
+          // Put the Introduction page under a "Getting Started" heading in the sidebar
+          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
+            const items = await defaultSidebarItemsGenerator(args);
+            const sidebar = items.map((item) =>
+              item.type === 'doc' && item.id === 'intro'
+                ? {type: 'category', label: 'Getting Started', collapsible: false, collapsed: false, items: [item]}
+                : item,
+            );
+            // "Powered by Docusaurus" line at the very bottom of the sidebar
+            return [
+              ...sidebar,
+              {
+                type: 'html',
+                defaultStyle: false,
+                className: 'sidebar-powered-by',
+                value: '<a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">Powered by <img src="/img/docusaurus-logo.svg" alt="" width="18" height="18" /><span class="sidebar-powered-by__name">Docusaurus</span></a>',
+              },
+            ];
+          },
         },
         blog: false,
         theme: {
@@ -85,13 +120,50 @@ const config = {
       },
       navbar: {
         title: 'DCU 715',
-        logo: {
-          alt: 'DCU 715',
-          src: 'img/logo.png',
-        },
         items: [
+          // Version label (not a tab) - links to the GitHub releases page
+          {
+            type: 'html',
+            position: 'left',
+            className: 'navbar-version',
+            value: `<a href="${GITHUB_REPO}/releases" target="_blank" rel="noopener noreferrer" title="Docs version ${DOCS_VERSION} (view releases on GitHub)">${DOCS_VERSION}</a>`,
+          },
+          // Thin grey divider between the version and the tabs
+          {
+            type: 'html',
+            position: 'left',
+            className: 'navbar-divider',
+            value: '<span aria-hidden="true"></span>',
+          },
+          // Home tab - the docs home page (src/pages/index.js)
+          {
+            to: '/',
+            label: 'Home',
+            position: 'left',
+            className: 'navbar-tab',
+            activeBaseRegex: '^/$',
+          },
+          // Documentation tab - active on every docs page except Home and Search
+          {
+            to: '/intro',
+            label: 'Documentation',
+            position: 'left',
+            className: 'navbar-tab',
+            activeBaseRegex: '^/(?!$|search)',
+          },
+          // Right side of the top row (the search box is centred by CSS)
+          {
+            href: SUPPORT_URL,
+            label: 'Support',
+            position: 'right',
+            className: 'navbar-support',
+          },
           {
             type: 'localeDropdown',
+            position: 'right',
+          },
+          {
+            type: 'custom-sidebarToggle',
             position: 'right',
           },
         ],
@@ -113,16 +185,16 @@ const config = {
           {
             title: 'Resources',
             items: [
-              { label: 'Introduction', to: '/' },
+              { label: 'Introduction', to: '/intro' },
               { label: 'Appendix A: URE Measurements', to: '/Appendix/A-UREMeasurements' },
-              { label: 'Appendix B: Troubleshooting', to: '/Appendix/B-Troubleshooting' },
-              { label: 'Appendix C: Glossary', to: '/Appendix/C-Glossary' },
+              { label: 'Appendix B: Troubleshooting', to: '/Appendix/B-Troubleshooting/' },
+              { label: 'Appendix C: Glossary', to: '/Appendix/C-glossary' },
             ],
           },
           {
             title: 'Social',
             items: [
-              { label: 'LinkedIn', to: 'https://www.linkedin.com/company/industrial-technology-research' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/industrial-technology-research' },
               { label: 'Website', href: 'https://www.itr.com/' },
             ],
           },

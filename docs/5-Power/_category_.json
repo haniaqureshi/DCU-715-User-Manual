@@ -1,8 +1,6 @@
 {
-  "label": "Module 5: Power",
+  "label": "Power",
   "position": 6,
-  "link": {
-    "type": "doc",
-    "id": "Power/index"
-  }
+  "link": null,
+  "collapsible": false
 }
