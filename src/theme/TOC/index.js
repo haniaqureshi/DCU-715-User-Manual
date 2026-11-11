@@ -18,8 +18,11 @@ const LINE_X = 8.5; // x of the line for top-level headings
 const LINE_STEP = 8; // the line moves this far right per heading level
 const TEXT_X = 20; // text indent for top-level headings
 const TEXT_STEP = 12; // extra text indent per heading level
-const CURVE = 6; // half-height of the S-curve between levels
+const CURVE = 12; // height of the S-curve, drawn at the top of the item it leads into
 
+// Each step to a new level is an S-curve that sits entirely at the TOP of the
+// item it leads into (as on Tonder). The highlight is clipped at item edges,
+// so it never cuts a curve in half.
 function buildPath(geo) {
   let d = '';
   geo.forEach((g, i) => {
@@ -27,10 +30,9 @@ function buildPath(geo) {
     if (i === 0) {
       d += `M${g.x} ${g.top}`;
     } else if (prev.x !== g.x) {
-      // S-curve centred on the boundary between the two items
-      const y0 = g.top - CURVE;
+      const y0 = g.top;
       const y1 = g.top + CURVE;
-      d += ` L${prev.x} ${y0} C${prev.x} ${g.top} ${g.x} ${g.top} ${g.x} ${y1}`;
+      d += ` L${prev.x} ${y0} C${prev.x} ${y0 + CURVE * 0.75} ${g.x} ${y0 + CURVE * 0.25} ${g.x} ${y1}`;
     }
     d += ` L${g.x} ${g.bottom}`;
   });

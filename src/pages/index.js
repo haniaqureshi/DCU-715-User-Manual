@@ -1,9 +1,10 @@
 /**
  * Docs home page ("Home" tab): hero + section tiles.
  */
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import SearchBar from '@theme/SearchBar';
 import styles from './index.module.css';
 
 const SUPPORT_EMAIL = 'support@ITR.com';
@@ -138,9 +139,18 @@ const REFERENCE = [
   },
 ];
 
-function openSearch() {
-  const input = document.querySelector('.navbar__search-input');
-  if (input) input.focus();
+// Home-page search: the plugin's search bar with its own placeholder text
+function HomeSearch() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const input = ref.current?.querySelector('input');
+    if (input) input.setAttribute('placeholder', 'Search the DCU 715 modules...');
+  }, []);
+  return (
+    <div ref={ref} className={styles.searchBox}>
+      <SearchBar />
+    </div>
+  );
 }
 
 export default function Home() {
@@ -163,13 +173,8 @@ export default function Home() {
               Contact support
             </a>
           </div>
-          <button type="button" className={styles.searchBox} onClick={openSearch}>
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="m20 20-4-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-            Search the DCU 715 modules...
-          </button>
+          {/* A real search box (same search engine as the top bar, separate input) */}
+          <HomeSearch />
         </header>
 
         <section aria-labelledby="sections-heading">
