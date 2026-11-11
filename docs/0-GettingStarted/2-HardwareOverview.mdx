@@ -1,0 +1,116 @@
+---
+sidebar_position: 2
+sidebar_label: 'Hardware Overview'
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+---
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+# Hardware Overview
+
+This page shows the physical parts of the DCU 715 and its accessories, and describes what each component does.
+
+## Hardware components
+<FigureRef id="DCU-715-Front-View"/> and <FigureRef id="Sensor-Connection-Cable"/> provide a detailed overview of the hardware components:
+
+<FigureProvider>
+    <Figure 
+        id="DCU-715-Front-View" 
+        src="/img/0-Intro/Hardware/DCU715FrontView.png" 
+        caption="DCU 715 Hardware Components (Front)" 
+        alt={"Front view of the DCU 715, a black rugged case with the touchscreen on top and a sensor mounted on the side. Labels point to 1. Screen, 2. Electronic Case and 3. Battery Cover."}
+        width="50%"
+    />
+
+    <Figure 
+        id="DCU-715-Back-View" 
+        src="/img/0-Intro/Hardware/DCU715BackView.png" 
+        caption="DCU 715 Hardware Component (Back)" 
+        alt={"Back view of the DCU 715 with labels for 4. Sensor Port, 5. Test Port, 6. Power Port, 7. Aux 1 Port, 8. Aux 2 Port, 9. Tach Port, 10. Sensor Plate, 11. On/Off Switch, 12. USB Port, 13. Battery and 14. Battery Release Latch."}
+        width="50%"
+    />
+
+    <Figure                                                 
+        id="Battery-Cover" 
+        src="/img/0-Intro/Hardware/BatteryCover.png" 
+        caption="Battery Cover" 
+        alt={"Drawing of the battery cover, a flat rounded plastic panel with a clip along its lower edge."}
+        width="20%"
+    />
+
+    <Figure 
+        id="Power-Switch-USB Panel-Cover" 
+        src="/img/0-Intro/Hardware/PowerSwitchUSBPanelCover.png" 
+        caption="Power Switch/USB Panel Cover" 
+        alt={"Drawing of the power switch and USB panel cover, a rounded plastic panel with a round opening for the on/off switch."}
+        width="20%"
+    />
+
+    <Figure 
+        id="Battery-Pack" 
+        src="/img/0-Intro/Hardware/BatteryPack.png" 
+        caption="Battery Pack" 
+        alt={"Two black 14.4 V lithium-ion battery packs."}
+        width="30%"
+    />
+
+    <Figure 
+        id="Battery-Charger-Dock" 
+        src="/img/0-Intro/Hardware/BatteryChargerDock.png" 
+        caption="Battery Charger Dock" 
+        alt={"Battery charger dock holding two black battery packs upright, with green indicator lights on the front."}
+        width="30%"
+    />
+
+    <Figure 
+        id="DCU-Keypad-Layout" 
+        src="/img/0-Intro/Hardware/DCUKeypadLayout.png" 
+        caption="DCU Keypad Layout" 
+        alt={"Drawing of the compact Bluetooth keyboard: a full QWERTY layout with function and arrow keys, and a touchpad with mouse buttons on the right."}
+        width="30%"
+    />
+
+    <Figure 
+        id="Headset" 
+        src="/img/0-Intro/Hardware/Headset.png" 
+        caption="Headset" 
+        alt={"Behind-the-neck wireless headset with two ear pieces."}
+        width="30%"
+    />
+
+    <Figure 
+        id="Triaxial-Accelerometer-Sensor" 
+        src="/img/0-Intro/Hardware/TriaxialAccelerometerSensor.png" 
+        caption="Triaxial Accelerometer Sensor" 
+        alt={"Triaxial accelerometer: a metal sensor block with a cable connector, mounted on a round magnetic base, with the X axis marked on the side."}
+        width="30%"
+    />
+
+    <Figure 
+        id="Sensor-Connection-Cable" 
+        src="/img/0-Intro/Hardware/SensorConnectionCable.png" 
+        caption="Sensor Connection Cable" 
+        alt={"Coiled black sensor connection cable with a connector at each end."}
+        width="30%"
+    />
+</FigureProvider>
+
+## ITR 715 DCU at a Glance
+| Components            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                         
+| :-------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Touchscreen           | All DCU operations are performed and viewed via the screen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+| Electronic Case       | Do not open this compartment.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Battery Cover         | Seals and protects the battery.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Sensor                | Main input port for collecting sensor data. Four circumstances to use this connector:<ul><li>**Triaxial IEPE (ICP®) accelerometers**</li> <li>**Single-axis IEPE (ICP®) accelerometers:** Requires an adapter to convert a two-conductor cable to a four-conductor cable.</li> <li>**Two-axis IEPE (ICP®) accelerometers:** Requires an adapter to convert a three-conductor cable to a four-conductor cable.</li> <li>**Voltage input – No ICP:** IEPE power is disabled; external power must be provided if the sensor needs it.</li></ul>**Requirements for Voltage Input – No ICP:**<ul><li>**DC voltage sensor:** ≤20V Peak, not powered by DCU</li> <li>**AC voltage sensor:** F ≤25 KHz, ≤ ±5V peak (no DC offset), not powered by DCU</li></ul> |
+| TEST                  | Output port used to test the integrity of the DCU sensor cable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| PWR                   | <ul><li>2-pin Amphenol connection to provide constant power from an AC wall adapter (18 V).</li> <li>The battery can be disconnected without interrupting the power supply.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| AUX1                  | Used for: <ul><li>Additional channel for simultaneous sampling</li> <li>High voltage AC/DC input</li> <li>Ultrasonic data collection</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |  
+| AUX2                  |  Used for: <ul><li>Additional channel for simultaneous sampling</li> <li>High voltage AC/DC input</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| TACH                  | Tachometer input.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Sensor Plate          | Stores magnet-mounted accelerometer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| On/Off Switch         | DCU smart on/off button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |     
+| USB Port              | Supports USB 2.0 devices.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Battery               | DCU Li-Ion battery.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Battery Release Latch | Slide and hold the latch to release the battery.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |

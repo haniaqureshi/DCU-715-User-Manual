@@ -1,5 +1,5 @@
 import {themes as prismThemes} from 'prism-react-renderer';
-import figureRegister from "./plugins/remark-pdf-numbering.mjs";
+import figureRegister from "./plugins/remark-figure-register.mjs";
 
 // PDF numbering plugin (see plugins/remark-pdf-numbering.mjs)
 import pdfNumbering from "./plugins/remark-pdf-numbering.mjs";
@@ -27,8 +27,18 @@ const config = {
 
   onBrokenLinks: 'throw',
 
+  // Inter: the site font (free; it's the font Tonder's docs fall back to)
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap',
+      type: 'text/css',
+    },
+  ],
+
   // Re-applies "sidebar hidden" before the page paints, so the sidebar doesn't flash
   headTags: [
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
     {
       tagName: 'script',
       attributes: {},
@@ -64,14 +74,10 @@ const config = {
           sidebarPath: './sidebars.js',
           // add chapter/section numbers only when building the PDF
           remarkPlugins: IS_PDF_BUILD ? [figureRegister, pdfNumbering] : [figureRegister],
-          // Put the Introduction page under a "Getting Started" heading in the sidebar
+          // Sidebar = the docs folders as they are (Getting Started is docs/0-GettingStarted),
+          // plus a "Powered by Docusaurus" line at the bottom
           async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            const items = await defaultSidebarItemsGenerator(args);
-            const sidebar = items.map((item) =>
-              item.type === 'doc' && item.id === 'intro'
-                ? {type: 'category', label: 'Getting Started', collapsible: false, collapsed: false, items: [item]}
-                : item,
-            );
+            const sidebar = await defaultSidebarItemsGenerator(args);
             // "Powered by Docusaurus" line at the very bottom of the sidebar
             return [
               ...sidebar,

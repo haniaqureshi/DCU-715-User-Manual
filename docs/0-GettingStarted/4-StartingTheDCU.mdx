@@ -1,0 +1,64 @@
+---
+sidebar_position: 4
+sidebar_label: 'Starting the DCU'
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+---
+
+import { FigureProvider, FigureRef } from "@site/src/components/FigureContext";
+import Figure from "@site/src/components/Figure";
+
+# Starting the DCU
+
+When you turn on the DCU, the ITR application initializes the device and then opens the Dashboard. This page describes the initialization screen and the Dashboard.
+
+## DCU Initialization
+When the ITR application starts, the **DCU Initialization** screen is displayed automatically. During startup, the
+system initializes the DCU by loading the required components and verifying the device status. The screen also 
+displays the internal voltage values, signal channel readings, auxiliary channel readings, and the overall system 
+status. 
+
+<FigureProvider>
+    <Figure 
+        id="DCU-Initialization-Screen" 
+        src="/img/0-Intro/DCUInitializationScreen-Light.jpg"
+        srcDark="/img/0-Intro/DCUInitializationScreen-Dark.png"
+        caption="DCU Initialization Screen" 
+        alt={"DCU Initialization screen. The four initialization steps (Loading Language Tables, Initializing A/D, Opening Database, Read Filter Tables) all show Ok. Below are the Internal Voltages, Signal Channels (accel and bias channels X, Y and Z) and Auxiliary Channels (Aux1 and Aux2, AC and DC) readings, a status line with Total Count 0 and Saturated False, and Ready in the task status bar."}
+        width="70%"
+    />
+</FigureProvider>
+
+## DCU Screen Description 
+The following components are available in <FigureRef id="DCU-Initialization-Screen" />.
+
+| Components         | Description                                                                                                                                            |                                                                                                                                          
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DCU Initialization | Displays the status of the initialization process, such as loading language tables, initializing A/D, opening the database, and reading filter tables. |
+| Internal Voltages  | Displays the DCU internal voltage values and battery voltage.                                                                                          |
+| Signal Channels    | Displays the accelerometer and bias channel readings.                                                                                                  | 
+| Auxiliary Channels | Displays the AC and DC readings for the auxiliary channels.                                                                                            |
+| Status Bar         | Displays the current device status, total count, and saturation status.                                                                                |
+
+
+## Dashboard Preview
+After the DCU initialization process is completed successfully, the **Dashboard** screen opens automatically. The
+Dashboard provides access to the main functional modules of the device. 
+
+**Procedure:**
+1. Power on the DCU device.
+2. Wait for the **DCU Initialization** process to complete.
+3. The Dashboard screen opens automatically.
+4. Tap any module to access its corresponding menu and options.
+
+The Dashboard displays the following options as shown in the <FigureRef id="DCU-Dashboard"/>.
+<FigureProvider>
+    <Figure 
+        id="DCU-Dashboard" 
+        src="/img/0-Intro/DCUDashboard-Light.jpg"
+        srcDark="/img/0-Intro/DCUDashboard-Dark.png"
+        caption="DCU Dashboard" 
+        alt={"Dashboard with the prompt 'Select menu item' and five buttons: Routes, Measurements, Special Tests, DCU Setup and Power, plus a Cancel button."}
+        width="70%"
+    />
+</FigureProvider>

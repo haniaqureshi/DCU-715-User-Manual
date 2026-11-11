@@ -1,4 +1,8 @@
 :root {
+  /* Typography: Inter (Tonder's own fallback font), with Tonder's sizes */
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-line-height-base: 1.5;
   --ifm-color-primary: #0056a0;
   --ifm-color-primary-dark: #004d90;
   --ifm-color-primary-darker: #004888;
@@ -20,6 +24,31 @@
   --ifm-color-primary-lighter: #78b6e0;
   --ifm-color-primary-lightest: #99c9e9;
   --docusaurus-highlighted-code-line-bg: rgba(248, 248, 248, 0.1);
+}
+
+/* Page headings: Tonder sizes (title 28px, sections 22px, sub-sections 17px) */
+.markdown h1,
+.markdown h1:first-child {
+  --ifm-h1-font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: 1.375rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.markdown > h3 {
+  --ifm-h3-font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.markdown > h4 {
+  --ifm-h4-font-size: 1rem;
+  font-weight: 600;
 }
 
 /* Make the tables take full width */
@@ -48,20 +77,37 @@
   --ifm-footer-title-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Tighten up the column titles */
+/* Footer text uses the same scale as the rest of the site:
+   12px column titles, 14px links (like "On this page"), 13px copyright (like the top bar) */
 .footer__title {
-  font-size: 12px;
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ifm-footer-title-color);
 }
 
+.footer__item {
+  padding: 0.2rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.footer__link-item {
+  line-height: 1.6;
+}
+
+.footer__link-item svg {
+  width: 11px;
+  height: 11px;
+}
+
 /* Subtle divider above copyright */
 .footer__bottom {
   border-top: 0.5px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.45);
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 [data-theme='dark'] .footer {
@@ -135,8 +181,8 @@ html[data-theme='light'] {
 }
 
 .navbar__title {
-  font-size: 1.45rem;
-  font-weight: 800;
+  font-size: 1.125rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ifm-heading-color);
 }
@@ -144,14 +190,14 @@ html[data-theme='light'] {
 .navbar__title::after {
   content: 'DOCS';
   display: inline-block;
-  margin-left: 0.55rem;
-  padding: 0.05rem 0.4rem 0.1rem;
+  margin-left: 0.45rem;
+  padding: 0.05rem 0.35rem 0.08rem;
   font-family: var(--ifm-font-family-monospace);
-  font-size: 0.68rem;
+  font-size: 0.6rem;
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: 0.18em;
-  vertical-align: 0.3em;
+  vertical-align: 0.2em;
   color: var(--ifm-color-primary);
   border: 1.5px solid var(--ifm-color-primary);
   border-radius: 5px;
@@ -159,8 +205,17 @@ html[data-theme='light'] {
 
 /* Support link: plain text, no "external" arrow */
 .navbar-support {
-  font-weight: 600;
-  color: var(--ifm-color-emphasis-700);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--navbar-muted-color);
+}
+
+:root {
+  --navbar-muted-color: #5a5c65;
+}
+
+[data-theme='dark'] {
+  --navbar-muted-color: #a5a8b0;
 }
 
 .navbar-support svg {
@@ -172,11 +227,11 @@ html[data-theme='light'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.875rem;
+  height: 1.875rem;
   padding: 0;
   font-size: 0;
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -185,8 +240,8 @@ html[data-theme='light'] {
 }
 
 .navbar__items--right .dropdown > .navbar__link svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin: 0;
 }
 
@@ -199,12 +254,12 @@ html[data-theme='light'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0;
   margin-left: 0.25rem;
   border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 10px;
+  border-radius: 999px;
   color: var(--ifm-color-emphasis-700);
 }
 
@@ -229,13 +284,14 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
 /* Desktop layout */
 @media (min-width: 997px) {
+  /* Tonder: 56px top row + 40px tab row */
   :root {
-    --ifm-navbar-height: 6.6rem;
+    --ifm-navbar-height: 6rem;
   }
 
   .navbar {
     height: auto;
-    padding-top: 0.6rem;
+    padding-top: 0;
     padding-bottom: 0;
   }
 
@@ -245,7 +301,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
     position: absolute;
     left: 0;
     right: 0;
-    top: 3.95rem;
+    top: 3.5rem;
     height: 1px;
     background: var(--ifm-color-emphasis-200);
   }
@@ -253,7 +309,35 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   .navbar__inner {
     position: relative;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: flex-start;
+  }
+
+  /* Right-hand group: every item is a 56px-tall flex box centred in the row,
+     so text, icons, the theme switch and the sidebar button share one centre line */
+  .navbar-support,
+  .navbar__items--right .dropdown,
+  .navbar-sidebar-toggle {
+    align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar__items--right .dropdown {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* The theme switch keeps its own pill size and is centred in the 56px row */
+  .navbar__inner [class*='colorModeToggle'] {
+    align-self: center;
+  }
+
+  .navbar-sidebar-toggle {
+    margin-top: 0.75rem;
   }
 
   /* Let every item sit directly in the wrapping row so they can be ordered */
@@ -264,7 +348,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
   .navbar__brand {
     order: 0;
-    height: 2.75rem;
+    height: 3.5rem;
     margin-right: 1.5rem;
   }
 
@@ -274,8 +358,8 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: clamp(24rem, 40vw, 44rem);
-    height: 2.75rem;
+    width: clamp(20rem, 35.5vw, 40rem);
+    height: 3.5rem;
     display: flex;
     align-items: center;
     padding: 0;
@@ -285,13 +369,21 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
     width: 100%;
   }
 
-  .navbar__inner .navbar__search-input {
+  /* On first use the search plugin wraps the input in an inline <span>,
+     which made the box shrink when clicked. Keep both full width. */
+  .navbar__inner [class*='navbarSearchContainer'] .navbar__search > span {
+    display: block !important;
     width: 100%;
-    height: 2.6rem;
-    padding-left: 2.5rem;
-    font-size: 1rem;
+  }
+
+  .navbar__inner .navbar__search-input {
+    width: 100% !important;
+    height: 2.25rem;
+    padding-left: 2.25rem;
+    font-family: inherit;
+    font-size: 0.875rem;
     border: 1px solid var(--ifm-color-emphasis-300);
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: var(--ifm-background-surface-color);
   }
 
@@ -300,7 +392,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
     order: 1;
     display: flex;
     align-items: center;
-    height: 2.75rem;
+    height: 3.5rem;
     padding-top: 0;
     padding-bottom: 0;
     margin-left: auto;
@@ -319,6 +411,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
   .navbar-sidebar-toggle {
     order: 4;
+    margin-left: 0.5rem;
   }
 
   /* Forces the tabs onto their own row, below the line */
@@ -327,7 +420,6 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
     order: 5;
     flex-basis: 100%;
     height: 0;
-    margin-top: 0.6rem;
   }
 
   .navbar__items:not(.navbar__items--right) > .navbar__item:not(.navbar__brand) {
@@ -336,9 +428,10 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
   /* Version label: plain bold text, not a tab */
   .navbar-version {
-    padding: 0.55rem 0 0.75rem;
-    line-height: var(--ifm-line-height-base);
-    font-weight: 700;
+    padding: 0.7rem 0 0.6rem;
+    font-size: 0.8125rem;
+    line-height: 1.15rem;
+    font-weight: 600;
   }
 
   .navbar-version a {
@@ -352,14 +445,14 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
   /* Thin grey divider after the version */
   .navbar-divider {
-    padding: 0.65rem 0 0.75rem;
-    margin: 0 1rem;
+    padding: 0.75rem 0 0.6rem;
+    margin: 0 0.9rem;
   }
 
   .navbar-divider span {
     display: block;
     width: 1px;
-    height: 1.25rem;
+    height: 1rem;
     background: var(--ifm-color-emphasis-300);
   }
 
@@ -367,8 +460,11 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   .navbar-tab {
     position: relative;
     margin-right: 1.5rem;
-    padding: 0.55rem 0 0.75rem;
-    color: var(--ifm-color-emphasis-700);
+    padding: 0.7rem 0 0.6rem;
+    font-size: 0.8125rem;
+    line-height: 1.15rem;
+    font-weight: 500;
+    color: var(--navbar-muted-color);
   }
 
   .navbar-tab:hover {
@@ -377,7 +473,6 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
   .navbar-tab.navbar__link--active {
     color: var(--ifm-heading-color);
-    font-weight: 600;
   }
 
   .navbar-tab.navbar__link--active::after {
@@ -413,7 +508,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   }
 
   .navbar__title {
-    font-size: 1.25rem;
+    font-size: 1.0625rem;
   }
 }
 
@@ -441,9 +536,14 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   --sidebar-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23868c96' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m9 6 6 6-6 6'/%3E%3C/svg%3E");
 }
 
-/* Regular body font weight (the sidebar is semi-bold by default) */
+/* Tonder sizes: 268px wide, 13px text, regular weight */
+:root {
+  --doc-sidebar-width: 268px !important;
+}
+
 .theme-doc-sidebar-container .menu {
-  font-weight: var(--ifm-font-weight-normal);
+  font-size: 0.8125rem;
+  font-weight: 450;
 }
 
 /* Room at the bottom so the list doesn't stop abruptly */
@@ -453,8 +553,9 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
 /* Page links: rounded hover */
 .theme-doc-sidebar-menu .menu__link {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.32rem;
+  padding-bottom: 0.32rem;
+  line-height: 1.15rem;
   border-radius: 8px;
 }
 
@@ -484,6 +585,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 }
 
 .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
+  font-weight: 500;
   color: var(--ifm-color-primary);
   background: none;
   cursor: default;
@@ -689,9 +791,17 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   margin: 0 auto;
 }
 
-/* No hard line between the sidebar and the page */
+/* Sidebar: a faint line on its right, like Nayax */
 .theme-doc-sidebar-container {
-  border-right: none !important;
+  border-right: 1px solid var(--ifm-color-emphasis-200) !important;
+}
+
+/* Clear space between the end of the docs (sidebar included) and the footer,
+   so the sidebar doesn't run straight into it */
+@media (min-width: 997px) {
+  div:has(> .theme-doc-sidebar-container) {
+    padding-bottom: 4rem;
+  }
 }
 
 /* ============================================================
@@ -712,9 +822,9 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   align-items: center;
   gap: 0.4rem;
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--toc-link-color);
+  color: var(--navbar-muted-color);
 }
 
 /* Scrolls on its own if the list is long, with soft faded edges */
@@ -771,7 +881,7 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   display: block;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  line-height: 1.4;
+  line-height: 1.6;
   color: var(--toc-link-color);
   transition: color 0.2s ease;
 }
@@ -807,7 +917,16 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 }
 
 .toc-track__base path {
-  stroke: var(--ifm-color-emphasis-300);
+  stroke: var(--toc-track-color);
+  stroke-width: 1;
+}
+
+:root {
+  --toc-track-color: rgba(17, 17, 17, 0.12);
+}
+
+[data-theme='dark'] {
+  --toc-track-color: rgba(255, 255, 255, 0.14);
 }
 
 .toc-track__active {
@@ -821,15 +940,15 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
 
 .toc-track__active path {
   stroke: var(--ifm-color-primary);
-  stroke-width: 1.5;
+  stroke-width: 1;
 }
 
 .toc-track__dot {
   position: absolute;
   top: 0;
   left: 0;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: var(--ifm-color-primary);
   offset-rotate: 0deg;
@@ -849,4 +968,17 @@ html:not(:has(.theme-doc-sidebar-container)) .navbar-sidebar-toggle {
   .toc-animated .table-of-contents__link {
     transition: none;
   }
+}
+
+/* Task status bar chips on the Screen Layout page (Getting Started).
+   Real text instead of images of text, so it resizes and keeps at least 4.5:1 contrast (1.4.3, 1.4.4, 1.4.5).
+   Background colours match the DCU status bar; each chip sets its own background and text colour inline. */
+.status-chip {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
 }
