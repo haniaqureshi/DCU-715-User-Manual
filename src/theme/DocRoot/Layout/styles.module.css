@@ -1,0 +1,29 @@
+/* Swizzled from @docusaurus/theme-classic 3.10.2 (DocRoot/Layout) */
+.docRoot {
+  display: flex;
+  width: 100%;
+}
+
+.docsWrapper {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+/* Main content + footer, stacked, to the right of the sidebar */
+.docMainColumn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 997px) {
+  .docMainColumn {
+    flex-grow: 1;
+    max-width: calc(100% - var(--doc-sidebar-width));
+  }
+
+  .docMainColumnEnhanced {
+    max-width: calc(100% - var(--doc-sidebar-hidden-width));
+  }
+}

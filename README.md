@@ -269,4 +269,6 @@ If the site is hosted on GitHub Pages, this builds the website and pushes it to 
 
 Built with [Docusaurus](https://docusaurus.io/) · PDF by [docs-to-pdf](https://www.npmjs.com/package/docs-to-pdf)
 
+<sub>Written, Designed and Developed by Javeria Qureshi</sub>
+
 </div>
