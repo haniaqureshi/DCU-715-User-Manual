@@ -25,8 +25,11 @@ const config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  url: 'https://haniaqureshi.github.io',
+  baseUrl: '/DCU-715-User-Manual/',
+  organizationName: 'haniaqureshi',
+  projectName: 'DCU-715-User-Manual',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
