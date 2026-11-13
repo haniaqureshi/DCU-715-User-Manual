@@ -4,11 +4,14 @@ import figureRegister from "./plugins/remark-figure-register.mjs";
 // PDF numbering plugin (see plugins/remark-pdf-numbering.mjs)
 import pdfNumbering from "./plugins/remark-pdf-numbering.mjs";
 
+// Writes llms.txt, llms-full.txt and sitemap.md for AI agents (see plugins/llms-files.mjs)
+import llmsFiles from "./plugins/llms-files.mjs";
+
 // true only while "yarn pdf" runs, so the numbers never appear on the website
 const IS_PDF_BUILD = process.env.PDF_BUILD === 'true';
 
 // Docs version shown in the navbar. Update this when you tag a new release on GitHub.
-const DOCS_VERSION = 'v1.0';
+const DOCS_VERSION = 'v1.0.0';
 const GITHUB_REPO = 'https://github.com/haniaqureshi/DCU-715-User-Manual';
 // The "Support" link in the top bar opens an email to this address
 const SUPPORT_URL = 'mailto:support@ITR.com';
@@ -26,6 +29,14 @@ const config = {
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
+
+  // "generated" holds llms.txt, llms-full.txt and sitemap.md (made by plugins/llms-files.mjs)
+  staticDirectories: ['static', 'generated'],
+
+  // Read by the footer (src/theme/Footer) for the Contact link
+  customFields: {
+    supportUrl: SUPPORT_URL,
+  },
 
   // Inter: the site font (free; it's the font Tonder's docs fall back to)
   stylesheets: [
@@ -53,6 +64,7 @@ const config = {
   },
 
   plugins: [
+    llmsFiles,
     [
       'docusaurus-plugin-image-zoom',
       {
@@ -74,21 +86,6 @@ const config = {
           sidebarPath: './sidebars.js',
           // add chapter/section numbers only when building the PDF
           remarkPlugins: IS_PDF_BUILD ? [figureRegister, pdfNumbering] : [figureRegister],
-          // Sidebar = the docs folders as they are (Getting Started is docs/0-GettingStarted),
-          // plus a "Powered by Docusaurus" line at the bottom
-          async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
-            const sidebar = await defaultSidebarItemsGenerator(args);
-            // "Powered by Docusaurus" line at the very bottom of the sidebar
-            return [
-              ...sidebar,
-              {
-                type: 'html',
-                defaultStyle: false,
-                className: 'sidebar-powered-by',
-                value: '<a href="https://docusaurus.io" target="_blank" rel="noopener noreferrer">Powered by <img src="/img/docusaurus-logo.svg" alt="" width="18" height="18" /><span class="sidebar-powered-by__name">Docusaurus</span></a>',
-              },
-            ];
-          },
         },
         blog: false,
         theme: {
@@ -182,50 +179,7 @@ const config = {
         ],
       },
 
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              { label: 'Routes', to: '/Routes/' },
-              { label: 'Measurements', to: '/Measurements/' },
-              { label: 'Special Tests', to: '/SpecialTests/' },
-              { label: 'DCU Setup', to: '/DCUSetup/' },
-              { label: 'Power', to: '/Power/' },
-            ],
-          },
-          {
-            title: 'Resources',
-            items: [
-              { label: 'Introduction', to: '/intro' },
-              { label: 'Appendix A: URE Measurements', to: '/Appendix/A-UREMeasurements' },
-              { label: 'Appendix B: Troubleshooting', to: '/Appendix/B-Troubleshooting/' },
-              { label: 'Appendix C: Glossary', to: '/Appendix/C-glossary' },
-            ],
-          },
-          {
-            title: 'Social',
-            items: [
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/industrial-technology-research' },
-              { label: 'Website', href: 'https://www.itr.com/' },
-            ],
-          },
-          {
-            title: 'Conformance',
-            items: [
-              {
-                html: `
-                  <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance">
-                    <img height="31" width="88" src="https://www.w3.org/WAI/WCAG22/wcag2.2AA" alt="Level AA conformance, W3C Web Content Accessibility Guidelines 2.2" />
-                  </a>
-                `,
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © 2016 - ${new Date().getFullYear()} ITR - Built with Docusaurus.`,
-      },
+      // The footer is a custom component: edit its links in src/theme/Footer/index.js
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
