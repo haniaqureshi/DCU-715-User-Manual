@@ -18,17 +18,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
-          lfs: true   # your repo uses Git LFS; without this, images deploy as broken placeholders
+          lfs: true
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: yarn
 
       - run: yarn install --frozen-lockfile
+
+      # 1. Build the website
       - run: yarn build
+
+      # 2. Build the PDF (same as running "yarn pdf" on your PC)
+      - run: yarn pdf
+
+      # 3. Put the PDF inside the website so it gets its own link
+      - run: cp pdf/DCU-715-User-Manual.pdf build/
 
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -26,10 +26,14 @@ const config = {
   },
 
   url: 'https://haniaqureshi.github.io',
-  baseUrl: '/DCU-715-User-Manual/',
+  // The PDF build is served from the root of localhost:3000, so it needs '/'.
+  // The website on GitHub Pages lives under /DCU-715-User-Manual/.
+  baseUrl: IS_PDF_BUILD ? '/' : '/DCU-715-User-Manual/',
   organizationName: 'haniaqureshi',
   projectName: 'DCU-715-User-Manual',
-  trailingSlash: false,
+  // The PDF tool can only open pages saved as folder/index.html, so the PDF
+  // build keeps Docusaurus' default; the website uses trailingSlash: false.
+  trailingSlash: IS_PDF_BUILD ? undefined : false,
 
   onBrokenLinks: 'throw',
 

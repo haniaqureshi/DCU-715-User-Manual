@@ -96,6 +96,9 @@ run("Creating the PDF", [
   `--headerTemplate=${headerTemplate}`,
   `--footerTemplate=${footerTemplate}`,
   `--cssStyle=${css}`,                                  // apply pdf/pdf.css
+  // On GitHub Actions (CI=true) Chrome must run without its sandbox, or it will not start.
+  // On your own PC nothing changes.
+  ...(process.env.CI ? ["--puppeteerArgs=--no-sandbox"] : []),
 ]);
 
 // ---------- Step 3: add the cover image as page 1 ----------
